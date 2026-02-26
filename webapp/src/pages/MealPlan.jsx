@@ -202,7 +202,24 @@ export default function MealPlan() {
     setLoading(true)
     try {
       const data = await api.get('/api/recipes/plan', token)
-      setPlan(data.plan)
+      const fetched = data.plan
+      // Auto-regenerate if stored plan lacks images (legacy plan from before image support)
+      if (fetched && fetched.days) {
+        const firstMeal = fetched.days[0]?.meals?.breakfast || fetched.days[0]?.meals?.lunch
+        const meal = Array.isArray(firstMeal) ? firstMeal[0] : firstMeal
+        if (meal && !meal.image_url) {
+          // Old plan without images — regenerate silently
+          try {
+            const fresh = await api.post('/api/recipes/plan/generate', {}, token)
+            setPlan(fresh.plan)
+          } catch {
+            setPlan(fetched) // fallback to old plan if regeneration fails
+          }
+          setLoading(false)
+          return
+        }
+      }
+      setPlan(fetched)
     } catch {
       // Plan might not exist
     }

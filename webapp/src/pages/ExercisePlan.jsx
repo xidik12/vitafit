@@ -32,7 +32,23 @@ export default function ExercisePlan() {
     setLoading(true)
     try {
       const data = await api.get('/api/exercises/plan', token)
-      setPlan(data.plan)
+      const fetched = data.plan
+      // Auto-regenerate if stored plan lacks exercise images (legacy plan)
+      if (fetched && fetched.days) {
+        const firstDay = fetched.days.find(d => d.exercises && d.exercises.length > 0)
+        const firstEx = firstDay?.exercises?.[0]
+        if (firstEx && !firstEx.images) {
+          try {
+            const fresh = await api.post('/api/exercises/plan/generate', {}, token)
+            setPlan(fresh.plan)
+          } catch {
+            setPlan(fetched)
+          }
+          setLoading(false)
+          return
+        }
+      }
+      setPlan(fetched)
     } catch (err) {
       if (!err.message?.includes('Not Found') && !err.message?.includes('404')) setError(err.message)
     }

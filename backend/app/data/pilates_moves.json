@@ -6,10 +6,23 @@
     "reps": 100,
     "sets": 1,
     "difficulty": "beginner",
-    "target_muscles": ["rectus_abdominis", "hip_flexors", "transverse_abdominis"],
+    "target_muscles": [
+      "rectus_abdominis",
+      "hip_flexors",
+      "transverse_abdominis"
+    ],
     "instructions": "Lie on your back with knees bent at 90 degrees (tabletop position). Lift head, neck and shoulders off the mat. Extend arms alongside the body hovering a few inches off the floor. Pump the arms vigorously up and down in small controlled movements. Legs may be extended to 45 degrees for more challenge.",
     "breathing": "Inhale for 5 arm pumps, exhale for 5 arm pumps. Repeat 10 times for 100 total pumps.",
-    "modifications": "Keep knees bent for beginners. Extend legs to 45 degrees for intermediate. Lower legs closer to the floor for advanced."
+    "modifications": "Keep knees bent for beginners. Extend legs to 45 degrees for intermediate. Lower legs closer to the floor for advanced.",
+    "images": [
+      "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Lie on your back with knees bent at 90 degrees in tabletop. Engage the deep abdominals by drawing the navel toward the spine. Imprint the lower back gently into the mat before lifting.",
+      "execution": "Lift head, neck, and shoulders off the mat using abdominal strength — not neck muscles. Extend arms alongside the body hovering off the floor. Pump arms vigorously up and down in small, controlled movements. Keep the scoop in the belly throughout.",
+      "mistakes": "Leading the lift with the chin instead of curling from the chest. Arms pumping from the shoulders instead of the lats. Lower back arching off the mat. Holding the breath instead of following the inhale-5-exhale-5 pattern.",
+      "breathing": "Inhale for 5 arm pumps, exhale for 5 arm pumps. Repeat 10 times for 100 total pumps. The breath is percussive and rhythmic, driving the arm movement."
+    }
   },
   {
     "name_en": "Roll Up",
@@ -18,10 +31,23 @@
     "reps": 8,
     "sets": 1,
     "difficulty": "intermediate",
-    "target_muscles": ["rectus_abdominis", "hip_flexors", "spinal_flexors"],
+    "target_muscles": [
+      "rectus_abdominis",
+      "hip_flexors",
+      "spinal_flexors"
+    ],
     "instructions": "Lie on your back with arms extended overhead and legs straight. Inhale and begin to curl the chin toward the chest. Exhale and peel the spine off the mat one vertebra at a time, reaching the arms toward the toes. Inhale at the top. Exhale and slowly roll back down with control, articulating through every vertebra.",
     "breathing": "Inhale to prepare and initiate, exhale to roll up. Inhale at top, exhale to roll down.",
-    "modifications": "Bend the knees or use a strap around the feet for beginners. Perform with straight legs and slow tempo for advanced."
+    "modifications": "Bend the knees or use a strap around the feet for beginners. Perform with straight legs and slow tempo for advanced.",
+    "images": [
+      "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Lie flat with arms extended overhead, legs straight and together, feet flexed. Press the lower back into the mat. Engage the powerhouse (deep core) before initiating any movement.",
+      "execution": "Inhale and begin curling the chin toward the chest. Exhale and peel the spine off the mat one vertebra at a time, reaching arms toward the toes. Inhale at the top. Exhale and roll back down with control, articulating through every vertebra.",
+      "mistakes": "Using momentum or swinging the arms to get up. Lifting as one block instead of articulating vertebra by vertebra. Feet lifting off the floor. Rushing the descent instead of controlling it.",
+      "breathing": "Inhale to prepare and initiate, exhale to roll up. Inhale at top, exhale to roll down. The exhale powers the abdominal work."
+    }
   },
   {
     "name_en": "Single Leg Circle",
@@ -30,10 +56,24 @@
     "reps": 5,
     "sets": 2,
     "difficulty": "beginner",
-    "target_muscles": ["hip_flexors", "quadriceps", "abdominals", "hip_adductors"],
+    "target_muscles": [
+      "hip_flexors",
+      "quadriceps",
+      "abdominals",
+      "hip_adductors"
+    ],
     "instructions": "Lie on your back with one leg extended toward the ceiling and the other leg flat on the mat. Arms alongside the body pressing into the floor. Circle the raised leg across the body, down, out and back up in a controlled circular motion. Keep the pelvis stable — the circle should be small enough that the hips do not rock. Reverse direction after 5 circles. Switch legs.",
     "breathing": "Inhale on the first half of the circle, exhale on the second half.",
-    "modifications": "Bend the bottom leg with foot flat on the floor for stability. Make smaller circles if the pelvis rocks."
+    "modifications": "Bend the bottom leg with foot flat on the floor for stability. Make smaller circles if the pelvis rocks.",
+    "images": [
+      "https://images.unsplash.com/photo-1599058917765-a780eda07a3e?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Lie on your back with one leg toward the ceiling, the other flat on the mat. Arms press into the floor alongside the body. Shoulders and pelvis remain anchored.",
+      "execution": "Circle the raised leg across the body, down, out, and back up in a controlled motion. The circle should be small enough that the hips do not rock. Keep the pelvis completely stable. Reverse direction after 5 circles.",
+      "mistakes": "Making circles too large, causing the pelvis to rock. The opposite hip lifting off the mat. Rushing the circles instead of controlling them. Tensing the neck and shoulders.",
+      "breathing": "Inhale on the first half of the circle, exhale on the second half. The breath rhythm matches the circular movement."
+    }
   },
   {
     "name_en": "Rolling Like a Ball",
@@ -42,10 +82,22 @@
     "reps": 8,
     "sets": 1,
     "difficulty": "beginner",
-    "target_muscles": ["rectus_abdominis", "spinal_flexors"],
+    "target_muscles": [
+      "rectus_abdominis",
+      "spinal_flexors"
+    ],
     "instructions": "Sit at the front of the mat with knees drawn to the chest. Hold the shins with both hands. Lift the feet off the floor and balance on the tailbone. Tuck chin toward the chest. Inhale and roll backward to the shoulder blades — never onto the neck. Exhale and roll back up to the balanced starting position. Maintain the tucked ball shape throughout.",
     "breathing": "Inhale to roll back, exhale to roll up.",
-    "modifications": "Hold behind the thighs instead of shins if balance is difficult. Keep feet lightly touching the mat to start."
+    "modifications": "Hold behind the thighs instead of shins if balance is difficult. Keep feet lightly touching the mat to start.",
+    "images": [
+      "https://images.unsplash.com/photo-1534258936925-c58bed479fcb?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Sit at the front of the mat with knees drawn to the chest. Hold the shins. Lift feet off the floor and balance on the tailbone. Tuck chin toward the chest. Create a compact, round shape.",
+      "execution": "Inhale and roll backward to the shoulder blades — never onto the neck. Exhale and roll back up to the balanced position. Maintain the tucked ball shape throughout — the shape does not change during the roll.",
+      "mistakes": "Rolling onto the neck. Losing the compact ball shape during the roll. Using momentum or throwing the head to roll up. Feet touching the floor between repetitions.",
+      "breathing": "Inhale to roll back, exhale to roll up. The exhale engages the abdominals to pull you back to balance."
+    }
   },
   {
     "name_en": "Single Leg Stretch",
@@ -54,10 +106,23 @@
     "reps": 10,
     "sets": 1,
     "difficulty": "beginner",
-    "target_muscles": ["rectus_abdominis", "obliques", "hip_flexors"],
+    "target_muscles": [
+      "rectus_abdominis",
+      "obliques",
+      "hip_flexors"
+    ],
     "instructions": "Lie on your back with head and shoulders lifted off the mat. Draw the right knee to the chest, placing the right hand on the right ankle and the left hand on the right knee. Extend the left leg out at a 45-degree angle. Switch legs in a smooth scissoring motion, changing hand positions accordingly. Keep the core engaged and the lower back pressed into the mat.",
     "breathing": "Inhale for two leg switches, exhale for two leg switches.",
-    "modifications": "Extend legs higher toward the ceiling for beginners. Lower legs closer to the floor for more challenge."
+    "modifications": "Extend legs higher toward the ceiling for beginners. Lower legs closer to the floor for more challenge.",
+    "images": [
+      "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Lie on your back with head and shoulders curled up off the mat. Engage the core to maintain the curl. One knee draws to the chest while the other leg extends at 45 degrees.",
+      "execution": "Draw the right knee to the chest — right hand on the ankle, left hand on the knee. Extend the left leg at 45 degrees. Switch legs in a smooth scissoring motion, changing hand positions. Keep the core engaged and lower back pressed into the mat.",
+      "mistakes": "Lower back arching off the mat as legs switch. Head dropping back between switches. Hands placed incorrectly on the bent leg. The extended leg dropping too low, causing back strain.",
+      "breathing": "Inhale for two leg switches, exhale for two leg switches. Keep the breathing rhythmic and connected to the movement."
+    }
   },
   {
     "name_en": "Double Leg Stretch",
@@ -66,10 +131,23 @@
     "reps": 8,
     "sets": 1,
     "difficulty": "intermediate",
-    "target_muscles": ["rectus_abdominis", "transverse_abdominis", "hip_flexors"],
+    "target_muscles": [
+      "rectus_abdominis",
+      "transverse_abdominis",
+      "hip_flexors"
+    ],
     "instructions": "Lie on your back with head and shoulders lifted. Hug both knees to the chest, hands on shins. Inhale and simultaneously extend both arms overhead and both legs out to 45 degrees. Exhale and circle the arms around while drawing knees back to the chest. Keep the lower back anchored to the mat throughout. The movement should be smooth and coordinated.",
     "breathing": "Inhale to extend out, exhale to draw back in.",
-    "modifications": "Extend legs higher for less intensity. Keep head on the mat if neck fatigues."
+    "modifications": "Extend legs higher for less intensity. Keep head on the mat if neck fatigues.",
+    "images": [
+      "https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Lie on your back with head and shoulders lifted. Hug both knees to the chest, hands on shins. Anchor the lower back firmly into the mat.",
+      "execution": "Inhale and simultaneously extend both arms overhead and both legs to 45 degrees. Exhale and circle arms around while drawing knees back to chest. Keep lower back anchored throughout. Movement should be smooth and coordinated.",
+      "mistakes": "Lower back lifting off the mat when arms and legs extend. Arms not reaching fully overhead. Losing the head and shoulder curl during the extension. The movement becoming disconnected and jerky.",
+      "breathing": "Inhale to extend out, exhale to draw back in. The exhale engagement pulls everything back to center."
+    }
   },
   {
     "name_en": "Spine Stretch Forward",
@@ -78,10 +156,23 @@
     "reps": 5,
     "sets": 1,
     "difficulty": "beginner",
-    "target_muscles": ["erector_spinae", "hamstrings", "abdominals"],
+    "target_muscles": [
+      "erector_spinae",
+      "hamstrings",
+      "abdominals"
+    ],
     "instructions": "Sit tall with legs extended straight and slightly wider than shoulder-width, feet flexed. Extend arms forward at shoulder height. Inhale to lengthen the spine. Exhale and round forward from the crown of the head, articulating through each vertebra as though curling over an imaginary ball. Reach the fingertips past the toes. Inhale and re-stack the spine to the upright position.",
     "breathing": "Inhale to sit tall, exhale to curl forward, inhale to roll back up.",
-    "modifications": "Sit on a small cushion if hamstrings are tight. Bend the knees slightly if needed."
+    "modifications": "Sit on a small cushion if hamstrings are tight. Bend the knees slightly if needed.",
+    "images": [
+      "https://images.unsplash.com/photo-1575052814086-f385e2e2ad33?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Sit tall with legs extended wider than shoulder-width, feet flexed. Extend arms forward at shoulder height. Sit on a cushion if hamstrings are tight. Stack the spine tall.",
+      "execution": "Inhale to lengthen the spine. Exhale and round forward from the crown, articulating through each vertebra as if curling over an imaginary ball. Reach fingertips past the toes. Inhale and re-stack the spine to upright.",
+      "mistakes": "Initiating the curl from the lower back instead of the crown of the head. Reaching forward with a flat back instead of rounding. Leaning the torso instead of articulating. Shoulders rising toward the ears.",
+      "breathing": "Inhale to sit tall, exhale to curl forward, inhale to roll back up. The exhale powers the sequential rounding."
+    }
   },
   {
     "name_en": "Open Leg Rocker",
@@ -90,10 +181,23 @@
     "reps": 8,
     "sets": 1,
     "difficulty": "intermediate",
-    "target_muscles": ["rectus_abdominis", "hip_flexors", "hamstrings"],
+    "target_muscles": [
+      "rectus_abdominis",
+      "hip_flexors",
+      "hamstrings"
+    ],
     "instructions": "Sit balanced on the tailbone, holding the ankles with legs extended in a wide V-shape. Find a balanced position. Inhale and roll back to the shoulder blades, keeping the open V-shape. Exhale and roll back up to the balanced position. Maintain leg extension and control throughout. Do not roll onto the neck.",
     "breathing": "Inhale to roll back, exhale to roll up.",
-    "modifications": "Hold behind the knees with legs slightly bent. Straighten fully only when balance and flexibility allow."
+    "modifications": "Hold behind the knees with legs slightly bent. Straighten fully only when balance and flexibility allow.",
+    "images": [
+      "https://images.unsplash.com/photo-1588286840104-8957b019727f?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Sit balanced on the tailbone, holding the ankles with legs in a wide V-shape. Find a balanced position first — do not rush into the roll. Legs should be straight if possible.",
+      "execution": "Inhale and roll back to the shoulder blades, maintaining the V-shape. Exhale and roll back up to balance. Maintain leg extension and control throughout. Do not roll onto the neck.",
+      "mistakes": "Closing the V-shape during the roll. Rolling onto the neck. Losing balance and toppling to one side. Using momentum instead of abdominal control to return to balance.",
+      "breathing": "Inhale to roll back, exhale to roll up. The exhale activates the abdominals needed to scoop back to the balanced position."
+    }
   },
   {
     "name_en": "Corkscrew",
@@ -102,10 +206,23 @@
     "reps": 3,
     "sets": 2,
     "difficulty": "intermediate",
-    "target_muscles": ["obliques", "rectus_abdominis", "hip_flexors"],
+    "target_muscles": [
+      "obliques",
+      "rectus_abdominis",
+      "hip_flexors"
+    ],
     "instructions": "Lie on your back with legs extended straight up toward the ceiling and arms pressed into the mat alongside the body. Keeping legs together, circle them to the right, down, to the left and back to center. The circle should be controlled and the pelvis should stay as stable as possible. Reverse the direction. Make circles smaller if the hips lift.",
     "breathing": "Inhale for half the circle, exhale for the other half.",
-    "modifications": "Bend the knees to reduce lever length. Make very small circles to start."
+    "modifications": "Bend the knees to reduce lever length. Make very small circles to start.",
+    "images": [
+      "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Lie on your back with legs straight up toward the ceiling. Arms press firmly into the mat alongside the body. Pelvis starts in a neutral or slightly imprinted position.",
+      "execution": "Keeping legs together, circle them to the right, down, to the left, and back to center. Control the circle from the core. The pelvis should stay as stable as possible. Reverse direction after the prescribed reps.",
+      "mistakes": "Making the circles too large, losing pelvic control. The lower back arching excessively. Arms lifting off the mat. The circles becoming lopsided — one direction larger than the other.",
+      "breathing": "Inhale for half the circle, exhale for the other half. The breathing helps maintain rhythm and pelvic stability."
+    }
   },
   {
     "name_en": "The Saw",
@@ -114,10 +231,24 @@
     "reps": 4,
     "sets": 2,
     "difficulty": "beginner",
-    "target_muscles": ["obliques", "hamstrings", "erector_spinae", "rotators"],
+    "target_muscles": [
+      "obliques",
+      "hamstrings",
+      "erector_spinae",
+      "rotators"
+    ],
     "instructions": "Sit tall with legs extended wider than shoulder-width, feet flexed. Extend arms out to the sides at shoulder height. Inhale and rotate the torso to the right. Exhale and round forward, reaching the left hand past the right foot in a sawing motion. The right arm extends behind. Inhale and roll back up to the rotated position. Exhale and return to center. Repeat on the other side.",
     "breathing": "Inhale to rotate, exhale to reach forward, inhale to re-stack, exhale to center.",
-    "modifications": "Sit on a cushion. Reduce the rotation range if the spine is stiff."
+    "modifications": "Sit on a cushion. Reduce the rotation range if the spine is stiff.",
+    "images": [
+      "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Sit tall with legs wider than shoulder-width, feet flexed. Extend arms to the sides at shoulder height. Sit on a cushion if the lower back rounds. Engage the core to maintain height.",
+      "execution": "Inhale and rotate the torso to the right. Exhale and round forward, reaching the left hand past the right foot in a sawing motion. The right arm extends behind. Inhale and roll back up. Exhale to center. Repeat on the other side.",
+      "mistakes": "Rotating from the shoulders instead of the waist. The buttock lifting off the mat on the reaching side. Not reaching far enough past the foot. Collapsing the spine instead of maintaining the rotation while rounding.",
+      "breathing": "Inhale to rotate, exhale to reach forward, inhale to re-stack, exhale to center. Each phase has a distinct breath."
+    }
   },
   {
     "name_en": "Swan Dive",
@@ -126,10 +257,24 @@
     "reps": 5,
     "sets": 1,
     "difficulty": "advanced",
-    "target_muscles": ["erector_spinae", "gluteals", "hamstrings", "deltoids"],
+    "target_muscles": [
+      "erector_spinae",
+      "gluteals",
+      "hamstrings",
+      "deltoids"
+    ],
     "instructions": "Lie face down with hands under the shoulders. Press up into a back extension. Release the hands and rock forward onto the chest while the legs lift. Rock back, arms extend forward, legs lower. Continue rocking like a seesaw, using momentum from the back extensors. Keep the body rigid during the rocking motion. Maintain the extension curve throughout.",
     "breathing": "Inhale as the chest lifts, exhale as the legs lift.",
-    "modifications": "Practice the Swan Prep first — just the extension without releasing the hands. Build strength before attempting the dive."
+    "modifications": "Practice the Swan Prep first — just the extension without releasing the hands. Build strength before attempting the dive.",
+    "images": [
+      "https://images.unsplash.com/photo-1599058917765-a780eda07a3e?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Lie face down with hands under the shoulders. Press up into a back extension first (Swan Prep). Only attempt the dive once the extension is strong and stable.",
+      "execution": "From the extension, release the hands and rock forward onto the chest while the legs lift. Rock back with arms extending forward and legs lowering. Continue rocking like a seesaw. Maintain the extension curve throughout.",
+      "mistakes": "Attempting the dive before mastering the extension. Losing the back extension during the rock. The rocking becoming uncontrolled. Compressing the lower back instead of distributing the extension evenly.",
+      "breathing": "Inhale as the chest lifts, exhale as the legs lift. The breath drives the rocking rhythm."
+    }
   },
   {
     "name_en": "Single Leg Kick",
@@ -138,10 +283,23 @@
     "reps": 8,
     "sets": 1,
     "difficulty": "beginner",
-    "target_muscles": ["hamstrings", "gluteals", "erector_spinae"],
+    "target_muscles": [
+      "hamstrings",
+      "gluteals",
+      "erector_spinae"
+    ],
     "instructions": "Lie face down propped on the forearms with elbows directly under the shoulders. Make fists or press palms flat. Lift the chest. Bend the right knee and pulse the heel twice toward the buttock with a brisk kick-kick motion. Straighten the leg and switch to the left. Keep the hips pressed into the mat. Maintain a lifted chest throughout.",
     "breathing": "Exhale with each double kick, inhale between switches.",
-    "modifications": "Rest the forehead on the hands if the back extension is too demanding."
+    "modifications": "Rest the forehead on the hands if the back extension is too demanding.",
+    "images": [
+      "https://images.unsplash.com/photo-1534258936925-c58bed479fcb?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Lie face down propped on forearms with elbows directly under shoulders. Make fists or press palms flat. Lift the chest and engage the upper back. Press the hips firmly into the mat.",
+      "execution": "Bend the right knee and pulse the heel twice toward the buttock with a brisk kick-kick motion. Straighten and switch to the left. Keep hips pressed into the mat. Maintain a lifted chest throughout.",
+      "mistakes": "Hips lifting off the mat during the kicks. The chest dropping between repetitions. Kicking with sloppy, uncontrolled movements. Lower back compressing due to excessive extension.",
+      "breathing": "Exhale with each double kick, inhale between switches. The rhythm is kick-kick-inhale, kick-kick-inhale."
+    }
   },
   {
     "name_en": "Double Leg Kick",
@@ -150,10 +308,25 @@
     "reps": 6,
     "sets": 1,
     "difficulty": "intermediate",
-    "target_muscles": ["hamstrings", "gluteals", "erector_spinae", "rhomboids", "rear_deltoids"],
+    "target_muscles": [
+      "hamstrings",
+      "gluteals",
+      "erector_spinae",
+      "rhomboids",
+      "rear_deltoids"
+    ],
     "instructions": "Lie face down with the head turned to one side. Clasp the hands behind the back as high as possible. Bend both knees and pulse the heels three times toward the buttocks. Then straighten the legs, extend the clasped hands toward the feet, and lift the chest in a back extension. Lower and turn the head to the other side. Repeat.",
     "breathing": "Exhale with the three kicks, inhale as you extend and lift.",
-    "modifications": "Hold a strap between the hands if clasping is difficult. Reduce range of extension."
+    "modifications": "Hold a strap between the hands if clasping is difficult. Reduce range of extension.",
+    "images": [
+      "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Lie face down with head turned to one side. Clasp hands behind the back as high as possible. If clasping is difficult, hold a strap between the hands.",
+      "execution": "Bend both knees and pulse the heels three times toward the buttocks. Then straighten legs, extend clasped hands toward feet, and lift the chest in a back extension. Lower and turn head to the other side. Repeat.",
+      "mistakes": "Not clasping the hands high enough up the back. Lifting only the chest without extending the legs. Neck straining during the extension. The three kicks being weak or uncontrolled.",
+      "breathing": "Exhale with the three kicks, inhale as you extend and lift. The inhale powers the back extension."
+    }
   },
   {
     "name_en": "Neck Pull",
@@ -162,10 +335,23 @@
     "reps": 6,
     "sets": 1,
     "difficulty": "advanced",
-    "target_muscles": ["rectus_abdominis", "hip_flexors", "erector_spinae"],
+    "target_muscles": [
+      "rectus_abdominis",
+      "hip_flexors",
+      "erector_spinae"
+    ],
     "instructions": "Lie on your back with hands clasped behind the head, legs extended and hip-width apart, feet flexed. Curl up through the spine, leading with the crown of the head. Continue forward and round over the legs. Roll up to a tall seated position. Hinge back with a flat back as far as control allows, then curl the rest of the way down one vertebra at a time.",
     "breathing": "Exhale to curl up and round over. Inhale to sit tall. Exhale to hinge back and roll down.",
-    "modifications": "Anchor feet under a strap or piece of furniture. Use a Roll Up approach if the full Neck Pull is too demanding."
+    "modifications": "Anchor feet under a strap or piece of furniture. Use a Roll Up approach if the full Neck Pull is too demanding.",
+    "images": [
+      "https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Lie on your back with hands clasped behind the head, legs extended and hip-width apart, feet flexed. Anchor the feet firmly — use a strap if needed. Engage the deep core.",
+      "execution": "Curl up through the spine leading with the crown. Continue forward and round over the legs. Roll up to a tall seated position. Hinge back with a flat back as far as control allows, then curl down vertebra by vertebra.",
+      "mistakes": "Using momentum to get up instead of sequential spinal articulation. The flat-back hinge collapsing into a round back. Feet lifting off the floor. Pulling on the neck with the hands.",
+      "breathing": "Exhale to curl up and round over. Inhale to sit tall. Exhale to hinge back and roll down. Each phase is powered by breath."
+    }
   },
   {
     "name_en": "Scissors",
@@ -174,10 +360,23 @@
     "reps": 8,
     "sets": 1,
     "difficulty": "intermediate",
-    "target_muscles": ["hip_flexors", "hamstrings", "rectus_abdominis"],
+    "target_muscles": [
+      "hip_flexors",
+      "hamstrings",
+      "rectus_abdominis"
+    ],
     "instructions": "Lie on your back and roll up into a shoulder stand supported by the hands on the lower back. Extend both legs straight up. Split the legs — one reaches toward the face, the other toward the floor. Pulse the top leg twice then switch in a scissoring motion. Keep the pelvis lifted and stable with the support of the hands. Legs stay straight throughout.",
     "breathing": "Inhale for one switch, exhale for the next.",
-    "modifications": "Keep the hips on the mat and perform the scissors lying flat with the head and shoulders lifted."
+    "modifications": "Keep the hips on the mat and perform the scissors lying flat with the head and shoulders lifted.",
+    "images": [
+      "https://images.unsplash.com/photo-1575052814086-f385e2e2ad33?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Lie on your back and roll up into a shoulder stand supported by hands on the lower back. Extend both legs straight up. Stabilize the pelvis with the hands before splitting the legs.",
+      "execution": "Split the legs — one toward the face, the other toward the floor. Pulse the top leg twice, then switch in a scissoring motion. Keep the pelvis lifted and stable. Legs stay straight throughout.",
+      "mistakes": "The pelvis dropping between switches. Bending the knees. Not pulsing the top leg — just switching. The legs not splitting evenly in both directions.",
+      "breathing": "Inhale for one switch, exhale for the next. Maintain rhythmic breathing to support the movement."
+    }
   },
   {
     "name_en": "Bicycle",
@@ -186,10 +385,24 @@
     "reps": 6,
     "sets": 2,
     "difficulty": "intermediate",
-    "target_muscles": ["hip_flexors", "quadriceps", "hamstrings", "rectus_abdominis"],
+    "target_muscles": [
+      "hip_flexors",
+      "quadriceps",
+      "hamstrings",
+      "rectus_abdominis"
+    ],
     "instructions": "From the same shoulder stand position as Scissors, bend one knee toward the chest while the other leg reaches long toward the floor. Pedal the legs as though riding a bicycle — one leg bends while the other extends. Keep the pelvis high and supported. Reverse the pedaling direction after the prescribed reps.",
     "breathing": "Breathe naturally and rhythmically with the pedaling motion.",
-    "modifications": "Perform lying flat on the back with hips on the mat for a less demanding version."
+    "modifications": "Perform lying flat on the back with hips on the mat for a less demanding version.",
+    "images": [
+      "https://images.unsplash.com/photo-1588286840104-8957b019727f?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "From the shoulder stand position (same as Scissors), support the pelvis with hands on the lower back. Both legs extend straight up to start.",
+      "execution": "Bend one knee toward the chest while the other leg reaches toward the floor. Pedal the legs as though riding a bicycle. Keep the pelvis high and supported. Reverse pedaling direction after prescribed reps.",
+      "mistakes": "Pelvis sinking and losing the shoulder stand height. Pedaling too fast without control. Not reversing the direction. The supporting hands slipping from the lower back.",
+      "breathing": "Breathe naturally and rhythmically with the pedaling motion. Do not hold the breath despite the inverted position."
+    }
   },
   {
     "name_en": "Shoulder Bridge",
@@ -198,10 +411,24 @@
     "reps": 5,
     "sets": 2,
     "difficulty": "intermediate",
-    "target_muscles": ["gluteals", "hamstrings", "quadriceps", "rectus_abdominis"],
+    "target_muscles": [
+      "gluteals",
+      "hamstrings",
+      "quadriceps",
+      "rectus_abdominis"
+    ],
     "instructions": "Lie on your back with knees bent, feet flat on the floor hip-width apart. Press hips up into a bridge. Place hands on the lower back for support. Extend the right leg straight up toward the ceiling. Lower the right leg toward the floor to hip height, then lift it back up. Repeat for the prescribed reps, then switch legs. Keep the hips level throughout.",
     "breathing": "Inhale as the leg lowers, exhale as it lifts.",
-    "modifications": "Keep both feet on the floor and simply practice the bridge hold without leg extension."
+    "modifications": "Keep both feet on the floor and simply practice the bridge hold without leg extension.",
+    "images": [
+      "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Lie on your back with knees bent, feet flat hip-width apart. Press hips up into a bridge first. Then place hands on the lower back for support. Stabilize before extending a leg.",
+      "execution": "Extend the right leg straight up toward the ceiling. Lower it to hip height, then lift back up. Repeat for prescribed reps, then switch legs. Keep the hips level throughout — they should not dip when the leg lowers.",
+      "mistakes": "Hips dropping when the leg extends. The supporting foot shifting or lifting. Not maintaining the bridge height between leg movements. The extended leg bending at the knee.",
+      "breathing": "Inhale as the leg lowers, exhale as it lifts. The exhale engagement keeps the hips stable and high."
+    }
   },
   {
     "name_en": "Side Kick Series — Front/Back",
@@ -210,10 +437,25 @@
     "reps": 10,
     "sets": 1,
     "difficulty": "beginner",
-    "target_muscles": ["hip_abductors", "hip_flexors", "gluteals", "quadriceps", "hamstrings"],
+    "target_muscles": [
+      "hip_abductors",
+      "hip_flexors",
+      "gluteals",
+      "quadriceps",
+      "hamstrings"
+    ],
     "instructions": "Lie on your side with the body in a straight line. Prop the head on the bottom hand. Place the top hand on the floor in front of the chest for balance. Lift the top leg to hip height. Swing the leg forward with a double pulse, then swing it back past the bottom leg. Keep the torso perfectly still — only the leg moves. The pelvis should not rock.",
     "breathing": "Inhale as the leg swings forward, exhale as it swings back.",
-    "modifications": "Reduce the range of the swing. Support the head on a pillow if neck strains."
+    "modifications": "Reduce the range of the swing. Support the head on a pillow if neck strains.",
+    "images": [
+      "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Lie on your side with the body in a straight line, slightly forward of the mat's back edge. Prop head on the bottom hand. Place top hand on the floor in front for balance. Lift the top leg to hip height.",
+      "execution": "Swing the leg forward with a double pulse, then swing it back past the bottom leg. Keep the torso perfectly still — only the leg moves. The pelvis should not rock forward or backward.",
+      "mistakes": "The torso rocking with the leg swing. The top leg dropping below hip height between kicks. Swinging too aggressively and losing core control. The bottom leg shifting position.",
+      "breathing": "Inhale as the leg swings forward, exhale as it swings back. The breath helps stabilize the torso."
+    }
   },
   {
     "name_en": "Teaser",
@@ -222,10 +464,23 @@
     "reps": 5,
     "sets": 1,
     "difficulty": "advanced",
-    "target_muscles": ["rectus_abdominis", "hip_flexors", "transverse_abdominis"],
+    "target_muscles": [
+      "rectus_abdominis",
+      "hip_flexors",
+      "transverse_abdominis"
+    ],
     "instructions": "Lie on your back with legs extended at a 45-degree angle and arms overhead. Inhale to prepare. Exhale and simultaneously roll the torso up and reach the arms toward the toes, arriving in a V-sit balance on the tailbone. Arms reach parallel to the legs. Inhale at the top. Exhale and roll back down with control, keeping the legs at 45 degrees. Do not let the legs drop.",
     "breathing": "Exhale to roll up, inhale to hold, exhale to roll down.",
-    "modifications": "Bend the knees. Perform Teaser I with feet on the floor first, then progress to Teaser II and III."
+    "modifications": "Bend the knees. Perform Teaser I with feet on the floor first, then progress to Teaser II and III.",
+    "images": [
+      "https://images.unsplash.com/photo-1599058917765-a780eda07a3e?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Lie on your back with legs at 45 degrees and arms overhead. Engage the deep powerhouse. This is one of the most challenging Pilates exercises — build up progressively.",
+      "execution": "Exhale and simultaneously roll the torso up and reach arms toward the toes, arriving in a V-sit balance. Arms parallel to the legs. Inhale at the top. Exhale and roll back down with control, keeping legs at 45 degrees.",
+      "mistakes": "Legs dropping during the roll-up or roll-down. Using momentum to swing up. The V-shape collapsing at the top. Not rolling down with vertebral articulation — just falling back.",
+      "breathing": "Exhale to roll up, inhale to hold, exhale to roll down. The exhale is essential for maintaining abdominal engagement."
+    }
   },
   {
     "name_en": "Swimming",
@@ -234,10 +489,24 @@
     "reps": 20,
     "sets": 1,
     "difficulty": "beginner",
-    "target_muscles": ["erector_spinae", "gluteals", "deltoids", "hamstrings"],
+    "target_muscles": [
+      "erector_spinae",
+      "gluteals",
+      "deltoids",
+      "hamstrings"
+    ],
     "instructions": "Lie face down with arms extended forward and legs extended back. Lift the arms, chest and legs off the mat simultaneously. Flutter the arms and legs in a swimming motion — right arm and left leg lift higher while left arm and right leg lower, then alternate. Keep the torso lifted and stable. The movement is brisk but controlled.",
     "breathing": "Inhale for 5 counts of swimming, exhale for 5 counts.",
-    "modifications": "Keep the range of flutter small. Lift only arms or only legs if the full movement is too challenging."
+    "modifications": "Keep the range of flutter small. Lift only arms or only legs if the full movement is too challenging.",
+    "images": [
+      "https://images.unsplash.com/photo-1534258936925-c58bed479fcb?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Lie face down with arms extended forward and legs extended back. Engage the back muscles and glutes before lifting. Think of lengthening rather than lifting.",
+      "execution": "Lift arms, chest, and legs off the mat simultaneously. Flutter arms and legs in a swimming motion — opposite arm and leg lift higher alternately. Keep the torso lifted and stable. Movement is brisk but controlled.",
+      "mistakes": "Looking up and compressing the neck — gaze should be slightly forward and down. Only lifting the arms while the legs stay down. Losing the torso lift between flutter cycles. Moving from the extremities instead of from the center.",
+      "breathing": "Inhale for 5 counts of swimming, exhale for 5 counts. Match the breathing to the flutter rhythm."
+    }
   },
   {
     "name_en": "Leg Pull Front",
@@ -246,10 +515,24 @@
     "reps": 5,
     "sets": 2,
     "difficulty": "intermediate",
-    "target_muscles": ["rectus_abdominis", "deltoids", "gluteals", "hamstrings"],
+    "target_muscles": [
+      "rectus_abdominis",
+      "deltoids",
+      "gluteals",
+      "hamstrings"
+    ],
     "instructions": "Start in a plank position with hands directly under the shoulders. Without shifting the hips, lift the right leg several inches off the mat. Pulse the heel toward the ceiling twice. Lower the foot and switch legs. Keep the body in one firm line. Do not let the hips sag or pike.",
     "breathing": "Exhale to lift the leg, inhale to lower.",
-    "modifications": "Hold the plank without lifting a leg until the position is stable."
+    "modifications": "Hold the plank without lifting a leg until the position is stable.",
+    "images": [
+      "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Start in a strong plank position with hands directly under shoulders. Body forms one firm line from head to heels. Engage the core fully before lifting any leg.",
+      "execution": "Without shifting the hips, lift the right leg several inches off the mat. Pulse the heel toward the ceiling twice. Lower and switch legs. Keep the body in one firm line throughout — no sagging or piking.",
+      "mistakes": "Hips shifting laterally when the leg lifts. The supporting hip hiking up. The body sagging into the lower back. Rushing the pulses without control.",
+      "breathing": "Exhale to lift the leg, inhale to lower. The exhale stabilizes the core during the single-leg challenge."
+    }
   },
   {
     "name_en": "Leg Pull Back",
@@ -258,10 +541,24 @@
     "reps": 5,
     "sets": 2,
     "difficulty": "intermediate",
-    "target_muscles": ["triceps", "gluteals", "hamstrings", "rectus_abdominis"],
+    "target_muscles": [
+      "triceps",
+      "gluteals",
+      "hamstrings",
+      "rectus_abdominis"
+    ],
     "instructions": "Sit with legs extended, hands behind the hips with fingers pointing toward the feet. Press into the hands and lift the hips into a reverse plank — body in one straight line from head to heels. Lift the right leg toward the ceiling without letting the hips drop. Lower the leg and switch sides. Keep the chest open and hips high throughout.",
     "breathing": "Inhale to lift the leg, exhale to lower.",
-    "modifications": "Keep both feet on the floor and practice holding the reverse plank."
+    "modifications": "Keep both feet on the floor and practice holding the reverse plank.",
+    "images": [
+      "https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Sit with legs extended, hands behind hips with fingers pointing toward feet. Prepare to press up into a reverse plank. Engage the backs of the arms, glutes, and hamstrings.",
+      "execution": "Press into the hands and lift hips into a reverse plank — one straight line from head to heels. Lift the right leg toward the ceiling without letting hips drop. Lower and switch sides. Keep chest open and hips high.",
+      "mistakes": "Hips dropping when the leg lifts. Shoulders hunching up toward the ears. The head dropping back. Wrists bearing all the weight without proper engagement of the arms and back.",
+      "breathing": "Inhale to lift the leg, exhale to lower. The breathing helps maintain the reverse plank integrity."
+    }
   },
   {
     "name_en": "Seal",
@@ -270,10 +567,22 @@
     "reps": 8,
     "sets": 1,
     "difficulty": "beginner",
-    "target_muscles": ["rectus_abdominis", "hip_adductors"],
+    "target_muscles": [
+      "rectus_abdominis",
+      "hip_adductors"
+    ],
     "instructions": "Sit balanced on the tailbone with knees open and feet together. Thread the arms inside the legs and wrap the hands around the outsides of the ankles. Clap the soles of the feet together three times like a seal. Roll back to the shoulder blades, clap three times, then roll back up and clap three times. Maintain the compact shape throughout.",
     "breathing": "Inhale to roll back, exhale to roll up.",
-    "modifications": "Skip the clapping at first and focus on the rolling motion with control."
+    "modifications": "Skip the clapping at first and focus on the rolling motion with control.",
+    "images": [
+      "https://images.unsplash.com/photo-1575052814086-f385e2e2ad33?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Sit balanced on the tailbone with knees open and feet together. Thread arms inside the legs and wrap hands around the outsides of the ankles. Find the balanced starting position.",
+      "execution": "Clap the soles of the feet together three times. Roll back to the shoulder blades, clap three times, roll back up and clap three times. Maintain the compact shape throughout the rolling.",
+      "mistakes": "Rolling onto the neck. Losing the balance position and toppling over. The clapping becoming an afterthought instead of a deliberate action. Letting go of the ankles during the roll.",
+      "breathing": "Inhale to roll back, exhale to roll up. The clapping provides a rhythmic punctuation to the rolling."
+    }
   },
   {
     "name_en": "Crab",
@@ -282,10 +591,23 @@
     "reps": 6,
     "sets": 1,
     "difficulty": "advanced",
-    "target_muscles": ["rectus_abdominis", "spinal_flexors", "neck_flexors"],
+    "target_muscles": [
+      "rectus_abdominis",
+      "spinal_flexors",
+      "neck_flexors"
+    ],
     "instructions": "Sit cross-legged and hold the tops of the feet with the opposite hands (right hand holds left foot, left hand holds right foot). Round the spine and balance on the tailbone. Roll back to the shoulder blades. Roll back up past the balanced position, placing the crown of the head lightly on the mat in front. Switch the cross of the legs and repeat.",
     "breathing": "Inhale to roll back, exhale to roll up and place the head.",
-    "modifications": "Skip the head placement and simply roll up to the balanced position. Cross the legs conventionally if opposite-hand grip is too difficult."
+    "modifications": "Skip the head placement and simply roll up to the balanced position. Cross the legs conventionally if opposite-hand grip is too difficult.",
+    "images": [
+      "https://images.unsplash.com/photo-1588286840104-8957b019727f?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Sit cross-legged and hold tops of feet with opposite hands. Round the spine and balance on the tailbone. This is an advanced exercise — master Rolling Like a Ball and Seal first.",
+      "execution": "Roll back to the shoulder blades. Roll back up past balance and place the crown of the head lightly on the mat in front. Switch the cross of the legs. Repeat the roll with the new leg cross.",
+      "mistakes": "Placing too much weight on the head when it touches the mat. Not switching the leg cross between rolls. Rolling onto the neck. Using momentum instead of abdominal control.",
+      "breathing": "Inhale to roll back, exhale to roll up and place the head. The controlled exhale protects the neck during the head placement."
+    }
   },
   {
     "name_en": "Bird Dog",
@@ -294,10 +616,24 @@
     "reps": 10,
     "sets": 2,
     "difficulty": "beginner",
-    "target_muscles": ["erector_spinae", "gluteals", "rectus_abdominis", "deltoids"],
+    "target_muscles": [
+      "erector_spinae",
+      "gluteals",
+      "rectus_abdominis",
+      "deltoids"
+    ],
     "instructions": "Start on hands and knees with wrists under shoulders and knees under hips. Extend the right arm forward and the left leg back simultaneously, creating a straight line from fingertips to toes. Hold for a breath. Return to the starting position and switch sides. Keep the hips and shoulders level throughout — do not rotate the torso.",
     "breathing": "Exhale to extend, inhale to return.",
-    "modifications": "Extend only the arm or only the leg until stability improves."
+    "modifications": "Extend only the arm or only the leg until stability improves.",
+    "images": [
+      "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Start on hands and knees with wrists under shoulders and knees under hips. Find a neutral spine — not arched, not rounded. Engage the deep core before moving.",
+      "execution": "Extend the right arm forward and left leg back simultaneously, creating a straight line from fingertips to toes. Hold for one breath. Return and switch sides. Keep hips and shoulders level — no rotation.",
+      "mistakes": "The torso rotating when the arm and leg extend. The lower back arching excessively. Not extending the arm and leg to the same height. Rushing through repetitions without holding.",
+      "breathing": "Exhale to extend the arm and leg, inhale to return. The exhale stabilizes the core during the balance challenge."
+    }
   },
   {
     "name_en": "Dead Bug",
@@ -306,10 +642,23 @@
     "reps": 10,
     "sets": 2,
     "difficulty": "beginner",
-    "target_muscles": ["transverse_abdominis", "rectus_abdominis", "hip_flexors"],
+    "target_muscles": [
+      "transverse_abdominis",
+      "rectus_abdominis",
+      "hip_flexors"
+    ],
     "instructions": "Lie on your back with arms extended toward the ceiling and knees bent at 90 degrees in tabletop position. Slowly extend the right arm overhead and the left leg out straight, lowering both toward the floor without touching it. Return to the starting position and switch sides. Keep the lower back pressed firmly into the mat throughout the entire movement.",
     "breathing": "Exhale as you extend the arm and leg, inhale as you return.",
-    "modifications": "Reduce the range — do not lower the arm and leg as far. Move only the legs while keeping arms still."
+    "modifications": "Reduce the range — do not lower the arm and leg as far. Move only the legs while keeping arms still.",
+    "images": [
+      "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Lie on your back with arms toward the ceiling and knees at 90 degrees in tabletop. Press the lower back firmly into the mat — this is your anchor point throughout.",
+      "execution": "Slowly extend the right arm overhead and left leg out straight, lowering both toward the floor without touching. Return and switch sides. The lower back must stay pressed into the mat the entire time.",
+      "mistakes": "Lower back arching off the mat — this means the range is too large. Moving too quickly. Extending the same-side arm and leg instead of opposite. Holding the breath.",
+      "breathing": "Exhale as you extend the arm and leg, inhale as you return. The exhale helps maintain the lower back imprint."
+    }
   },
   {
     "name_en": "Clam Shell",
@@ -318,10 +667,22 @@
     "reps": 15,
     "sets": 2,
     "difficulty": "beginner",
-    "target_muscles": ["gluteus_medius", "hip_external_rotators"],
+    "target_muscles": [
+      "gluteus_medius",
+      "hip_external_rotators"
+    ],
     "instructions": "Lie on your side with knees bent at 45 degrees, heels together. Rest the head on the bottom arm. Place the top hand on the hip. Keeping the heels together and the pelvis stable, open the top knee as far as possible without rolling the hips backward. Slowly close the knee. The motion resembles a clamshell opening and closing.",
     "breathing": "Exhale to open, inhale to close.",
-    "modifications": "Place a resistance band above the knees for added challenge. Reduce the range of opening if the hip rotates."
+    "modifications": "Place a resistance band above the knees for added challenge. Reduce the range of opening if the hip rotates.",
+    "images": [
+      "https://images.unsplash.com/photo-1599058917765-a780eda07a3e?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Lie on your side with knees bent at 45 degrees, heels together. Rest head on bottom arm. Place top hand on hip. Stack the hips vertically — do not let the top hip roll backward.",
+      "execution": "Keeping heels together and pelvis stable, open the top knee as far as possible without rolling the hips. Slowly close. The motion resembles a clamshell opening and closing. Control is more important than range.",
+      "mistakes": "The top hip rolling backward during the opening — this recruits the wrong muscles. Opening too wide and losing pelvic stability. Rushing the movement. Using momentum instead of gluteal control.",
+      "breathing": "Exhale to open, inhale to close. The exhale helps engage the deep hip stabilizers."
+    }
   },
   {
     "name_en": "Toe Taps",
@@ -330,10 +691,23 @@
     "reps": 12,
     "sets": 2,
     "difficulty": "beginner",
-    "target_muscles": ["transverse_abdominis", "rectus_abdominis", "hip_flexors"],
+    "target_muscles": [
+      "transverse_abdominis",
+      "rectus_abdominis",
+      "hip_flexors"
+    ],
     "instructions": "Lie on your back with knees bent at 90 degrees in tabletop position, arms alongside the body. Slowly lower the right foot toward the floor, tapping the toe lightly, then return to tabletop. Repeat with the left foot. Keep the lower back pressed into the mat and the 90-degree knee angle consistent throughout. The movement is slow and controlled.",
     "breathing": "Exhale as the toe lowers, inhale as it returns.",
-    "modifications": "Tap both feet simultaneously for more challenge. Place hands under the lower back for tactile feedback."
+    "modifications": "Tap both feet simultaneously for more challenge. Place hands under the lower back for tactile feedback.",
+    "images": [
+      "https://images.unsplash.com/photo-1534258936925-c58bed479fcb?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Lie on your back with knees at 90 degrees in tabletop, arms alongside the body. Press the lower back into the mat. Maintain the 90-degree knee angle consistently.",
+      "execution": "Slowly lower the right foot toward the floor, tapping the toe lightly, then return to tabletop. Repeat with the left foot. The movement is slow and controlled. The 90-degree angle does not change.",
+      "mistakes": "The knee angle changing during the tap — the leg straightening as it lowers. Lower back arching off the mat. Moving too fast. Both feet moving simultaneously when they should alternate.",
+      "breathing": "Exhale as the toe lowers, inhale as it returns. The exhale helps maintain the abdominal engagement and lower back imprint."
+    }
   },
   {
     "name_en": "Pelvic Curl",
@@ -342,10 +716,24 @@
     "reps": 8,
     "sets": 1,
     "difficulty": "beginner",
-    "target_muscles": ["gluteals", "hamstrings", "rectus_abdominis", "erector_spinae"],
+    "target_muscles": [
+      "gluteals",
+      "hamstrings",
+      "rectus_abdominis",
+      "erector_spinae"
+    ],
     "instructions": "Lie on your back with knees bent, feet flat on the floor hip-width apart, arms alongside the body. Exhale and tilt the pelvis, imprinting the lower back into the mat. Continue peeling the spine off the mat one vertebra at a time — tailbone, sacrum, lower back, middle back — until the hips are lifted and the body forms a straight line from shoulders to knees. Inhale at the top. Exhale and roll back down starting from the upper back, one vertebra at a time.",
     "breathing": "Exhale to curl up, inhale at the top, exhale to roll down.",
-    "modifications": "Place a small ball between the knees to engage the adductors. Stop at a lower height if the back is uncomfortable."
+    "modifications": "Place a small ball between the knees to engage the adductors. Stop at a lower height if the back is uncomfortable.",
+    "images": [
+      "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Lie on your back with knees bent, feet flat hip-width apart. Arms alongside the body. Start by imprinting the lower back into the mat through a gentle pelvic tilt.",
+      "execution": "Exhale and peel the spine off the mat one vertebra at a time — tailbone, sacrum, lower back, middle back — until hips are lifted in a straight line from shoulders to knees. Inhale at top. Exhale and roll down from upper back, one vertebra at a time.",
+      "mistakes": "Lifting as one block instead of articulating vertebra by vertebra. Pushing the hips too high and overarching. Feet shifting position during the curl. Rolling down too quickly without sequential control.",
+      "breathing": "Exhale to curl up, inhale at the top, exhale to roll down. The breath drives the sequential articulation."
+    }
   },
   {
     "name_en": "Mermaid Stretch",
@@ -354,9 +742,23 @@
     "reps": 4,
     "sets": 2,
     "difficulty": "beginner",
-    "target_muscles": ["obliques", "latissimus_dorsi", "intercostals", "quadratus_lumborum"],
+    "target_muscles": [
+      "obliques",
+      "latissimus_dorsi",
+      "intercostals",
+      "quadratus_lumborum"
+    ],
     "instructions": "Sit with both legs folded to the left side (Z-sit). Extend the left arm out and place the hand on the floor. Reach the right arm overhead and lean to the left, creating a long side stretch along the right side of the body. Return to center and switch — right hand on the floor, left arm reaching over to the right. Switch leg positions and repeat on the other side.",
     "breathing": "Inhale to reach, exhale to deepen the stretch, inhale to return.",
-    "modifications": "Sit cross-legged if the Z-sit is uncomfortable. Use a smaller range of stretch."
+    "modifications": "Sit cross-legged if the Z-sit is uncomfortable. Use a smaller range of stretch.",
+    "images": [
+      "https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Sit in a Z-sit with both legs folded to one side. If the Z-sit is uncomfortable, sit cross-legged instead. Ground both sitting bones evenly.",
+      "execution": "Extend one arm out to the side and place the hand on the floor. Reach the other arm overhead and lean to the side, creating a long side stretch. Return to center and switch sides. Change leg positions and repeat.",
+      "mistakes": "Leaning forward instead of staying in the lateral plane. The reaching arm bending instead of staying long. Lifting the opposite hip off the floor. Not switching leg positions for the second set.",
+      "breathing": "Inhale to reach overhead, exhale to deepen the stretch, inhale to return. The breath opens the intercostal spaces on the stretched side."
+    }
   }
 ]

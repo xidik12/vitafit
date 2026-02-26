@@ -3,385 +3,847 @@
     "name_en": "Neck Rolls",
     "name_ru": "Круговые движения шеей",
     "body_region": "upper_body",
-    "target_muscles": ["sternocleidomastoid", "trapezius", "levator_scapulae"],
+    "target_muscles": [
+      "sternocleidomastoid",
+      "trapezius",
+      "levator_scapulae"
+    ],
     "duration_secs": 30,
     "sides": 2,
     "difficulty": "beginner",
     "instructions": "Stand or sit tall. Slowly drop the right ear toward the right shoulder. Roll the chin down toward the chest, then over to the left shoulder, and gently tilt the head back to complete the circle. Move slowly and smoothly. Perform 5 circles in each direction.",
-    "tips": "Never force the head backward. If you feel any pinching, reduce the range. Keep the shoulders down and relaxed."
+    "tips": "Never force the head backward. If you feel any pinching, reduce the range. Keep the shoulders down and relaxed.",
+    "images": [
+      "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Stand or sit tall with the spine long. Relax the shoulders away from the ears. Let the arms hang naturally or rest on the thighs. Soften the jaw and facial muscles.",
+      "execution": "Slowly drop the right ear toward the right shoulder. Roll the chin down toward the chest, over to the left shoulder, and gently tilt back to complete the circle. Move slowly and smoothly. Perform 5 circles in each direction.",
+      "mistakes": "Forcing the head backward aggressively. Moving too fast through the circles. Shrugging the shoulders up during the movement. Holding the breath.",
+      "breathing": "Breathe slowly and continuously throughout the circles. Exhale as the chin drops toward the chest. Inhale as the head tilts back. Let the breath guide the speed."
+    }
   },
   {
     "name_en": "Shoulder Shrugs",
     "name_ru": "Подъёмы плеч",
     "body_region": "upper_body",
-    "target_muscles": ["upper_trapezius", "levator_scapulae"],
+    "target_muscles": [
+      "upper_trapezius",
+      "levator_scapulae"
+    ],
     "duration_secs": 20,
     "sides": 0,
     "difficulty": "beginner",
     "instructions": "Stand or sit with arms at your sides. Inhale and raise both shoulders toward the ears as high as possible. Hold for 2 seconds. Exhale and drop the shoulders down forcefully, releasing tension. Repeat 10 times. On the last rep, roll the shoulders backward in large circles 5 times.",
-    "tips": "Exaggerate the upward movement. Focus on the release — let gravity pull the shoulders down."
+    "tips": "Exaggerate the upward movement. Focus on the release — let gravity pull the shoulders down.",
+    "images": [
+      "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Stand or sit with arms relaxed at the sides. Let the shoulders drop completely before beginning. Feel the full weight of the arms pulling the shoulders down.",
+      "execution": "Inhale and raise both shoulders toward the ears as high as possible. Hold for 2 seconds. Exhale and drop the shoulders forcefully, releasing tension. Repeat 10 times. On the last rep, roll shoulders backward 5 times.",
+      "mistakes": "Not raising the shoulders high enough — the movement should be exaggerated. Lowering the shoulders slowly instead of dropping them. Tensing the arms during the shrug. Not holding at the top long enough.",
+      "breathing": "Inhale sharply as shoulders rise. Exhale forcefully as they drop. The sharp exhale helps release muscular tension in the upper trapezius."
+    }
   },
   {
     "name_en": "Cross-Body Shoulder Stretch",
     "name_ru": "Перекрёстная растяжка плеча",
     "body_region": "upper_body",
-    "target_muscles": ["posterior_deltoid", "infraspinatus", "rhomboids"],
+    "target_muscles": [
+      "posterior_deltoid",
+      "infraspinatus",
+      "rhomboids"
+    ],
     "duration_secs": 30,
     "sides": 2,
     "difficulty": "beginner",
     "instructions": "Stand or sit tall. Extend the right arm straight across the chest at shoulder height. Use the left hand or forearm to press the right arm closer to the body. Keep the right arm straight. Hold for 30 seconds, then switch sides.",
-    "tips": "Keep the shoulder being stretched down — do not let it hike up. Relax the neck muscles."
+    "tips": "Keep the shoulder being stretched down — do not let it hike up. Relax the neck muscles.",
+    "images": [
+      "https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Stand or sit tall. Extend the right arm straight across the chest at shoulder height. Keep the arm parallel to the floor. The left hand or forearm will apply gentle pressure.",
+      "execution": "Use the left hand or forearm to press the right arm closer to the body. Keep the right arm straight and at shoulder height. Hold for 30 seconds. Switch sides. Feel the stretch in the back of the shoulder.",
+      "mistakes": "Letting the stretched shoulder hike up toward the ear. Bending the stretched arm. Rotating the torso toward the stretched side. Pressing too aggressively and causing pain.",
+      "breathing": "Breathe deeply and evenly. Exhale to relax deeper into the stretch. Inhale to maintain an upright posture. Let each exhale increase the range slightly."
+    }
   },
   {
     "name_en": "Triceps Stretch",
     "name_ru": "Растяжка трицепса",
     "body_region": "upper_body",
-    "target_muscles": ["triceps_brachii", "latissimus_dorsi"],
+    "target_muscles": [
+      "triceps_brachii",
+      "latissimus_dorsi"
+    ],
     "duration_secs": 30,
     "sides": 2,
     "difficulty": "beginner",
     "instructions": "Raise the right arm overhead. Bend the elbow, reaching the right hand down between the shoulder blades. Use the left hand to gently press the right elbow further behind the head. Keep the upper arm close to the ear. Hold for 30 seconds, then switch arms.",
-    "tips": "Stand tall — do not arch the back. Keep the ribcage closed."
+    "tips": "Stand tall — do not arch the back. Keep the ribcage closed.",
+    "images": [
+      "https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Raise the right arm overhead. Bend the elbow so the right hand reaches down between the shoulder blades. Stand tall with the ribcage closed — do not arch the back.",
+      "execution": "Use the left hand to gently press the right elbow further behind the head. Keep the upper arm close to the ear. Hold for 30 seconds. Switch arms. The stretch should be felt along the back of the upper arm.",
+      "mistakes": "Arching the lower back. The upper arm drifting away from the ear. Pushing the elbow too aggressively. Tilting the head forward to avoid the arm.",
+      "breathing": "Breathe steadily through the nose. Exhale to relax the triceps and deepen the stretch. Keep the ribcage closed with each exhale."
+    }
   },
   {
     "name_en": "Chest Opener Stretch",
     "name_ru": "Раскрытие грудной клетки",
     "body_region": "upper_body",
-    "target_muscles": ["pectoralis_major", "pectoralis_minor", "anterior_deltoid"],
+    "target_muscles": [
+      "pectoralis_major",
+      "pectoralis_minor",
+      "anterior_deltoid"
+    ],
     "duration_secs": 30,
     "sides": 0,
     "difficulty": "beginner",
     "instructions": "Stand tall and clasp the hands behind the back. Straighten the arms and lift them away from the body. Squeeze the shoulder blades together and push the chest forward. Lift the chin slightly. Hold for 30 seconds.",
-    "tips": "If you cannot clasp the hands, hold a towel between them. Do not hyperextend the lower back."
+    "tips": "If you cannot clasp the hands, hold a towel between them. Do not hyperextend the lower back.",
+    "images": [
+      "https://images.unsplash.com/photo-1575052814086-f385e2e2ad33?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Stand tall. Clasp the hands behind the back. If clasping is not possible, hold a towel between the hands. Stand with feet hip-width apart for stability.",
+      "execution": "Straighten the arms and lift them away from the body behind you. Squeeze the shoulder blades together. Push the chest forward and slightly upward. Lift the chin slightly. Hold for 30 seconds.",
+      "mistakes": "Hyperextending the lower back instead of opening the chest. Bending the elbows. Not squeezing the shoulder blades together. Jutting the head forward.",
+      "breathing": "Inhale deeply to expand the chest further. Exhale to squeeze the shoulder blades closer. Breathe into the front of the chest to amplify the opening."
+    }
   },
   {
     "name_en": "Doorway Chest Stretch",
     "name_ru": "Растяжка груди в дверном проёме",
     "body_region": "upper_body",
-    "target_muscles": ["pectoralis_major", "pectoralis_minor", "biceps_brachii"],
+    "target_muscles": [
+      "pectoralis_major",
+      "pectoralis_minor",
+      "biceps_brachii"
+    ],
     "duration_secs": 30,
     "sides": 2,
     "difficulty": "beginner",
     "instructions": "Stand in a doorway. Place the right forearm against the doorframe with the elbow at shoulder height and the arm bent at 90 degrees. Step the right foot forward and lean gently through the doorway until you feel a stretch in the right chest and shoulder. Hold for 30 seconds, then switch sides.",
-    "tips": "Adjust the height of the elbow — higher targets upper chest fibers, lower targets the middle fibers."
+    "tips": "Adjust the height of the elbow — higher targets upper chest fibers, lower targets the middle fibers.",
+    "images": [
+      "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Stand in a doorway. Place the right forearm against the doorframe with the elbow at shoulder height, arm bent at 90 degrees. Step the right foot forward through the doorway.",
+      "execution": "Lean gently through the doorway until you feel a stretch in the right chest and shoulder. Hold for 30 seconds. Switch sides. Adjust elbow height to target different chest fibers — higher for upper chest, lower for middle.",
+      "mistakes": "Rotating the torso instead of keeping it square. Pressing the elbow above shoulder height without awareness. Leaning too aggressively. Not stepping the foot forward enough.",
+      "breathing": "Breathe deeply into the stretched side of the chest. Exhale to lean slightly deeper. Inhale to maintain the upright posture."
+    }
   },
   {
     "name_en": "Wrist Flexor Stretch",
     "name_ru": "Растяжка сгибателей запястья",
     "body_region": "upper_body",
-    "target_muscles": ["wrist_flexors", "forearm_flexors"],
+    "target_muscles": [
+      "wrist_flexors",
+      "forearm_flexors"
+    ],
     "duration_secs": 20,
     "sides": 2,
     "difficulty": "beginner",
     "instructions": "Extend the right arm straight in front with the palm facing up. Use the left hand to gently pull the right fingers downward and toward the body until you feel a stretch along the inner forearm. Keep the arm straight. Hold for 20 seconds, then switch hands.",
-    "tips": "Apply gentle pressure — the forearm muscles are delicate. Especially important for people who type frequently."
+    "tips": "Apply gentle pressure — the forearm muscles are delicate. Especially important for people who type frequently.",
+    "images": [
+      "https://images.unsplash.com/photo-1588286840104-8957b019727f?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Extend the right arm straight in front with the palm facing up. Keep the arm at shoulder height. The left hand will apply gentle pressure to the right fingers.",
+      "execution": "Use the left hand to gently pull the right fingers downward and toward the body until you feel a stretch along the inner forearm. Keep the arm straight. Hold for 20 seconds. Switch hands.",
+      "mistakes": "Bending the elbow during the stretch. Pulling the fingers too aggressively — the forearm muscles are delicate. Rotating the wrist instead of keeping the palm facing up. Rushing through the hold.",
+      "breathing": "Breathe gently and steadily. Exhale to deepen the stretch slightly. This is a subtle stretch — gentle pressure with calm breathing is most effective."
+    }
   },
   {
     "name_en": "Wrist Extensor Stretch",
     "name_ru": "Растяжка разгибателей запястья",
     "body_region": "upper_body",
-    "target_muscles": ["wrist_extensors", "forearm_extensors"],
+    "target_muscles": [
+      "wrist_extensors",
+      "forearm_extensors"
+    ],
     "duration_secs": 20,
     "sides": 2,
     "difficulty": "beginner",
     "instructions": "Extend the right arm straight in front with the palm facing down. Use the left hand to gently press the right fingers and hand downward until you feel a stretch along the outer forearm. Keep the arm straight. Hold for 20 seconds, then switch hands.",
-    "tips": "Common stretch for relieving tennis elbow symptoms. Apply pressure gradually."
+    "tips": "Common stretch for relieving tennis elbow symptoms. Apply pressure gradually.",
+    "images": [
+      "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Extend the right arm straight in front with the palm facing down. Keep the arm at shoulder height and fully straight. Prepare the left hand to apply gentle downward pressure.",
+      "execution": "Use the left hand to gently press the right fingers and hand downward until you feel a stretch along the outer forearm. Keep the arm straight. Hold for 20 seconds. Switch hands.",
+      "mistakes": "Bending the elbow. Pressing too hard — this is a common stretch for tennis elbow and should be gentle. Rotating the hand instead of keeping the palm facing down. Not holding long enough.",
+      "breathing": "Breathe evenly. Apply pressure gradually on the exhale. Release slightly on the inhale if the stretch is too intense."
+    }
   },
   {
     "name_en": "Lat Stretch (Side Reach)",
     "name_ru": "Растяжка широчайших мышц (боковой наклон)",
     "body_region": "upper_body",
-    "target_muscles": ["latissimus_dorsi", "obliques", "intercostals"],
+    "target_muscles": [
+      "latissimus_dorsi",
+      "obliques",
+      "intercostals"
+    ],
     "duration_secs": 30,
     "sides": 2,
     "difficulty": "beginner",
     "instructions": "Stand with feet hip-width apart. Raise the right arm overhead. Lean the torso to the left, reaching the right arm over and to the left. Keep the hips level and both feet flat on the ground. Feel the stretch along the right side from the hip to the armpit. Hold for 30 seconds, then switch sides.",
-    "tips": "Do not rotate the torso. Keep the movement in the frontal plane. Breathe into the stretched side."
+    "tips": "Do not rotate the torso. Keep the movement in the frontal plane. Breathe into the stretched side.",
+    "images": [
+      "https://images.unsplash.com/photo-1545389336-cf090694435e?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Stand with feet hip-width apart. Raise the right arm overhead. Ground both feet firmly. Prepare to lean the torso to the left side.",
+      "execution": "Lean the torso to the left, reaching the right arm over and to the left. Keep the hips level and both feet flat on the ground. Feel the stretch from the hip to the armpit along the right side. Hold for 30 seconds. Switch sides.",
+      "mistakes": "Rotating the torso instead of staying in the frontal plane. Letting the hips shift to the side. The reaching arm bending instead of staying long. Leaning forward.",
+      "breathing": "Breathe into the stretched side — feel the right ribcage expand with each inhale. Exhale to reach slightly further. The breath opens the intercostal spaces."
+    }
   },
   {
     "name_en": "Cat-Cow Stretch",
     "name_ru": "Кошка-корова",
     "body_region": "core_back",
-    "target_muscles": ["erector_spinae", "rectus_abdominis", "serratus_anterior"],
+    "target_muscles": [
+      "erector_spinae",
+      "rectus_abdominis",
+      "serratus_anterior"
+    ],
     "duration_secs": 60,
     "sides": 0,
     "difficulty": "beginner",
     "instructions": "Start on hands and knees with wrists under shoulders and knees under hips. Cow: Inhale, drop the belly toward the floor, lift the chest and tailbone, gaze forward. Cat: Exhale, round the spine toward the ceiling, tuck the chin and tailbone. Flow between the two positions with the breath. Perform 10–15 repetitions.",
-    "tips": "Move slowly and feel each vertebra articulate. This is a warm-up and mobilization, not a forceful stretch."
+    "tips": "Move slowly and feel each vertebra articulate. This is a warm-up and mobilization, not a forceful stretch.",
+    "images": [
+      "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Start on hands and knees with wrists under shoulders and knees under hips. Spine begins in a neutral position. Spread the fingers for a stable base.",
+      "execution": "Cow: Inhale, drop the belly toward the floor, lift the chest and tailbone, gaze forward. Cat: Exhale, round the spine toward the ceiling, tuck the chin and tailbone. Flow between the two with the breath. 10-15 reps.",
+      "mistakes": "Moving too quickly without feeling each vertebra articulate. Keeping the hips static — they should tilt with each position. Only moving the upper back while the lower back stays flat. Forcing the range.",
+      "breathing": "Inhale for Cow (belly drops, chest lifts). Exhale for Cat (spine rounds, chin tucks). The breath drives the movement — they are inseparable."
+    }
   },
   {
     "name_en": "Seated Spinal Twist",
     "name_ru": "Скручивание позвоночника сидя",
     "body_region": "core_back",
-    "target_muscles": ["obliques", "erector_spinae", "piriformis", "gluteals"],
+    "target_muscles": [
+      "obliques",
+      "erector_spinae",
+      "piriformis",
+      "gluteals"
+    ],
     "duration_secs": 30,
     "sides": 2,
     "difficulty": "beginner",
     "instructions": "Sit on the floor with legs extended. Bend the right knee and place the right foot outside the left thigh. Place the left elbow on the outside of the right knee. Place the right hand behind you. Inhale and lengthen the spine. Exhale and twist to the right. Hold for 30 seconds, then switch sides.",
-    "tips": "Lead the twist from the belly, then the chest, then the head. Do not force the rotation — let each exhale deepen it naturally."
+    "tips": "Lead the twist from the belly, then the chest, then the head. Do not force the rotation — let each exhale deepen it naturally.",
+    "images": [
+      "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Sit on the floor with legs extended. Bend the right knee and place the right foot outside the left thigh. Sit tall before initiating any twist. Place the right hand behind you for support.",
+      "execution": "Place the left elbow on the outside of the right knee. Inhale and lengthen the spine. Exhale and twist to the right. Hold for 30 seconds. Lead the twist from the belly, then chest, then head. Switch sides.",
+      "mistakes": "Forcing the rotation with the arm instead of initiating from the abdomen. Rounding the spine during the twist. The grounding sitting bone lifting off the floor. Holding the breath.",
+      "breathing": "Inhale to lengthen the spine taller. Exhale to deepen the twist. Each exhale should produce a small increment of additional rotation without force."
+    }
   },
   {
     "name_en": "Child's Pose Stretch",
     "name_ru": "Поза ребёнка (растяжка)",
     "body_region": "core_back",
-    "target_muscles": ["latissimus_dorsi", "erector_spinae", "gluteals", "hip_adductors"],
+    "target_muscles": [
+      "latissimus_dorsi",
+      "erector_spinae",
+      "gluteals",
+      "hip_adductors"
+    ],
     "duration_secs": 60,
     "sides": 0,
     "difficulty": "beginner",
     "instructions": "Kneel on the floor with big toes together and knees wide apart. Sit the hips back toward the heels. Walk the hands forward and lower the chest toward the floor. Rest the forehead on the mat. Extend the arms fully and press the palms into the floor. Breathe deeply into the lower back.",
-    "tips": "Place a pillow between the thighs and calves if the knees are uncomfortable. Walk the hands to one side for a lateral stretch."
+    "tips": "Place a pillow between the thighs and calves if the knees are uncomfortable. Walk the hands to one side for a lateral stretch.",
+    "images": [
+      "https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Kneel on the floor with big toes together and knees wide apart. If the knees are uncomfortable, place a pillow between thighs and calves. Prepare to fold forward.",
+      "execution": "Sit the hips back toward the heels. Walk the hands forward and lower the chest toward the floor. Rest the forehead on the mat. Extend arms fully and press palms into the floor. Breathe deeply into the lower back.",
+      "mistakes": "Knees too close together, compressing the belly. Forcing the buttocks to the heels when the body resists. Not fully extending the arms. Holding tension in the shoulders.",
+      "breathing": "Breathe deeply into the back body. Feel the lower back and kidneys expand with each inhale. Exhale to soften and sink deeper into the pose."
+    }
   },
   {
     "name_en": "Thread the Needle",
     "name_ru": "Вдеть нитку в иголку",
     "body_region": "core_back",
-    "target_muscles": ["rhomboids", "trapezius", "obliques", "posterior_deltoid"],
+    "target_muscles": [
+      "rhomboids",
+      "trapezius",
+      "obliques",
+      "posterior_deltoid"
+    ],
     "duration_secs": 30,
     "sides": 2,
     "difficulty": "beginner",
     "instructions": "Start on hands and knees. Slide the right arm under the left arm, threading it through with the palm facing up. Lower the right shoulder and temple to the floor. The left hand can stay in place or walk forward for a deeper stretch. Hold for 30 seconds, then switch sides.",
-    "tips": "Let the weight of the body deepen the twist gradually. Keep the hips stacked over the knees."
+    "tips": "Let the weight of the body deepen the twist gradually. Keep the hips stacked over the knees.",
+    "images": [
+      "https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Start on hands and knees with a stable base. Wrists under shoulders, knees under hips. The spine is in a neutral position.",
+      "execution": "Slide the right arm under the left arm, threading it through with palm facing up. Lower the right shoulder and temple to the floor. Hold for 30 seconds. The left hand can stay or walk forward for depth. Switch sides.",
+      "mistakes": "Forcing the twist by pressing too hard. The hips shifting off-center — they should stay stacked over the knees. Not letting the body weight deepen the stretch naturally. Holding the breath.",
+      "breathing": "Exhale as you thread the arm through and lower to the floor. Breathe steadily while holding. Each exhale releases the upper back and shoulder deeper into the twist."
+    }
   },
   {
     "name_en": "Sphinx Stretch",
     "name_ru": "Поза сфинкса",
     "body_region": "core_back",
-    "target_muscles": ["rectus_abdominis", "hip_flexors", "erector_spinae"],
+    "target_muscles": [
+      "rectus_abdominis",
+      "hip_flexors",
+      "erector_spinae"
+    ],
     "duration_secs": 30,
     "sides": 0,
     "difficulty": "beginner",
     "instructions": "Lie face down. Place the forearms on the floor with elbows directly under the shoulders. Press into the forearms and lift the chest. Keep the hips and legs on the floor. Draw the shoulder blades together and lengthen the neck. Hold and breathe deeply into the front body.",
-    "tips": "A gentler alternative to Cobra. Keep the glutes relaxed. If you feel lower back compression, move the elbows slightly forward."
+    "tips": "A gentler alternative to Cobra. Keep the glutes relaxed. If you feel lower back compression, move the elbows slightly forward.",
+    "images": [
+      "https://images.unsplash.com/photo-1575052814086-f385e2e2ad33?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Lie face down. Place forearms on the floor with elbows directly under the shoulders. Legs extend straight back with the tops of the feet on the floor.",
+      "execution": "Press into the forearms and lift the chest. Keep hips and legs on the floor. Draw the shoulder blades together. Lengthen the neck — gaze forward, not up. Hold and breathe deeply into the front body.",
+      "mistakes": "Elbows too far forward, reducing the extension. Clenching the glutes — they should be relaxed. Compressing the lower back — if this occurs, move elbows slightly forward. Shrugging the shoulders.",
+      "breathing": "Inhale to lift the chest slightly higher. Exhale to relax the lower body and maintain the position. Breathe into the abdomen and front of the chest."
+    }
   },
   {
     "name_en": "Supine Twist",
     "name_ru": "Скручивание лёжа на спине",
     "body_region": "core_back",
-    "target_muscles": ["obliques", "erector_spinae", "gluteals", "pectorals"],
+    "target_muscles": [
+      "obliques",
+      "erector_spinae",
+      "gluteals",
+      "pectorals"
+    ],
     "duration_secs": 30,
     "sides": 2,
     "difficulty": "beginner",
     "instructions": "Lie on your back with arms extended out to the sides at shoulder height. Draw the right knee toward the chest. Cross the right knee over the body to the left, guiding it with the left hand. Keep the right shoulder on the floor. Turn the head to the right. Let gravity pull the knee toward the floor. Hold for 30 seconds, then switch sides.",
-    "tips": "Place a pillow under the knee if it does not reach the floor. Relax completely and let the stretch happen passively."
+    "tips": "Place a pillow under the knee if it does not reach the floor. Relax completely and let the stretch happen passively.",
+    "images": [
+      "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Lie on your back with arms extended at shoulder height, forming a T-shape. Draw the right knee toward the chest. Keep both shoulders on the floor as your anchors.",
+      "execution": "Cross the right knee over the body to the left, guided by the left hand. Keep the right shoulder on the floor. Turn the head to the right. Let gravity pull the knee toward the floor. Hold 30 seconds. Switch sides.",
+      "mistakes": "The opposite shoulder lifting off the floor. Forcing the knee to the floor instead of letting gravity work. Tensing the body instead of relaxing passively. Not turning the head in the opposite direction.",
+      "breathing": "Breathe deeply and let each exhale release the body deeper into the twist. Inhale to create length. Exhale to soften. This is a passive stretch — effort should be minimal."
+    }
   },
   {
     "name_en": "Standing Side Bend",
     "name_ru": "Боковой наклон стоя",
     "body_region": "core_back",
-    "target_muscles": ["obliques", "quadratus_lumborum", "intercostals", "latissimus_dorsi"],
+    "target_muscles": [
+      "obliques",
+      "quadratus_lumborum",
+      "intercostals",
+      "latissimus_dorsi"
+    ],
     "duration_secs": 30,
     "sides": 2,
     "difficulty": "beginner",
     "instructions": "Stand with feet hip-width apart. Reach the right arm overhead and place the left hand on the left hip. Lean the torso to the left, reaching the right arm over. Keep both feet firmly planted and the hips centered. Feel the stretch along the right side. Hold for 30 seconds, then switch sides.",
-    "tips": "Avoid leaning forward or backward. The movement is strictly lateral."
+    "tips": "Avoid leaning forward or backward. The movement is strictly lateral.",
+    "images": [
+      "https://images.unsplash.com/photo-1588286840104-8957b019727f?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Stand with feet hip-width apart. Reach the right arm overhead. Place the left hand on the left hip. Ground firmly through both feet.",
+      "execution": "Lean the torso to the left, reaching the right arm over. Keep both feet planted and hips centered. Feel the stretch along the right side. Hold 30 seconds. Switch sides.",
+      "mistakes": "Leaning forward or backward instead of strictly lateral. The hips shifting to the side. Not reaching far enough with the overhead arm. Bending the arm.",
+      "breathing": "Inhale to reach taller. Exhale to lean deeper. Breathe into the stretched side to expand the ribcage and intercostal muscles."
+    }
   },
   {
     "name_en": "Standing Quad Stretch",
     "name_ru": "Растяжка квадрицепса стоя",
     "body_region": "lower_body",
-    "target_muscles": ["quadriceps", "hip_flexors"],
+    "target_muscles": [
+      "quadriceps",
+      "hip_flexors"
+    ],
     "duration_secs": 30,
     "sides": 2,
     "difficulty": "beginner",
     "instructions": "Stand on the left leg. Bend the right knee and grab the right ankle or foot with the right hand behind you. Pull the heel gently toward the buttock. Keep the knees together and the standing leg slightly bent. Stand tall with the pelvis slightly tucked under. Hold for 30 seconds, then switch legs.",
-    "tips": "Stand near a wall for balance. Keep the knees aligned — do not let the stretching knee drift outward."
+    "tips": "Stand near a wall for balance. Keep the knees aligned — do not let the stretching knee drift outward.",
+    "images": [
+      "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Stand near a wall or chair for balance support. Shift weight onto the left leg. Prepare to bend the right knee and reach back for the right foot.",
+      "execution": "Bend the right knee and grab the right ankle or foot behind you. Pull the heel gently toward the buttock. Keep knees together and standing leg slightly bent. Stand tall with pelvis tucked. Hold 30 seconds. Switch.",
+      "mistakes": "Knees drifting apart — they should stay together. Arching the lower back instead of tucking the pelvis. Leaning forward. Pulling the foot to the outside of the buttock instead of directly behind.",
+      "breathing": "Breathe steadily. Exhale to gently draw the heel closer. Inhale to maintain the tall upright posture. Keep the breathing calm for balance."
+    }
   },
   {
     "name_en": "Seated Hamstring Stretch",
     "name_ru": "Растяжка задней поверхности бедра сидя",
     "body_region": "lower_body",
-    "target_muscles": ["hamstrings", "calves", "erector_spinae"],
+    "target_muscles": [
+      "hamstrings",
+      "calves",
+      "erector_spinae"
+    ],
     "duration_secs": 30,
     "sides": 2,
     "difficulty": "beginner",
     "instructions": "Sit on the floor with the right leg extended straight and the left leg bent with the sole against the inner right thigh. Sit tall. Hinge forward from the hips and reach both hands toward the right foot. Keep the right knee straight and the foot flexed. Hold for 30 seconds, then switch legs.",
-    "tips": "Lead with the chest, not the forehead. A straight back produces a more effective hamstring stretch than rounding forward."
+    "tips": "Lead with the chest, not the forehead. A straight back produces a more effective hamstring stretch than rounding forward.",
+    "images": [
+      "https://images.unsplash.com/photo-1545389336-cf090694435e?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Sit on the floor with the right leg extended straight, left leg bent with sole against the inner right thigh. Sit tall on the sitting bones. The extended foot is flexed.",
+      "execution": "Hinge forward from the hips, reaching both hands toward the right foot. Keep the right knee straight and foot flexed. Lead with the chest, not the forehead. Hold 30 seconds. Switch legs.",
+      "mistakes": "Rounding the back to reach the foot instead of hinging from the hips. Bending the extended knee. Leading with the forehead, which rounds the upper back. Bouncing to reach further.",
+      "breathing": "Inhale to lengthen the spine. Exhale to fold deeper from the hips. Each breath cycle should produce a small increase in range without forcing."
+    }
   },
   {
     "name_en": "Standing Calf Stretch",
     "name_ru": "Растяжка икроножных мышц стоя",
     "body_region": "lower_body",
-    "target_muscles": ["gastrocnemius", "soleus"],
+    "target_muscles": [
+      "gastrocnemius",
+      "soleus"
+    ],
     "duration_secs": 30,
     "sides": 2,
     "difficulty": "beginner",
     "instructions": "Stand facing a wall with hands on the wall at shoulder height. Step the right foot back about 2–3 feet. Keep the right leg straight with the heel on the floor. Bend the left knee and lean into the wall until you feel a stretch in the right calf. Hold for 30 seconds. To target the soleus, slightly bend the right knee while maintaining the stretch. Switch legs.",
-    "tips": "Keep the back foot pointing straight ahead. Press the heel firmly into the floor."
+    "tips": "Keep the back foot pointing straight ahead. Press the heel firmly into the floor.",
+    "images": [
+      "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Stand facing a wall with hands at shoulder height. Step the right foot back 2-3 feet. Keep the back foot pointing straight ahead, heel on the floor.",
+      "execution": "Keep the right leg straight. Bend the left knee and lean into the wall until you feel a stretch in the right calf. Hold 30 seconds. To target the soleus, slightly bend the right knee. Switch legs.",
+      "mistakes": "The back foot turning outward instead of pointing straight ahead. The back heel lifting off the floor. Bending the back knee (unless targeting soleus). Leaning too aggressively and bouncing.",
+      "breathing": "Breathe steadily. Exhale to lean slightly deeper. Inhale to maintain the stable position. The calf stretch should be moderate — not painful."
+    }
   },
   {
     "name_en": "Hip Flexor Lunge Stretch",
     "name_ru": "Растяжка сгибателей бедра в выпаде",
     "body_region": "lower_body",
-    "target_muscles": ["iliopsoas", "rectus_femoris", "tensor_fasciae_latae"],
+    "target_muscles": [
+      "iliopsoas",
+      "rectus_femoris",
+      "tensor_fasciae_latae"
+    ],
     "duration_secs": 30,
     "sides": 2,
     "difficulty": "beginner",
     "instructions": "Kneel on the right knee with the left foot forward, both knees at 90 degrees. Place the hands on the left thigh. Gently push the hips forward while keeping the torso upright. Squeeze the right glute to deepen the stretch. Hold for 30 seconds, then switch sides.",
-    "tips": "Place a folded towel under the knee for cushioning. For a deeper stretch, raise the right arm overhead and lean slightly to the left."
+    "tips": "Place a folded towel under the knee for cushioning. For a deeper stretch, raise the right arm overhead and lean slightly to the left.",
+    "images": [
+      "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Kneel on the right knee with left foot forward, both knees at 90 degrees. Place a folded towel under the back knee for cushioning. Hands rest on the front thigh.",
+      "execution": "Gently push the hips forward while keeping the torso upright. Squeeze the right glute to deepen the stretch. Hold 30 seconds. For more depth, raise the right arm overhead and lean slightly left. Switch sides.",
+      "mistakes": "Leaning the torso forward instead of staying upright. Not squeezing the back-side glute. The front knee pushing past the toes. Arching the lower back excessively.",
+      "breathing": "Exhale as you push the hips forward. Inhale to maintain the upright torso. Breathe into the front of the hip being stretched — visualize the hip flexor lengthening."
+    }
   },
   {
     "name_en": "Pigeon Pose Stretch",
     "name_ru": "Растяжка в позе голубя",
     "body_region": "lower_body",
-    "target_muscles": ["piriformis", "gluteals", "hip_external_rotators"],
+    "target_muscles": [
+      "piriformis",
+      "gluteals",
+      "hip_external_rotators"
+    ],
     "duration_secs": 60,
     "sides": 2,
     "difficulty": "intermediate",
     "instructions": "From hands and knees, bring the right knee forward behind the right wrist. Extend the right shin across the mat at an angle that is comfortable for the knee. Extend the left leg straight back with the top of the foot on the floor. Square the hips. Walk the hands forward and lower the torso over the front leg. Rest on forearms or forehead. Hold for 60 seconds, then switch sides.",
-    "tips": "If the hip does not reach the floor, place a folded blanket under it. Never force the knee into a painful position."
+    "tips": "If the hip does not reach the floor, place a folded blanket under it. Never force the knee into a painful position.",
+    "images": [
+      "https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "From hands and knees, bring the right knee forward behind the right wrist. Extend the right shin across the mat at a comfortable angle. Extend the left leg straight back. Square the hips.",
+      "execution": "Walk the hands forward and lower the torso over the front leg. Rest on forearms or forehead. Hold 60 seconds. The stretch targets the outer hip and piriformis. Switch sides.",
+      "mistakes": "Forcing the front knee into a painful position. Hips not squared — one side significantly higher. Collapsing into the lower back. Not using a blanket under the hip when it does not reach the floor.",
+      "breathing": "Breathe deeply and slowly. Exhale to release deeper. Inhale to create space. This is a long hold — use the breath to manage the intensity and gradually open the hip."
+    }
   },
   {
     "name_en": "Figure-4 Stretch (Supine Piriformis)",
     "name_ru": "Растяжка в виде четвёрки (грушевидная мышца лёжа)",
     "body_region": "lower_body",
-    "target_muscles": ["piriformis", "gluteals", "hip_external_rotators"],
+    "target_muscles": [
+      "piriformis",
+      "gluteals",
+      "hip_external_rotators"
+    ],
     "duration_secs": 30,
     "sides": 2,
     "difficulty": "beginner",
     "instructions": "Lie on your back with both knees bent and feet flat on the floor. Cross the right ankle over the left thigh just above the knee, creating a figure-4 shape. Reach both hands behind the left thigh and pull the left knee toward the chest. Keep the right knee pressing gently away from the body. Hold for 30 seconds, then switch sides.",
-    "tips": "Keep the head and shoulders on the floor. If reaching behind the thigh is difficult, use a strap."
+    "tips": "Keep the head and shoulders on the floor. If reaching behind the thigh is difficult, use a strap.",
+    "images": [
+      "https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Lie on your back with knees bent, feet flat on the floor. Cross the right ankle over the left thigh just above the knee, creating a figure-4 shape.",
+      "execution": "Reach both hands behind the left thigh and pull the left knee toward the chest. Keep the right knee pressing gently away from the body. Hold 30 seconds. Switch sides.",
+      "mistakes": "Lifting the head and shoulders off the floor. Not pressing the crossed knee away from the body. Pulling too aggressively on the thigh. The figure-4 ankle not flexed (flexing protects the knee).",
+      "breathing": "Breathe deeply. Exhale to draw the knee closer. Inhale to maintain the position. Keep the neck and shoulders relaxed on the floor."
+    }
   },
   {
     "name_en": "IT Band Stretch (Standing Cross-Leg)",
     "name_ru": "Растяжка подвздошно-большеберцового тракта стоя",
     "body_region": "lower_body",
-    "target_muscles": ["iliotibial_band", "tensor_fasciae_latae", "gluteals"],
+    "target_muscles": [
+      "iliotibial_band",
+      "tensor_fasciae_latae",
+      "gluteals"
+    ],
     "duration_secs": 30,
     "sides": 2,
     "difficulty": "beginner",
     "instructions": "Stand tall. Cross the right leg behind the left leg. Reach the right arm overhead and lean the torso to the left. Push the right hip out to the right. You should feel a stretch along the outer right hip and thigh. Hold for 30 seconds, then switch sides.",
-    "tips": "Use a wall for balance. Keep both feet flat on the ground."
+    "tips": "Use a wall for balance. Keep both feet flat on the ground.",
+    "images": [
+      "https://images.unsplash.com/photo-1575052814086-f385e2e2ad33?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Stand tall. Cross the right leg behind the left leg. Prepare to reach the right arm overhead and lean to the left. Stand near a wall for balance if needed.",
+      "execution": "Reach the right arm overhead. Lean the torso to the left. Push the right hip out to the right. Feel the stretch along the outer right hip and thigh. Hold 30 seconds. Switch sides.",
+      "mistakes": "Not crossing the legs far enough. Leaning forward instead of laterally. Not pushing the hip out to the side. Losing balance — use a wall for support.",
+      "breathing": "Inhale to reach overhead. Exhale to lean and push the hip out. Breathe into the outer hip and IT band region."
+    }
   },
   {
     "name_en": "Butterfly Stretch",
     "name_ru": "Растяжка «бабочка»",
     "body_region": "lower_body",
-    "target_muscles": ["hip_adductors", "gracilis", "pectineus"],
+    "target_muscles": [
+      "hip_adductors",
+      "gracilis",
+      "pectineus"
+    ],
     "duration_secs": 30,
     "sides": 0,
     "difficulty": "beginner",
     "instructions": "Sit on the floor. Bring the soles of the feet together and let the knees fall open to the sides. Hold the feet with both hands. Sit tall and lengthen the spine. Gently press the knees toward the floor using the elbows. For a deeper stretch, hinge forward from the hips keeping the back straight.",
-    "tips": "Sit on a cushion to tilt the pelvis forward. Do not bounce the knees — use steady, gentle pressure."
+    "tips": "Sit on a cushion to tilt the pelvis forward. Do not bounce the knees — use steady, gentle pressure.",
+    "images": [
+      "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Sit on the floor with soles of the feet together, knees falling open. Sit on a cushion to tilt the pelvis forward if needed. Hold the feet with both hands.",
+      "execution": "Sit tall and lengthen the spine. Gently press the knees toward the floor using the elbows. Use steady, gentle pressure — not bouncing. For deeper stretch, hinge forward from the hips with a straight back.",
+      "mistakes": "Bouncing the knees instead of using steady pressure. Rounding the back. Forcing the knees to the floor. Sitting too far back on the tailbone instead of upright.",
+      "breathing": "Inhale to sit taller. Exhale to let the knees release downward. Each exhale should produce a small, natural deepening of the stretch."
+    }
   },
   {
     "name_en": "Frog Stretch",
     "name_ru": "Растяжка «лягушка»",
     "body_region": "lower_body",
-    "target_muscles": ["hip_adductors", "gracilis", "pectineus"],
+    "target_muscles": [
+      "hip_adductors",
+      "gracilis",
+      "pectineus"
+    ],
     "duration_secs": 60,
     "sides": 0,
     "difficulty": "intermediate",
     "instructions": "Start on hands and knees. Widen the knees as far apart as comfortable, keeping the ankles in line with the knees (shins parallel). Flex the feet so the inner edges rest on the floor. Lower the forearms to the floor. Slowly shift the hips back toward the heels until you feel a deep stretch in the inner thighs. Hold and breathe deeply.",
-    "tips": "Place padding under the knees. Move into this stretch gradually over several sessions — do not force the range."
+    "tips": "Place padding under the knees. Move into this stretch gradually over several sessions — do not force the range.",
+    "images": [
+      "https://images.unsplash.com/photo-1588286840104-8957b019727f?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Start on hands and knees. Place padding under the knees. Begin with knees only moderately wide — this stretch can be intense and should be entered gradually over multiple sessions.",
+      "execution": "Widen the knees, keeping ankles in line with knees (shins parallel). Flex the feet with inner edges on the floor. Lower to forearms. Slowly shift hips back toward the heels. Hold and breathe deeply.",
+      "mistakes": "Going too deep too fast — this is an intense adductor stretch. Ankles not aligned with knees. Letting the lower back arch excessively. Not using knee padding on hard floors.",
+      "breathing": "Breathe deeply and slowly. Exhale to shift the hips slightly further back. Inhale to maintain the position. Use the breath to manage the intensity of this deep stretch."
+    }
   },
   {
     "name_en": "Ankle Circles",
     "name_ru": "Круговые движения стопой",
     "body_region": "lower_body",
-    "target_muscles": ["tibialis_anterior", "peroneals", "gastrocnemius", "ankle_ligaments"],
+    "target_muscles": [
+      "tibialis_anterior",
+      "peroneals",
+      "gastrocnemius",
+      "ankle_ligaments"
+    ],
     "duration_secs": 30,
     "sides": 2,
     "difficulty": "beginner",
     "instructions": "Sit or stand with one foot elevated. Slowly rotate the foot in a large circle, making 10 rotations clockwise and 10 counterclockwise. Focus on making the circles as large as possible, using the full range of motion. Switch feet.",
-    "tips": "Point the toes at the bottom of the circle and flex at the top. Excellent for ankle mobility and injury prevention."
+    "tips": "Point the toes at the bottom of the circle and flex at the top. Excellent for ankle mobility and injury prevention.",
+    "images": [
+      "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Sit or stand with one foot elevated off the ground. If standing, hold a wall for balance. Point the toe initially to begin the circle from the bottom.",
+      "execution": "Slowly rotate the foot in a large circle — 10 clockwise and 10 counterclockwise. Make circles as large as possible, using the full range of motion. Point toes at the bottom, flex at the top. Switch feet.",
+      "mistakes": "Making circles too small. Rotating from the knee instead of the ankle. Moving too fast without control. Not making full circles — skipping parts of the range.",
+      "breathing": "Breathe naturally and steadily. There is no specific breathing pattern — just maintain calm, even breathing throughout the circles."
+    }
   },
   {
     "name_en": "Standing Hip Circles",
     "name_ru": "Круговые движения бедром стоя",
     "body_region": "lower_body",
-    "target_muscles": ["hip_flexors", "hip_extensors", "hip_abductors", "hip_adductors"],
+    "target_muscles": [
+      "hip_flexors",
+      "hip_extensors",
+      "hip_abductors",
+      "hip_adductors"
+    ],
     "duration_secs": 30,
     "sides": 2,
     "difficulty": "beginner",
     "instructions": "Stand on the left leg with a slight bend in the knee. Lift the right knee to hip height. Make large circles with the right knee, bringing it forward, out to the side, behind, and back to the front. Perform 10 circles forward and 10 circles backward. Switch legs.",
-    "tips": "Hold a wall for balance. Keep the circles controlled — do not swing with momentum."
+    "tips": "Hold a wall for balance. Keep the circles controlled — do not swing with momentum.",
+    "images": [
+      "https://images.unsplash.com/photo-1545389336-cf090694435e?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Stand on the left leg with a slight knee bend. Hold a wall for balance. Lift the right knee to hip height. Engage the standing leg's glute for stability.",
+      "execution": "Make large circles with the right knee — forward, out to the side, behind, and back to front. Perform 10 circles forward and 10 backward. Keep circles controlled — no swinging with momentum. Switch legs.",
+      "mistakes": "Swinging the leg with momentum instead of controlling the movement. The standing leg collapsing or locking. Leaning the torso excessively. Not completing full circles in both directions.",
+      "breathing": "Breathe naturally and rhythmically. Exhale on the effort portion of the circle. Inhale on the return. Keep breathing calm to aid balance."
+    }
   },
   {
     "name_en": "Adductor Stretch (Wide-Legged Seated)",
     "name_ru": "Растяжка приводящих мышц (широкий шпагат сидя)",
     "body_region": "lower_body",
-    "target_muscles": ["hip_adductors", "gracilis", "hamstrings"],
+    "target_muscles": [
+      "hip_adductors",
+      "gracilis",
+      "hamstrings"
+    ],
     "duration_secs": 45,
     "sides": 0,
     "difficulty": "intermediate",
     "instructions": "Sit on the floor with legs extended wide in a straddle. Flex the feet. Sit tall and lengthen the spine. Keeping the back straight, hinge forward from the hips and walk the hands along the floor in front of you. Go only as far as you can with a straight back. Hold at your maximum comfortable range and breathe.",
-    "tips": "Sit on a cushion to tilt the pelvis. Do not round the back — a straight-back position targets the adductors more effectively."
+    "tips": "Sit on a cushion to tilt the pelvis. Do not round the back — a straight-back position targets the adductors more effectively.",
+    "images": [
+      "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Sit on the floor with legs wide in a straddle. Flex the feet. Sit tall on the sitting bones. Sit on a cushion if the pelvis tilts backward. Engage the core to maintain spinal height.",
+      "execution": "Keeping the back straight, hinge forward from the hips. Walk hands along the floor in front. Go only as far as possible with a straight back. Hold at maximum comfortable range. Breathe deeply.",
+      "mistakes": "Rounding the back to get lower — this shifts the stretch away from the adductors. Knees bending. Not flexing the feet. Forcing the range beyond what the body allows today.",
+      "breathing": "Inhale to lengthen the spine. Exhale to hinge forward slightly more. Each breath cycle should produce a small increment of depth without pain."
+    }
   },
   {
     "name_en": "Glute Stretch (Knee to Chest)",
     "name_ru": "Растяжка ягодичных мышц (колено к груди)",
     "body_region": "lower_body",
-    "target_muscles": ["gluteus_maximus", "lower_erector_spinae"],
+    "target_muscles": [
+      "gluteus_maximus",
+      "lower_erector_spinae"
+    ],
     "duration_secs": 30,
     "sides": 2,
     "difficulty": "beginner",
     "instructions": "Lie on your back with both legs extended. Draw the right knee toward the chest and clasp both hands around the shin or behind the thigh. Gently pull the knee closer to the chest until you feel a stretch in the right buttock and lower back. Keep the left leg straight on the floor. Hold for 30 seconds, then switch sides.",
-    "tips": "Relax the shoulders and keep them on the floor. Breathe deeply to allow the stretch to deepen."
+    "tips": "Relax the shoulders and keep them on the floor. Breathe deeply to allow the stretch to deepen.",
+    "images": [
+      "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Lie on your back with both legs extended. Prepare to draw one knee toward the chest. Keep the head and shoulders relaxed on the floor.",
+      "execution": "Draw the right knee toward the chest. Clasp both hands around the shin or behind the thigh. Gently pull closer until you feel a stretch in the buttock and lower back. Keep the left leg straight on the floor. Hold 30 seconds. Switch.",
+      "mistakes": "Lifting the head and shoulders off the floor. The extended leg bending. Pulling too aggressively on the knee. Not relaxing the shoulders and jaw.",
+      "breathing": "Breathe deeply. Exhale to draw the knee slightly closer. Inhale to create space. Each exhale deepens the glute stretch naturally."
+    }
   },
   {
     "name_en": "Standing Forward Fold",
     "name_ru": "Наклон вперёд стоя",
     "body_region": "full_body",
-    "target_muscles": ["hamstrings", "calves", "erector_spinae", "gluteals"],
+    "target_muscles": [
+      "hamstrings",
+      "calves",
+      "erector_spinae",
+      "gluteals"
+    ],
     "duration_secs": 30,
     "sides": 0,
     "difficulty": "beginner",
     "instructions": "Stand with feet hip-width apart. Soften the knees slightly. Hinge at the hips and fold the torso forward. Let the head hang heavy. Reach the hands toward the floor, shins, or ankles. Let the weight of the upper body create the stretch. Shake the head gently 'yes' and 'no' to release neck tension.",
-    "tips": "Bend the knees as much as needed to release the lower back. Straighten gradually as flexibility improves."
+    "tips": "Bend the knees as much as needed to release the lower back. Straighten gradually as flexibility improves.",
+    "images": [
+      "https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Stand with feet hip-width apart. Soften the knees slightly. Prepare to fold from the hips, not the waist. Let the arms hang.",
+      "execution": "Hinge at the hips and fold the torso forward. Let the head hang heavy. Reach toward the floor, shins, or ankles. Let the weight of the upper body create the stretch. Shake head gently yes and no to release neck tension.",
+      "mistakes": "Locking the knees. Rounding from the upper back instead of folding from the hips. Straining to touch the floor. Holding tension in the neck and jaw.",
+      "breathing": "Exhale to fold deeper. Inhale to create length. Let the breath be natural and relaxed. Each exhale releases the hamstrings and lower back slightly more."
+    }
   },
   {
     "name_en": "Ragdoll Stretch",
     "name_ru": "Тряпичная кукла",
     "body_region": "full_body",
-    "target_muscles": ["hamstrings", "erector_spinae", "trapezius", "calves"],
+    "target_muscles": [
+      "hamstrings",
+      "erector_spinae",
+      "trapezius",
+      "calves"
+    ],
     "duration_secs": 30,
     "sides": 0,
     "difficulty": "beginner",
     "instructions": "From a standing forward fold, grab opposite elbows with the hands. Let the upper body hang heavily. Sway gently side to side. Allow the spine to decompress naturally. Keep the knees slightly bent. The weight of the arms creates a gentle traction for the spine.",
-    "tips": "Excellent after long periods of sitting. Bend the knees more for lower back sensitivity."
+    "tips": "Excellent after long periods of sitting. Bend the knees more for lower back sensitivity.",
+    "images": [
+      "https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Begin in a standing forward fold. Keep the knees slightly bent. Let the upper body hang completely — no muscular effort to hold the torso up.",
+      "execution": "Grab opposite elbows with the hands. Let the upper body hang heavily. Sway gently side to side. Allow the spine to decompress naturally. The weight of the arms creates gentle traction for the spine.",
+      "mistakes": "Straightening the knees and creating tension. Holding the torso up with the back muscles instead of surrendering to gravity. Swaying too aggressively. Tensing the neck.",
+      "breathing": "Breathe naturally and deeply. Exhale to let the body hang heavier. Inhale to create space between the vertebrae. This is a surrender — the breath should reflect ease."
+    }
   },
   {
     "name_en": "World's Greatest Stretch",
     "name_ru": "Лучшая растяжка в мире",
     "body_region": "full_body",
-    "target_muscles": ["hip_flexors", "hamstrings", "thoracic_spine", "adductors", "quadriceps", "obliques"],
+    "target_muscles": [
+      "hip_flexors",
+      "hamstrings",
+      "thoracic_spine",
+      "adductors",
+      "quadriceps",
+      "obliques"
+    ],
     "duration_secs": 30,
     "sides": 2,
     "difficulty": "intermediate",
     "instructions": "Step the right foot forward into a deep lunge. Place the left hand on the floor inside the right foot. Rotate the torso to the right and extend the right arm toward the ceiling. Hold the twist for 5 seconds. Bring the right hand down, then straighten the front leg for a hamstring stretch. Return to the lunge. Repeat 3 times, then switch sides.",
-    "tips": "This combines a hip flexor stretch, adductor opening, thoracic rotation, and hamstring stretch in one movement. Keep the back knee off the floor for more challenge."
+    "tips": "This combines a hip flexor stretch, adductor opening, thoracic rotation, and hamstring stretch in one movement. Keep the back knee off the floor for more challenge.",
+    "images": [
+      "https://images.unsplash.com/photo-1575052814086-f385e2e2ad33?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Step the right foot forward into a deep lunge. Place the left hand on the floor inside the right foot. The back leg can have the knee down or up for more challenge.",
+      "execution": "Rotate the torso to the right and extend the right arm toward the ceiling. Hold the twist 5 seconds. Bring hand down, straighten the front leg for a hamstring stretch. Return to lunge. Repeat 3 times. Switch sides.",
+      "mistakes": "Not getting deep enough into the lunge. Rushing the rotation — hold the twist. The back knee collapsing inward. Not straightening the front leg fully for the hamstring component.",
+      "breathing": "Exhale to deepen the twist. Inhale to lengthen. Exhale to straighten the front leg. This multi-component stretch benefits from deliberate breathing at each phase."
+    }
   },
   {
     "name_en": "Scorpion Stretch",
     "name_ru": "Растяжка «скорпион»",
     "body_region": "full_body",
-    "target_muscles": ["hip_flexors", "obliques", "pectorals", "quadriceps"],
+    "target_muscles": [
+      "hip_flexors",
+      "obliques",
+      "pectorals",
+      "quadriceps"
+    ],
     "duration_secs": 30,
     "sides": 2,
     "difficulty": "intermediate",
     "instructions": "Lie face down with arms extended out to the sides at shoulder height. Bend the right knee and lift the right foot toward the ceiling. Rotate the right hip and swing the right foot across the body toward the left hand. The right shoulder may lift slightly but keep the left shoulder and arm pressed into the floor. Hold for 15 seconds, then switch sides.",
-    "tips": "Go slowly and do not force the rotation. The stretch should be felt in the chest, hip flexor, and obliques."
+    "tips": "Go slowly and do not force the rotation. The stretch should be felt in the chest, hip flexor, and obliques.",
+    "images": [
+      "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Lie face down with arms extended at shoulder height, forming a T-shape. Both shoulders press into the floor. Prepare to rotate through the hip by bending one knee.",
+      "execution": "Bend the right knee and lift the right foot toward the ceiling. Rotate the right hip and swing the right foot across the body toward the left hand. The right shoulder may lift slightly — keep the left shoulder grounded. Hold 15 seconds. Switch.",
+      "mistakes": "Forcing the rotation too aggressively. Both shoulders lifting off the floor. Not bending the knee enough to create the rotation. Moving too quickly into the full range.",
+      "breathing": "Exhale as you rotate across the body. Breathe steadily while holding. Inhale to return to center. Go slowly — this stretch involves multiple regions simultaneously."
+    }
   },
   {
     "name_en": "Windmill Stretch",
     "name_ru": "Растяжка «мельница»",
     "body_region": "full_body",
-    "target_muscles": ["hamstrings", "obliques", "adductors", "thoracic_spine"],
+    "target_muscles": [
+      "hamstrings",
+      "obliques",
+      "adductors",
+      "thoracic_spine"
+    ],
     "duration_secs": 30,
     "sides": 2,
     "difficulty": "intermediate",
     "instructions": "Stand with feet wider than shoulder-width. Extend the arms out to the sides. Hinge at the hips and rotate the torso, reaching the right hand toward the left foot while the left arm extends toward the ceiling. Keep both legs as straight as possible. Hold for 3 seconds, then rotate to the other side. Alternate for 10 repetitions total.",
-    "tips": "Maintain a flat back during the hinge. Look up at the raised hand for an additional neck stretch."
+    "tips": "Maintain a flat back during the hinge. Look up at the raised hand for an additional neck stretch.",
+    "images": [
+      "https://images.unsplash.com/photo-1588286840104-8957b019727f?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Stand with feet wider than shoulder-width. Extend arms out to the sides at shoulder height. Engage the core. Prepare to hinge and rotate.",
+      "execution": "Hinge at the hips and rotate the torso, reaching the right hand toward the left foot while the left arm extends toward the ceiling. Keep legs as straight as possible. Hold 3 seconds. Rotate to the other side. Alternate for 10 total.",
+      "mistakes": "Bending the knees significantly. Rounding the back during the hinge. Not looking up at the raised hand. Rotating from the shoulders instead of the thoracic spine.",
+      "breathing": "Exhale as you rotate and reach. Inhale as you return to center. The breath supports the thoracic rotation and hamstring stretch."
+    }
   },
   {
     "name_en": "Neck Lateral Flexion Stretch",
     "name_ru": "Боковая растяжка шеи",
     "body_region": "upper_body",
-    "target_muscles": ["upper_trapezius", "scalenes", "sternocleidomastoid"],
+    "target_muscles": [
+      "upper_trapezius",
+      "scalenes",
+      "sternocleidomastoid"
+    ],
     "duration_secs": 30,
     "sides": 2,
     "difficulty": "beginner",
     "instructions": "Sit or stand tall. Drop the right ear toward the right shoulder. Place the right hand gently on the left side of the head and apply light pressure to deepen the stretch. Extend the left arm downward and slightly away from the body, pressing the left fingertips toward the floor. Hold for 30 seconds, then switch sides.",
-    "tips": "Never pull the head forcefully. The weight of the hand alone provides sufficient pressure. Keep the opposite shoulder relaxed and down."
+    "tips": "Never pull the head forcefully. The weight of the hand alone provides sufficient pressure. Keep the opposite shoulder relaxed and down.",
+    "images": [
+      "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Sit or stand tall. Prepare to drop the right ear toward the right shoulder. The right hand will rest gently on the left side of the head. The left arm extends downward and slightly away.",
+      "execution": "Drop the right ear toward the right shoulder. Place the right hand gently on the left side of the head — the weight of the hand alone provides pressure. Extend the left arm down, pressing fingertips toward the floor. Hold 30 seconds. Switch.",
+      "mistakes": "Pulling the head forcefully with the hand. The opposite shoulder hiking up instead of staying down. Rotating the head instead of keeping it in pure lateral flexion. Tensing the jaw.",
+      "breathing": "Breathe slowly. Exhale to let the head drop slightly further. Inhale to maintain length in the neck. Never force — the weight of the hand is sufficient."
+    }
   }
 ]

@@ -37,6 +37,16 @@ PILATES_MOVES: list[dict] = _load_json("pilates_moves.json")
 STRETCHING_ROUTINES: list[dict] = _load_json("stretching_routines.json")
 BODYWEIGHT_EXERCISES: list[dict] = _load_json("bodyweight_exercises.json")
 
+
+def _add_media(entry: dict, source: dict) -> dict:
+    """Attach images and form_tips from source data to an exercise dict."""
+    if source.get("images"):
+        entry["images"] = source["images"]
+    if source.get("form_tips"):
+        entry["form_tips"] = source["form_tips"]
+    return entry
+
+
 # ---------------------------------------------------------------------------
 # Phase 9: Warm-up / Cool-down classification
 # ---------------------------------------------------------------------------
@@ -127,7 +137,7 @@ def _get_warm_up(primary_body_parts: list[str], count: int = 4) -> list[dict]:
     result = []
     for s in picks:
         duration_mins = max(1, round(s.get("duration_secs", 30) / 60))
-        result.append({
+        result.append(_add_media({
             "name_en": s["name_en"],
             "name_ru": s.get("name_ru", s["name_en"]),
             "type": "warm_up",
@@ -136,7 +146,7 @@ def _get_warm_up(primary_body_parts: list[str], count: int = 4) -> list[dict]:
             "instructions": s.get("instructions", ""),
             "body_region": s.get("body_region", ""),
             "tips": s.get("tips", ""),
-        })
+        }, s))
     return result
 
 
@@ -162,7 +172,7 @@ def _get_cool_down(primary_body_parts: list[str], count: int = 4) -> list[dict]:
     result = []
     for s in picks:
         duration_mins = max(1, round(s.get("duration_secs", 30) / 60))
-        result.append({
+        result.append(_add_media({
             "name_en": s["name_en"],
             "name_ru": s.get("name_ru", s["name_en"]),
             "type": "cool_down",
@@ -171,7 +181,7 @@ def _get_cool_down(primary_body_parts: list[str], count: int = 4) -> list[dict]:
             "instructions": s.get("instructions", ""),
             "body_region": s.get("body_region", ""),
             "tips": s.get("tips", ""),
-        })
+        }, s))
     return result
 
 
@@ -515,14 +525,14 @@ def _generate_gentle_plan(
         if beginner_tai_chi:
             selected_moves = random.sample(beginner_tai_chi, min(4, len(beginner_tai_chi)))
             for move in selected_moves:
-                day_exercises.append({
+                day_exercises.append(_add_media({
                     "name_en": move["name_en"],
                     "name_ru": move["name_ru"],
                     "type": "tai_chi",
                     "duration_mins": move["duration_mins"],
                     "instructions": move["instructions"],
                     "difficulty": move["difficulty"],
-                })
+                }, move))
 
         # 3. Full-body cool-down stretch
         day_exercises.append({
@@ -624,7 +634,7 @@ def _generate_goal_plan(
             if yoga_pool:
                 pick = random.choice(yoga_pool)
                 duration_mins = max(1, round(pick.get("duration_secs", 30) / 60))
-                day_exercises.append({
+                day_exercises.append(_add_media({
                     "name_en": pick["name_en"],
                     "name_ru": pick.get("name_ru", pick["name_en"]),
                     "type": "yoga",
@@ -632,7 +642,7 @@ def _generate_goal_plan(
                     "instructions": pick.get("instructions", ""),
                     "difficulty": "beginner",
                     "note": "Added for stress relief",
-                })
+                }, pick))
 
         # Sleep-aware: if < 6 hours, reduce sets and add recovery
         if sleep_hours is not None and sleep_hours < 6:
@@ -647,7 +657,7 @@ def _generate_goal_plan(
             if recovery_pool:
                 pick = random.choice(recovery_pool)
                 duration_mins = max(1, round(pick.get("duration_secs", 30) / 60))
-                day_exercises.append({
+                day_exercises.append(_add_media({
                     "name_en": pick["name_en"],
                     "name_ru": pick.get("name_ru", pick["name_en"]),
                     "type": "flexibility",
@@ -655,7 +665,7 @@ def _generate_goal_plan(
                     "instructions": pick.get("instructions", ""),
                     "difficulty": "beginner",
                     "note": "Added for recovery (low sleep)",
-                })
+                }, pick))
 
         # Job-type adjustment
         if job_type == "physical":
@@ -678,7 +688,7 @@ def _generate_goal_plan(
                     ]
                 if upper_pool:
                     pick = random.choice(upper_pool)
-                    day_exercises.append({
+                    day_exercises.append(_add_media({
                         "name_en": pick["name_en"],
                         "name_ru": pick.get("name_ru", pick["name_en"]),
                         "type": "strength",
@@ -688,7 +698,7 @@ def _generate_goal_plan(
                         "reps": pick.get("reps", 12),
                         "instructions": pick.get("instructions", ""),
                         "note": "Added to compensate for physical job (lower-body reduced)",
-                    })
+                    }, pick))
         elif job_type == "sedentary":
             # Add mobility/flexibility exercise for desk workers
             mobility_pool = [
@@ -701,7 +711,7 @@ def _generate_goal_plan(
             if mobility_pool:
                 pick = random.choice(mobility_pool)
                 duration_mins = max(1, round(pick.get("duration_secs", 30) / 60))
-                day_exercises.append({
+                day_exercises.append(_add_media({
                     "name_en": pick["name_en"],
                     "name_ru": pick.get("name_ru", pick["name_en"]),
                     "type": "flexibility",
@@ -710,7 +720,7 @@ def _generate_goal_plan(
                     "difficulty": "beginner",
                     "body_region": pick.get("body_region", ""),
                     "note": "Added for mobility (sedentary job)",
-                })
+                }, pick))
 
         # --- Phase 9: Warm-up / Cool-down ---
         body_parts = _extract_day_body_parts(day_exercises)
@@ -821,14 +831,14 @@ def _weight_loss_day(
         picks = random.sample(pool, min(2, len(pool)))
         for stretch in picks:
             duration_mins = max(1, round(stretch.get("duration_secs", 30) / 60))
-            day_exercises.append({
+            day_exercises.append(_add_media({
                 "name_en": stretch["name_en"],
                 "name_ru": stretch["name_ru"],
                 "type": "flexibility",
                 "duration_mins": duration_mins,
                 "instructions": stretch.get("instructions", ""),
                 "body_region": stretch.get("body_region", ""),
-            })
+            }, stretch))
     else:
         day_exercises.extend(_bodyweight_fallback("flexibility", 2))
 
@@ -926,7 +936,7 @@ def _muscle_day(
         if pilates_core:
             picks = random.sample(pilates_core, min(2, len(pilates_core)))
             for move in picks:
-                day_exercises.append({
+                day_exercises.append(_add_media({
                     "name_en": move["name_en"],
                     "name_ru": move["name_ru"],
                     "type": "pilates",
@@ -935,7 +945,7 @@ def _muscle_day(
                     "instructions": move.get("instructions", ""),
                     "difficulty": move.get("difficulty", "beginner"),
                     "breathing": move.get("breathing", ""),
-                })
+                }, move))
 
     return day_exercises
 
@@ -964,14 +974,14 @@ def _flexibility_day(
         count = min(6, len(pool))
         selected = random.sample(pool, count) if pool else []
         for move in selected:
-            day_exercises.append({
+            day_exercises.append(_add_media({
                 "name_en": move["name_en"],
                 "name_ru": move["name_ru"],
                 "type": "tai_chi",
                 "duration_mins": move["duration_mins"],
                 "instructions": move["instructions"],
                 "difficulty": move["difficulty"],
-            })
+            }, move))
 
     elif pattern == 2:
         # Yoga day — pull from loaded yoga_poses.json
@@ -982,7 +992,7 @@ def _flexibility_day(
         selected = random.sample(pool, count) if pool else []
         for pose in selected:
             duration_mins = max(1, round(pose.get("duration_secs", 30) / 60))
-            day_exercises.append({
+            day_exercises.append(_add_media({
                 "name_en": pose["name_en"],
                 "name_ru": pose["name_ru"],
                 "type": "yoga",
@@ -990,7 +1000,7 @@ def _flexibility_day(
                 "instructions": pose.get("instructions", ""),
                 "difficulty": pose.get("difficulty", "beginner"),
                 "benefits": pose.get("benefits", ""),
-            })
+            }, pose))
         # Close with breathing exercise
         day_exercises.append({
             "name_en": "Diaphragmatic Deep Breathing",
@@ -1010,7 +1020,7 @@ def _flexibility_day(
         selected = random.sample(pool, count) if pool else []
         for stretch in selected:
             duration_mins = max(1, round(stretch.get("duration_secs", 30) / 60))
-            day_exercises.append({
+            day_exercises.append(_add_media({
                 "name_en": stretch["name_en"],
                 "name_ru": stretch["name_ru"],
                 "type": "flexibility",
@@ -1018,7 +1028,7 @@ def _flexibility_day(
                 "instructions": stretch.get("instructions", ""),
                 "difficulty": stretch.get("difficulty", "beginner"),
                 "body_region": stretch.get("body_region", ""),
-            })
+            }, stretch))
         # Fallback if stretching_routines.json was empty
         if not day_exercises:
             day_exercises.extend(_bodyweight_fallback("flexibility", 4))
@@ -1057,14 +1067,14 @@ def _stress_relief_day(
         if beginner_moves:
             selected = random.sample(beginner_moves, min(5, len(beginner_moves)))
             for move in selected:
-                day_exercises.append({
+                day_exercises.append(_add_media({
                     "name_en": move["name_en"],
                     "name_ru": move["name_ru"],
                     "type": "tai_chi",
                     "duration_mins": move["duration_mins"],
                     "instructions": move["instructions"],
                     "difficulty": move["difficulty"],
-                })
+                }, move))
 
     elif pattern == 2:
         # Restorative / beginner yoga (4 poses)
@@ -1082,7 +1092,7 @@ def _stress_relief_day(
         selected = random.sample(pool, count) if pool else []
         for pose in selected:
             duration_mins = max(1, round(pose.get("duration_secs", 30) / 60))
-            day_exercises.append({
+            day_exercises.append(_add_media({
                 "name_en": pose["name_en"],
                 "name_ru": pose["name_ru"],
                 "type": "yoga",
@@ -1090,7 +1100,7 @@ def _stress_relief_day(
                 "instructions": pose.get("instructions", ""),
                 "difficulty": pose.get("difficulty", "beginner"),
                 "benefits": pose.get("benefits", ""),
-            })
+            }, pose))
 
     else:
         # Gentle stretching (4 routines)
@@ -1101,7 +1111,7 @@ def _stress_relief_day(
         selected = random.sample(pool, count) if pool else []
         for stretch in selected:
             duration_mins = max(1, round(stretch.get("duration_secs", 30) / 60))
-            day_exercises.append({
+            day_exercises.append(_add_media({
                 "name_en": stretch["name_en"],
                 "name_ru": stretch["name_ru"],
                 "type": "flexibility",
@@ -1109,7 +1119,7 @@ def _stress_relief_day(
                 "instructions": stretch.get("instructions", ""),
                 "difficulty": stretch.get("difficulty", "beginner"),
                 "body_region": stretch.get("body_region", ""),
-            })
+            }, stretch))
         if not day_exercises:
             day_exercises.extend(_bodyweight_fallback("flexibility", 4))
 
@@ -1207,13 +1217,13 @@ def _general_health_day(
         pool = [m for m in TAI_CHI_MOVES if m["difficulty"] in allowed][:12]
         selected = random.sample(pool, min(3, len(pool))) if pool else []
         for move in selected:
-            day_exercises.append({
+            day_exercises.append(_add_media({
                 "name_en": move["name_en"],
                 "name_ru": move["name_ru"],
                 "type": "tai_chi",
                 "duration_mins": move["duration_mins"],
                 "instructions": move["instructions"],
-            })
+            }, move))
     elif pattern == 2 and PILATES_MOVES:
         # Pilates core cool-down (beginner-friendly)
         core_pilates = [
@@ -1226,7 +1236,7 @@ def _general_health_day(
             core_pilates = PILATES_MOVES
         selected = random.sample(core_pilates, min(3, len(core_pilates)))
         for move in selected:
-            day_exercises.append({
+            day_exercises.append(_add_media({
                 "name_en": move["name_en"],
                 "name_ru": move["name_ru"],
                 "type": "pilates",
@@ -1235,7 +1245,7 @@ def _general_health_day(
                 "instructions": move.get("instructions", ""),
                 "difficulty": move.get("difficulty", "beginner"),
                 "breathing": move.get("breathing", ""),
-            })
+            }, move))
     else:
         # Stretching routines cool-down
         pool = [s for s in STRETCHING_ROUTINES if s.get("difficulty") == "beginner"]
@@ -1245,13 +1255,13 @@ def _general_health_day(
             selected = random.sample(pool, min(2, len(pool)))
             for stretch in selected:
                 duration_mins = max(1, round(stretch.get("duration_secs", 30) / 60))
-                day_exercises.append({
+                day_exercises.append(_add_media({
                     "name_en": stretch["name_en"],
                     "name_ru": stretch["name_ru"],
                     "type": "flexibility",
                     "duration_mins": duration_mins,
                     "instructions": stretch.get("instructions", ""),
-                })
+                }, stretch))
         else:
             day_exercises.extend(_bodyweight_fallback("flexibility", 2))
 

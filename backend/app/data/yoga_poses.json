@@ -8,7 +8,16 @@
     "difficulty": "beginner",
     "benefits": "Improves posture, strengthens thighs and ankles, firms abdomen",
     "instructions": "Stand with feet together or hip-width apart. Distribute weight evenly across both feet. Engage thigh muscles to lift kneecaps. Lengthen tailbone toward floor and lift the crown of your head toward the ceiling. Roll shoulders back and down, arms alongside body with palms facing forward. Gaze straight ahead softly.",
-    "contraindications": "Headache, insomnia, low blood pressure"
+    "contraindications": "Headache, insomnia, low blood pressure",
+    "images": [
+      "https://images.unsplash.com/photo-1575052814086-f385e2e2ad33?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Stand with feet together or hip-width apart. Spread the toes and press all four corners of each foot into the floor. Let arms hang naturally at the sides.",
+      "execution": "Engage the thigh muscles to lift kneecaps. Lengthen the tailbone toward the floor and the crown of the head toward the ceiling. Roll shoulders back and down. Palms face forward with fingers gently active.",
+      "mistakes": "Locking the knees. Hyperextending the lower back. Letting the weight shift too far forward onto the toes. Shrugging the shoulders up toward the ears.",
+      "breathing": "Breathe steadily through the nose. Inhale to lengthen the spine upward. Exhale to ground the feet more firmly. Maintain an even, calm rhythm."
+    }
   },
   {
     "name_en": "Warrior I (Virabhadrasana I)",
@@ -19,7 +28,16 @@
     "difficulty": "beginner",
     "benefits": "Strengthens legs and arms, stretches hip flexors, opens chest and lungs",
     "instructions": "From standing, step the right foot back about 3.5–4 feet. Turn the right foot out 45 degrees. Bend the left knee to 90 degrees, keeping it directly over the ankle. Square hips forward. Raise both arms overhead with palms facing each other. Lift the chest and gaze upward. Keep the back leg strong and pressed into the floor. Hold, then switch sides.",
-    "contraindications": "Heart problems, high blood pressure (keep arms at hip level), knee injuries"
+    "contraindications": "Heart problems, high blood pressure (keep arms at hip level), knee injuries",
+    "images": [
+      "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "From standing, step the right foot back 3.5-4 feet. Turn the back foot out 45 degrees. Bend the front knee to 90 degrees directly over the ankle. Square the hips forward.",
+      "execution": "Raise both arms overhead with palms facing each other. Lift the chest and gaze upward. Keep the back leg strong and pressed into the floor. Draw the front ribs in to avoid overarching the lower back.",
+      "mistakes": "Letting the front knee collapse inward past the ankle. Not squaring the hips forward. Overarching the lower back when reaching arms overhead. Back heel lifting off the floor.",
+      "breathing": "Inhale as you raise the arms overhead. Exhale to settle deeper into the lunge. Breathe steadily and fully while holding the pose."
+    }
   },
   {
     "name_en": "Warrior II (Virabhadrasana II)",
@@ -30,7 +48,16 @@
     "difficulty": "beginner",
     "benefits": "Strengthens legs and ankles, stretches groins, chest and shoulders, increases stamina",
     "instructions": "Stand with feet 3.5–4 feet apart. Turn the right foot out 90 degrees and the left foot slightly inward. Bend the right knee to 90 degrees over the ankle. Extend arms out parallel to the floor, palms facing down. Keep torso centered between the legs. Turn head to gaze over the right fingertips. Press outer edge of back foot firmly into the floor. Hold, then switch sides.",
-    "contraindications": "Diarrhea, high blood pressure, neck problems (don't turn the head — look straight ahead)"
+    "contraindications": "Diarrhea, high blood pressure, neck problems (don't turn the head — look straight ahead)",
+    "images": [
+      "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Stand with feet 3.5-4 feet apart. Turn the front foot out 90 degrees and the back foot slightly in. Align the front heel with the arch of the back foot.",
+      "execution": "Bend the front knee to 90 degrees over the ankle. Extend arms out parallel to the floor, palms facing down. Keep the torso centered over the hips. Gaze over the front fingertips. Press the outer edge of the back foot firmly into the floor.",
+      "mistakes": "Front knee collapsing inward. Leaning the torso toward the front leg. Arms drooping below shoulder height. Turning the head too far and straining the neck.",
+      "breathing": "Inhale to lengthen the spine. Exhale to sink deeper into the bent knee. Breathe evenly and use the exhale to find more depth in the stance."
+    }
   },
   {
     "name_en": "Warrior III (Virabhadrasana III)",
@@ -41,7 +68,16 @@
     "difficulty": "intermediate",
     "benefits": "Strengthens ankles, legs, shoulders and back muscles, tones abdomen, improves balance and posture",
     "instructions": "From Warrior I, shift weight into the front foot. Hinge forward at the hips while lifting the back leg until torso and back leg are parallel to the floor. Extend arms forward alongside ears or out to the sides. Keep hips level. Flex the back foot with toes pointing down. Engage the standing leg without locking the knee. Hold, then switch sides.",
-    "contraindications": "High blood pressure, recent or chronic leg or back injury"
+    "contraindications": "High blood pressure, recent or chronic leg or back injury",
+    "images": [
+      "https://images.unsplash.com/photo-1573384666979-2b1e3e2261e4?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "From Warrior I, shift weight into the front foot. Prepare to hinge forward by engaging the core and stabilizing the standing leg. Arms may start alongside the ears or at the hips.",
+      "execution": "Hinge forward at the hips while lifting the back leg until torso and back leg are parallel to the floor. Extend arms forward or out to the sides. Keep hips level. Flex the back foot with toes pointing down.",
+      "mistakes": "Letting the raised hip rotate open instead of keeping both hips level. Locking the standing knee. Rounding the spine instead of maintaining a flat back. Looking up and compressing the neck.",
+      "breathing": "Exhale as you hinge forward and lift the back leg. Inhale to lengthen through the crown and the raised heel. Breathe steadily to maintain balance."
+    }
   },
   {
     "name_en": "Tree Pose (Vrksasana)",
@@ -52,7 +88,16 @@
     "difficulty": "beginner",
     "benefits": "Strengthens thighs, calves, ankles and spine, stretches groins and inner thighs, improves balance",
     "instructions": "Stand in Mountain Pose. Shift weight onto the left foot. Bend the right knee and place the sole of the right foot on the inner left thigh or calf — never on the knee. Press the foot and thigh into each other. Bring hands to prayer at chest or extend arms overhead. Fix gaze on a point ahead. Hold, then switch sides.",
-    "contraindications": "Headache, insomnia, low blood pressure"
+    "contraindications": "Headache, insomnia, low blood pressure",
+    "images": [
+      "https://images.unsplash.com/photo-1510894347713-fc3ed6fdf539?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Stand in Mountain Pose. Shift weight onto the left foot and root down through all four corners. Bend the right knee and externally rotate the right hip to open.",
+      "execution": "Place the sole of the right foot on the inner left thigh or calf — never on the knee. Press the foot and thigh into each other. Bring hands to prayer at chest or extend arms overhead. Fix gaze on a steady point.",
+      "mistakes": "Placing the foot on the knee joint, which creates dangerous lateral pressure. Gripping the floor with the standing foot toes. Letting the standing hip jut out to the side. Looking around instead of fixing the gaze.",
+      "breathing": "Breathe steadily through the nose. Inhale to grow taller. Exhale to root deeper through the standing foot. Use the breath as an anchor for balance."
+    }
   },
   {
     "name_en": "Triangle Pose (Trikonasana)",
@@ -63,7 +108,16 @@
     "difficulty": "beginner",
     "benefits": "Stretches legs, groins, hips, shoulders, chest and spine; strengthens thighs, knees and ankles",
     "instructions": "Stand with feet 3.5–4 feet apart. Turn the right foot out 90 degrees, left foot slightly in. Extend arms parallel to the floor. Hinge at the right hip and reach the right hand toward the right shin, ankle or floor. Extend the left arm straight up toward the ceiling. Keep both legs straight. Turn head to gaze at the top hand. Keep torso in one plane — do not lean forward. Hold, then switch sides.",
-    "contraindications": "Diarrhea, headache, low blood pressure, heart condition, neck problems (look straight ahead instead of up)"
+    "contraindications": "Diarrhea, headache, low blood pressure, heart condition, neck problems (look straight ahead instead of up)",
+    "images": [
+      "https://images.unsplash.com/photo-1588286840104-8957b019727f?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Stand with feet 3.5-4 feet apart. Turn the front foot out 90 degrees and the back foot slightly inward. Extend arms parallel to the floor. Engage the thigh muscles.",
+      "execution": "Hinge at the front hip and reach the front hand toward the shin, ankle, or floor. Extend the top arm straight up. Keep both legs straight. Turn the head to gaze at the top hand. Keep the torso in one plane — do not lean forward.",
+      "mistakes": "Collapsing the torso forward instead of staying in one plane. Bending the front knee. Resting heavily on the bottom hand instead of using core strength. Hyperextending the front knee.",
+      "breathing": "Inhale to lengthen the spine. Exhale to deepen the side bend. Breathe into the upper side of the ribcage to open the chest more fully."
+    }
   },
   {
     "name_en": "Extended Side Angle (Utthita Parsvakonasana)",
@@ -74,7 +128,16 @@
     "difficulty": "intermediate",
     "benefits": "Strengthens and stretches the legs, knees and ankles, stretches the groins, spine, waist and chest",
     "instructions": "From Warrior II with right knee bent, place the right hand on the floor outside the right foot or on a block. Extend the left arm overhead, creating a straight line from the left foot through the left fingertips. Turn the chest toward the ceiling. Keep the right knee tracking over the right ankle. Press firmly through the outer edge of the back foot. Hold, then switch sides.",
-    "contraindications": "Headache, high or low blood pressure, insomnia"
+    "contraindications": "Headache, high or low blood pressure, insomnia",
+    "images": [
+      "https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "From Warrior II with the front knee bent, prepare to extend the bottom hand to the floor or a block outside the front foot. The top arm will create a long line from foot to fingertips.",
+      "execution": "Place the bottom hand on the floor or block outside the front foot. Extend the top arm overhead, creating a straight line from back foot through fingertips. Turn the chest toward the ceiling. Keep the front knee tracking over the ankle.",
+      "mistakes": "Front knee falling inward. Compressing the bottom side of the waist. Not turning the chest upward enough. The top shoulder rolling forward instead of stacking open.",
+      "breathing": "Inhale to lengthen from back foot to top fingertips. Exhale to rotate the chest more toward the ceiling. Breathe deeply into the open side of the ribcage."
+    }
   },
   {
     "name_en": "Half Moon Pose (Ardha Chandrasana)",
@@ -85,7 +148,16 @@
     "difficulty": "intermediate",
     "benefits": "Strengthens abdomen, ankles, thighs, buttocks and spine; stretches groins, hamstrings, calves and shoulders; improves balance and coordination",
     "instructions": "From Triangle Pose on the right side, bend the right knee and shift weight onto the right foot. Place the right hand on the floor about 12 inches ahead of the right foot. Lift the left leg parallel to the floor. Straighten the standing leg. Open the left hip, stacking it over the right. Extend the left arm toward the ceiling. Gaze upward or straight ahead. Hold, then switch sides.",
-    "contraindications": "Headache, migraine, low blood pressure, diarrhea, insomnia"
+    "contraindications": "Headache, migraine, low blood pressure, diarrhea, insomnia",
+    "images": [
+      "https://images.unsplash.com/photo-1545389336-cf090694435e?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "From Triangle Pose, bend the front knee and shift weight onto the front foot. Place the bottom hand on the floor about 12 inches ahead. Engage the core and standing leg firmly.",
+      "execution": "Lift the back leg parallel to the floor. Straighten the standing leg. Open the top hip, stacking it over the bottom hip. Extend the top arm toward the ceiling. Gaze upward or straight ahead for balance.",
+      "mistakes": "Letting the raised leg drop below hip height. Locking the standing knee aggressively. Placing the bottom hand too close to the standing foot. Collapsing the chest downward.",
+      "breathing": "Exhale as you lift into the pose. Inhale to expand through the chest and raised leg. Use steady breathing to maintain balance and length."
+    }
   },
   {
     "name_en": "Chair Pose (Utkatasana)",
@@ -96,7 +168,16 @@
     "difficulty": "beginner",
     "benefits": "Strengthens ankles, thighs, calves and spine; stretches shoulders and chest; stimulates diaphragm and heart",
     "instructions": "Stand with feet together or hip-width apart. Bend the knees and lower the hips as though sitting into an imaginary chair. Keep weight in the heels. Raise the arms overhead with palms facing each other or touching. Keep the chest lifted and shoulders down. Ensure the knees do not extend past the toes. Tilt the pelvis slightly to lengthen the lower back.",
-    "contraindications": "Headache, insomnia, low blood pressure, knee injuries"
+    "contraindications": "Headache, insomnia, low blood pressure, knee injuries",
+    "images": [
+      "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Stand with feet together or hip-width apart. Ground through the heels. Prepare to sit back as though lowering into an imaginary chair behind you.",
+      "execution": "Bend the knees and lower the hips, keeping weight in the heels. Raise the arms overhead with palms facing each other. Lift the chest and keep the shoulders down. Ensure the knees do not extend past the toes. Tilt the pelvis slightly to lengthen the lower back.",
+      "mistakes": "Knees pushing forward past the toes. Weight shifting to the balls of the feet. Lower back overarching. Shoulders shrugging up toward the ears when arms are raised.",
+      "breathing": "Inhale as you raise the arms. Exhale as you sit deeper. Breathe steadily to sustain the effort in the thighs without holding the breath."
+    }
   },
   {
     "name_en": "Eagle Pose (Garudasana)",
@@ -107,7 +188,16 @@
     "difficulty": "intermediate",
     "benefits": "Strengthens and stretches ankles and calves, stretches thighs, hips, shoulders and upper back, improves concentration and balance",
     "instructions": "Stand in Mountain Pose. Bend knees slightly, lift the right foot and cross the right thigh over the left. Hook the right foot behind the left calf if possible. Extend arms forward, cross the left arm over the right at the elbows, then wrap forearms and press palms together. Lift elbows to shoulder height while dropping shoulders away from ears. Sink hips lower. Hold, then switch sides.",
-    "contraindications": "Knee injuries (avoid deep bend or skip the leg wrap)"
+    "contraindications": "Knee injuries (avoid deep bend or skip the leg wrap)",
+    "images": [
+      "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Stand in Mountain Pose. Bend knees slightly. Prepare to cross the right thigh over the left and wrap the arms — left arm under right at the elbows.",
+      "execution": "Cross the right thigh over the left, hooking the right foot behind the left calf if possible. Cross the left arm over the right at elbows, wrap forearms and press palms together. Lift elbows to shoulder height while dropping shoulders. Sink the hips lower.",
+      "mistakes": "Leaning forward instead of staying upright. Not wrapping deeply enough at the knees or elbows. Letting the elbows drop below shoulder height. Holding the breath due to the compression.",
+      "breathing": "Breathe deeply despite the compressed position. Inhale to lift the elbows. Exhale to sink the hips deeper. Focus on expanding the upper back with each inhale."
+    }
   },
   {
     "name_en": "Revolved Triangle (Parivrtta Trikonasana)",
@@ -118,7 +208,16 @@
     "difficulty": "intermediate",
     "benefits": "Strengthens and stretches the legs, stretches the hips and spine, opens the chest, improves balance and digestion",
     "instructions": "Stand with feet 3–3.5 feet apart, right foot forward, left foot turned out 45 degrees. Square hips forward. Hinge at the hips and place the left hand on the floor or a block outside the right foot. Extend the right arm toward the ceiling, twisting the torso to the right. Keep both legs straight. Gaze up at the right hand. Hold, then switch sides.",
-    "contraindications": "Back injuries, low blood pressure, migraine, diarrhea, headache, insomnia"
+    "contraindications": "Back injuries, low blood pressure, migraine, diarrhea, headache, insomnia",
+    "images": [
+      "https://images.unsplash.com/photo-1575052814086-f385e2e2ad33?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Stand with feet 3-3.5 feet apart, front foot forward, back foot turned 45 degrees. Square the hips forward. Hinge at the hips with a long spine.",
+      "execution": "Place the opposite hand on the floor or a block outside the front foot. Extend the top arm toward the ceiling, twisting the torso. Keep both legs straight. Gaze up at the top hand. Root through the back heel.",
+      "mistakes": "Rounding the spine instead of twisting with a long back. Back heel lifting off the floor. Hips not squared — the back hip tends to hike up. Placing the hand on the wrong side of the front foot.",
+      "breathing": "Inhale to lengthen the spine. Exhale to deepen the twist. Each breath should create more space and rotation."
+    }
   },
   {
     "name_en": "Wide-Legged Forward Fold (Prasarita Padottanasana)",
@@ -129,7 +228,16 @@
     "difficulty": "beginner",
     "benefits": "Strengthens and stretches inner and back legs, tones abdominal organs, calms the brain, relieves mild backache",
     "instructions": "Stand with feet 4–5 feet apart, toes pointing slightly inward. Place hands on hips. Inhale and lengthen the torso. Exhale, hinge at the hips and fold forward. Place hands on the floor beneath the shoulders. If flexibility permits, walk hands back between the legs and place the crown of the head on the floor. Keep legs active and kneecaps lifted. Hold and breathe deeply.",
-    "contraindications": "Lower back problems (avoid full forward bend, keep the back concave)"
+    "contraindications": "Lower back problems (avoid full forward bend, keep the back concave)",
+    "images": [
+      "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Stand with feet 4-5 feet apart, toes pointing slightly inward. Place hands on hips. Firm the outer edges of the feet into the floor. Engage the thighs.",
+      "execution": "Inhale and lengthen the torso. Exhale, hinge at the hips and fold forward. Place hands on the floor beneath the shoulders. If flexibility allows, walk hands back between the legs. Keep legs active and kneecaps lifted.",
+      "mistakes": "Rounding the back during the fold. Feet sliding outward. Weight shifting too far forward onto the balls of the feet. Knees bending or hyperextending.",
+      "breathing": "Inhale to lengthen the spine each time. Exhale to fold deeper. Breathe into the back body to release the hamstrings and lower back gradually."
+    }
   },
   {
     "name_en": "Easy Pose (Sukhasana)",
@@ -140,7 +248,16 @@
     "difficulty": "beginner",
     "benefits": "Opens hips, lengthens spine, promotes calm and grounding, strengthens back muscles",
     "instructions": "Sit on the floor or on a folded blanket with legs crossed. Each foot rests beneath the opposite knee. Place hands on the knees with palms down or up. Lengthen the spine from tailbone to crown. Relax the shoulders away from the ears. Softly close the eyes or lower the gaze. Breathe naturally and deeply.",
-    "contraindications": "Knee injuries (use a cushion or sit on a chair instead)"
+    "contraindications": "Knee injuries (use a cushion or sit on a chair instead)",
+    "images": [
+      "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Sit on the floor or a folded blanket with legs crossed. Each foot rests beneath the opposite knee. Sit high enough on props that the knees are at or below hip height.",
+      "execution": "Place hands on the knees, palms down or up. Lengthen the spine from tailbone to crown. Relax the shoulders away from the ears. Softly close the eyes or lower the gaze.",
+      "mistakes": "Rounding the lower back. Knees floating much higher than the hips (sit on a higher prop). Forcing the knees down. Tensing the jaw and face.",
+      "breathing": "Breathe naturally and deeply through the nose. Inhale to lengthen the spine. Exhale to relax the shoulders. Let each breath become progressively calmer."
+    }
   },
   {
     "name_en": "Hero Pose (Virasana)",
@@ -151,7 +268,16 @@
     "difficulty": "beginner",
     "benefits": "Stretches thighs, knees and ankles, strengthens arches, improves digestion",
     "instructions": "Kneel on the floor with knees together. Separate the feet wider than hip-width. Sit back between the feet — the buttocks rest on the floor or on a block. Keep the tops of the feet on the floor with toes pointing straight back. Place hands on the knees. Lengthen the spine and lift the chest. If there is any knee pain, sit higher on props.",
-    "contraindications": "Heart problems, headache, knee or ankle injury (use props or avoid)"
+    "contraindications": "Heart problems, headache, knee or ankle injury (use props or avoid)",
+    "images": [
+      "https://images.unsplash.com/photo-1573384666979-2b1e3e2261e4?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Kneel with knees together. Separate the feet wider than hip-width. Slowly sit back between the feet. Use a block under the sitting bones if needed for comfort.",
+      "execution": "The buttocks rest on the floor or on a block. Keep the tops of the feet on the floor with toes pointing straight back. Place hands on the knees. Lengthen the spine and lift the chest.",
+      "mistakes": "Sitting on the feet instead of between them. Forcing the buttocks to the floor when flexibility is insufficient. Knees splaying apart. Toes curling or pointing outward.",
+      "breathing": "Breathe deeply and evenly. Inhale to lift the chest. Exhale to settle the sitting bones. This is a restorative position — let the breath reflect calm."
+    }
   },
   {
     "name_en": "Bound Angle Pose (Baddha Konasana)",
@@ -162,7 +288,16 @@
     "difficulty": "beginner",
     "benefits": "Stretches inner thighs, groins and knees, stimulates abdominal organs and heart, helps relieve mild depression",
     "instructions": "Sit with legs extended. Bend the knees and bring the soles of the feet together, letting the knees fall open to the sides. Draw heels close to the pelvis. Clasp the feet with both hands. Sit tall with the spine lengthened. Gently press the knees toward the floor using the elbows if desired. Hold and breathe deeply.",
-    "contraindications": "Groin or knee injury (support thighs with blankets)"
+    "contraindications": "Groin or knee injury (support thighs with blankets)",
+    "images": [
+      "https://images.unsplash.com/photo-1510894347713-fc3ed6fdf539?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Sit with legs extended. Bend the knees and bring the soles of the feet together. Draw heels close to the pelvis. Sit on a blanket if the hips are tight.",
+      "execution": "Clasp the feet with both hands. Sit tall with the spine lengthened. Gently press the knees toward the floor using the elbows. Let gravity work — do not force the stretch.",
+      "mistakes": "Rounding the back. Forcing the knees to the floor. Sitting too far back on the tailbone instead of upright on the sitting bones. Gripping the feet too tightly.",
+      "breathing": "Inhale to lift the spine taller. Exhale to let the knees release downward. Breathe into the inner groins and hips to encourage opening."
+    }
   },
   {
     "name_en": "Seated Forward Bend (Paschimottanasana)",
@@ -173,7 +308,16 @@
     "difficulty": "beginner",
     "benefits": "Stretches the spine, shoulders and hamstrings, stimulates liver and kidneys, calms the brain",
     "instructions": "Sit with legs extended straight in front. Flex the feet and press through the heels. Inhale and lengthen the spine. Exhale and hinge forward from the hips, not the waist. Reach the hands toward the feet — grasp the shins, ankles, or feet depending on flexibility. Keep the spine long rather than rounding the back. With each exhale, deepen the fold slightly.",
-    "contraindications": "Asthma, diarrhea, back injury (perform only with a straight back or use a strap)"
+    "contraindications": "Asthma, diarrhea, back injury (perform only with a straight back or use a strap)",
+    "images": [
+      "https://images.unsplash.com/photo-1588286840104-8957b019727f?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Sit with legs extended straight ahead, feet together and flexed. Press through the heels. Sit tall on the sitting bones. Reach the arms forward.",
+      "execution": "Inhale and lengthen the spine. Exhale and hinge forward from the hips — not the waist. Reach the hands toward the feet. Keep the spine long rather than rounding. With each exhale, deepen the fold slightly.",
+      "mistakes": "Rounding the upper back to reach the feet instead of hinging from the hips. Bending the knees without awareness. Pulling on the feet with the arms instead of using the hip hinge. Forcing the head toward the knees.",
+      "breathing": "Inhale to lengthen the front of the torso. Exhale to fold deeper. Use the breath as a tool to gradually release the hamstrings without forcing."
+    }
   },
   {
     "name_en": "Head-to-Knee Pose (Janu Sirsasana)",
@@ -184,7 +328,16 @@
     "difficulty": "beginner",
     "benefits": "Stretches the spine, shoulders, hamstrings and groins, calms the brain, improves digestion",
     "instructions": "Sit with legs extended. Bend the right knee and place the sole of the right foot against the inner left thigh. Turn torso to face the left leg. Inhale and lengthen the spine. Exhale, fold forward over the extended leg, reaching for the foot with both hands. Keep the extended leg active with the foot flexed. Hold, then switch sides.",
-    "contraindications": "Asthma, diarrhea, knee injury (support the bent knee with a blanket)"
+    "contraindications": "Asthma, diarrhea, knee injury (support the bent knee with a blanket)",
+    "images": [
+      "https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Sit with legs extended. Bend the right knee and place the sole against the inner left thigh. Turn the torso to face the extended left leg squarely.",
+      "execution": "Inhale and lengthen the spine. Exhale, fold forward over the extended leg, reaching for the foot with both hands. Keep the extended leg active with the foot flexed. Lead with the chest, not the forehead.",
+      "mistakes": "Not turning the torso to face the extended leg. Rounding the back. Letting the extended knee bend. The bent knee lifting off the floor (use a blanket for support).",
+      "breathing": "Inhale to create length in the spine. Exhale to fold forward. Each breath cycle should produce a small increment of deepening without strain."
+    }
   },
   {
     "name_en": "Boat Pose (Navasana)",
@@ -195,7 +348,16 @@
     "difficulty": "intermediate",
     "benefits": "Strengthens the abdomen, hip flexors and spine, stimulates kidneys and intestines, improves balance",
     "instructions": "Sit with knees bent and feet flat on the floor. Lean back slightly, keeping the spine straight. Lift the feet off the floor and straighten the legs to a 45-degree angle, forming a V-shape with the body. Extend the arms forward parallel to the floor, palms facing each other. Balance on the sitting bones. Keep the chest lifted and avoid rounding the back.",
-    "contraindications": "Asthma, diarrhea, headache, heart problems, insomnia, low blood pressure, menstruation, pregnancy, neck injury (sit near a wall to support the head)"
+    "contraindications": "Asthma, diarrhea, headache, heart problems, insomnia, low blood pressure, menstruation, pregnancy, neck injury (sit near a wall to support the head)",
+    "images": [
+      "https://images.unsplash.com/photo-1545389336-cf090694435e?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Sit with knees bent and feet flat on the floor. Lean back slightly, keeping the spine straight. Engage the core before lifting the feet.",
+      "execution": "Lift the feet off the floor and straighten the legs to 45 degrees, forming a V-shape. Extend the arms forward parallel to the floor. Balance on the sitting bones. Keep the chest lifted and avoid rounding the back.",
+      "mistakes": "Rounding the back and collapsing the chest. Holding the breath. Letting the legs drop below 45 degrees. Gripping the hip flexors excessively instead of engaging the core.",
+      "breathing": "Inhale to lift and lengthen the spine. Exhale to engage the core deeper. Breathe steadily — the tendency to hold the breath makes the pose harder."
+    }
   },
   {
     "name_en": "Staff Pose (Dandasana)",
@@ -206,7 +368,16 @@
     "difficulty": "beginner",
     "benefits": "Strengthens back muscles, stretches shoulders and chest, improves posture, calms the mind",
     "instructions": "Sit with legs extended straight in front and together. Flex the feet. Place hands on the floor beside the hips with fingers pointing forward. Press through the palms to lift and lengthen the spine. Roll shoulders back and down. Engage the thigh muscles and press the backs of the legs toward the floor. Hold with steady breathing.",
-    "contraindications": "Wrist injury (use fists or modify hand position), lower back injury (sit on a blanket)"
+    "contraindications": "Wrist injury (use fists or modify hand position), lower back injury (sit on a blanket)",
+    "images": [
+      "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Sit with legs extended straight in front and together. Flex the feet and press through the heels. Place hands on the floor beside the hips, fingers pointing forward.",
+      "execution": "Press through the palms to lift and lengthen the spine. Roll shoulders back and down. Engage the thigh muscles and press the backs of the legs toward the floor. Maintain a tall, active posture.",
+      "mistakes": "Rounding the lower back. Locking the elbows. Not engaging the thigh muscles. Letting the chest collapse. Feet falling outward instead of staying flexed.",
+      "breathing": "Inhale to lengthen the spine. Exhale to engage the core and press the legs down. Maintain steady breathing that supports the upright alignment."
+    }
   },
   {
     "name_en": "Cobra Pose (Bhujangasana)",
@@ -217,7 +388,16 @@
     "difficulty": "beginner",
     "benefits": "Strengthens the spine, stretches chest, lungs, shoulders and abdomen, firms the buttocks, opens the heart",
     "instructions": "Lie face down with legs extended and tops of the feet on the floor. Place hands under the shoulders with fingers spread. Press the tops of the feet and thighs into the floor. On an inhale, straighten the arms partially to lift the chest off the floor. Keep elbows slightly bent and hugged to the sides. Lift through the sternum, not by pushing into the hands. Keep the shoulders away from the ears.",
-    "contraindications": "Back injury, carpal tunnel syndrome, headache, pregnancy"
+    "contraindications": "Back injury, carpal tunnel syndrome, headache, pregnancy",
+    "images": [
+      "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Lie face down with legs extended and tops of feet on the floor. Place hands under the shoulders with fingers spread. Press the tops of the feet, thighs, and pelvis into the floor.",
+      "execution": "On an inhale, partially straighten the arms to lift the chest off the floor. Keep elbows slightly bent and hugged to the sides. Lift through the sternum, not by pushing hard into the hands. Keep shoulders away from the ears.",
+      "mistakes": "Straightening the arms fully and compressing the lower back. Elbows splaying out to the sides. Leading the lift with the chin instead of the sternum. Clenching the buttocks tightly.",
+      "breathing": "Inhale to lift the chest. Exhale to maintain the position with ease. Breathe into the front of the chest to deepen the opening."
+    }
   },
   {
     "name_en": "Upward-Facing Dog (Urdhva Mukha Svanasana)",
@@ -228,7 +408,16 @@
     "difficulty": "intermediate",
     "benefits": "Strengthens the spine, arms and wrists, stretches chest, lungs, shoulders and abdomen, improves posture",
     "instructions": "Lie face down. Place hands beside the lower ribs. On an inhale, press into the hands, straighten the arms and lift the torso and legs a few inches off the floor. Only the tops of the feet and the hands touch the floor. Roll shoulders back and lift the chest. Press the shoulder blades into the back. Keep thighs firm and turned slightly inward. Look straight ahead or slightly upward.",
-    "contraindications": "Back injury, carpal tunnel syndrome, headache, pregnancy"
+    "contraindications": "Back injury, carpal tunnel syndrome, headache, pregnancy",
+    "images": [
+      "https://images.unsplash.com/photo-1575052814086-f385e2e2ad33?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Lie face down. Place hands beside the lower ribs, fingers spread. Press the tops of the feet into the floor. Firm the thighs.",
+      "execution": "On an inhale, press into the hands and straighten the arms. Lift the torso and legs off the floor — only hands and tops of feet touch. Roll shoulders back, lift the chest. Thighs firm and slightly turned inward.",
+      "mistakes": "Sinking into the shoulders instead of pressing up. Hips and thighs touching the floor. Compressing the lower back by pushing the hips forward. Dropping the head back too far.",
+      "breathing": "Inhale to press up and open the chest. Exhale to maintain the lift without collapsing. Breathe into the expanded front body."
+    }
   },
   {
     "name_en": "Locust Pose (Salabhasana)",
@@ -239,7 +428,16 @@
     "difficulty": "beginner",
     "benefits": "Strengthens the muscles of the spine, buttocks, backs of arms and legs, stretches shoulders and chest, improves posture",
     "instructions": "Lie face down with arms alongside the body, palms facing up. Rest the forehead on the floor. On an inhale, lift the head, upper torso, arms and legs off the floor. Reach actively through the fingertips and toes. Keep the gaze slightly forward and down. Firm the buttocks without over-squeezing. Lift the chest higher with each breath. Hold, then release slowly on an exhale.",
-    "contraindications": "Headache, serious back injury, pregnancy (use modifications)"
+    "contraindications": "Headache, serious back injury, pregnancy (use modifications)",
+    "images": [
+      "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Lie face down with arms alongside the body, palms facing up. Rest the forehead on the floor. Engage the back muscles and glutes gently before lifting.",
+      "execution": "On an inhale, lift the head, upper torso, arms, and legs off the floor simultaneously. Reach actively through fingertips and toes. Keep the gaze slightly forward and down. Lift the chest higher with each breath.",
+      "mistakes": "Over-squeezing the buttocks. Looking up and compressing the neck. Lifting only the upper body while the legs stay on the floor. Holding the breath.",
+      "breathing": "Inhale to lift everything up. Exhale to maintain the lift. Each inhale should help you lift slightly higher. Release slowly on an exhale."
+    }
   },
   {
     "name_en": "Bow Pose (Dhanurasana)",
@@ -250,7 +448,16 @@
     "difficulty": "intermediate",
     "benefits": "Stretches the entire front of the body, strengthens back muscles, improves posture, stimulates abdominal organs",
     "instructions": "Lie face down. Bend the knees and reach back to grasp the ankles with both hands. On an inhale, strongly lift the thighs off the floor while simultaneously lifting the chest. Press the ankles into the hands to deepen the backbend. Keep the knees no wider than hip-width. Look forward. Rock gently on the belly with the breath if desired. Hold, then release slowly.",
-    "contraindications": "High or low blood pressure, migraine, insomnia, serious lower back or neck injury, pregnancy"
+    "contraindications": "High or low blood pressure, migraine, insomnia, serious lower back or neck injury, pregnancy",
+    "images": [
+      "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Lie face down. Bend the knees and reach back to grasp the ankles with both hands. Keep the knees no wider than hip-width apart before lifting.",
+      "execution": "On an inhale, strongly lift the thighs off the floor while simultaneously lifting the chest. Press the ankles into the hands to deepen the backbend. Look forward. Rock gently on the belly with the breath if desired.",
+      "mistakes": "Knees splaying wider than hip-width. Gripping the feet instead of the ankles. Only lifting the chest without lifting the thighs. Compressing the lower back by not engaging the legs enough.",
+      "breathing": "Inhale to lift higher. Exhale to maintain. The rocking motion naturally follows the breath — inhale lifts the chest, exhale rocks forward."
+    }
   },
   {
     "name_en": "Bridge Pose (Setu Bandhasana)",
@@ -261,7 +468,16 @@
     "difficulty": "beginner",
     "benefits": "Stretches the chest, neck and spine, calms the brain, reduces anxiety and stress, strengthens the legs and buttocks",
     "instructions": "Lie on your back with knees bent and feet flat on the floor, hip-width apart. Place arms alongside the body with palms down. Walk the feet close enough to the buttocks that you can almost touch the heels with your fingers. On an inhale, press feet and arms into the floor and lift the hips toward the ceiling. Clasp the hands beneath the pelvis and extend the arms. Keep thighs parallel. Hold, then release the hands and slowly roll the spine down.",
-    "contraindications": "Neck injury (practice with a folded blanket under the shoulders)"
+    "contraindications": "Neck injury (practice with a folded blanket under the shoulders)",
+    "images": [
+      "https://images.unsplash.com/photo-1573384666979-2b1e3e2261e4?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Lie on your back with knees bent, feet flat on the floor hip-width apart. Place arms alongside the body with palms down. Walk feet close enough to almost touch heels with fingers.",
+      "execution": "On an inhale, press feet and arms into the floor and lift hips toward the ceiling. Clasp hands beneath the pelvis and extend the arms. Keep thighs parallel. Roll shoulders under to open the chest.",
+      "mistakes": "Knees splaying outward. Feet turning out instead of staying parallel. Compressing the neck by lifting the chin. Clenching the buttocks instead of using the hamstrings and inner thighs.",
+      "breathing": "Inhale to lift the hips. Exhale to settle and extend through the knees. Breathe into the front of the chest to deepen the opening."
+    }
   },
   {
     "name_en": "Supine Spinal Twist (Supta Matsyendrasana)",
@@ -272,7 +488,16 @@
     "difficulty": "beginner",
     "benefits": "Stretches the glutes and back, massages the spine and abdominal organs, promotes relaxation, relieves lower back tension",
     "instructions": "Lie on your back. Draw the right knee to the chest. Extend the right arm out to the side at shoulder height. With the left hand, guide the right knee across the body to the left side. Keep both shoulders on the floor. Turn the head to look toward the right hand. Allow gravity to draw the knee toward the floor — do not force. Hold, then switch sides.",
-    "contraindications": "Serious back or spine injury (consult a professional before attempting)"
+    "contraindications": "Serious back or spine injury (consult a professional before attempting)",
+    "images": [
+      "https://images.unsplash.com/photo-1510894347713-fc3ed6fdf539?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Lie on your back with arms extended at shoulder height. Draw one knee toward the chest. Keep both shoulders firmly on the floor.",
+      "execution": "Guide the bent knee across the body to the opposite side with the opposite hand. Keep both shoulders on the floor. Turn the head to look toward the extended arm on the same side as the bent knee. Let gravity draw the knee toward the floor.",
+      "mistakes": "Forcing the knee to the floor and lifting the opposite shoulder. Not keeping both shoulders grounded. Twisting too aggressively. Tensing instead of relaxing into the stretch.",
+      "breathing": "Inhale to lengthen the spine. Exhale to release deeper into the twist. Let each exhale soften the body closer to the floor. This is a passive stretch — do not force."
+    }
   },
   {
     "name_en": "Corpse Pose (Savasana)",
@@ -283,7 +508,16 @@
     "difficulty": "beginner",
     "benefits": "Calms the brain, relieves stress, relaxes the body, reduces headache, fatigue and insomnia, lowers blood pressure",
     "instructions": "Lie flat on your back with legs slightly apart and arms alongside the body, palms facing up. Close the eyes. Let the feet fall open naturally. Release all muscular effort. Let the breath be natural. Systematically relax each part of the body from toes to crown. Remain still and awake for 5–10 minutes. To exit, deepen the breath, wiggle fingers and toes, roll to the right side and slowly sit up.",
-    "contraindications": "Back injury (bend the knees or place a bolster under them), pregnancy (lie on the left side instead)"
+    "contraindications": "Back injury (bend the knees or place a bolster under them), pregnancy (lie on the left side instead)",
+    "images": [
+      "https://images.unsplash.com/photo-1588286840104-8957b019727f?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Lie flat on your back with legs slightly apart and arms alongside the body, palms facing up. Close the eyes. Let the feet fall open naturally. Use a blanket under the knees if the lower back is sensitive.",
+      "execution": "Release all muscular effort. Let the breath be natural and uncontrolled. Systematically relax each body part from toes to crown. Remain still and awake for 5-10 minutes. To exit, deepen the breath, wiggle fingers and toes, roll to the right side.",
+      "mistakes": "Falling asleep (the practice is conscious relaxation). Fidgeting or adjusting the body repeatedly. Tensing the jaw, forehead, or hands without realizing it. Skipping this pose to rush out of class.",
+      "breathing": "Allow the breath to be completely natural and uncontrolled. Do not try to breathe deeply or slowly — simply observe whatever rhythm the body chooses."
+    }
   },
   {
     "name_en": "Happy Baby Pose (Ananda Balasana)",
@@ -294,7 +528,16 @@
     "difficulty": "beginner",
     "benefits": "Gently stretches inner groins and back spine, calms the brain, helps relieve stress and fatigue",
     "instructions": "Lie on your back. On an exhale, bend the knees toward the belly. Grip the outsides of the feet with both hands. Open the knees wider than the torso. Draw the knees toward the armpits. Keep the ankles directly over the knees with shins perpendicular to the floor. Gently rock side to side to massage the lower back. Keep the head and tailbone on the floor.",
-    "contraindications": "Pregnancy, knee injury, neck injury (use a blanket under the head)"
+    "contraindications": "Pregnancy, knee injury, neck injury (use a blanket under the head)",
+    "images": [
+      "https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Lie on your back. On an exhale, bend the knees toward the belly. Grip the outsides of the feet with both hands. Let the knees fall wider than the torso.",
+      "execution": "Draw the knees toward the armpits. Keep ankles directly over the knees with shins perpendicular to the floor. Gently rock side to side to massage the lower back. Keep the head and tailbone on the floor.",
+      "mistakes": "Lifting the head off the floor. Pulling the knees together instead of keeping them wide. Gripping too hard and creating tension. Not keeping the shins perpendicular.",
+      "breathing": "Breathe naturally and allow the body to relax. Inhale to create space. Exhale to draw the knees slightly closer. Use the rocking motion to release the sacrum."
+    }
   },
   {
     "name_en": "Fish Pose (Matsyasana)",
@@ -305,7 +548,16 @@
     "difficulty": "intermediate",
     "benefits": "Stretches the hip flexors, intercostals, chest and neck, strengthens the upper back, stimulates throat and abdominal organs",
     "instructions": "Lie on your back with legs extended and arms alongside the body. Slide the hands under the buttocks, palms down. Press the forearms and elbows into the floor. On an inhale, lift the chest and head, then tilt the head back to rest the crown on the floor. The weight is on the forearms and buttocks, not the head. Arch the upper back. Hold and breathe, then carefully lift the head, lower the torso and release.",
-    "contraindications": "High or low blood pressure, migraine, insomnia, serious lower back or neck injury"
+    "contraindications": "High or low blood pressure, migraine, insomnia, serious lower back or neck injury",
+    "images": [
+      "https://images.unsplash.com/photo-1545389336-cf090694435e?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Lie on your back with legs extended. Slide the hands under the buttocks, palms down. Press the forearms and elbows firmly into the floor as your foundation.",
+      "execution": "On an inhale, lift the chest and head, then tilt the head back to rest the crown on the floor. Weight is on the forearms and buttocks, not the head. Arch the upper back. Lift through the sternum.",
+      "mistakes": "Putting too much weight on the head instead of the forearms. Not arching the upper back enough. Compressing the neck. Holding the breath in this vulnerable position.",
+      "breathing": "Inhale to open the chest wider. Exhale to maintain the arch. Breathe into the throat and upper chest area — the pose opens these regions."
+    }
   },
   {
     "name_en": "Plow Pose (Halasana)",
@@ -316,7 +568,16 @@
     "difficulty": "intermediate",
     "benefits": "Calms the brain, stimulates abdominal organs and thyroid, stretches shoulders and spine, helps relieve symptoms of menopause",
     "instructions": "Lie on your back with arms alongside the body. On an exhale, press the arms into the floor and lift the legs over the head until the toes touch the floor behind the head. Keep the legs as straight as possible. Support the back with the hands or clasp the hands on the floor and extend the arms. Do not turn the head. Hold, then roll down one vertebra at a time.",
-    "contraindications": "Diarrhea, menstruation, neck injury, asthma, high blood pressure, pregnancy"
+    "contraindications": "Diarrhea, menstruation, neck injury, asthma, high blood pressure, pregnancy",
+    "images": [
+      "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Lie on your back with arms alongside the body. Prepare the core and back muscles. If needed, place a folded blanket under the shoulders to protect the neck.",
+      "execution": "On an exhale, press the arms into the floor and lift the legs over the head until toes touch the floor behind. Keep legs as straight as possible. Support the back with hands or clasp hands and extend arms on the floor. Do not turn the head.",
+      "mistakes": "Turning the head while in the pose, which can injure the neck. Bending the knees excessively. Rolling onto the neck instead of staying on the upper shoulders. Forcing the toes to reach the floor.",
+      "breathing": "Exhale to lift the legs overhead. Breathe into the back body — the front body is compressed. Inhale to lengthen the spine. Exhale to settle deeper."
+    }
   },
   {
     "name_en": "Downward-Facing Dog (Adho Mukha Svanasana)",
@@ -327,7 +588,16 @@
     "difficulty": "beginner",
     "benefits": "Calms the brain, energizes the body, stretches shoulders, hamstrings, calves, arches and hands, strengthens arms and legs",
     "instructions": "Start on hands and knees with wrists under shoulders and knees under hips. Spread the fingers wide. Tuck the toes and lift the knees off the floor. Straighten the legs and push the hips up and back, forming an inverted V-shape. Press the chest toward the thighs. Keep ears between the upper arms. Press heels toward the floor. Hold and breathe.",
-    "contraindications": "Carpal tunnel syndrome, diarrhea, pregnancy (late-term), high blood pressure or headache (support head on bolster)"
+    "contraindications": "Carpal tunnel syndrome, diarrhea, pregnancy (late-term), high blood pressure or headache (support head on bolster)",
+    "images": [
+      "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Start on hands and knees with wrists under shoulders and knees under hips. Spread the fingers wide. Ground through the entire hand, especially the thumb and index finger root.",
+      "execution": "Tuck the toes and lift the knees off the floor. Straighten the legs and push the hips up and back, forming an inverted V. Press the chest toward the thighs. Keep ears between the upper arms. Press heels toward the floor.",
+      "mistakes": "Rounding the upper back. Hands too close to the feet, creating a compressed shape. Weight dumping into the wrists instead of being distributed. Locking the knees.",
+      "breathing": "Inhale to lengthen the spine. Exhale to press the heels toward the floor. Breathe steadily for 5 breaths. This is both an energizing and calming inversion."
+    }
   },
   {
     "name_en": "Headstand (Sirsasana)",
@@ -338,7 +608,16 @@
     "difficulty": "advanced",
     "benefits": "Calms the brain, strengthens arms, legs and spine, stimulates pituitary and pineal glands, improves digestion, relieves insomnia",
     "instructions": "Kneel on the floor. Interlace the fingers and place the forearms on the floor, elbows shoulder-width apart. Place the crown of the head on the floor cradled by the interlaced hands. Lift the knees and walk the feet toward the elbows. Engage the core and slowly lift both legs overhead until the body is inverted and straight. Keep weight primarily on the forearms, not the head. Hold, then lower slowly with control.",
-    "contraindications": "Back injury, headache, heart condition, high blood pressure, menstruation, neck injury, low blood pressure, pregnancy"
+    "contraindications": "Back injury, headache, heart condition, high blood pressure, menstruation, neck injury, low blood pressure, pregnancy",
+    "images": [
+      "https://images.unsplash.com/photo-1575052814086-f385e2e2ad33?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Kneel on the floor. Interlace the fingers and place forearms on the floor, elbows shoulder-width apart. Place the crown of the head on the floor, cradled by interlaced hands. Build the foundation before lifting.",
+      "execution": "Lift the knees and walk feet toward elbows. Engage the core and slowly lift both legs overhead until body is inverted and straight. Keep weight primarily on the forearms, not the head. Hold with steady breathing.",
+      "mistakes": "Jumping into the pose instead of lifting with control. Too much weight on the head. Elbows wider than shoulder-width. Banana-back — lower back arching instead of straight alignment. Fear causing breath-holding.",
+      "breathing": "Breathe steadily through the nose. Inhale to lengthen upward. Exhale to engage the core. The breath should be calm and regular — if it becomes strained, come down."
+    }
   },
   {
     "name_en": "Shoulder Stand (Sarvangasana)",
@@ -349,7 +628,16 @@
     "difficulty": "intermediate",
     "benefits": "Calms the brain, stimulates thyroid and prostate glands, stretches shoulders and neck, reduces fatigue, alleviates insomnia",
     "instructions": "Lie on your back with a folded blanket under the shoulders for neck protection. Lift the legs over the head into Plow Pose. Place the hands on the lower back for support. Lift the legs straight up toward the ceiling, stacking the hips over the shoulders. Press the elbows into the floor. Keep the neck long — do not turn the head. Hold, then lower through Plow and roll down slowly.",
-    "contraindications": "Diarrhea, headache, high blood pressure, menstruation, neck injury, pregnancy"
+    "contraindications": "Diarrhea, headache, high blood pressure, menstruation, neck injury, pregnancy",
+    "images": [
+      "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Lie on your back with a folded blanket under the shoulders for neck protection. The head rests on the floor below the blanket level. Arms alongside the body.",
+      "execution": "Lift legs over head into Plow Pose. Place hands on the lower back for support. Lift legs straight up, stacking hips over shoulders. Press elbows into the floor. Keep neck long — do not turn the head.",
+      "mistakes": "Turning the head while in the pose. Not using a blanket under the shoulders. Letting the elbows splay wider than shoulders. Hips not stacked over the shoulders — body forming a diagonal instead of vertical.",
+      "breathing": "Breathe into the belly and upper chest. The throat is gently compressed, so breathe more shallowly if needed. Keep breathing calm and steady throughout."
+    }
   },
   {
     "name_en": "Crow Pose (Bakasana)",
@@ -360,7 +648,16 @@
     "difficulty": "intermediate",
     "benefits": "Strengthens arms and wrists, stretches upper back, strengthens abdominal muscles, opens the groins, tones abdominal organs",
     "instructions": "Squat with feet together and knees wide. Place the hands shoulder-width apart on the floor. Bend the elbows slightly and place the knees on the backs of the upper arms. Shift weight forward into the hands, lifting one foot and then the other off the floor. Round the upper back. Straighten the arms as much as possible. Gaze slightly forward on the floor. Hold, then lower carefully.",
-    "contraindications": "Carpal tunnel syndrome, pregnancy, wrist injury"
+    "contraindications": "Carpal tunnel syndrome, pregnancy, wrist injury",
+    "images": [
+      "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Squat with feet together and knees wide. Place hands shoulder-width apart on the floor. Spread the fingers and grip the mat. Gaze at a point on the floor ahead of the hands.",
+      "execution": "Bend the elbows slightly and place knees on the backs of the upper arms. Shift weight forward into the hands. Lift one foot then the other. Round the upper back. Straighten the arms as much as possible. Keep gazing forward.",
+      "mistakes": "Looking down between the hands, which pitches the body forward. Not engaging the core. Elbows splaying outward instead of staying in. Jumping instead of shifting weight gradually. Fear of falling forward.",
+      "breathing": "Exhale to engage the core and lift. Inhale to hold and balance. Keep breathing — holding the breath makes balance much harder."
+    }
   },
   {
     "name_en": "Side Plank (Vasisthasana)",
@@ -371,7 +668,16 @@
     "difficulty": "intermediate",
     "benefits": "Strengthens arms, belly and legs, stretches and strengthens wrists, improves balance",
     "instructions": "From Plank Pose, shift weight onto the right hand and the outer edge of the right foot. Stack the left foot on top of the right. Extend the left arm toward the ceiling. Align the body in one straight line from head to feet. Firm the thighs and press through the heels. Gaze up at the top hand. Hold, then switch sides.",
-    "contraindications": "Serious wrist, elbow or shoulder injury"
+    "contraindications": "Serious wrist, elbow or shoulder injury",
+    "images": [
+      "https://images.unsplash.com/photo-1573384666979-2b1e3e2261e4?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "From Plank Pose, prepare to shift weight onto one hand. Stack the feet or stagger them for more stability. Ground firmly through the entire supporting hand.",
+      "execution": "Shift onto the right hand and outer edge of the right foot. Stack the left foot on top. Extend the left arm toward the ceiling. Align the body in one straight line. Firm the thighs and press through the heels. Gaze up at the top hand.",
+      "mistakes": "Hips sagging toward the floor. Weight collapsing into the supporting shoulder. Not stacking the hips vertically. Holding the breath due to the effort.",
+      "breathing": "Exhale to lift into the pose. Inhale to extend and lengthen. Breathe steadily to sustain the hold without gripping."
+    }
   },
   {
     "name_en": "Child's Pose (Balasana)",
@@ -382,7 +688,16 @@
     "difficulty": "beginner",
     "benefits": "Gently stretches the hips, thighs and ankles, calms the brain, relieves stress and fatigue, relieves back and neck pain",
     "instructions": "Kneel on the floor with big toes together and knees hip-width apart or wider. Sit back on the heels. Exhale and fold the torso forward between the thighs. Extend the arms forward with palms on the floor, or place them alongside the body with palms up. Rest the forehead on the floor. Relax the shoulders toward the floor. Breathe deeply into the back body.",
-    "contraindications": "Diarrhea, pregnancy, knee injury (place a blanket between thighs and calves)"
+    "contraindications": "Diarrhea, pregnancy, knee injury (place a blanket between thighs and calves)",
+    "images": [
+      "https://images.unsplash.com/photo-1510894347713-fc3ed6fdf539?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Kneel with big toes together and knees hip-width apart or wider. Prepare to fold forward by sitting back toward the heels. Use a blanket between thighs and calves if knees are sensitive.",
+      "execution": "Sit back on the heels. Fold the torso forward between the thighs. Extend arms forward with palms on the floor, or alongside the body with palms up. Rest the forehead on the floor. Relax the shoulders toward the floor.",
+      "mistakes": "Knees too close together, compressing the belly. Forcing the buttocks to the heels when the knees resist. Holding tension in the arms and shoulders instead of releasing. Lifting the forehead off the floor.",
+      "breathing": "Breathe deeply into the back body — feel the back ribs expand with each inhale. Exhale to soften and release deeper. This is a resting pose — the breath should reflect deep calm."
+    }
   },
   {
     "name_en": "Pigeon Pose (Eka Pada Rajakapotasana)",
@@ -393,7 +708,16 @@
     "difficulty": "intermediate",
     "benefits": "Stretches hip flexors, groin and psoas, opens the hip rotators, can help relieve sciatic pain",
     "instructions": "From Downward Dog, bring the right knee forward and place it behind the right wrist. Extend the right shin across the mat at an angle comfortable for the knee. Extend the left leg straight back with the top of the foot on the floor. Square the hips as much as possible. Walk the hands forward and fold over the front leg, resting the forehead on the floor or on stacked hands. Hold, then switch sides.",
-    "contraindications": "Sacroiliac injury, ankle injury, knee injury, tight hips (use modifications with props)"
+    "contraindications": "Sacroiliac injury, ankle injury, knee injury, tight hips (use modifications with props)",
+    "images": [
+      "https://images.unsplash.com/photo-1588286840104-8957b019727f?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "From Downward Dog, bring one knee forward behind the wrist on the same side. Extend the front shin at a comfortable angle. Extend the back leg straight. Square the hips as much as possible.",
+      "execution": "Walk the hands forward and fold over the front leg, resting the forehead on the floor or stacked hands. Allow the hip to release with gravity over time. Keep the back leg extended with the top of the foot on the floor.",
+      "mistakes": "The front shin angle being too aggressive for the knee. Hips not square — one side lifting significantly. Compressing the lower back by arching. Forcing the fold before the hips have released.",
+      "breathing": "Breathe deeply and slowly. Inhale to create space in the hips. Exhale to soften and release deeper into the pose. This is a long hold — use the breath to manage intensity."
+    }
   },
   {
     "name_en": "Camel Pose (Ustrasana)",
@@ -404,7 +728,16 @@
     "difficulty": "intermediate",
     "benefits": "Stretches the entire front of the body including hip flexors, chest and throat, strengthens back muscles, improves posture",
     "instructions": "Kneel with knees hip-width apart and thighs perpendicular to the floor. Place hands on the lower back with fingers pointing down. Press the hips forward and begin to lean back, lifting the chest toward the ceiling. Reach back and place the hands on the heels one at a time. Press the hips forward, keeping them over the knees. Let the head drop back gently if comfortable. Hold, then bring hands back to lower back and rise up slowly.",
-    "contraindications": "High or low blood pressure, migraine, serious low back or neck injury, insomnia"
+    "contraindications": "High or low blood pressure, migraine, serious low back or neck injury, insomnia",
+    "images": [
+      "https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Kneel with knees hip-width apart, thighs perpendicular to the floor. Place hands on the lower back with fingers pointing down. Tuck the toes under for easier reach initially.",
+      "execution": "Press the hips forward. Lift the chest toward the ceiling and begin to lean back. Reach back and place hands on the heels one at a time. Keep hips directly over the knees. Let the head drop back gently if comfortable.",
+      "mistakes": "Hips pushing backward instead of staying over the knees. Compressing the lower back by not engaging the core. Dropping the head back aggressively, straining the neck. Holding the breath due to the intensity.",
+      "breathing": "Inhale to lift the chest. Exhale to deepen the backbend. Breathe into the front of the chest and throat — the areas being opened. Keep breathing steady despite the intensity."
+    }
   },
   {
     "name_en": "Garland Pose (Malasana)",
@@ -415,7 +748,16 @@
     "difficulty": "beginner",
     "benefits": "Stretches ankles, groins and back torso, tones the belly, aids digestion",
     "instructions": "Stand with feet slightly wider than hip-width apart, toes turned out. Bend the knees and lower the hips into a deep squat. Bring the palms together at the chest in prayer position. Press the elbows against the inner knees to gently open the hips. Lengthen the spine and lift the chest. If the heels lift off the floor, place a folded blanket under them.",
-    "contraindications": "Knee or lower back injury"
+    "contraindications": "Knee or lower back injury",
+    "images": [
+      "https://images.unsplash.com/photo-1545389336-cf090694435e?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Stand with feet slightly wider than hip-width, toes turned out about 45 degrees. If heels lift off the floor, place a folded blanket underneath them.",
+      "execution": "Bend the knees and lower into a deep squat. Bring palms together at the chest in prayer position. Press elbows against inner knees to open the hips. Lengthen the spine and lift the chest.",
+      "mistakes": "Rounding the back. Knees caving inward instead of tracking over the toes. Heels lifting and balance becoming unstable. Letting the chest collapse toward the thighs.",
+      "breathing": "Inhale to lengthen the spine upward. Exhale to sink the hips lower. Breathe deeply to help the hips open gradually."
+    }
   },
   {
     "name_en": "Sun Salutation A — Step 1: Prayer Pose (Pranamasana)",
@@ -426,7 +768,16 @@
     "difficulty": "beginner",
     "benefits": "Centers the mind, establishes steady breathing, calms the nervous system",
     "instructions": "Stand at the front of the mat with feet together. Bring the palms together at the heart center. Stand tall with shoulders relaxed. Close the eyes and take one deep breath to set an intention.",
-    "contraindications": "None"
+    "contraindications": "None",
+    "images": [
+      "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Stand at the front of the mat with feet together. Find your balance and establish contact with the ground through all four corners of each foot.",
+      "execution": "Bring the palms together at the heart center. Stand tall with shoulders relaxed. Close the eyes and take one deep breath to set an intention for the practice.",
+      "mistakes": "Rushing past this centering moment. Standing with uneven weight. Shoulders creeping up toward the ears. Not taking the time to breathe and center.",
+      "breathing": "Take one long, deep inhale through the nose. Exhale completely. This breath sets the rhythm for the entire Sun Salutation sequence."
+    }
   },
   {
     "name_en": "Sun Salutation A — Step 2: Upward Salute (Urdhva Hastasana)",
@@ -437,7 +788,16 @@
     "difficulty": "beginner",
     "benefits": "Stretches the belly, improves digestion, stretches shoulders and armpits",
     "instructions": "Inhale and sweep the arms overhead. Press the palms together and gaze up at the thumbs. Lengthen through the sides of the body. Gently arch the upper back.",
-    "contraindications": "Neck injury (keep the gaze forward instead of up)"
+    "contraindications": "Neck injury (keep the gaze forward instead of up)",
+    "images": [
+      "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "From Prayer Pose, prepare to sweep the arms overhead on the inhale. Root through the feet to create a stable base for the upward reach.",
+      "execution": "Inhale and sweep arms overhead. Press palms together and gaze up at the thumbs. Lengthen through the sides of the body. Gently arch the upper back — not the lower back.",
+      "mistakes": "Overarching the lower back. Compressing the back of the neck by dropping the head too far back. Not rooting through the feet. Rushing the arm sweep.",
+      "breathing": "This is an inhale movement. Fill the lungs completely as the arms sweep up. The breath should match the duration of the arm movement."
+    }
   },
   {
     "name_en": "Sun Salutation A — Step 3: Standing Forward Fold (Uttanasana)",
@@ -448,7 +808,16 @@
     "difficulty": "beginner",
     "benefits": "Stretches hamstrings and calves, strengthens thighs, calms the brain, reduces stress",
     "instructions": "Exhale and fold forward from the hips, bringing the hands to the floor beside the feet. Let the head hang heavy. Bend the knees slightly if the hamstrings are tight. Press the belly toward the thighs.",
-    "contraindications": "Back injury (bend the knees and keep the back straight)"
+    "contraindications": "Back injury (bend the knees and keep the back straight)",
+    "images": [
+      "https://images.unsplash.com/photo-1575052814086-f385e2e2ad33?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "From Upward Salute, prepare to fold forward. Soften the knees slightly if the hamstrings are tight. Initiate the fold from the hips, not the waist.",
+      "execution": "Exhale and fold forward from the hips. Bring hands to the floor beside the feet. Let the head hang heavy. Bend the knees if needed. Press the belly toward the thighs.",
+      "mistakes": "Rounding the back to reach the floor instead of hinging at the hips. Locking the knees. Straining the neck by looking forward. Bouncing to reach deeper.",
+      "breathing": "This is an exhale movement. Empty the lungs as you fold. The exhalation facilitates the forward fold and helps release the hamstrings."
+    }
   },
   {
     "name_en": "Sun Salutation A — Step 4: Half Lift (Ardha Uttanasana)",
@@ -459,7 +828,16 @@
     "difficulty": "beginner",
     "benefits": "Strengthens the back, stretches the front torso, improves posture",
     "instructions": "Inhale and lift the torso halfway, bringing the back parallel to the floor. Place fingertips on the shins or the floor. Lengthen the spine forward with a flat back. Gaze slightly ahead.",
-    "contraindications": "Back injury (keep knees bent)"
+    "contraindications": "Back injury (keep knees bent)",
+    "images": [
+      "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "From the forward fold, prepare to lift the torso halfway. Place fingertips on the shins or the floor. Engage the back muscles.",
+      "execution": "Inhale and lift the torso halfway, bringing the back parallel to the floor. Lengthen the spine forward with a flat back. Gaze slightly ahead. Create a straight line from the crown to the tailbone.",
+      "mistakes": "Not lifting high enough — the back should be truly flat. Compressing the neck by looking too far forward. Losing the flat back by rounding. Bending the knees unnecessarily.",
+      "breathing": "This is an inhale movement. The breath lifts the torso. Inhale fully to create maximum spinal length."
+    }
   },
   {
     "name_en": "Sun Salutation A — Step 5: Plank Pose (Phalakasana)",
@@ -470,7 +848,16 @@
     "difficulty": "beginner",
     "benefits": "Strengthens arms, wrists, spine and core, tones the abdomen",
     "instructions": "Exhale and step or jump back to a high plank position. Hands under shoulders, body in one straight line from head to heels. Engage the core and thighs. Press through the heels. Gaze slightly ahead of the hands.",
-    "contraindications": "Carpal tunnel syndrome, wrist injury"
+    "contraindications": "Carpal tunnel syndrome, wrist injury",
+    "images": [
+      "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "From the half lift, prepare to step or jump back. Place hands flat on the floor, fingers spread wide. Shoulders will stack directly over the wrists.",
+      "execution": "Step or jump back to a high plank. Hands under shoulders, body in one straight line from head to heels. Engage the core and thighs. Press through the heels. Gaze slightly ahead of the hands.",
+      "mistakes": "Hips sagging toward the floor. Hips piking up too high. Hands too far forward or back relative to the shoulders. Holding the breath.",
+      "breathing": "Exhale as you step back into plank. Maintain steady breathing while holding. The core engagement supports the breath, not restricts it."
+    }
   },
   {
     "name_en": "Sun Salutation A — Step 6: Four-Limbed Staff (Chaturanga Dandasana)",
@@ -481,7 +868,16 @@
     "difficulty": "intermediate",
     "benefits": "Strengthens arms, shoulders and legs, tones the abdomen, prepares for arm balances",
     "instructions": "From Plank, shift forward slightly on the toes. Exhale and bend the elbows to lower the body halfway to the floor. Keep elbows hugged to the sides at 90 degrees. Maintain a straight line from head to heels. Do not let the hips sag or pike. Gaze slightly forward.",
-    "contraindications": "Carpal tunnel syndrome, pregnancy, shoulder injury"
+    "contraindications": "Carpal tunnel syndrome, pregnancy, shoulder injury",
+    "images": [
+      "https://images.unsplash.com/photo-1573384666979-2b1e3e2261e4?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "From Plank, shift forward slightly on the toes so the shoulders move past the wrists. This sets up the proper lowering angle. Engage the core fully.",
+      "execution": "Exhale and bend the elbows to lower halfway to the floor. Keep elbows hugged to the sides at 90 degrees. Maintain a straight line from head to heels. Body hovers parallel to the floor.",
+      "mistakes": "Elbows splaying outward. Lowering too far — the shoulders should not dip below the elbows. Hips sagging or piking. Leading with the belly instead of lowering as one unit.",
+      "breathing": "This is an exhale movement. Lower on the exhale with control. The exhalation helps engage the core for a controlled descent."
+    }
   },
   {
     "name_en": "Sun Salutation A — Step 7: Upward-Facing Dog (Urdhva Mukha Svanasana)",
@@ -492,7 +888,16 @@
     "difficulty": "intermediate",
     "benefits": "Strengthens the spine, arms and wrists, stretches the chest and abdomen, improves posture",
     "instructions": "Inhale and roll over the toes. Straighten the arms and lift the torso and legs off the floor. Only the tops of the feet and hands touch the floor. Open the chest, roll shoulders back and look slightly upward. Keep the thighs off the floor and engaged.",
-    "contraindications": "Back injury, carpal tunnel syndrome, headache, pregnancy"
+    "contraindications": "Back injury, carpal tunnel syndrome, headache, pregnancy",
+    "images": [
+      "https://images.unsplash.com/photo-1510894347713-fc3ed6fdf539?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "From Chaturanga, prepare to roll over the toes and press up. Hands remain where they are. The transition should be fluid.",
+      "execution": "Inhale and roll over the toes. Straighten the arms and lift torso and legs off the floor. Only tops of feet and hands touch the floor. Open the chest, roll shoulders back, look slightly upward. Thighs stay off the floor.",
+      "mistakes": "Thighs and hips touching the floor — this makes it Cobra, not Upward Dog. Dumping into the lower back. Not rolling over the toes smoothly. Shoulders hunching up toward the ears.",
+      "breathing": "This is an inhale movement. The breath lifts and opens the chest. Fill the lungs to expand the front body fully."
+    }
   },
   {
     "name_en": "Sun Salutation A — Step 8: Downward-Facing Dog (Adho Mukha Svanasana)",
@@ -503,7 +908,16 @@
     "difficulty": "beginner",
     "benefits": "Calms the brain, energizes the body, stretches the entire back body",
     "instructions": "Exhale and lift the hips up and back, rolling over the toes into an inverted V-shape. Press the chest toward the thighs. Straighten the legs and press the heels toward the floor. Spread the fingers wide and press evenly through the hands. Hold for five breaths.",
-    "contraindications": "Carpal tunnel syndrome, late-term pregnancy, high blood pressure"
+    "contraindications": "Carpal tunnel syndrome, late-term pregnancy, high blood pressure",
+    "images": [
+      "https://images.unsplash.com/photo-1588286840104-8957b019727f?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "From Upward Dog, prepare to lift the hips. Press firmly through the hands. Engage the core to initiate the hip lift.",
+      "execution": "Exhale and lift the hips up and back, rolling over the toes into an inverted V. Press the chest toward the thighs. Straighten the legs and press heels toward the floor. Spread fingers wide. Hold for 5 breaths.",
+      "mistakes": "Rounding the upper back. Not pressing the chest toward the thighs. Weight dumping into the heels and the hands lifting. Holding the breath during the 5-breath hold.",
+      "breathing": "Exhale to lift into the pose. Then breathe steadily for 5 full cycles. Inhale to lengthen. Exhale to deepen. This is the longest hold in the Sun Salutation."
+    }
   },
   {
     "name_en": "Sun Salutation A — Step 9: Half Lift (Ardha Uttanasana)",
@@ -514,7 +928,16 @@
     "difficulty": "beginner",
     "benefits": "Strengthens the back, lengthens the spine",
     "instructions": "Step or jump the feet to the front of the mat. Inhale and lift the torso halfway, lengthening the spine forward. Fingertips on shins or floor. Flat back, gaze slightly ahead.",
-    "contraindications": "Back injury (keep knees bent)"
+    "contraindications": "Back injury (keep knees bent)",
+    "images": [
+      "https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "From Downward Dog, prepare to step or jump the feet to the front of the mat. Land with feet between the hands.",
+      "execution": "Step or jump feet to the front. Inhale and lift the torso halfway, lengthening the spine forward. Fingertips on shins or floor. Flat back, gaze slightly ahead.",
+      "mistakes": "Not stepping the feet far enough forward. Rounding the back instead of finding the flat-back position. Rushing past this transitional pose.",
+      "breathing": "Inhale as you lift. Use the full inhale to create maximum length in the spine before the next fold."
+    }
   },
   {
     "name_en": "Sun Salutation A — Step 10: Standing Forward Fold (Uttanasana)",
@@ -525,7 +948,16 @@
     "difficulty": "beginner",
     "benefits": "Calms the brain, stretches hamstrings, relieves stress",
     "instructions": "Exhale and fold forward completely. Relax the head and neck. Hands on the floor or clasping opposite elbows. Let gravity draw the torso deeper into the fold.",
-    "contraindications": "Back injury (keep knees bent)"
+    "contraindications": "Back injury (keep knees bent)",
+    "images": [
+      "https://images.unsplash.com/photo-1545389336-cf090694435e?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "From the half lift, prepare to fold completely. Release the effort of the flat back and surrender to gravity.",
+      "execution": "Exhale and fold forward completely. Relax the head and neck. Hands on the floor or clasping opposite elbows. Let gravity draw the torso deeper into the fold.",
+      "mistakes": "Holding tension in the neck. Not fully exhaling. Keeping the back flat instead of surrendering into the fold. Rushing to stand up.",
+      "breathing": "Exhale completely. Let the exhale draw you deeper. This fold is a moment of release before the final rise."
+    }
   },
   {
     "name_en": "Sun Salutation A — Step 11: Upward Salute (Urdhva Hastasana)",
@@ -536,7 +968,16 @@
     "difficulty": "beginner",
     "benefits": "Opens the chest, stretches the belly, creates full body extension",
     "instructions": "Inhale and rise up with a flat back, sweeping the arms overhead. Press the palms together. Gaze up at the thumbs. Lengthen the spine fully.",
-    "contraindications": "Neck injury (gaze forward)"
+    "contraindications": "Neck injury (gaze forward)",
+    "images": [
+      "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "From the forward fold, prepare to rise with a flat back. Root the feet firmly. Engage the legs and core to support the rise.",
+      "execution": "Inhale and rise up with a flat back, sweeping arms overhead. Press palms together. Gaze up at the thumbs. Lengthen the spine fully. This mirrors Step 2.",
+      "mistakes": "Rising with a rounded back. Not using the legs to power the rise. Losing the connection between breath and movement. Rushing the final stretch.",
+      "breathing": "Inhale fully as you rise. The breath powers the entire upward sweep. Fill the lungs completely at the top."
+    }
   },
   {
     "name_en": "Sun Salutation A — Step 12: Prayer Pose (Pranamasana)",
@@ -547,6 +988,15 @@
     "difficulty": "beginner",
     "benefits": "Returns to center, completes the cycle, promotes mindfulness",
     "instructions": "Exhale and bring the palms together at the heart center. Return to the starting position. Stand tall, breathe evenly, and observe the effects of the sequence in the body.",
-    "contraindications": "None"
+    "contraindications": "None",
+    "images": [
+      "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "From Upward Salute, prepare to return to the starting prayer position. This completes the cycle.",
+      "execution": "Exhale and bring palms together at the heart center. Return to the starting position. Stand tall, breathe evenly. Observe the effects of the sequence in the body before beginning the next round.",
+      "mistakes": "Rushing immediately into the next round. Not pausing to observe. Collapsing the posture after the effort. Losing the connection to the breath.",
+      "breathing": "Exhale to return to center. Take one complete breath to observe the effects before starting the next cycle. The pause is as important as the movement."
+    }
   }
 ]

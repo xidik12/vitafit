@@ -4,167 +4,383 @@
     "name_ru": "Начальная форма",
     "duration_mins": 1,
     "instructions": "Stand with feet shoulder-width apart, arms relaxed at sides. Slowly raise both arms forward to shoulder height with palms facing down. Exhale and gently lower arms back down while bending the knees slightly. Breathe in as arms rise, breathe out as arms lower. Feel the weight sink into the ground. Repeat 2-3 times to settle into the practice.",
-    "difficulty": "beginner"
+    "difficulty": "beginner",
+    "images": [
+      "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Stand with feet parallel, shoulder-width apart. Arms hang naturally at the sides. Relax the face, jaw, shoulders, and hands completely before beginning.",
+      "execution": "Raise arms slowly to shoulder height with palms facing down, as if floating on water. Lower arms while gently bending the knees, sinking the weight. The entire movement should take 5-8 seconds per cycle.",
+      "mistakes": "Rushing the arm lift. Locking the knees. Tensing the shoulders while raising the arms. Leaning forward or backward instead of staying centered.",
+      "breathing": "Inhale smoothly through the nose as arms rise. Exhale softly through the mouth as arms lower and knees bend. Let the breath lead the movement."
+    }
   },
   {
     "name_en": "Part the Wild Horse's Mane (Left & Right)",
     "name_ru": "Расчёсывание гривы дикой лошади (влево и вправо)",
     "duration_mins": 2,
     "instructions": "Hold an imaginary ball at chest height with right hand on top. Step forward with left foot into a bow stance while separating hands — left arm sweeps forward and upward to shoulder height, right hand presses down past the hip. Shift weight forward smoothly. Turn torso, gather hands again, step forward with right foot and mirror the movement on the opposite side. Repeat 3 times each side. Coordinate arm movement with the weight shift as one integrated action.",
-    "difficulty": "beginner"
+    "difficulty": "beginner",
+    "images": [
+      "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Begin in a comfortable stance with weight centered. Hold an imaginary ball at chest height — one hand on top, one underneath. Keep the elbows soft and rounded.",
+      "execution": "Step forward into a bow stance, separating the hands — the forward hand sweeps upward to shoulder height while the rear hand presses down past the hip. Shift weight forward as one integrated action with the arms.",
+      "mistakes": "Stepping too wide or too narrow. Separating the hands independently of the weight shift. Raising the forward hand above shoulder height. Losing the rounded quality in the arms.",
+      "breathing": "Inhale as you gather the ball and prepare to step. Exhale as you step forward and separate the hands. Keep breathing continuous and smooth."
+    }
   },
   {
     "name_en": "White Crane Spreads Wings",
     "name_ru": "Белый журавль расправляет крылья",
     "duration_mins": 1,
     "instructions": "Step back with the left foot while simultaneously raising the right arm upward to face height and lowering the left arm to hip height, palms facing outward in opposite directions. Shift most weight to the back right foot. The front left foot touches lightly with only the toe on the ground. Maintain upright posture with a sense of expansion — as though the crane is opening its wings to achieve balance. Hold the posture for one breath before transitioning.",
-    "difficulty": "beginner"
+    "difficulty": "beginner",
+    "images": [
+      "https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Position the feet so the front foot touches lightly with only the toes on the ground. Most weight rests on the back leg. Stand upright with a sense of vertical alignment.",
+      "execution": "Raise the right arm upward to face height while lowering the left arm to hip height. Palms face outward in opposite directions. Expand outward as though the crane is opening its wings for balance.",
+      "mistakes": "Placing too much weight on the front foot. Raising the top hand too high above the head. Collapsing the chest or leaning to one side. Tensing the neck and jaw.",
+      "breathing": "Inhale as the arms separate and expand outward. Exhale while holding the posture and settling the weight. Breathe into the sense of expansion."
+    }
   },
   {
     "name_en": "Brush Knee and Push (Left & Right)",
     "name_ru": "Отвести колено и шагнуть (влево и вправо)",
     "duration_mins": 2,
     "instructions": "Swing the right arm out and circle it down past the left knee — brushing it aside — while the left hand simultaneously pushes forward at chest height with a relaxed palm. Step forward with the left foot into a bow stance. Then turn the waist, swing the left arm out and circle down past the right knee while the right hand pushes forward. Step forward with the right foot. Continue alternating sides for 3 repetitions each. The push is relaxed and springy, not forced.",
-    "difficulty": "beginner"
+    "difficulty": "beginner",
+    "images": [
+      "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Start with weight on the back leg, one arm circled out to the side. The other hand is positioned at chest height ready to push forward. Face the direction you will step toward.",
+      "execution": "Step forward into a bow stance while one arm brushes past the knee and the other pushes forward with a relaxed, springy palm. The push is driven by the waist and the weight shift, not arm strength.",
+      "mistakes": "Pushing with a rigid arm instead of a relaxed palm. Not coordinating the brush and push simultaneously. Stepping with the foot turned outward instead of straight ahead. Upper body leaning forward.",
+      "breathing": "Inhale as you circle the arm back and prepare. Exhale as you step forward, brush the knee, and push. The exhalation powers the forward expression."
+    }
   },
   {
     "name_en": "Playing the Lute",
     "name_ru": "Игра на лютне",
     "duration_mins": 1,
     "instructions": "Without taking a full step, draw the back foot a half-step forward and shift most weight to that back foot. The arms take a lute-playing position: one hand rises forward to nose height, the other pulls back near the elbow of the front arm. Both palms face inward toward the body. The posture is still, centered, and meditative. Hold this balanced, quiet form for one full breath before transitioning to the next move.",
-    "difficulty": "beginner"
+    "difficulty": "beginner",
+    "images": [
+      "https://images.unsplash.com/photo-1545389336-cf090694435e?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Draw the back foot a half-step forward. Shift most weight onto the back foot. The front foot barely touches the ground. Center your balance directly over the supporting leg.",
+      "execution": "Position both arms as if playing a lute — one hand rises to nose height, the other pulls back near the elbow of the front arm. Both palms face inward. The posture is still, centered, and meditative.",
+      "mistakes": "Leaning the torso forward or backward. Putting equal weight on both feet instead of loading the back leg. Tensing the arms rigidly instead of keeping them soft and rounded.",
+      "breathing": "Breathe quietly and naturally. Inhale as you settle into the position. Exhale to deepen the sense of rootedness and stillness. Hold for one full calm breath."
+    }
   },
   {
     "name_en": "Repulse the Monkey (Left & Right)",
     "name_ru": "Отшагнуть назад и отбить обезьяну (влево и вправо)",
     "duration_mins": 3,
     "instructions": "Step backward with the right foot while the right hand simultaneously draws back past the ear in a circular arc and then pushes forward at shoulder height. The left hand withdraws to the hip as the right pushes forward. Then step backward with the left foot and repeat on the other side, drawing the left hand back and pushing forward. Maintain 4 to 6 backward steps alternating sides. Keep the torso upright and the stepping foot light — place it down toe-first then settle the heel.",
-    "difficulty": "beginner"
+    "difficulty": "beginner",
+    "images": [
+      "https://images.unsplash.com/photo-1588286840104-8957b019727f?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Stand with weight on the front foot, one hand extended forward at shoulder height. The other hand begins to circle back past the ear. Prepare to step backward.",
+      "execution": "Step backward placing the toe first, then settling the heel. Simultaneously draw one hand back past the ear and push it forward while the opposite hand withdraws to the hip. Alternate sides with each backward step.",
+      "mistakes": "Stepping backward flat-footed instead of toe-first. Looking down at the feet during backward steps. Losing the coordination between hand push and opposite hand withdrawal. Rushing the movement.",
+      "breathing": "Inhale as the hand draws back past the ear. Exhale as the hand pushes forward and weight settles backward. Maintain rhythmic breathing with each step."
+    }
   },
   {
     "name_en": "Grasp the Sparrow's Tail — Left",
     "name_ru": "Схватить воробья за хвост — влево",
     "duration_mins": 2,
     "instructions": "Step forward with the left foot. Perform four techniques in flowing sequence: (1) Ward Off — left arm sweeps upward in a curved arc as weight shifts forward, deflecting incoming force; (2) Roll Back — both hands rotate palms-down and pull back across the body as weight shifts to the rear foot, yielding; (3) Press — right palm presses into left wrist and both push forward at chest level as weight shifts forward again; (4) Push Down and Push — hands separate, sink, then both palms thrust forward horizontally. Each technique flows into the next without pause. Breathe naturally.",
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "images": [
+      "https://images.unsplash.com/photo-1573384666979-2b1e3e2261e4?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Step forward with the left foot into a bow stance. Prepare the arms for the four-part sequence: Ward Off, Roll Back, Press, and Push. Center your attention and intention.",
+      "execution": "Flow through four techniques without pause: Ward Off (left arm sweeps upward deflecting), Roll Back (both hands rotate and pull back yielding), Press (right palm into left wrist pushing forward), Push (hands separate, sink, then thrust forward).",
+      "mistakes": "Pausing between the four techniques instead of flowing continuously. Using arm strength instead of waist-driven power. Failing to shift weight fully between front and back foot. Tensing the shoulders.",
+      "breathing": "Inhale on yielding movements (Roll Back). Exhale on issuing movements (Ward Off, Press, Push). Let the breath coordinate naturally with the ebb and flow of each technique."
+    }
   },
   {
     "name_en": "Grasp the Sparrow's Tail — Right",
     "name_ru": "Схватить воробья за хвост — вправо",
     "duration_mins": 2,
     "instructions": "Mirror of the left-side sequence. Step forward with the right foot and perform Ward Off, Roll Back, Press, and Push on the right side. Ward Off: right arm sweeps upward deflecting outward. Roll Back: both hands rotate and yield, drawing energy back. Press: left palm against right wrist, both push forward. Push: hands separate and both palms thrust forward. Ensure weight shifting is fully coordinated with each hand technique. Breathe in on yielding movements, breathe out on issuing movements.",
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "images": [
+      "https://images.unsplash.com/photo-1575052814086-f385e2e2ad33?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Mirror the left side setup. Step forward with the right foot into a bow stance. Prepare for the same four-part sequence on the opposite side.",
+      "execution": "Perform Ward Off with the right arm sweeping upward, Roll Back yielding and rotating, Press with left palm against right wrist pushing forward, and Push with both palms thrusting forward. Fully coordinate weight shifting with each hand technique.",
+      "mistakes": "Not fully mirroring the left side — the right side often feels less natural. Insufficient weight shift between front and back. Disconnecting the arms from the waist rotation. Holding the breath.",
+      "breathing": "Breathe in on yielding movements (Roll Back), breathe out on issuing movements (Ward Off, Press, Push). Keep the breathing natural and unforced throughout."
+    }
   },
   {
     "name_en": "Single Whip",
     "name_ru": "Одиночный хлыст",
     "duration_mins": 1,
     "instructions": "From a wide stance, shift weight to the right leg and pivot the left foot outward. The right hand forms a crane-beak hook — fingertips pinched together pointing downward — and extends to the right at shoulder height. Step out with the left foot into a bow stance as the left hand arcs upward in front of the face, then opens with palm facing outward and extends to the left at shoulder height. Weight settles on the front left leg. The body is fully open, arms stretched wide like a wide horizon. Hold for one breath.",
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "images": [
+      "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Start in a wide stance with weight shifted to the right leg. Pivot the left foot outward. Form a crane-beak hook with the right hand — fingertips pinched together pointing downward.",
+      "execution": "Extend the crane-beak to the right at shoulder height. Step out with the left foot into a bow stance. The left hand arcs upward past the face, opens palm-outward, and extends to the left. Weight settles on the front left leg. The body opens wide like a horizon.",
+      "mistakes": "Opening the body before the foot is placed. Losing the crane-beak formation. Leaning forward instead of staying upright. Allowing the rear arm to drop below shoulder height.",
+      "breathing": "Inhale as the crane-beak extends and the left hand begins its arc. Exhale as the left palm opens and the body settles into the full open posture. Hold for one breath."
+    }
   },
   {
     "name_en": "Wave Hands Like Clouds",
     "name_ru": "Руки как облака",
     "duration_mins": 3,
     "instructions": "Stand in a shoulder-width parallel stance or slightly wide horse stance. Hands move in large alternating vertical circles in front of the body — as one hand rises to face height with palm facing inward, the other simultaneously lowers to hip height. Simultaneously side-step with a close-and-open pattern: close feet together as one hand rises, then step out as the other rises. The movement is slow, seamless, and horizontal — drifting sideways like clouds rolling across the sky. Perform 5 to 9 repetitions moving to the left.",
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "images": [
+      "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Stand in a parallel shoulder-width stance or slightly wide horse stance. Hands begin at different heights — one at face level, one at hip level. Weight is evenly distributed.",
+      "execution": "Move hands in large alternating vertical circles in front of the body. As one hand rises to face height, the other lowers to hip height. Side-step with a close-and-open pattern. The movement is slow, seamless, and horizontal — drifting like clouds.",
+      "mistakes": "Moving the hands and feet at different rhythms instead of unifying them. Making the circles too small or too jerky. Bouncing up and down instead of gliding horizontally. Looking at the hands instead of gazing softly ahead.",
+      "breathing": "Breathe naturally and continuously. Inhale as one hand rises. Exhale as it descends and the other rises. Let the breathing rhythm match the cloud-like tempo."
+    }
   },
   {
     "name_en": "High Pat on Horse",
     "name_ru": "Высокое поглаживание лошади",
     "duration_mins": 1,
     "instructions": "Shift nearly all weight to the back foot as the rear hand lifts upward to ear level, then presses or 'pats' gently forward at head height with palm facing down. The front foot lightly touches the ground with only the toes — most weight remains on the back leg. The front hand withdraws to hip level simultaneously. Imagine patting the neck of a tall horse — the movement is light, precise, and graceful rather than heavy or forceful.",
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "images": [
+      "https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Shift most weight to the back foot. The front foot touches lightly with only the toes. The rear hand is near ear level, ready to pat forward. Stand upright and balanced.",
+      "execution": "Press or pat gently forward at head height with the rear hand, palm facing down. The front hand withdraws to hip level simultaneously. The movement is light, precise, and graceful — imagine patting the neck of a tall horse.",
+      "mistakes": "Using heavy or forceful patting instead of a light, graceful touch. Distributing too much weight on the front foot. Collapsing the posture or rounding the shoulders. Rushing the transition.",
+      "breathing": "Inhale as the hand lifts to ear level. Exhale as the hand pats forward and the weight settles on the back leg. Keep the breath light to match the delicate quality of the movement."
+    }
   },
   {
     "name_en": "Kick with Right Heel",
     "name_ru": "Удар правой пяткой",
     "duration_mins": 1,
     "instructions": "Balance on the left foot and cross both hands in front of the chest — right wrist over left. Then separate the hands outward in opposite diagonals while simultaneously lifting the right knee to hip height. Extend the right foot in a slow, controlled heel kick toward the right-forward diagonal. The right hand and right foot extend in the same direction. Maintain an upright torso — do not lean back. Hold the kick position for one breath before slowly lowering the foot back to the ground.",
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "images": [
+      "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Balance on the left foot with the knee slightly bent. Cross both hands in front of the chest — right wrist over left. Engage the core for stability before initiating the kick.",
+      "execution": "Separate the hands outward in opposite diagonals while lifting the right knee. Extend the right foot in a slow, controlled heel kick toward the right-forward diagonal. The right hand and foot extend in the same direction. Maintain an upright torso.",
+      "mistakes": "Leaning back to compensate for the leg lift. Kicking too fast or with momentum instead of control. Letting the standing leg lock at the knee. Not extending hand and foot in the same direction.",
+      "breathing": "Inhale as the hands cross and prepare. Exhale as the hands separate and the heel kicks outward. Hold the position for one breath before lowering."
+    }
   },
   {
     "name_en": "Strike Ears with Fists",
     "name_ru": "Удар кулаками по ушам",
     "duration_mins": 1,
     "instructions": "Lower the right foot forward into a left bow stance. Both hands open and drop to the sides at hip level. Then both fists arc upward and inward simultaneously in a hammer-fist motion aimed at the temples of an imaginary opponent — the knuckles face forward at the end. The motion originates from waist rotation, not just arm movement. The strike is focused and controlled, neither limp nor excessively tense. The fists stop at head-level with wrists lightly turned inward.",
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "images": [
+      "https://images.unsplash.com/photo-1545389336-cf090694435e?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Lower the foot forward into a bow stance. Both hands open and drop to hip level at the sides. Center the body and prepare for the upward arc of both fists.",
+      "execution": "Both fists arc upward and inward simultaneously in a hammer-fist motion aimed at temple height. The knuckles face forward. The strike originates from waist rotation, not just arm movement. Controlled and focused, neither limp nor tense.",
+      "mistakes": "Striking with arm strength alone instead of waist rotation. Lifting the shoulders during the strike. Making the fists too tight or too loose. Overextending past head level.",
+      "breathing": "Inhale as the hands drop and prepare. Exhale forcefully as the fists arc upward to strike. The breath powers the focused intention of the movement."
+    }
   },
   {
     "name_en": "Kick with Left Heel",
     "name_ru": "Удар левой пяткой",
     "duration_mins": 1,
     "instructions": "Turn the body to the left and balance on the right foot. Cross both hands in front of the chest — left wrist over right. Separate hands outward in opposite diagonals while lifting the left knee to hip height. Extend the left foot in a slow, controlled heel kick toward the left-forward diagonal. The left hand and left foot extend in the same direction simultaneously. Keep the supporting right leg slightly bent and stable. Lower the foot gradually with control after the kick.",
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "images": [
+      "https://images.unsplash.com/photo-1588286840104-8957b019727f?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Turn the body to the left and balance on the right foot. Cross both hands in front of the chest — left wrist over right. Ground firmly through the standing leg before kicking.",
+      "execution": "Separate hands outward in opposite diagonals while lifting the left knee. Extend the left foot in a slow, controlled heel kick toward the left-forward diagonal. Left hand and left foot extend in the same direction.",
+      "mistakes": "Rotating the torso instead of keeping it upright. Allowing the supporting right leg to straighten completely. Rushing the kick extension. Not maintaining alignment between hand and foot.",
+      "breathing": "Inhale as the hands cross and you prepare. Exhale as the hands separate and the left heel kicks outward. Lower the foot gradually with control on the next inhale."
+    }
   },
   {
     "name_en": "Snake Creeps Down — Left",
     "name_ru": "Змея ползёт вниз — влево",
     "duration_mins": 2,
     "instructions": "Transition from Single Whip. The right hand retains the crane-beak hook position extended to the right. Bend the right knee deeply and sink low as the left leg extends outward to the left, foot flat on the ground. The left hand traces a path along the inner side of the left leg from the thigh down toward the foot with palm facing outward. Descend as low as hip flexibility comfortably allows — do not force the depth. The spine remains elongated, not rounded. Breathe out as you sink into the posture.",
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "images": [
+      "https://images.unsplash.com/photo-1573384666979-2b1e3e2261e4?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Transition from Single Whip. The right hand maintains the crane-beak hook extended to the right. Position the feet wide enough to sink low. Engage the core for stability.",
+      "execution": "Bend the right knee deeply and sink low as the left leg extends outward. The left hand traces along the inner side of the left leg from thigh to foot with palm facing outward. Descend as low as comfortable. The spine stays elongated, not rounded.",
+      "mistakes": "Rounding the spine instead of keeping it elongated. Forcing depth beyond what hip flexibility allows. Losing the crane-beak formation on the supporting side. Shifting weight too far forward.",
+      "breathing": "Inhale to prepare and lengthen the spine. Exhale as you sink into the posture, guiding the hand along the leg. Breathe steadily at the bottom of the position."
+    }
   },
   {
     "name_en": "Snake Creeps Down — Right",
     "name_ru": "Змея ползёт вниз — вправо",
     "duration_mins": 2,
     "instructions": "The left hand forms a crane-beak hook and extends to the left. Bend the left knee deeply and sink low as the right leg extends outward to the right, foot flat on the ground. The right hand traces a path along the inner side of the right extended leg with palm facing outward. Move slowly and with complete muscular control. Ensure the spine stays long rather than collapsing downward. Only go as deep as the body allows today — this posture improves gradually with practice.",
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "images": [
+      "https://images.unsplash.com/photo-1575052814086-f385e2e2ad33?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "The left hand forms a crane-beak hook extended to the left. Prepare to sink on the left leg while the right leg extends outward. Center your weight over the bending knee.",
+      "execution": "Bend the left knee deeply and sink low as the right leg extends outward. The right hand traces along the inner side of the right extended leg with palm facing outward. Move slowly with complete muscular control throughout.",
+      "mistakes": "Collapsing the spine downward instead of keeping it long. Going too deep too quickly. Losing balance by shifting weight too far to one side. Holding the breath during the descent.",
+      "breathing": "Inhale to prepare. Exhale steadily as you descend into the low posture. Breathe naturally while holding. This posture improves gradually — do not force it."
+    }
   },
   {
     "name_en": "Golden Rooster Stands on One Leg (Left & Right)",
     "name_ru": "Золотой петух стоит на одной ноге (влево и вправо)",
     "duration_mins": 2,
     "instructions": "Rise up from Snake Creeps Down by lifting one knee high while the same-side arm rises with palm facing up as if lifting the knee from underneath. The opposite arm simultaneously drops straight down to the side. Balance on one leg with the raised knee at or near hip height. The head lifts, the spine is tall. Hold for two to three breaths. Then lower that foot and raise the opposite knee with the opposite arm rising — alternating sides. This posture cultivates deep single-leg rooting and internal strength.",
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "images": [
+      "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Rise from Snake Creeps Down. Center the weight over one standing leg. Prepare to lift the opposite knee high while the same-side arm rises with palm facing up.",
+      "execution": "Lift one knee to hip height while the same-side arm rises as if lifting the knee from underneath. The opposite arm drops straight down. Balance with a tall spine and lifted head. Hold for 2-3 breaths. Lower and switch sides.",
+      "mistakes": "Leaning the torso to the side to compensate for the lifted leg. Not lifting the knee high enough to hip level. Tensing the shoulders and neck. Rushing through the balance hold.",
+      "breathing": "Inhale as the knee and arm rise together. Hold steady breaths while balancing. Exhale as you lower and prepare to switch sides. Calm breathing aids balance."
+    }
   },
   {
     "name_en": "Fair Lady Works Shuttles (Four Corners)",
     "name_ru": "Нефритовая дева работает за ткацким станком (четыре угла)",
     "duration_mins": 3,
     "instructions": "Perform four diagonal stepping movements, one for each diagonal corner (NE, NW, SW, SE). For each corner: pivot the body, step diagonally with the leading foot into a bow stance, one arm sweeps upward in a ward-off arc to overhead height (palm facing upward as a shield), while the other hand simultaneously pushes forward at chest height with an open palm. After each corner, turn the waist to face the next diagonal before stepping. The four corners represent the four guardians of space. Move with smooth rotational pivots between corners.",
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "images": [
+      "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Prepare for four diagonal stepping movements, one for each corner (NE, NW, SW, SE). Face the first diagonal. Position the arms ready for a ward-off arc overhead and a forward push.",
+      "execution": "For each corner: pivot, step diagonally into a bow stance. One arm sweeps overhead as a shield (palm up), while the other pushes forward at chest height. After each corner, turn the waist to face the next diagonal before stepping.",
+      "mistakes": "Not pivoting the waist fully to face each new diagonal. Stepping too narrow for the diagonal direction. The overhead arm drifting to the side instead of staying protective. Losing rhythm between the four corners.",
+      "breathing": "Inhale as you pivot and prepare for each new corner. Exhale as you step and express the overhead ward-off and forward push. Maintain a steady rhythm across all four corners."
+    }
   },
   {
     "name_en": "Needle at Sea Bottom",
     "name_ru": "Игла на дне моря",
     "duration_mins": 1,
     "instructions": "Draw the right foot inward so only the toes touch the floor and shift nearly all weight to the rear left foot. One hand — typically the right — drops straight downward with fingers pointing toward the ground, as if threading a very long needle into the sea floor far below. The other left hand draws back near the left hip. The torso tilts slightly forward from the hip joint — the back remains long, not rounded. The body compresses downward like a spring gathering energy for the next movement.",
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "images": [
+      "https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Draw the right foot inward so only toes touch the floor. Shift nearly all weight to the rear left foot. The body compresses downward like a spring gathering energy.",
+      "execution": "One hand drops straight downward with fingers pointing to the ground, as if threading a long needle into the sea floor. The other hand draws back to the hip. The torso tilts slightly forward from the hip joint with a long, un-rounded back.",
+      "mistakes": "Rounding the back instead of hinging from the hip. Placing weight on the front foot. Dropping the head excessively. Over-tilting forward and losing balance.",
+      "breathing": "Exhale as the hand drops downward and the body compresses. The exhalation gathers energy that will be released in the next movement (Fan Through Back)."
+    }
   },
   {
     "name_en": "Fan Through Back",
     "name_ru": "Веер через спину",
     "duration_mins": 1,
     "instructions": "Immediately following Needle at Sea Bottom, step forward with the right foot into a wide bow stance. Simultaneously one arm sweeps upward and diagonally forward — like a fan opening dramatically to the upper-forward diagonal — while the other hand pushes outward at shoulder height in the opposite direction. The body rises and expands fully after the compressed needle posture, releasing accumulated energy in an expansive spreading gesture. The transition from compression to expansion should feel effortless.",
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "images": [
+      "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Immediately follow Needle at Sea Bottom. The body is compressed and loaded with gathered energy. Prepare to step forward into a wide bow stance and expand dramatically.",
+      "execution": "Step forward with the right foot. One arm sweeps upward and diagonally forward like a fan opening. The other hand pushes outward at shoulder height in the opposite direction. The body rises and expands fully, releasing accumulated energy.",
+      "mistakes": "Not connecting this movement to the previous Needle posture — the transition from compression to expansion should be effortless. Expanding too early before the foot is planted. Overarching the back.",
+      "breathing": "Inhale powerfully as the body rises and the arms expand. The inhalation should match the dramatic opening of the fan. Exhale to settle into the expanded position."
+    }
   },
   {
     "name_en": "Turn, Deflect, Parry, and Punch",
     "name_ru": "Поворот, отбив, парирование и удар",
     "duration_mins": 2,
     "instructions": "Pivot sharply on the heel to turn the body 180 degrees while one fist swings in a downward-deflecting arc clearing the way. Step forward with the left foot, raising the left forearm in a parrying block as the weight shifts forward. Finally, as the body settles into a stable bow stance, the right fist punches straight forward at chest height. Each of the four phases — Turn, Deflect, Parry, Punch — flows directly into the next without any pause. Waist rotation drives each technique. The punch derives power from the step, not just the arm.",
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "images": [
+      "https://images.unsplash.com/photo-1545389336-cf090694435e?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Prepare for a four-phase sequence: Turn, Deflect, Parry, Punch. Each phase flows directly into the next. The waist rotation drives each technique.",
+      "execution": "Pivot sharply on the heel to turn 180 degrees while one fist swings in a downward deflecting arc. Step forward with the left foot, raising the forearm in a parrying block. Then settle into a bow stance and punch straight forward at chest height. The punch derives power from the step.",
+      "mistakes": "Pausing between the four phases instead of flowing continuously. Punching with only arm force instead of whole-body power from the step and waist. The deflection being too large or too small. Losing balance during the 180-degree pivot.",
+      "breathing": "Exhale sharply on the final punch. Breathe naturally through the turn, deflect, and parry phases. The exhalation on the punch focuses the energy."
+    }
   },
   {
     "name_en": "Apparent Close Up",
     "name_ru": "Кажущееся закрытие",
     "duration_mins": 1,
     "instructions": "Slide both hands under the punching arm with palms facing upward, then separate them forward and outward. Sit back onto the rear foot, drawing both hands back to chest level — palms now face forward in a yielding position as if absorbing incoming force. Then shift weight forward decisively and push both palms outward simultaneously at chest height in a double push. This two-phase withdraw-then-issue movement embodies the core tai chi principle: yield first to gather, then issue to express. Breathe in on the withdrawal, breathe out on the push.",
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "images": [
+      "https://images.unsplash.com/photo-1588286840104-8957b019727f?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Position both hands under the punching arm with palms facing upward. Prepare for a two-phase withdraw-then-issue movement that embodies tai chi's core principle of yielding first.",
+      "execution": "Separate hands forward and outward. Sit back onto the rear foot, drawing both hands to chest level (palms forward, absorbing). Then shift weight forward decisively and push both palms outward at chest height in a double push.",
+      "mistakes": "Rushing the withdrawal phase — the yield must be genuine and complete before issuing. Not shifting weight fully back before pushing forward. Using rigid arms instead of yielding, elastic ones. Pushing from the shoulders instead of the waist.",
+      "breathing": "Inhale as you sit back and withdraw the hands (yield). Exhale as you shift forward and push outward (issue). The breath matches the two-phase energy cycle."
+    }
   },
   {
     "name_en": "Cross Hands",
     "name_ru": "Скрещённые руки",
     "duration_mins": 1,
     "instructions": "Pivot the body to face the original starting direction. Shift weight to center and step the feet to shoulder-width in a parallel stance with knees slightly bent. Both arms swing open outward to the sides, then arc downward and cross at the wrists in front of the chest — right wrist over left — with palms facing the body. Weight is evenly distributed between both feet. Stand upright and still. Breathe naturally. This posture represents gathering and centering all the energy dispersed during the form, drawing it back to the heart center.",
-    "difficulty": "beginner"
+    "difficulty": "beginner",
+    "images": [
+      "https://images.unsplash.com/photo-1573384666979-2b1e3e2261e4?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Pivot the body to face the original starting direction. Step the feet to shoulder-width in a parallel stance. Knees are slightly bent. Weight is evenly distributed.",
+      "execution": "Both arms swing open outward to the sides, then arc downward and cross at the wrists in front of the chest — right wrist over left — with palms facing the body. Stand upright and still. This gathers and centers all the energy dispersed during the form.",
+      "mistakes": "Crossing the wrists too low or too high — they should be at heart center height. Standing with locked knees. Rushing the arm crossing instead of moving with deliberate grace. Tensing the shoulders.",
+      "breathing": "Inhale as the arms open wide. Exhale as the arms cross at the chest. Breathe naturally while holding the centered, gathered posture."
+    }
   },
   {
     "name_en": "Closing Form",
     "name_ru": "Завершающая форма",
     "duration_mins": 1,
     "instructions": "Uncross the hands and lower both arms slowly and smoothly down to the sides with palms facing downward. Gradually straighten the knees as the arms lower — do not lock the knees. Return to the neutral shoulder-width standing position that mirrored the Opening Form. Breathe out fully and completely as the arms lower all the way. Stand quietly for one full minute after the arms rest — do not rush away. Absorb the calm energy cultivated throughout the entire form before resuming normal activity.",
-    "difficulty": "beginner"
+    "difficulty": "beginner",
+    "images": [
+      "https://images.unsplash.com/photo-1575052814086-f385e2e2ad33?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Begin from Cross Hands position with wrists crossed at the chest. Prepare for the final descent of the arms and the return to neutral standing. Let the practice's calm energy settle.",
+      "execution": "Uncross the hands and lower both arms slowly to the sides with palms facing down. Gradually straighten the knees as the arms lower — do not lock them. Return to the neutral shoulder-width standing position. Stand quietly for one full minute afterward.",
+      "mistakes": "Lowering the arms too quickly. Locking the knees at the end. Rushing away immediately after the arms reach the sides. Not taking the full minute of standing stillness.",
+      "breathing": "Exhale fully and completely as the arms lower all the way down. Once the arms rest at the sides, return to natural, quiet breathing. Absorb the calm energy cultivated during the entire form."
+    }
   }
 ]
