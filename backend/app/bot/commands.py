@@ -1,6 +1,6 @@
 import logging
 from aiogram import Router, F
-from aiogram.types import Message, BotCommand
+from aiogram.types import Message, CallbackQuery
 from aiogram.filters import Command
 from sqlalchemy import select
 
@@ -42,6 +42,27 @@ async def cmd_start(message: Message):
     )
 
 
+@router.callback_query(F.data.startswith("lang:"))
+async def on_language(callback: CallbackQuery):
+    lang = callback.data.split(":")[1]
+    await callback.answer()
+
+    async with async_session() as session:
+        result = await session.execute(
+            select(User).where(User.telegram_id == callback.from_user.id)
+        )
+        user = result.scalar_one_or_none()
+        if user:
+            user.language = lang
+            await session.commit()
+
+    await callback.message.edit_text(t("language_set", lang))
+    await callback.message.answer(
+        t("welcome", lang),
+        reply_markup=main_keyboard(lang),
+    )
+
+
 @router.message(Command("help"))
 async def cmd_help(message: Message):
     user = await get_or_create_user(message.from_user.id)
@@ -51,9 +72,6 @@ async def cmd_help(message: Message):
 @router.message(Command("plan"))
 async def cmd_plan(message: Message):
     user = await get_or_create_user(message.from_user.id)
-    if not user.onboarding_complete:
-        await message.answer(t("welcome", user.language), reply_markup=main_keyboard(user.language))
-        return
     await message.answer(
         t("btn_open_app", user.language),
         reply_markup=main_keyboard(user.language),
@@ -78,9 +96,8 @@ async def cmd_water(message: Message):
     from datetime import date as dt_date
     from app.database import WaterLog
     user = await get_or_create_user(message.from_user.id)
-    # Parse amount from command: /water 250
     parts = message.text.split()
-    amount = 250  # default glass
+    amount = 250
     if len(parts) > 1:
         try:
             amount = int(parts[1])

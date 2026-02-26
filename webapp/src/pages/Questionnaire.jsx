@@ -107,7 +107,9 @@ export default function Questionnaire() {
     }
     try {
       const res = await api.post('/api/questionnaire/answers', payload, token)
-      if (res?.profile) setProfile(res.profile)
+      if (res?.profile) {
+        setProfile(prev => ({ ...prev, ...res.profile }))
+      }
       navigate('/')
     } catch (err) {
       setError(err.message || 'Submission failed')

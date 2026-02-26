@@ -12,7 +12,7 @@ export default function Dashboard() {
   const [todaySummary, setTodaySummary] = useState(null)
   const [summaryLoading, setSummaryLoading] = useState(true)
 
-  const isOnboarded = profile?.onboarded
+  const isOnboarded = profile?.onboarding_complete
 
   useEffect(() => {
     if (!token || !isOnboarded) {
@@ -40,7 +40,7 @@ export default function Dashboard() {
   }
 
   const firstName = tgUser?.first_name || profile?.first_name || ''
-  const calGoal = profile?.calorie_goal || 2000
+  const calGoal = profile?.calorie_goal || profile?.target_calories || 2000
   const calConsumed = todaySummary?.calories_consumed || 0
   const calLeft = Math.max(0, calGoal - calConsumed)
   const calPercent = Math.min(100, (calConsumed / calGoal) * 100)

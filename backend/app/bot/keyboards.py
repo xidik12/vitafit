@@ -30,10 +30,6 @@ def main_keyboard(lang: str = "ru") -> InlineKeyboardMarkup:
             text=t("btn_open_app", lang),
             web_app=WebAppInfo(url=settings.telegram_webapp_url),
         )])
-    buttons.append([InlineKeyboardButton(
-        text=t("btn_start_questionnaire", lang),
-        callback_data="start_questionnaire",
-    )])
     return InlineKeyboardMarkup(inline_keyboard=buttons)
 
 
