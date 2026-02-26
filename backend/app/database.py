@@ -11,12 +11,13 @@ _db_logger = logging.getLogger(__name__)
 
 def _create_engine():
     url = settings.async_database_url
+    _db_logger.info(f"Database URL scheme: {url.split('://')[0] if '://' in url else 'unknown'}")
     if settings.is_postgres:
         _db_logger.info("Using PostgreSQL backend")
         return create_async_engine(
-            url, echo=False, pool_size=10, max_overflow=20,
-            pool_pre_ping=True, pool_recycle=1800, pool_timeout=10,
-            connect_args={"command_timeout": 30},
+            url, echo=False, pool_size=5, max_overflow=10,
+            pool_pre_ping=True, pool_recycle=1800, pool_timeout=30,
+            connect_args={"timeout": 30, "ssl": "disable"},
         )
     _db_logger.info("Using SQLite backend")
     return create_async_engine(url, echo=False)
