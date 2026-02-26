@@ -5,7 +5,7 @@ class Settings(BaseSettings):
     telegram_bot_token: str = ""
     telegram_webapp_url: str = ""
     admin_telegram_id: int = 0
-    database_url: str
+    database_url: str = "sqlite:///./vitafit.db"
     host: str = "0.0.0.0"
     port: int = 8000
     debug: bool = False
@@ -26,12 +26,19 @@ class Settings(BaseSettings):
     @property
     def async_database_url(self) -> str:
         url = self.database_url
-        if url.startswith("postgres://"):
-            url = url.replace("postgres://", "postgresql+asyncpg://", 1)
-        elif url.startswith("postgresql://"):
-            url = url.replace("postgresql://", "postgresql+asyncpg://", 1)
-        elif url.startswith("sqlite"):
-            url = url.replace("sqlite://", "sqlite+aiosqlite://", 1)
+        # Normalize all postgres variants to asyncpg
+        for sync_prefix in (
+            "postgresql+psycopg2://",
+            "postgresql+psycopg://",
+            "postgresql://",
+            "postgres://",
+        ):
+            if url.startswith(sync_prefix):
+                return "postgresql+asyncpg://" + url[len(sync_prefix):]
+        if url.startswith("sqlite:///"):
+            return "sqlite+aiosqlite:///" + url[len("sqlite:///"):]
+        if url.startswith("sqlite://"):
+            return "sqlite+aiosqlite://" + url[len("sqlite://"):]
         return url
 
     model_config = {"env_file": ".env"}

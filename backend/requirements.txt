@@ -33,4 +33,4 @@ greenlet==3.1.1
 PyJWT==2.10.1
 
 # Redis client
-redis[hiredis]==5.2.1
+redis==5.2.1
