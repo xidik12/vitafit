@@ -29,7 +29,7 @@ function StepProgress({ step }) {
       {Array.from({ length: TOTAL_STEPS }).map((_, i) => (
         <div
           key={i}
-          className={`flex-1 h-1 rounded-full transition-all duration-300 ${i <= step ? 'bg-accent-green' : 'bg-gray-700'}`}
+          className={`flex-1 h-1 rounded-full transition-all duration-300 ${i <= step ? 'bg-accent-green' : 'bg-gray-200'}`}
         />
       ))}
     </div>
@@ -135,7 +135,7 @@ export default function Questionnaire() {
             <p className="text-text-secondary text-sm leading-relaxed mb-6">
               {t('consent')}
             </p>
-            <label className="flex items-start gap-3 bg-bg-card rounded-xl p-4 cursor-pointer">
+            <label className="flex items-start gap-3 bg-white rounded-xl p-4 cursor-pointer border border-border shadow-sm">
               <input
                 type="checkbox"
                 checked={consent}
@@ -163,7 +163,7 @@ export default function Questionnaire() {
             )}
             <div className="space-y-3">
               {PARQ_QUESTIONS.map(qKey => (
-                <div key={qKey} className="bg-bg-card rounded-xl p-3">
+                <div key={qKey} className="bg-white rounded-xl p-3 border border-border shadow-sm">
                   <p className="text-sm text-text-primary mb-2">{t(`parq.${qKey}`)}</p>
                   <div className="flex gap-2">
                     {['yes', 'no'].map(val => (
@@ -175,7 +175,7 @@ export default function Questionnaire() {
                             ? val === 'yes'
                               ? 'bg-accent-orange/20 border-accent-orange text-accent-orange'
                               : 'bg-accent-green/20 border-accent-green text-accent-green'
-                            : 'bg-transparent border-gray-700 text-text-secondary'
+                            : 'bg-transparent border-border text-text-secondary'
                         }`}
                       >
                         {tc(`common.${val}`)}
@@ -201,8 +201,8 @@ export default function Questionnaire() {
                   onClick={() => setGoal(g)}
                   className={`w-full text-left px-4 py-3 rounded-xl border text-sm font-medium transition-colors ${
                     goal === g
-                      ? 'bg-accent-green/20 border-accent-green text-accent-green'
-                      : 'bg-bg-card border-transparent text-text-primary'
+                      ? 'bg-accent-green/20 border-accent-green text-accent-dark'
+                      : 'bg-white border-border text-text-primary shadow-sm'
                   }`}
                 >
                   {t(`goals.${g}`)}
@@ -226,7 +226,7 @@ export default function Questionnaire() {
                   value={metrics.age}
                   onChange={e => setMetrics(m => ({ ...m, age: e.target.value }))}
                   placeholder="25"
-                  className="w-full bg-bg-card rounded-xl px-3 py-2.5 text-sm text-text-primary outline-none border border-transparent focus:border-accent-green"
+                  className="w-full bg-white rounded-xl px-3 py-2.5 text-sm text-text-primary outline-none border border-border focus:border-accent-green"
                 />
               </div>
               <div>
@@ -238,8 +238,8 @@ export default function Questionnaire() {
                       onClick={() => setMetrics(m => ({ ...m, gender: g }))}
                       className={`flex-1 py-2 rounded-xl text-sm border transition-colors ${
                         metrics.gender === g
-                          ? 'bg-accent-green/20 border-accent-green text-accent-green'
-                          : 'bg-bg-card border-transparent text-text-secondary'
+                          ? 'bg-accent-green/20 border-accent-green text-accent-dark'
+                          : 'bg-white border-border text-text-secondary'
                       }`}
                     >
                       {g.charAt(0).toUpperCase() + g.slice(1)}
@@ -254,7 +254,7 @@ export default function Questionnaire() {
                   value={metrics.height_cm}
                   onChange={e => setMetrics(m => ({ ...m, height_cm: e.target.value }))}
                   placeholder="170"
-                  className="w-full bg-bg-card rounded-xl px-3 py-2.5 text-sm text-text-primary outline-none border border-transparent focus:border-accent-green"
+                  className="w-full bg-white rounded-xl px-3 py-2.5 text-sm text-text-primary outline-none border border-border focus:border-accent-green"
                 />
               </div>
               <div>
@@ -265,7 +265,7 @@ export default function Questionnaire() {
                   value={metrics.weight_kg}
                   onChange={e => setMetrics(m => ({ ...m, weight_kg: e.target.value }))}
                   placeholder="70"
-                  className="w-full bg-bg-card rounded-xl px-3 py-2.5 text-sm text-text-primary outline-none border border-transparent focus:border-accent-green"
+                  className="w-full bg-white rounded-xl px-3 py-2.5 text-sm text-text-primary outline-none border border-border focus:border-accent-green"
                 />
               </div>
               <div>
@@ -276,7 +276,7 @@ export default function Questionnaire() {
                   value={metrics.target_weight_kg}
                   onChange={e => setMetrics(m => ({ ...m, target_weight_kg: e.target.value }))}
                   placeholder="65 (optional)"
-                  className="w-full bg-bg-card rounded-xl px-3 py-2.5 text-sm text-text-primary outline-none border border-transparent focus:border-accent-green"
+                  className="w-full bg-white rounded-xl px-3 py-2.5 text-sm text-text-primary outline-none border border-border focus:border-accent-green"
                 />
               </div>
             </div>
@@ -296,8 +296,8 @@ export default function Questionnaire() {
                   onClick={() => setDiet(d)}
                   className={`w-full text-left px-4 py-3 rounded-xl border text-sm font-medium transition-colors ${
                     diet === d
-                      ? 'bg-accent-green/20 border-accent-green text-accent-green'
-                      : 'bg-bg-card border-transparent text-text-primary'
+                      ? 'bg-accent-green/20 border-accent-green text-accent-dark'
+                      : 'bg-white border-border text-text-primary shadow-sm'
                   }`}
                 >
                   {d === 'no_restriction' ? 'No restriction' : d.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase())}
@@ -316,7 +316,7 @@ export default function Questionnaire() {
             <div className="space-y-4">
               <div>
                 <label className="text-xs text-text-secondary mb-2 block">
-                  Sleep Hours per Night: <span className="text-accent-green">{sleep.sleep_hours}h</span>
+                  Sleep Hours per Night: <span className="text-accent-green font-semibold">{sleep.sleep_hours}h</span>
                 </label>
                 <input
                   type="range"
@@ -341,8 +341,8 @@ export default function Questionnaire() {
                       onClick={() => setSleep(s => ({ ...s, sleep_quality: q }))}
                       className={`flex-1 py-2 rounded-xl text-xs border transition-colors ${
                         sleep.sleep_quality === q
-                          ? 'bg-accent-green/20 border-accent-green text-accent-green'
-                          : 'bg-bg-card border-transparent text-text-secondary'
+                          ? 'bg-accent-green/20 border-accent-green text-accent-dark'
+                          : 'bg-white border-border text-text-secondary'
                       }`}
                     >
                       {q.charAt(0).toUpperCase() + q.slice(1)}
@@ -370,8 +370,8 @@ export default function Questionnaire() {
                       onClick={() => setLifestyle(l => ({ ...l, activity_level: level }))}
                       className={`w-full text-left px-4 py-2.5 rounded-xl border text-sm transition-colors ${
                         lifestyle.activity_level === level
-                          ? 'bg-accent-green/20 border-accent-green text-accent-green'
-                          : 'bg-bg-card border-transparent text-text-primary'
+                          ? 'bg-accent-green/20 border-accent-green text-accent-dark'
+                          : 'bg-white border-border text-text-primary'
                       }`}
                     >
                       {level.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase())}
@@ -389,7 +389,7 @@ export default function Questionnaire() {
                       className={`flex-1 py-2 rounded-xl text-sm border transition-colors ${
                         lifestyle.stress_level === lvl
                           ? 'bg-accent-orange/20 border-accent-orange text-accent-orange'
-                          : 'bg-bg-card border-transparent text-text-secondary'
+                          : 'bg-white border-border text-text-secondary'
                       }`}
                     >
                       {lvl.charAt(0).toUpperCase() + lvl.slice(1)}
@@ -407,7 +407,7 @@ export default function Questionnaire() {
                       className={`flex-1 py-2 rounded-xl text-xs border transition-colors ${
                         lifestyle.work_type === wt
                           ? 'bg-accent-blue/20 border-accent-blue text-accent-blue'
-                          : 'bg-bg-card border-transparent text-text-secondary'
+                          : 'bg-white border-border text-text-secondary'
                       }`}
                     >
                       {wt.charAt(0).toUpperCase() + wt.slice(1)}
@@ -431,7 +431,7 @@ export default function Questionnaire() {
           {step > 0 && (
             <button
               onClick={back}
-              className="flex-1 bg-gray-700 py-3 rounded-xl text-sm font-medium text-text-primary"
+              className="flex-1 bg-gray-100 py-3 rounded-xl text-sm font-medium text-text-primary border border-border"
             >
               {tc('common.back')}
             </button>
@@ -439,7 +439,7 @@ export default function Questionnaire() {
           <button
             onClick={next}
             disabled={submitting}
-            className="flex-1 bg-accent-green text-bg-primary py-3 rounded-xl text-sm font-semibold disabled:opacity-50"
+            className="flex-1 bg-accent-green text-white py-3 rounded-xl text-sm font-semibold disabled:opacity-50"
           >
             {submitting
               ? tc('common.loading')

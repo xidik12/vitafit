@@ -9,20 +9,20 @@ from app.database import async_session, FoodItem
 logger = logging.getLogger(__name__)
 
 
-async def seed_russian_foods():
-    """Load common Russian foods into the database."""
-    foods_path = Path(__file__).parent.parent / "data" / "common_foods_ru.json"
+async def seed_global_foods():
+    """Load comprehensive global food database into the database."""
+    foods_path = Path(__file__).parent.parent / "data" / "common_foods_global.json"
     if not foods_path.exists():
-        logger.warning("common_foods_ru.json not found — skipping seed")
+        logger.warning("common_foods_global.json not found — skipping seed")
         return
 
     async with async_session() as session:
         # Check if already seeded
         result = await session.execute(
-            select(FoodItem).where(FoodItem.source == "custom_ru").limit(1)
+            select(FoodItem).where(FoodItem.source == "custom_global").limit(1)
         )
         if result.scalar_one_or_none():
-            logger.info("Russian foods already seeded")
+            logger.info("Global foods already seeded")
             return
 
     with open(foods_path, encoding="utf-8") as f:
@@ -34,7 +34,7 @@ async def seed_russian_foods():
             fi = FoodItem(
                 name_en=item.get("name_en", ""),
                 name_ru=item.get("name_ru", ""),
-                source="custom_ru",
+                source="custom_global",
                 calories_per_100g=item.get("calories_per_100g"),
                 protein_per_100g=item.get("protein_per_100g"),
                 carbs_per_100g=item.get("carbs_per_100g"),
@@ -44,4 +44,4 @@ async def seed_russian_foods():
             session.add(fi)
             count += 1
         await session.commit()
-        logger.info(f"Seeded {count} Russian food items")
+        logger.info(f"Seeded {count} global food items")

@@ -24,14 +24,14 @@ class ErrorBoundary extends Component {
   render() {
     if (this.state.hasError) {
       return (
-        <div style={{ padding: 24, color: 'white', fontFamily: 'monospace' }}>
+        <div style={{ padding: 24, color: '#1a2e1a', fontFamily: 'monospace', backgroundColor: '#fefdf8' }}>
           <h2 style={{ color: '#f87171' }}>Something went wrong</h2>
-          <pre style={{ fontSize: 12, color: '#aaa', whiteSpace: 'pre-wrap' }}>
+          <pre style={{ fontSize: 12, color: '#6b7b6b', whiteSpace: 'pre-wrap' }}>
             {this.state.error?.message}
           </pre>
           <button
             onClick={() => window.location.reload()}
-            style={{ marginTop: 16, padding: '8px 16px', background: '#60a5fa', border: 'none', borderRadius: 6, color: 'white', cursor: 'pointer' }}
+            style={{ marginTop: 16, padding: '8px 16px', background: '#22c55e', border: 'none', borderRadius: 6, color: 'white', cursor: 'pointer' }}
           >
             Reload
           </button>

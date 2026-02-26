@@ -23,8 +23,8 @@ function RecipeDetail({ recipe, onClose }) {
     : (recipe.instructions_en || [])
 
   return (
-    <div className="fixed inset-0 bg-black/60 z-50 flex items-end">
-      <div className="bg-bg-secondary w-full rounded-t-2xl max-h-[90vh] overflow-y-auto">
+    <div className="fixed inset-0 bg-black/40 z-50 flex items-end">
+      <div className="bg-white w-full rounded-t-2xl max-h-[90vh] overflow-y-auto shadow-xl">
         {recipe.image_url && (
           <img src={recipe.image_url} alt={title} className="w-full h-40 object-cover" />
         )}
@@ -146,24 +146,24 @@ export default function MealPlan() {
       </div>
 
       {!isOnboarded ? (
-        <div className="bg-bg-card rounded-2xl p-6 text-center">
+        <div className="bg-white rounded-2xl p-6 text-center border border-border shadow-sm">
           <span className="text-4xl block mb-3">🍽️</span>
           <p className="text-text-secondary text-sm mb-4">{t('empty')}</p>
           <button
             onClick={() => navigate('/questionnaire')}
-            className="bg-accent-green text-bg-primary px-6 py-2.5 rounded-xl text-sm font-semibold"
+            className="bg-accent-green text-white px-6 py-2.5 rounded-xl text-sm font-semibold"
           >
             {tc('dashboard.start_questionnaire')}
           </button>
         </div>
       ) : !plan ? (
-        <div className="bg-bg-card rounded-2xl p-6 text-center">
+        <div className="bg-white rounded-2xl p-6 text-center border border-border shadow-sm">
           <span className="text-4xl block mb-3">📋</span>
           <p className="text-text-secondary text-sm mb-4">{t('empty')}</p>
           <button
             onClick={generatePlan}
             disabled={generating}
-            className="bg-accent-green text-bg-primary px-6 py-2.5 rounded-xl text-sm font-semibold disabled:opacity-50"
+            className="bg-accent-green text-white px-6 py-2.5 rounded-xl text-sm font-semibold disabled:opacity-50"
           >
             {generating ? tc('common.loading') : t('generate')}
           </button>
@@ -186,7 +186,7 @@ export default function MealPlan() {
               }, 0)
 
               return (
-                <div key={index} className="bg-bg-card rounded-xl overflow-hidden">
+                <div key={index} className="bg-white rounded-xl overflow-hidden border border-border shadow-sm">
                   <button
                     onClick={() => setExpandedDay(isExpanded ? null : index)}
                     className="w-full flex items-center justify-between p-3"

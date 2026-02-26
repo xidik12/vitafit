@@ -18,7 +18,7 @@ const ACHIEVEMENTS = [
 
 function AchievementBadge({ achievement, unlocked }) {
   return (
-    <div className={`flex flex-col items-center p-3 rounded-xl ${unlocked ? 'bg-accent-green/10 border border-accent-green/30' : 'bg-bg-card opacity-40'}`}>
+    <div className={`flex flex-col items-center p-3 rounded-xl ${unlocked ? 'bg-accent-green/10 border border-accent-green/30' : 'bg-gray-50 border border-border opacity-40'}`}>
       <span className="text-2xl">{achievement.icon}</span>
       <span className="text-xs text-text-secondary mt-1 text-center leading-tight">{achievement.label}</span>
     </div>
@@ -28,7 +28,7 @@ function AchievementBadge({ achievement, unlocked }) {
 function CustomTooltip({ active, payload, label, lang }) {
   if (!active || !payload?.length) return null
   return (
-    <div className="bg-bg-secondary border border-gray-700 rounded-lg px-3 py-2 text-xs">
+    <div className="bg-white border border-border rounded-lg px-3 py-2 text-xs shadow-sm">
       <p className="text-text-secondary">{formatDate(label, lang)}</p>
       <p className="text-accent-green font-semibold">{payload[0].value} kg</p>
     </div>
@@ -93,7 +93,7 @@ export default function Progress() {
       <h1 className="text-xl font-bold text-text-primary mb-4">{t('title')}</h1>
 
       {!hasData ? (
-        <div className="bg-bg-card rounded-2xl p-6 text-center">
+        <div className="bg-white rounded-2xl p-6 text-center border border-border shadow-sm">
           <span className="text-4xl block mb-3">📊</span>
           <p className="text-text-secondary text-sm">{t('no_data')}</p>
         </div>
@@ -101,14 +101,14 @@ export default function Progress() {
         <>
           {/* Weight trend chart */}
           {chartData.length > 0 && (
-            <div className="bg-bg-secondary rounded-2xl p-4 mb-4">
+            <div className="bg-white rounded-2xl p-4 mb-4 border border-border shadow-sm">
               <h2 className="text-sm font-semibold text-text-primary mb-3">{t('weight_trend')}</h2>
               <ResponsiveContainer width="100%" height={160}>
                 <LineChart data={chartData}>
-                  <CartesianGrid strokeDasharray="3 3" stroke="#2d3748" />
+                  <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
                   <XAxis
                     dataKey="date"
-                    tick={{ fill: '#9aa0a6', fontSize: 10 }}
+                    tick={{ fill: '#6b7b6b', fontSize: 10 }}
                     tickFormatter={d => {
                       const date = new Date(d)
                       return `${date.getMonth() + 1}/${date.getDate()}`
@@ -116,7 +116,7 @@ export default function Progress() {
                     interval="preserveStartEnd"
                   />
                   <YAxis
-                    tick={{ fill: '#9aa0a6', fontSize: 10 }}
+                    tick={{ fill: '#6b7b6b', fontSize: 10 }}
                     domain={['dataMin - 1', 'dataMax + 1']}
                     tickFormatter={v => `${v}`}
                   />
@@ -124,9 +124,9 @@ export default function Progress() {
                   <Line
                     type="monotone"
                     dataKey="weight"
-                    stroke="#34d399"
+                    stroke="#22c55e"
                     strokeWidth={2}
-                    dot={{ fill: '#34d399', r: 3 }}
+                    dot={{ fill: '#22c55e', r: 3 }}
                     activeDot={{ r: 5 }}
                   />
                 </LineChart>
@@ -135,15 +135,15 @@ export default function Progress() {
           )}
 
           {/* Streak & XP */}
-          <div className="bg-bg-secondary rounded-2xl p-4 mb-4">
+          <div className="bg-white rounded-2xl p-4 mb-4 border border-border shadow-sm">
             <h2 className="text-sm font-semibold text-text-primary mb-3">{t('streak_info')}</h2>
             <div className="flex gap-3 mb-4">
-              <div className="flex-1 bg-bg-card rounded-xl p-3 text-center">
+              <div className="flex-1 bg-bg-secondary rounded-xl p-3 text-center">
                 <span className="text-3xl block">🔥</span>
                 <p className="text-xl font-bold text-accent-orange">{streak}</p>
                 <p className="text-xs text-text-secondary">{t('current_streak')}</p>
               </div>
-              <div className="flex-1 bg-bg-card rounded-xl p-3 text-center">
+              <div className="flex-1 bg-bg-secondary rounded-xl p-3 text-center">
                 <span className="text-3xl block">🏅</span>
                 <p className="text-xl font-bold text-accent-blue">{longestStreak}</p>
                 <p className="text-xs text-text-secondary">{t('longest_streak')}</p>
@@ -151,7 +151,7 @@ export default function Progress() {
             </div>
 
             {/* Level & XP */}
-            <div className="bg-bg-card rounded-xl p-3">
+            <div className="bg-bg-secondary rounded-xl p-3">
               <div className="flex justify-between items-center mb-2">
                 <span className="text-sm font-medium text-text-primary">
                   {t('level', { n: level })} 🌟
@@ -160,7 +160,7 @@ export default function Progress() {
                   {t('xp', { xp })} / {xpToNext}
                 </span>
               </div>
-              <div className="w-full h-2 bg-gray-700 rounded-full overflow-hidden">
+              <div className="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
                 <div
                   className="h-full rounded-full bg-accent-purple transition-all duration-500"
                   style={{ width: `${xpPercent}%` }}
@@ -171,12 +171,12 @@ export default function Progress() {
 
           {/* Weekly compliance */}
           {weeklyCompliance > 0 && (
-            <div className="bg-bg-secondary rounded-2xl p-4 mb-4">
+            <div className="bg-white rounded-2xl p-4 mb-4 border border-border shadow-sm">
               <div className="flex justify-between items-center mb-2">
                 <h2 className="text-sm font-semibold text-text-primary">{t('weekly_compliance')}</h2>
                 <span className="text-sm font-bold text-accent-green">{Math.round(weeklyCompliance)}%</span>
               </div>
-              <div className="w-full h-3 bg-gray-700 rounded-full overflow-hidden">
+              <div className="w-full h-3 bg-gray-200 rounded-full overflow-hidden">
                 <div
                   className="h-full rounded-full bg-accent-green transition-all duration-500"
                   style={{ width: `${weeklyCompliance}%` }}
@@ -186,7 +186,7 @@ export default function Progress() {
           )}
 
           {/* Achievements */}
-          <div className="bg-bg-secondary rounded-2xl p-4">
+          <div className="bg-white rounded-2xl p-4 border border-border shadow-sm">
             <h2 className="text-sm font-semibold text-text-primary mb-3">{t('achievements')}</h2>
             <div className="grid grid-cols-3 gap-2">
               {ACHIEVEMENTS.map(achievement => (

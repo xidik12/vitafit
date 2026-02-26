@@ -74,8 +74,8 @@ export default function Dashboard() {
 
       {/* Onboarding CTA */}
       {!isOnboarded && (
-        <div className="bg-accent-green/10 border border-accent-green/30 rounded-2xl p-4 mb-4">
-          <h2 className="text-accent-green font-semibold text-base mb-1">
+        <div className="bg-accent-light border border-accent-green/30 rounded-2xl p-4 mb-4">
+          <h2 className="text-accent-dark font-semibold text-base mb-1">
             {t('dashboard.start_questionnaire')}
           </h2>
           <p className="text-text-secondary text-sm mb-3">
@@ -83,7 +83,7 @@ export default function Dashboard() {
           </p>
           <button
             onClick={() => navigate('/questionnaire')}
-            className="w-full bg-accent-green text-bg-primary font-semibold py-3 rounded-xl text-sm"
+            className="w-full bg-accent-green text-white font-semibold py-3 rounded-xl text-sm"
           >
             {t('dashboard.start_questionnaire')} →
           </button>
@@ -93,7 +93,7 @@ export default function Dashboard() {
       {/* Today's summary */}
       {isOnboarded && (
         <>
-          <div className="bg-bg-secondary rounded-2xl p-4 mb-4">
+          <div className="bg-white rounded-2xl p-4 mb-4 border border-border shadow-sm">
             <h2 className="text-text-secondary text-xs uppercase tracking-wide mb-3">
               {t('dashboard.today')}
             </h2>
@@ -109,7 +109,7 @@ export default function Dashboard() {
                     percent={calPercent}
                     size={72}
                     strokeWidth={5}
-                    color="#34d399"
+                    color="#22c55e"
                     label={t('dashboard.calories_left')}
                   />
                   <span className="text-sm font-bold text-text-primary mt-1">{calLeft}</span>
@@ -122,7 +122,7 @@ export default function Dashboard() {
                     percent={waterPercent}
                     size={72}
                     strokeWidth={5}
-                    color="#60a5fa"
+                    color="#3b82f6"
                     label={t('dashboard.water')}
                   />
                   <span className="text-sm font-bold text-text-primary mt-1">{waterConsumed}</span>
@@ -147,7 +147,7 @@ export default function Dashboard() {
           <div className="grid grid-cols-3 gap-2 mb-4">
             <button
               onClick={() => navigate('/calories')}
-              className="bg-bg-card rounded-xl p-3 flex flex-col items-center gap-1"
+              className="bg-white rounded-xl p-3 flex flex-col items-center gap-1 border border-border shadow-sm"
             >
               <span className="text-2xl">📝</span>
               <span className="text-xs text-text-secondary text-center leading-tight">
@@ -156,7 +156,7 @@ export default function Dashboard() {
             </button>
             <button
               onClick={() => navigate('/exercises')}
-              className="bg-bg-card rounded-xl p-3 flex flex-col items-center gap-1"
+              className="bg-white rounded-xl p-3 flex flex-col items-center gap-1 border border-border shadow-sm"
             >
               <span className="text-2xl">💪</span>
               <span className="text-xs text-text-secondary text-center leading-tight">
@@ -165,7 +165,7 @@ export default function Dashboard() {
             </button>
             <button
               onClick={() => navigate('/meals')}
-              className="bg-bg-card rounded-xl p-3 flex flex-col items-center gap-1"
+              className="bg-white rounded-xl p-3 flex flex-col items-center gap-1 border border-border shadow-sm"
             >
               <span className="text-2xl">🍽️</span>
               <span className="text-xs text-text-secondary text-center leading-tight">

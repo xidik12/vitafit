@@ -11,16 +11,27 @@ from app.database import async_session, UserProfile, Exercise, ExercisePlan
 logger = logging.getLogger(__name__)
 
 # ---------------------------------------------------------------------------
-# Load tai chi moves at module level
+# Load exercise data files at module level
 # ---------------------------------------------------------------------------
-_tai_chi_path = Path(__file__).parent.parent / "data" / "tai_chi_moves.json"
-TAI_CHI_MOVES: list[dict] = []
-if _tai_chi_path.exists():
-    with open(_tai_chi_path, encoding="utf-8") as _f:
-        TAI_CHI_MOVES = json.load(_f)
-    logger.info(f"Loaded {len(TAI_CHI_MOVES)} tai chi moves")
-else:
-    logger.warning(f"tai_chi_moves.json not found at {_tai_chi_path}")
+_data_dir = Path(__file__).parent.parent / "data"
+
+
+def _load_json(filename: str) -> list[dict]:
+    path = _data_dir / filename
+    if path.exists():
+        with open(path, encoding="utf-8") as _f:
+            data = json.load(_f)
+        logger.info(f"Loaded {len(data)} entries from {filename}")
+        return data
+    logger.warning(f"{filename} not found at {path}")
+    return []
+
+
+TAI_CHI_MOVES: list[dict] = _load_json("tai_chi_moves.json")
+YOGA_POSES: list[dict] = _load_json("yoga_poses.json")
+PILATES_MOVES: list[dict] = _load_json("pilates_moves.json")
+STRETCHING_ROUTINES: list[dict] = _load_json("stretching_routines.json")
+BODYWEIGHT_EXERCISES: list[dict] = _load_json("bodyweight_exercises.json")
 
 
 # ---------------------------------------------------------------------------
@@ -276,17 +287,33 @@ def _weight_loss_day(
 ) -> list[dict]:
     """
     Weight loss: cardio warm-up + compound strength circuit + cool-down stretch.
+    Cardio uses bodyweight_exercises.json when available.
+    Cool-down uses stretching_routines.json when available.
     Alternates muscle group targets each day to ensure full-body coverage.
     """
     day_exercises: list[dict] = []
 
-    # --- Cardio warm-up ---
+    # --- Cardio warm-up (prefer bodyweight_exercises.json cardio category) ---
     cardio_mins = max(10, time_per_session // 3)
-    cardio_pool = _bodyweight_fallback("cardio", 2)
-    for c in cardio_pool:
-        c = c.copy()
-        c["duration_mins"] = cardio_mins // len(cardio_pool)
-        day_exercises.append(c)
+    bw_cardio = [e for e in BODYWEIGHT_EXERCISES if e.get("category") == "cardio"]
+    if bw_cardio:
+        picks = random.sample(bw_cardio, min(2, len(bw_cardio)))
+        each_mins = max(1, cardio_mins // len(picks))
+        for c in picks:
+            day_exercises.append({
+                "name_en": c["name_en"],
+                "name_ru": c["name_ru"],
+                "type": "cardio",
+                "duration_mins": each_mins,
+                "instructions": c.get("instructions", ""),
+                "difficulty": c.get("difficulty", "beginner"),
+            })
+    else:
+        cardio_pool = _bodyweight_fallback("cardio", 2)
+        for c in cardio_pool:
+            c = c.copy()
+            c["duration_mins"] = cardio_mins // len(cardio_pool)
+            day_exercises.append(c)
 
     # --- Strength circuit (rotate body part each day) ---
     body_parts = ["chest", "legs", "back", "core", "arms", "shoulders", "full_body"]
@@ -295,11 +322,51 @@ def _weight_loss_day(
     reps = 15 if age_group == "young" else 12
 
     db_ex = _pick_exercises(exercises, body_part=target, ex_type="strength", count=3)
-    day_exercises.extend(_resolve_exercises(db_ex, sets=sets, reps=reps))
+    resolved = _resolve_exercises(db_ex, sets=sets, reps=reps)
 
-    # --- Cool-down stretch ---
-    stretches = _bodyweight_fallback("flexibility", 2)
-    day_exercises.extend(stretches)
+    # Supplement with bodyweight_exercises.json if DB returned too few
+    if len(resolved) < 3 and BODYWEIGHT_EXERCISES:
+        bw_strength = [
+            e for e in BODYWEIGHT_EXERCISES
+            if e.get("body_part", "").lower() == target or e.get("category") in ("push", "pull", "legs", "core")
+        ]
+        if not bw_strength:
+            bw_strength = BODYWEIGHT_EXERCISES
+        already_names = {r.get("name_en") for r in resolved}
+        bw_strength = [e for e in bw_strength if e["name_en"] not in already_names]
+        needed = 3 - len(resolved)
+        picks = random.sample(bw_strength, min(needed, len(bw_strength)))
+        for e in picks:
+            resolved.append({
+                "name_en": e["name_en"],
+                "name_ru": e["name_ru"],
+                "type": "strength",
+                "body_part": e.get("body_part", ""),
+                "difficulty": e.get("difficulty", "beginner"),
+                "sets": sets,
+                "reps": e.get("reps", reps),
+                "instructions": e.get("instructions", ""),
+            })
+    day_exercises.extend(resolved)
+
+    # --- Cool-down stretch (prefer stretching_routines.json) ---
+    pool = [s for s in STRETCHING_ROUTINES if s.get("difficulty") == "beginner"]
+    if not pool:
+        pool = STRETCHING_ROUTINES
+    if pool:
+        picks = random.sample(pool, min(2, len(pool)))
+        for stretch in picks:
+            duration_mins = max(1, round(stretch.get("duration_secs", 30) / 60))
+            day_exercises.append({
+                "name_en": stretch["name_en"],
+                "name_ru": stretch["name_ru"],
+                "type": "flexibility",
+                "duration_mins": duration_mins,
+                "instructions": stretch.get("instructions", ""),
+                "body_region": stretch.get("body_region", ""),
+            })
+    else:
+        day_exercises.extend(_bodyweight_fallback("flexibility", 2))
 
     return day_exercises
 
@@ -315,8 +382,10 @@ def _muscle_day(
     Muscle building: progressive overload split.
     Young: 4x8 heavy | Middle: 3x10 moderate | Senior: 3x12 light
     Rotating push/pull/legs split across the week.
+    Bodyweight_exercises.json used to supplement DB results.
+    Core days include pilates moves for targeted core work.
     """
-    # Push/Pull/Legs/Shoulders/Arms/Legs2 split
+    # Push/Pull/Legs/Shoulders/Arms/Legs2/Core split
     splits = {
         1: "chest",
         2: "back",
@@ -338,14 +407,66 @@ def _muscle_day(
     db_ex = _pick_exercises(exercises, body_part=target, ex_type="strength", count=4)
     day_exercises = _resolve_exercises(db_ex, sets=sets, reps=reps)
 
-    # Supplement with bodyweight if DB returned fewer than 4
-    if len(day_exercises) < 4:
+    # Supplement with bodyweight_exercises.json if DB returned fewer than 4
+    if len(day_exercises) < 4 and BODYWEIGHT_EXERCISES:
+        category_map = {
+            "chest": ("push",),
+            "back": ("pull",),
+            "legs": ("legs",),
+            "shoulders": ("push",),
+            "arms": ("push", "pull"),
+            "core": ("core",),
+            "full_body": ("push", "pull", "legs", "core", "full_body"),
+        }
+        cats = category_map.get(target, ("push", "pull", "legs", "core"))
+        bw_pool = [e for e in BODYWEIGHT_EXERCISES if e.get("category") in cats]
+        if not bw_pool:
+            bw_pool = BODYWEIGHT_EXERCISES
+        already_names = {d.get("name_en") for d in day_exercises}
+        bw_pool = [e for e in bw_pool if e["name_en"] not in already_names]
+        needed = 4 - len(day_exercises)
+        picks = random.sample(bw_pool, min(needed, len(bw_pool)))
+        for e in picks:
+            day_exercises.append({
+                "name_en": e["name_en"],
+                "name_ru": e["name_ru"],
+                "type": "strength",
+                "body_part": e.get("body_part", ""),
+                "difficulty": e.get("difficulty", "beginner"),
+                "sets": sets,
+                "reps": e.get("reps", reps),
+                "instructions": e.get("instructions", ""),
+            })
+    elif len(day_exercises) < 4:
+        # Last resort: hardcoded fallback
         fallback = _bodyweight_fallback("strength", 4 - len(day_exercises))
         for ex in fallback:
             ex = ex.copy()
             ex["sets"] = sets
             ex["reps"] = reps
         day_exercises.extend(fallback)
+
+    # Core day: append pilates core finisher (2 moves)
+    if target == "core" and PILATES_MOVES:
+        pilates_core = [
+            p for p in PILATES_MOVES
+            if p.get("category") == "core" and p.get("difficulty") in ("beginner", "intermediate")
+        ]
+        if not pilates_core:
+            pilates_core = [p for p in PILATES_MOVES if p.get("difficulty") == "beginner"]
+        if pilates_core:
+            picks = random.sample(pilates_core, min(2, len(pilates_core)))
+            for move in picks:
+                day_exercises.append({
+                    "name_en": move["name_en"],
+                    "name_ru": move["name_ru"],
+                    "type": "pilates",
+                    "sets": move.get("sets", 1),
+                    "reps": move.get("reps", 8),
+                    "instructions": move.get("instructions", ""),
+                    "difficulty": move.get("difficulty", "beginner"),
+                    "breathing": move.get("breathing", ""),
+                })
 
     return day_exercises
 
@@ -356,17 +477,20 @@ def _flexibility_day(
     time_per_session: int,
 ) -> list[dict]:
     """
-    Flexibility: alternates between full tai chi sessions and yoga/stretching days.
-    Seniors always get beginner-only tai chi; young/middle get intermediate too.
+    Flexibility: cycles through tai chi, yoga, and stretching days.
+    Day pattern (mod 3): 1=tai chi, 2=yoga, 0=stretching routines.
+    Seniors get beginner-only content; young/middle get intermediate too.
     """
     day_exercises: list[dict] = []
+    allowed_difficulties = (
+        ["beginner"] if age_group == "senior"
+        else ["beginner", "intermediate"]
+    )
 
-    if day_num % 2 == 1:
-        # Tai chi day — select moves appropriate to age group
-        allowed_difficulties = (
-            ["beginner"] if age_group == "senior"
-            else ["beginner", "intermediate"]
-        )
+    pattern = day_num % 3
+
+    if pattern == 1:
+        # Tai chi day
         pool = [m for m in TAI_CHI_MOVES if m["difficulty"] in allowed_difficulties]
         count = min(6, len(pool))
         selected = random.sample(pool, count) if pool else []
@@ -379,10 +503,26 @@ def _flexibility_day(
                 "instructions": move["instructions"],
                 "difficulty": move["difficulty"],
             })
-    else:
-        # Yoga / deep stretching day
-        stretches = _bodyweight_fallback("flexibility", 4)
-        day_exercises.extend(stretches)
+
+    elif pattern == 2:
+        # Yoga day — pull from loaded yoga_poses.json
+        pool = [p for p in YOGA_POSES if p["difficulty"] in allowed_difficulties]
+        if not pool:
+            pool = YOGA_POSES  # fall back to full list
+        count = min(6, len(pool))
+        selected = random.sample(pool, count) if pool else []
+        for pose in selected:
+            duration_mins = max(1, round(pose.get("duration_secs", 30) / 60))
+            day_exercises.append({
+                "name_en": pose["name_en"],
+                "name_ru": pose["name_ru"],
+                "type": "yoga",
+                "duration_mins": duration_mins,
+                "instructions": pose.get("instructions", ""),
+                "difficulty": pose.get("difficulty", "beginner"),
+                "benefits": pose.get("benefits", ""),
+            })
+        # Close with breathing exercise
         day_exercises.append({
             "name_en": "Diaphragmatic Deep Breathing",
             "name_ru": "Диафрагмальное глубокое дыхание",
@@ -391,6 +531,28 @@ def _flexibility_day(
             "instructions_en": "Lie on your back. Place one hand on the chest, one on the belly. Breathe deeply so only the belly hand rises. 5 seconds in, hold 2, 5 seconds out.",
             "instructions_ru": "Лягте на спину. Одну руку положите на грудь, другую на живот. Дышите глубоко так, чтобы поднималась только рука на животе. 5 секунд вдох, задержка 2, 5 секунд выдох.",
         })
+
+    else:
+        # Stretching routines day — pull from loaded stretching_routines.json
+        pool = [s for s in STRETCHING_ROUTINES if s.get("difficulty") in allowed_difficulties]
+        if not pool:
+            pool = STRETCHING_ROUTINES
+        count = min(5, len(pool))
+        selected = random.sample(pool, count) if pool else []
+        for stretch in selected:
+            duration_mins = max(1, round(stretch.get("duration_secs", 30) / 60))
+            day_exercises.append({
+                "name_en": stretch["name_en"],
+                "name_ru": stretch["name_ru"],
+                "type": "flexibility",
+                "duration_mins": duration_mins,
+                "instructions": stretch.get("instructions", ""),
+                "difficulty": stretch.get("difficulty", "beginner"),
+                "body_region": stretch.get("body_region", ""),
+            })
+        # Fallback if stretching_routines.json was empty
+        if not day_exercises:
+            day_exercises.extend(_bodyweight_fallback("flexibility", 4))
 
     return day_exercises
 
@@ -401,8 +563,9 @@ def _stress_relief_day(
     time_per_session: int,
 ) -> list[dict]:
     """
-    Stress relief: mindful walking + tai chi (beginner) + progressive muscle relaxation.
+    Stress relief: mindful walking + alternates tai chi / yoga / stretching + relaxation.
     Always calm, low-intensity, meditative in nature.
+    Day pattern (mod 3): 1=tai chi, 2=yoga, 0=stretching.
     """
     day_exercises: list[dict] = []
 
@@ -417,19 +580,69 @@ def _stress_relief_day(
         "instructions_ru": "Идите медленно. Замечайте каждый шаг. Вдыхайте на 4 шага, выдыхайте на 4 шага. Позвольте мыслям проходить мимо.",
     })
 
-    # Beginner tai chi (5 moves)
-    beginner_moves = [m for m in TAI_CHI_MOVES if m["difficulty"] == "beginner"]
-    if beginner_moves:
-        selected = random.sample(beginner_moves, min(5, len(beginner_moves)))
-        for move in selected:
+    pattern = day_num % 3
+
+    if pattern == 1:
+        # Beginner tai chi (5 moves)
+        beginner_moves = [m for m in TAI_CHI_MOVES if m["difficulty"] == "beginner"]
+        if beginner_moves:
+            selected = random.sample(beginner_moves, min(5, len(beginner_moves)))
+            for move in selected:
+                day_exercises.append({
+                    "name_en": move["name_en"],
+                    "name_ru": move["name_ru"],
+                    "type": "tai_chi",
+                    "duration_mins": move["duration_mins"],
+                    "instructions": move["instructions"],
+                    "difficulty": move["difficulty"],
+                })
+
+    elif pattern == 2:
+        # Restorative / beginner yoga (4 poses)
+        restorative_categories = {"restorative", "supine", "seated"}
+        pool = [
+            p for p in YOGA_POSES
+            if p.get("difficulty") == "beginner"
+            and p.get("category") in restorative_categories
+        ]
+        if not pool:
+            pool = [p for p in YOGA_POSES if p.get("difficulty") == "beginner"]
+        if not pool:
+            pool = YOGA_POSES
+        count = min(4, len(pool))
+        selected = random.sample(pool, count) if pool else []
+        for pose in selected:
+            duration_mins = max(1, round(pose.get("duration_secs", 30) / 60))
             day_exercises.append({
-                "name_en": move["name_en"],
-                "name_ru": move["name_ru"],
-                "type": "tai_chi",
-                "duration_mins": move["duration_mins"],
-                "instructions": move["instructions"],
-                "difficulty": move["difficulty"],
+                "name_en": pose["name_en"],
+                "name_ru": pose["name_ru"],
+                "type": "yoga",
+                "duration_mins": duration_mins,
+                "instructions": pose.get("instructions", ""),
+                "difficulty": pose.get("difficulty", "beginner"),
+                "benefits": pose.get("benefits", ""),
             })
+
+    else:
+        # Gentle stretching (4 routines)
+        pool = [s for s in STRETCHING_ROUTINES if s.get("difficulty") == "beginner"]
+        if not pool:
+            pool = STRETCHING_ROUTINES
+        count = min(4, len(pool))
+        selected = random.sample(pool, count) if pool else []
+        for stretch in selected:
+            duration_mins = max(1, round(stretch.get("duration_secs", 30) / 60))
+            day_exercises.append({
+                "name_en": stretch["name_en"],
+                "name_ru": stretch["name_ru"],
+                "type": "flexibility",
+                "duration_mins": duration_mins,
+                "instructions": stretch.get("instructions", ""),
+                "difficulty": stretch.get("difficulty", "beginner"),
+                "body_region": stretch.get("body_region", ""),
+            })
+        if not day_exercises:
+            day_exercises.extend(_bodyweight_fallback("flexibility", 4))
 
     # Progressive muscle relaxation cool-down
     day_exercises.append({
@@ -452,26 +665,68 @@ def _general_health_day(
     equipment: list[str],
 ) -> list[dict]:
     """
-    General health: balanced mix of cardio, strength, and flexibility/tai chi.
-    Every third day includes tai chi instead of plain stretching.
+    General health: balanced mix of cardio, strength (from bodyweight_exercises.json
+    when DB is empty), and a rotating cool-down (tai chi / pilates core / stretching).
+    Cool-down pattern (mod 3): 1=tai chi, 2=pilates core, 0=stretching routines.
     """
     day_exercises: list[dict] = []
 
-    # Cardio warm-up
-    cardio = _bodyweight_fallback("cardio", 1)
-    for c in cardio:
-        c = c.copy()
-        c["duration_mins"] = 10
-    day_exercises.extend(cardio)
+    # Cardio warm-up — prefer bodyweight_exercises.json cardio, fall back to hardcoded
+    bw_cardio = [e for e in BODYWEIGHT_EXERCISES if e.get("category") == "cardio"]
+    if bw_cardio:
+        cardio_pick = random.sample(bw_cardio, min(1, len(bw_cardio)))
+        for c in cardio_pick:
+            day_exercises.append({
+                "name_en": c["name_en"],
+                "name_ru": c["name_ru"],
+                "type": "cardio",
+                "duration_mins": 10,
+                "instructions": c.get("instructions", ""),
+                "difficulty": c.get("difficulty", "beginner"),
+            })
+    else:
+        cardio = _bodyweight_fallback("cardio", 1)
+        for c in cardio:
+            c = c.copy()
+            c["duration_mins"] = 10
+        day_exercises.extend(cardio)
 
-    # Strength block (3 exercises)
+    # Strength block — try DB first, supplement/replace with bodyweight_exercises.json
     db_ex = _pick_exercises(exercises, ex_type="strength", count=3)
-    day_exercises.extend(_resolve_exercises(db_ex, sets=3, reps=12))
+    resolved = _resolve_exercises(db_ex, sets=3, reps=12)
+    if len(resolved) < 3 and BODYWEIGHT_EXERCISES:
+        # Fill remaining slots from BODYWEIGHT_EXERCISES (strength/push/pull categories)
+        bw_strength = [
+            e for e in BODYWEIGHT_EXERCISES
+            if e.get("category") in ("push", "pull", "legs", "core", "full_body")
+        ]
+        needed = 3 - len(resolved)
+        already_names = {r.get("name_en") for r in resolved}
+        bw_strength = [e for e in bw_strength if e["name_en"] not in already_names]
+        if bw_strength:
+            picks = random.sample(bw_strength, min(needed, len(bw_strength)))
+            for e in picks:
+                resolved.append({
+                    "name_en": e["name_en"],
+                    "name_ru": e["name_ru"],
+                    "type": "strength",
+                    "body_part": e.get("body_part", ""),
+                    "difficulty": e.get("difficulty", "beginner"),
+                    "sets": 3,
+                    "reps": e.get("reps", 12),
+                    "instructions": e.get("instructions", ""),
+                })
+    day_exercises.extend(resolved)
 
-    # Cool-down: tai chi every 3rd day, otherwise stretching
-    if day_num % 3 == 0 and TAI_CHI_MOVES:
-        sample_pool = TAI_CHI_MOVES[:12]  # First 12 are beginner/intermediate
-        selected = random.sample(sample_pool, min(3, len(sample_pool)))
+    # Cool-down rotation
+    pattern = day_num % 3
+    if pattern == 1 and TAI_CHI_MOVES:
+        allowed = (
+            ["beginner"] if age_group == "senior"
+            else ["beginner", "intermediate"]
+        )
+        pool = [m for m in TAI_CHI_MOVES if m["difficulty"] in allowed][:12]
+        selected = random.sample(pool, min(3, len(pool))) if pool else []
         for move in selected:
             day_exercises.append({
                 "name_en": move["name_en"],
@@ -480,9 +735,46 @@ def _general_health_day(
                 "duration_mins": move["duration_mins"],
                 "instructions": move["instructions"],
             })
+    elif pattern == 2 and PILATES_MOVES:
+        # Pilates core cool-down (beginner-friendly)
+        core_pilates = [
+            p for p in PILATES_MOVES
+            if p.get("difficulty") == "beginner" and p.get("category") in ("core", "flexibility")
+        ]
+        if not core_pilates:
+            core_pilates = [p for p in PILATES_MOVES if p.get("difficulty") == "beginner"]
+        if not core_pilates:
+            core_pilates = PILATES_MOVES
+        selected = random.sample(core_pilates, min(3, len(core_pilates)))
+        for move in selected:
+            day_exercises.append({
+                "name_en": move["name_en"],
+                "name_ru": move["name_ru"],
+                "type": "pilates",
+                "sets": move.get("sets", 1),
+                "reps": move.get("reps", 8),
+                "instructions": move.get("instructions", ""),
+                "difficulty": move.get("difficulty", "beginner"),
+                "breathing": move.get("breathing", ""),
+            })
     else:
-        stretches = _bodyweight_fallback("flexibility", 2)
-        day_exercises.extend(stretches)
+        # Stretching routines cool-down
+        pool = [s for s in STRETCHING_ROUTINES if s.get("difficulty") == "beginner"]
+        if not pool:
+            pool = STRETCHING_ROUTINES
+        if pool:
+            selected = random.sample(pool, min(2, len(pool)))
+            for stretch in selected:
+                duration_mins = max(1, round(stretch.get("duration_secs", 30) / 60))
+                day_exercises.append({
+                    "name_en": stretch["name_en"],
+                    "name_ru": stretch["name_ru"],
+                    "type": "flexibility",
+                    "duration_mins": duration_mins,
+                    "instructions": stretch.get("instructions", ""),
+                })
+        else:
+            day_exercises.extend(_bodyweight_fallback("flexibility", 2))
 
     return day_exercises
 

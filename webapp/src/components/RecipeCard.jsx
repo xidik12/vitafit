@@ -6,7 +6,7 @@ export default function RecipeCard({ recipe, onClick }) {
   const title = lang === 'ru' ? (recipe.title_ru || recipe.title_en) : recipe.title_en
 
   return (
-    <div className="bg-bg-card rounded-xl overflow-hidden mb-3 cursor-pointer" onClick={onClick}>
+    <div className="bg-bg-card rounded-xl overflow-hidden mb-3 cursor-pointer border border-border shadow-sm" onClick={onClick}>
       {recipe.image_url && (
         <img src={recipe.image_url} alt={title} className="w-full h-32 object-cover" loading="lazy" />
       )}

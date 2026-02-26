@@ -36,12 +36,12 @@ async def lifespan(app: FastAPI):
     await init_db()
     logger.info("Database initialized")
 
-    # Seed Russian foods
+    # Seed global foods database
     try:
-        from app.scheduler.jobs import seed_russian_foods
-        await seed_russian_foods()
+        from app.scheduler.jobs import seed_global_foods
+        await seed_global_foods()
     except Exception as e:
-        logger.error(f"Seed Russian foods failed: {e}")
+        logger.error(f"Seed global foods failed: {e}")
 
     # Load exercises from Free Exercise DB
     try:

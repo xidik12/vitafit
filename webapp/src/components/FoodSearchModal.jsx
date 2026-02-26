@@ -49,10 +49,10 @@ export default function FoodSearchModal({ mealType, onAdd, onClose }) {
   const lang = i18n.language
 
   return (
-    <div className="fixed inset-0 bg-black/60 z-50 flex items-end">
-      <div className="bg-bg-secondary w-full rounded-t-2xl p-4 max-h-[85vh] overflow-y-auto">
+    <div className="fixed inset-0 bg-black/40 z-50 flex items-end">
+      <div className="bg-white w-full rounded-t-2xl p-4 max-h-[85vh] overflow-y-auto shadow-xl">
         <div className="flex justify-between items-center mb-3">
-          <h3 className="text-lg font-semibold">{t('add_food')}</h3>
+          <h3 className="text-lg font-semibold text-text-primary">{t('add_food')}</h3>
           <button onClick={onClose} className="text-text-secondary text-xl">✕</button>
         </div>
 
@@ -63,19 +63,19 @@ export default function FoodSearchModal({ mealType, onAdd, onClose }) {
             onChange={e => setQuery(e.target.value)}
             onKeyDown={e => e.key === 'Enter' && search()}
             placeholder={t('search')}
-            className="flex-1 bg-bg-card rounded-lg px-3 py-2 text-sm text-text-primary outline-none"
+            className="flex-1 bg-bg-secondary rounded-lg px-3 py-2 text-sm text-text-primary outline-none border border-border focus:border-accent-green"
             autoFocus
           />
           <button
             onClick={search}
-            className="bg-accent-green text-bg-primary px-4 py-2 rounded-lg text-sm font-medium"
+            className="bg-accent-green text-white px-4 py-2 rounded-lg text-sm font-medium"
           >
             {loading ? '...' : '🔍'}
           </button>
         </div>
 
         {selectedFood ? (
-          <div className="bg-bg-card rounded-xl p-3">
+          <div className="bg-bg-secondary rounded-xl p-3 border border-border">
             <h4 className="font-medium text-text-primary">
               {lang === 'ru' ? (selectedFood.name_ru || selectedFood.name_en) : selectedFood.name_en}
             </h4>
@@ -88,7 +88,7 @@ export default function FoodSearchModal({ mealType, onAdd, onClose }) {
                 type="number"
                 value={amount}
                 onChange={e => setAmount(Number(e.target.value))}
-                className="w-full bg-bg-primary rounded-lg px-3 py-2 text-sm text-text-primary outline-none mt-1"
+                className="w-full bg-bg-primary rounded-lg px-3 py-2 text-sm text-text-primary outline-none mt-1 border border-border focus:border-accent-green"
               />
             </div>
             <div className="flex gap-3 mt-2 text-xs text-text-secondary">
@@ -100,13 +100,13 @@ export default function FoodSearchModal({ mealType, onAdd, onClose }) {
             <div className="flex gap-2 mt-3">
               <button
                 onClick={() => setSelectedFood(null)}
-                className="flex-1 bg-gray-700 py-2 rounded-lg text-sm text-text-primary"
+                className="flex-1 bg-gray-100 py-2 rounded-lg text-sm text-text-primary border border-border"
               >
                 {t('common:common.back')}
               </button>
               <button
                 onClick={handleAdd}
-                className="flex-1 bg-accent-green text-bg-primary py-2 rounded-lg text-sm font-medium"
+                className="flex-1 bg-accent-green text-white py-2 rounded-lg text-sm font-medium"
               >
                 {t('add_food')}
               </button>
@@ -118,7 +118,7 @@ export default function FoodSearchModal({ mealType, onAdd, onClose }) {
               <button
                 key={i}
                 onClick={() => setSelectedFood(food)}
-                className="w-full text-left bg-bg-card rounded-lg p-3"
+                className="w-full text-left bg-bg-secondary rounded-lg p-3 border border-border hover:border-accent-green transition-colors"
               >
                 <div className="text-sm font-medium text-text-primary">
                   {lang === 'ru' ? (food.name_ru || food.name_en) : food.name_en}

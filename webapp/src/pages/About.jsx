@@ -22,7 +22,7 @@ export default function About() {
 
       {/* App identity */}
       <div className="flex flex-col items-center py-8 mb-6">
-        <div className="w-20 h-20 bg-accent-green/10 border border-accent-green/30 rounded-2xl flex items-center justify-center mb-4">
+        <div className="w-20 h-20 bg-accent-light border border-accent-green/30 rounded-2xl flex items-center justify-center mb-4">
           <span className="text-4xl">🌿</span>
         </div>
         <h2 className="text-2xl font-bold text-text-primary">VitaFit</h2>
@@ -30,7 +30,7 @@ export default function About() {
       </div>
 
       {/* Description */}
-      <div className="bg-bg-card rounded-2xl p-4 mb-4">
+      <div className="bg-white rounded-2xl p-4 mb-4 border border-border shadow-sm">
         <h3 className="text-sm font-semibold text-text-primary mb-2">About VitaFit</h3>
         <p className="text-text-secondary text-sm leading-relaxed">
           VitaFit is your personal AI-powered health and fitness companion. Get personalized
@@ -40,7 +40,7 @@ export default function About() {
       </div>
 
       {/* Features */}
-      <div className="bg-bg-card rounded-2xl p-4 mb-4">
+      <div className="bg-white rounded-2xl p-4 mb-4 border border-border shadow-sm">
         <h3 className="text-sm font-semibold text-text-primary mb-3">Features</h3>
         <div className="space-y-2">
           {[
@@ -72,12 +72,12 @@ export default function About() {
       </div>
 
       {/* Links */}
-      <div className="bg-bg-card rounded-2xl overflow-hidden mb-4">
+      <div className="bg-white rounded-2xl overflow-hidden mb-4 border border-border shadow-sm">
         <a
           href="https://t.me/vitafit_support"
           target="_blank"
           rel="noopener noreferrer"
-          className="w-full flex items-center justify-between px-4 py-3 border-b border-gray-800"
+          className="w-full flex items-center justify-between px-4 py-3 border-b border-border"
         >
           <div className="flex items-center gap-2">
             <span>📩</span>

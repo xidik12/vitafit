@@ -14,18 +14,18 @@ export default function ExerciseCard({ exercise }) {
   }
 
   return (
-    <div className="bg-bg-card rounded-xl p-3 mb-2">
+    <div className="bg-bg-card rounded-xl p-3 mb-2 border border-border shadow-sm">
       <div className="flex items-center justify-between">
         <div>
           <h4 className="text-sm font-medium text-text-primary">{name}</h4>
           <div className="flex gap-2 mt-1 flex-wrap">
             {exercise.type && (
-              <span className={`text-xs px-2 py-0.5 rounded-full ${typeColors[exercise.type] || 'bg-gray-700 text-gray-300'}`}>
+              <span className={`text-xs px-2 py-0.5 rounded-full ${typeColors[exercise.type] || 'bg-gray-100 text-text-secondary'}`}>
                 {t(`types.${exercise.type}`, exercise.type)}
               </span>
             )}
             {exercise.sets && exercise.reps && (
-              <span className="text-xs text-text-secondary">{exercise.sets}×{exercise.reps}</span>
+              <span className="text-xs text-text-secondary">{exercise.sets}x{exercise.reps}</span>
             )}
             {exercise.duration_mins && (
               <span className="text-xs text-text-secondary">{exercise.duration_mins} {t('duration')}</span>

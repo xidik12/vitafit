@@ -68,7 +68,7 @@ export default function Settings() {
       <h1 className="text-xl font-bold text-text-primary mb-6">{t('common.settings')}</h1>
 
       {/* Language */}
-      <div className="bg-bg-card rounded-2xl p-4 mb-4">
+      <div className="bg-white rounded-2xl p-4 mb-4 border border-border shadow-sm">
         <h2 className="text-sm font-semibold text-text-secondary uppercase tracking-wide mb-3">Language</h2>
         <div className="flex gap-2">
           {LANGUAGE_OPTIONS.map(opt => (
@@ -77,8 +77,8 @@ export default function Settings() {
               onClick={() => handleLangChange(opt.code)}
               className={`flex-1 flex items-center justify-center gap-2 py-2.5 rounded-xl border text-sm font-medium transition-colors ${
                 lang === opt.code
-                  ? 'bg-accent-green/20 border-accent-green text-accent-green'
-                  : 'bg-bg-secondary border-transparent text-text-secondary'
+                  ? 'bg-accent-green/20 border-accent-green text-accent-dark'
+                  : 'bg-bg-secondary border-border text-text-secondary'
               }`}
             >
               <span>{opt.flag}</span>
@@ -89,7 +89,7 @@ export default function Settings() {
       </div>
 
       {/* Weight update */}
-      <div className="bg-bg-card rounded-2xl p-4 mb-4">
+      <div className="bg-white rounded-2xl p-4 mb-4 border border-border shadow-sm">
         <h2 className="text-sm font-semibold text-text-secondary uppercase tracking-wide mb-3">Update Weight</h2>
         <div className="flex gap-2">
           <input
@@ -98,14 +98,14 @@ export default function Settings() {
             value={weight}
             onChange={e => setWeight(e.target.value)}
             placeholder={profile?.weight_kg ? `${profile.weight_kg} kg` : 'Your weight (kg)'}
-            className="flex-1 bg-bg-secondary rounded-xl px-3 py-2.5 text-sm text-text-primary outline-none border border-transparent focus:border-accent-green"
+            className="flex-1 bg-bg-secondary rounded-xl px-3 py-2.5 text-sm text-text-primary outline-none border border-border focus:border-accent-green"
           />
           <span className="text-text-secondary text-sm flex items-center px-2">kg</span>
         </div>
       </div>
 
       {/* Dietary preference */}
-      <div className="bg-bg-card rounded-2xl p-4 mb-4">
+      <div className="bg-white rounded-2xl p-4 mb-4 border border-border shadow-sm">
         <h2 className="text-sm font-semibold text-text-secondary uppercase tracking-wide mb-3">Dietary Preference</h2>
         <div className="grid grid-cols-2 gap-2">
           {DIET_OPTIONS.map(opt => (
@@ -114,8 +114,8 @@ export default function Settings() {
               onClick={() => setDiet(opt.value)}
               className={`py-2.5 rounded-xl border text-sm transition-colors ${
                 diet === opt.value
-                  ? 'bg-accent-green/20 border-accent-green text-accent-green'
-                  : 'bg-bg-secondary border-transparent text-text-secondary'
+                  ? 'bg-accent-green/20 border-accent-green text-accent-dark'
+                  : 'bg-bg-secondary border-border text-text-secondary'
               }`}
             >
               {opt.label}
@@ -140,16 +140,16 @@ export default function Settings() {
       <button
         onClick={handleSave}
         disabled={saving}
-        className="w-full bg-accent-green text-bg-primary py-3 rounded-xl text-sm font-semibold mb-3 disabled:opacity-50"
+        className="w-full bg-accent-green text-white py-3 rounded-xl text-sm font-semibold mb-3 disabled:opacity-50"
       >
         {saving ? t('common.loading') : t('common.save')}
       </button>
 
       {/* Navigation links */}
-      <div className="bg-bg-card rounded-2xl overflow-hidden mb-4">
+      <div className="bg-white rounded-2xl overflow-hidden mb-4 border border-border shadow-sm">
         <button
           onClick={() => navigate('/about')}
-          className="w-full flex items-center justify-between px-4 py-3 border-b border-gray-800"
+          className="w-full flex items-center justify-between px-4 py-3 border-b border-border"
         >
           <span className="text-sm text-text-primary">{t('common.about')}</span>
           <span className="text-text-secondary">›</span>

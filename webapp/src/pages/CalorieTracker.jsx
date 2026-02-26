@@ -16,7 +16,7 @@ function MealSection({ mealType, entries, onAddFood }) {
   const totalCal = entries.reduce((sum, e) => sum + (e.calories || 0), 0)
 
   return (
-    <div className="bg-bg-card rounded-xl mb-3 overflow-hidden">
+    <div className="bg-white rounded-xl mb-3 overflow-hidden border border-border shadow-sm">
       <button
         onClick={() => setExpanded(v => !v)}
         className="w-full flex items-center justify-between p-3"
@@ -42,7 +42,7 @@ function MealSection({ mealType, entries, onAddFood }) {
           ) : (
             <div className="space-y-1 mb-2">
               {entries.map((entry, i) => (
-                <div key={i} className="flex justify-between items-center py-1 border-b border-gray-800 last:border-0">
+                <div key={i} className="flex justify-between items-center py-1 border-b border-border last:border-0">
                   <div>
                     <p className="text-xs text-text-primary">{entry.food_name}</p>
                     <p className="text-xs text-text-secondary">{entry.amount_g}g</p>
@@ -54,7 +54,7 @@ function MealSection({ mealType, entries, onAddFood }) {
           )}
           <button
             onClick={() => onAddFood(mealType)}
-            className="w-full flex items-center justify-center gap-1 py-2 text-accent-green text-xs border border-accent-green/30 rounded-lg"
+            className="w-full flex items-center justify-center gap-1 py-2 text-accent-green text-xs border border-accent-green/30 rounded-lg hover:bg-accent-green/5 transition-colors"
           >
             <span>+</span>
             <span>{t('add_food')}</span>
@@ -160,7 +160,7 @@ export default function CalorieTracker() {
       <h1 className="text-xl font-bold text-text-primary mb-4">{t('title')}</h1>
 
       {/* Calorie summary */}
-      <div className="bg-bg-secondary rounded-2xl p-4 mb-4">
+      <div className="bg-white rounded-2xl p-4 mb-4 border border-border shadow-sm">
         <div className="flex justify-between items-center mb-3">
           <div className="text-center">
             <p className="text-2xl font-bold text-accent-green">{Math.round(t2.calories)}</p>
@@ -191,13 +191,13 @@ export default function CalorieTracker() {
             label={tc('common.protein')}
             current={t2.protein}
             target={proteinGoal}
-            color="#60a5fa"
+            color="#3b82f6"
           />
           <MacroBar
             label={tc('common.carbs')}
             current={t2.carbs}
             target={carbsGoal}
-            color="#fbbf24"
+            color="#f59e0b"
           />
           <MacroBar
             label={tc('common.fat')}
@@ -209,7 +209,7 @@ export default function CalorieTracker() {
       </div>
 
       {/* Water tracker */}
-      <div className="bg-bg-secondary rounded-2xl p-4 mb-4">
+      <div className="bg-white rounded-2xl p-4 mb-4 border border-border shadow-sm">
         <div className="flex items-center justify-between mb-2">
           <div className="flex items-center gap-2">
             <span className="text-xl">💧</span>
@@ -227,7 +227,7 @@ export default function CalorieTracker() {
             </button>
           </div>
         </div>
-        <div className="w-full h-2 bg-gray-700 rounded-full overflow-hidden">
+        <div className="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
           <div
             className="h-full rounded-full transition-all duration-300 bg-accent-blue"
             style={{ width: `${waterPercent}%` }}
