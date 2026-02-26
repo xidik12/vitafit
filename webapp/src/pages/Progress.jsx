@@ -9,18 +9,18 @@ import { formatDate } from '../utils/format'
 import { ChartBarIcon, FireIcon, MedalIcon, PencilIcon, BoltIcon, SparklesIcon, GemIcon, CrownIcon, TrophyIcon, DumbbellIcon, DropletIcon, StarIcon, TargetIcon } from '../components/Icons'
 
 const ACHIEVEMENTS = [
-  { id: 'first_log', Icon: PencilIcon, label: 'First Log', color: 'accent-teal' },
-  { id: 'streak_3', Icon: BoltIcon, label: '3-Day Streak', color: 'accent-orange' },
-  { id: 'streak_7', Icon: FireIcon, label: '7-Day Streak', color: 'accent-orange' },
-  { id: 'streak_14', Icon: SparklesIcon, label: '14-Day Streak', color: 'accent-amber' },
-  { id: 'streak_30', Icon: GemIcon, label: '30-Day Streak', color: 'accent-indigo' },
-  { id: 'streak_60', Icon: CrownIcon, label: '60-Day Streak', color: 'accent-purple' },
-  { id: 'streak_100', Icon: TrophyIcon, label: '100-Day Streak', color: 'accent-pink' },
-  { id: 'workout_10', Icon: DumbbellIcon, label: '10 Workouts', color: 'accent-blue' },
-  { id: 'hydration', Icon: DropletIcon, label: 'Hydration Pro', color: 'accent-cyan' },
-  { id: 'level_5', Icon: StarIcon, label: 'Level 5', color: 'accent-green' },
-  { id: 'level_10', Icon: StarIcon, label: 'Level 10', color: 'accent-emerald' },
-  { id: 'goal_reached', Icon: TargetIcon, label: 'Goal Reached', color: 'accent-red' },
+  { id: 'first_log', Icon: PencilIcon, labelKey: 'ach_first_log', color: 'accent-teal' },
+  { id: 'streak_3', Icon: BoltIcon, labelKey: 'ach_streak_3', color: 'accent-orange' },
+  { id: 'streak_7', Icon: FireIcon, labelKey: 'ach_streak_7', color: 'accent-orange' },
+  { id: 'streak_14', Icon: SparklesIcon, labelKey: 'ach_streak_14', color: 'accent-amber' },
+  { id: 'streak_30', Icon: GemIcon, labelKey: 'ach_streak_30', color: 'accent-indigo' },
+  { id: 'streak_60', Icon: CrownIcon, labelKey: 'ach_streak_60', color: 'accent-purple' },
+  { id: 'streak_100', Icon: TrophyIcon, labelKey: 'ach_streak_100', color: 'accent-pink' },
+  { id: 'workout_10', Icon: DumbbellIcon, labelKey: 'ach_workout_10', color: 'accent-blue' },
+  { id: 'hydration', Icon: DropletIcon, labelKey: 'ach_hydration', color: 'accent-cyan' },
+  { id: 'level_5', Icon: StarIcon, labelKey: 'ach_level_5', color: 'accent-green' },
+  { id: 'level_10', Icon: StarIcon, labelKey: 'ach_level_10', color: 'accent-emerald' },
+  { id: 'goal_reached', Icon: TargetIcon, labelKey: 'ach_goal_reached', color: 'accent-red' },
 ]
 
 const achievementColorMap = {
@@ -38,6 +38,7 @@ const achievementColorMap = {
 }
 
 function AchievementBadge({ achievement, unlocked }) {
+  const { t } = useTranslation('progress')
   const colors = unlocked ? achievementColorMap[achievement.color] : null
   return (
     <div className={`flex flex-col items-center p-3 rounded-xl border transition-all ${
@@ -47,18 +48,19 @@ function AchievementBadge({ achievement, unlocked }) {
     }`}>
       <achievement.Icon className={`w-7 h-7 ${unlocked ? colors.text : 'text-text-secondary'}`} />
       <span className={`text-xs mt-1 text-center leading-tight font-medium ${unlocked ? colors.text : 'text-text-secondary'}`}>
-        {achievement.label}
+        {t(achievement.labelKey)}
       </span>
     </div>
   )
 }
 
 function CustomTooltip({ active, payload, label, lang }) {
+  const { t } = useTranslation()
   if (!active || !payload?.length) return null
   return (
     <div className="bg-white border border-border rounded-lg px-3 py-2 text-xs shadow-sm">
       <p className="text-text-secondary">{formatDate(label, lang)}</p>
-      <p className="text-accent-green font-semibold">{payload[0].value} kg</p>
+      <p className="text-accent-green font-semibold">{payload[0].value} {t('common.kg')}</p>
     </div>
   )
 }
@@ -158,7 +160,7 @@ export default function Progress() {
       {/* Header */}
       <div className="bg-gradient-to-br from-accent-purple/10 via-accent-indigo/5 to-transparent rounded-2xl p-4 mb-4">
         <h1 className="text-2xl font-bold text-text-primary">{t('title')}</h1>
-        <p className="text-accent-purple text-xs font-medium mt-1">Track your journey</p>
+        <p className="text-accent-purple text-xs font-medium mt-1">{t('subtitle')}</p>
       </div>
 
       {!hasData ? (
@@ -206,54 +208,54 @@ export default function Progress() {
           {/* Body Measurements form */}
           <div className="bg-white rounded-2xl p-4 mb-4 border border-border shadow-sm">
             <div className="flex justify-between items-center mb-3">
-              <h2 className="text-sm font-semibold text-text-primary">Body Measurements</h2>
+              <h2 className="text-sm font-semibold text-text-primary">{t('measurements')}</h2>
               <button
                 onClick={() => setShowMeasurements(!showMeasurements)}
                 className="text-xs text-accent-purple font-semibold bg-accent-purple/10 px-3 py-1 rounded-lg"
               >
-                {showMeasurements ? 'Hide' : 'Add'}
+                {showMeasurements ? t('hide_measurements') : t('add_measurements')}
               </button>
             </div>
             {showMeasurements && (
               <div className="space-y-2">
                 <div className="grid grid-cols-2 gap-2">
                   <MeasurementInput
-                    label="Waist (cm)"
+                    label={t('waist')}
                     value={measurements.waist_cm}
                     onChange={v => setMeasurements(m => ({ ...m, waist_cm: v }))}
                   />
                   <MeasurementInput
-                    label="Hips (cm)"
+                    label={t('hips')}
                     value={measurements.hips_cm}
                     onChange={v => setMeasurements(m => ({ ...m, hips_cm: v }))}
                   />
                   <MeasurementInput
-                    label="Chest (cm)"
+                    label={t('chest')}
                     value={measurements.chest_cm}
                     onChange={v => setMeasurements(m => ({ ...m, chest_cm: v }))}
                   />
                   <MeasurementInput
-                    label="Neck (cm)"
+                    label={t('neck')}
                     value={measurements.neck_cm}
                     onChange={v => setMeasurements(m => ({ ...m, neck_cm: v }))}
                   />
                   <MeasurementInput
-                    label="L Arm (cm)"
+                    label={t('left_arm')}
                     value={measurements.left_arm_cm}
                     onChange={v => setMeasurements(m => ({ ...m, left_arm_cm: v }))}
                   />
                   <MeasurementInput
-                    label="R Arm (cm)"
+                    label={t('right_arm')}
                     value={measurements.right_arm_cm}
                     onChange={v => setMeasurements(m => ({ ...m, right_arm_cm: v }))}
                   />
                   <MeasurementInput
-                    label="L Thigh (cm)"
+                    label={t('left_thigh')}
                     value={measurements.left_thigh_cm}
                     onChange={v => setMeasurements(m => ({ ...m, left_thigh_cm: v }))}
                   />
                   <MeasurementInput
-                    label="R Thigh (cm)"
+                    label={t('right_thigh')}
                     value={measurements.right_thigh_cm}
                     onChange={v => setMeasurements(m => ({ ...m, right_thigh_cm: v }))}
                   />
@@ -262,7 +264,7 @@ export default function Progress() {
                   onClick={saveMeasurements}
                   className="w-full bg-gradient-to-r from-accent-purple to-accent-indigo text-white py-2 rounded-xl text-sm font-semibold mt-2 shadow-md shadow-accent-purple/20"
                 >
-                  Save Measurements
+                  {t('save_measurements')}
                 </button>
               </div>
             )}
@@ -271,7 +273,7 @@ export default function Progress() {
           {/* Measurement trend chart */}
           {measChartData.length > 0 && (
             <div className="bg-white rounded-2xl p-4 mb-4 border border-border shadow-sm">
-              <h2 className="text-sm font-semibold text-text-primary mb-3">Measurement Trends</h2>
+              <h2 className="text-sm font-semibold text-text-primary mb-3">{t('measurement_trend')}</h2>
               <ResponsiveContainer width="100%" height={160}>
                 <LineChart data={measChartData}>
                   <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
@@ -293,7 +295,7 @@ export default function Progress() {
                   <Line
                     type="monotone"
                     dataKey="waist"
-                    name="Waist (cm)"
+                    name={t('waist_cm')}
                     stroke="#f97316"
                     strokeWidth={2}
                     dot={{ fill: '#f97316', r: 3 }}
@@ -303,7 +305,7 @@ export default function Progress() {
                   <Line
                     type="monotone"
                     dataKey="body_fat"
-                    name="Body Fat (%)"
+                    name={t('body_fat_pct')}
                     stroke="#a855f7"
                     strokeWidth={2}
                     dot={{ fill: '#a855f7', r: 3 }}

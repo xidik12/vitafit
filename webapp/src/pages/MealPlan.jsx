@@ -20,6 +20,7 @@ const mealDotColors = {
 
 function RecipeDetail({ recipe, onClose }) {
   const { i18n, t } = useTranslation('meals')
+  const { t: tc } = useTranslation()
   const { token } = useUser()
   const lang = i18n.language
 
@@ -100,27 +101,27 @@ function RecipeDetail({ recipe, onClose }) {
           <div className="flex gap-2 mb-4 flex-wrap">
             {(r.calories ?? recipe.calories) != null && (
               <span className="px-2.5 py-1 bg-accent-orange/10 text-accent-orange rounded-full text-xs font-semibold">
-                {Math.round(r.calories ?? recipe.calories)} kcal
+                {Math.round(r.calories ?? recipe.calories)} {tc('common.kcal')}
               </span>
             )}
             {(r.protein ?? recipe.protein) != null && (
               <span className="px-2.5 py-1 bg-accent-blue/10 text-accent-blue rounded-full text-xs font-semibold">
-                P: {Math.round(r.protein ?? recipe.protein)}g
+                {t('macro_p')} {Math.round(r.protein ?? recipe.protein)}{tc('common.g')}
               </span>
             )}
             {(r.carbs ?? recipe.carbs) != null && (
               <span className="px-2.5 py-1 bg-accent-green/10 text-accent-green rounded-full text-xs font-semibold">
-                C: {Math.round(r.carbs ?? recipe.carbs)}g
+                {t('macro_c')} {Math.round(r.carbs ?? recipe.carbs)}{tc('common.g')}
               </span>
             )}
             {(r.fat ?? recipe.fat) != null && (
               <span className="px-2.5 py-1 bg-accent-red/10 text-accent-red rounded-full text-xs font-semibold">
-                F: {Math.round(r.fat ?? recipe.fat)}g
+                {t('macro_f')} {Math.round(r.fat ?? recipe.fat)}{tc('common.g')}
               </span>
             )}
             {(r.cook_time_mins || recipe.cook_time_mins) && (
               <span className="px-2.5 py-1 bg-gray-100 text-text-secondary rounded-full text-xs font-medium">
-                {r.cook_time_mins || recipe.cook_time_mins} min
+                {r.cook_time_mins || recipe.cook_time_mins} {tc('common.min')}
               </span>
             )}
           </div>
@@ -207,8 +208,9 @@ export default function MealPlan() {
       if (fetched && fetched.days) {
         const firstMeal = fetched.days[0]?.meals?.breakfast || fetched.days[0]?.meals?.lunch
         const meal = Array.isArray(firstMeal) ? firstMeal[0] : firstMeal
-        if (meal && !meal.image_url) {
-          // Old plan without images — regenerate silently
+        if (meal && !meal.image_url && !localStorage.getItem('vitafit-meal-plan-upgraded')) {
+          // Old plan without images — regenerate silently (only once)
+          localStorage.setItem('vitafit-meal-plan-upgraded', '1')
           try {
             const fresh = await api.post('/api/recipes/plan/generate', {}, token)
             setPlan(fresh.plan)

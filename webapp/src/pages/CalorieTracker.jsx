@@ -39,7 +39,7 @@ function MealSection({ mealType, entries, onAddFood }) {
           </span>
         </div>
         <div className="flex items-center gap-2">
-          <span className="text-xs font-medium text-text-secondary bg-gray-50 px-2 py-0.5 rounded-full">{Math.round(totalCal)} kcal</span>
+          <span className="text-xs font-medium text-text-secondary bg-gray-50 px-2 py-0.5 rounded-full">{Math.round(totalCal)} {t('common:common.kcal')}</span>
           <span className="text-text-secondary text-xs">{expanded ? '▲' : '▼'}</span>
         </div>
       </button>
@@ -47,16 +47,16 @@ function MealSection({ mealType, entries, onAddFood }) {
       {expanded && (
         <div className="px-3 pb-3">
           {entries.length === 0 ? (
-            <p className="text-xs text-text-secondary py-2 text-center">No food logged</p>
+            <p className="text-xs text-text-secondary py-2 text-center">{t('no_food_logged')}</p>
           ) : (
             <div className="space-y-1 mb-2">
               {entries.map((entry, i) => (
                 <div key={i} className="flex justify-between items-center py-1.5 border-b border-border/50 last:border-0">
                   <div>
                     <p className="text-sm text-text-primary">{entry.food_name}</p>
-                    <p className="text-xs text-text-secondary">{entry.amount_g}g</p>
+                    <p className="text-xs text-text-secondary">{entry.amount_g}{t('common:common.g')}</p>
                   </div>
-                  <span className="text-xs font-medium text-text-secondary">{Math.round(entry.calories)} kcal</span>
+                  <span className="text-xs font-medium text-text-secondary">{Math.round(entry.calories)} {t('common:common.kcal')}</span>
                 </div>
               ))}
             </div>
@@ -172,7 +172,7 @@ export default function CalorieTracker() {
       {/* Header */}
       <div className="bg-gradient-to-br from-accent-teal/10 via-accent-cyan/5 to-transparent rounded-2xl p-4 mb-4">
         <h1 className="text-2xl font-bold text-text-primary">{t('title')}</h1>
-        <p className="text-accent-teal text-xs font-medium mt-1">Track your daily nutrition</p>
+        <p className="text-accent-teal text-xs font-medium mt-1">{t('subtitle')}</p>
       </div>
 
       {/* Calorie summary */}
@@ -187,7 +187,7 @@ export default function CalorieTracker() {
           <div className="text-center flex-1 mx-2">
             <div className="bg-gradient-to-br from-gray-50 to-gray-100/50 rounded-xl py-2 px-3">
               <p className="text-xl font-bold text-text-primary">{calGoal}</p>
-              <p className="text-xs text-text-secondary font-medium">Goal</p>
+              <p className="text-xs text-text-secondary font-medium">{t('goal')}</p>
             </div>
           </div>
           <div className="text-center flex-1">
@@ -257,7 +257,7 @@ export default function CalorieTracker() {
         </div>
         <div className="flex justify-between mt-1">
           <span className="text-xs text-text-secondary font-medium">{Math.round(waterPercent)}%</span>
-          <span className="text-xs text-text-secondary">{waterGoal}{tc('common.water_ml')} goal</span>
+          <span className="text-xs text-text-secondary">{waterGoal}{tc('common.water_ml')} {t('goal').toLowerCase()}</span>
         </div>
       </div>
 

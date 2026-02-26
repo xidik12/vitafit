@@ -1,7 +1,7 @@
 import logging
 from sqlalchemy.ext.asyncio import create_async_engine, async_sessionmaker, AsyncSession
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, relationship
-from sqlalchemy import Text, Float, Integer, BigInteger, String, JSON, DateTime, Boolean, Date, ForeignKey, func
+from sqlalchemy import Text, Float, Integer, BigInteger, String, JSON, DateTime, Boolean, Date, ForeignKey, func, text
 from datetime import datetime, date
 
 from app.config import settings
@@ -165,6 +165,7 @@ class FoodItem(Base):
     fat_per_100g: Mapped[float | None] = mapped_column(Float, nullable=True)
     fiber_per_100g: Mapped[float | None] = mapped_column(Float, nullable=True)
     serving_size_g: Mapped[float | None] = mapped_column(Float, nullable=True)
+    image_url: Mapped[str | None] = mapped_column(Text, nullable=True)
 
 
 class CalorieLog(Base):
@@ -314,3 +315,11 @@ async def init_db():
     async with engine.begin() as conn:
         await conn.run_sync(Base.metadata.create_all)
     _db_logger.info("Database tables created/verified")
+
+    # Ensure new columns exist on older databases (ALTER TABLE is idempotent)
+    async with engine.connect() as conn:
+        try:
+            await conn.execute(text("ALTER TABLE food_items ADD COLUMN IF NOT EXISTS image_url TEXT"))
+            await conn.commit()
+        except Exception:
+            pass

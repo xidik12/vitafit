@@ -3,6 +3,7 @@ import { UtensilsIcon } from './Icons'
 
 export default function RecipeCard({ recipe, onClick }) {
   const { i18n, t } = useTranslation('meals')
+  const { t: tc } = useTranslation()
   const lang = i18n.language
   const title = lang === 'ru' ? (recipe.title_ru || recipe.title_en) : recipe.title_en
 
@@ -30,17 +31,17 @@ export default function RecipeCard({ recipe, onClick }) {
           <div className="flex gap-2 mt-2">
             {recipe.protein != null && (
               <span className="px-2 py-0.5 bg-accent-blue/10 text-accent-blue rounded-full text-xs font-semibold">
-                P: {Math.round(recipe.protein)}g
+                {t('macro_p')} {Math.round(recipe.protein)}{tc('common.g')}
               </span>
             )}
             {recipe.carbs != null && (
               <span className="px-2 py-0.5 bg-accent-green/10 text-accent-green rounded-full text-xs font-semibold">
-                C: {Math.round(recipe.carbs)}g
+                {t('macro_c')} {Math.round(recipe.carbs)}{tc('common.g')}
               </span>
             )}
             {recipe.fat != null && (
               <span className="px-2 py-0.5 bg-accent-red/10 text-accent-red rounded-full text-xs font-semibold">
-                F: {Math.round(recipe.fat)}g
+                {t('macro_f')} {Math.round(recipe.fat)}{tc('common.g')}
               </span>
             )}
           </div>

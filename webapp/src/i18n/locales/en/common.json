@@ -16,7 +16,8 @@
     "calories_left": "Calories left",
     "water": "Water",
     "start_questionnaire": "Start Questionnaire",
-    "complete_setup": "Complete your profile to get a personalized plan"
+    "complete_setup": "Complete your profile to get a personalized plan",
+    "subtitle": "Let's crush today's goals"
   },
   "common": {
     "loading": "Loading...",
@@ -33,6 +34,28 @@
     "fat": "Fat",
     "water_ml": "ml",
     "settings": "Settings",
-    "about": "About"
+    "about": "About",
+    "kg": "kg",
+    "g": "g",
+    "cm": "cm",
+    "min": "min"
+  },
+  "settings": {
+    "subtitle": "Customize your experience",
+    "language": "Language",
+    "update_weight": "Update Weight",
+    "weight_placeholder": "Your weight (kg)",
+    "dietary_pref": "Dietary Preference",
+    "saved": "Saved successfully!",
+    "redo_questionnaire": "Redo Questionnaire",
+    "logout": "Log Out",
+    "diet": {
+      "no_restriction": "No restriction",
+      "halal": "Halal",
+      "vegetarian": "Vegetarian",
+      "vegan": "Vegan",
+      "gluten_free": "Gluten Free",
+      "dairy_free": "Dairy Free"
+    }
   }
 }

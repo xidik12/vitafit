@@ -99,6 +99,7 @@ function RestCircle({ seconds, total }) {
 
 /** Single set row inside the exercise view */
 function SetRow({ setNum, exercise, isCompleted, onComplete }) {
+  const { t } = useTranslation('exercises')
   const [weight, setWeight] = useState('')
   const [reps, setReps] = useState('')
 
@@ -138,7 +139,7 @@ function SetRow({ setNum, exercise, isCompleted, onComplete }) {
           type="number"
           min="0"
           step="0.5"
-          placeholder="kg"
+          placeholder={t('common:common.kg')}
           value={weight}
           onChange={e => setWeight(e.target.value)}
           disabled={isCompleted}
@@ -148,7 +149,7 @@ function SetRow({ setNum, exercise, isCompleted, onComplete }) {
               : 'bg-white border-border text-text-primary focus:border-accent-green'
           }`}
         />
-        <p className="text-center text-[10px] text-text-secondary mt-0.5">weight</p>
+        <p className="text-center text-[10px] text-text-secondary mt-0.5">{t('weight_label')}</p>
       </div>
 
       {/* Reps input */}
@@ -156,7 +157,7 @@ function SetRow({ setNum, exercise, isCompleted, onComplete }) {
         <input
           type="number"
           min="0"
-          placeholder={exercise.reps ? String(exercise.reps) : 'reps'}
+          placeholder={exercise.reps ? String(exercise.reps) : t('reps_label')}
           value={reps}
           onChange={e => setReps(e.target.value)}
           disabled={isCompleted}
@@ -166,7 +167,7 @@ function SetRow({ setNum, exercise, isCompleted, onComplete }) {
               : 'bg-white border-border text-text-primary focus:border-accent-green'
           }`}
         />
-        <p className="text-center text-[10px] text-text-secondary mt-0.5">reps</p>
+        <p className="text-center text-[10px] text-text-secondary mt-0.5">{t('reps_label')}</p>
       </div>
 
       {/* Complete button */}
@@ -201,7 +202,8 @@ export default function ActiveWorkout() {
   const { dayIndex: dayIndexParam } = useParams()
   const dayIndex = parseInt(dayIndexParam, 10)
   const navigate = useNavigate()
-  const { t, i18n } = useTranslation()
+  const { t: tc, i18n } = useTranslation()
+  const { t } = useTranslation('exercises')
   const { token } = useUser()
 
   // -- Core state -----------------------------------------------------------
@@ -389,7 +391,7 @@ export default function ActiveWorkout() {
   }
 
   async function handleEarlyExit() {
-    const confirmed = window.confirm('End workout early? Your progress so far will be saved.')
+    const confirmed = window.confirm(t('confirm_early_exit'))
     if (!confirmed) return
     await finishWorkout()
   }
@@ -399,7 +401,7 @@ export default function ActiveWorkout() {
     return (
       <div className="fixed inset-0 bg-bg-primary flex flex-col items-center justify-center gap-4 z-[60]">
         <div className="w-8 h-8 border-2 border-accent-green border-t-transparent rounded-full animate-spin" />
-        <p className="text-text-secondary text-sm">Loading workout...</p>
+        <p className="text-text-secondary text-sm">{t('loading_workout')}</p>
       </div>
     )
   }
@@ -417,7 +419,7 @@ export default function ActiveWorkout() {
           onClick={() => navigate('/exercises')}
           className="mt-2 bg-accent-green text-white px-6 py-2.5 rounded-xl text-sm font-semibold"
         >
-          Back to Plan
+          {t('back_to_plan')}
         </button>
       </div>
     )
@@ -447,29 +449,29 @@ export default function ActiveWorkout() {
             </svg>
           </div>
 
-          <h1 className="text-2xl font-bold text-text-primary mb-1">Workout Complete!</h1>
-          <p className="text-text-secondary text-sm mb-8">Great job — you crushed it today!</p>
+          <h1 className="text-2xl font-bold text-text-primary mb-1">{t('workout_complete')}</h1>
+          <p className="text-text-secondary text-sm mb-8">{t('workout_congrats')}</p>
 
           {/* Stats grid */}
           <div className="w-full max-w-xs grid grid-cols-2 gap-3 mb-8">
             <div className="bg-white rounded-2xl p-4 border border-border shadow-sm text-center">
               <p className="text-2xl font-bold text-text-primary">{formatTime(duration)}</p>
-              <p className="text-xs text-text-secondary mt-1">Duration</p>
+              <p className="text-xs text-text-secondary mt-1">{t('duration')}</p>
             </div>
             <div className="bg-white rounded-2xl p-4 border border-border shadow-sm text-center">
               <p className="text-2xl font-bold text-text-primary">{totalSetsCompleted}</p>
-              <p className="text-xs text-text-secondary mt-1">Sets done</p>
+              <p className="text-xs text-text-secondary mt-1">{t('sets_done')}</p>
             </div>
             {xp > 0 && (
               <div className="bg-accent-purple/10 rounded-2xl p-4 border border-accent-purple/30 shadow-sm text-center">
                 <p className="text-2xl font-bold text-accent-purple">+{xp}</p>
-                <p className="text-xs text-text-secondary mt-1">XP earned</p>
+                <p className="text-xs text-text-secondary mt-1">{t('xp_earned')}</p>
               </div>
             )}
             {calories > 0 && (
               <div className="bg-accent-orange/10 rounded-2xl p-4 border border-accent-orange/30 shadow-sm text-center">
                 <p className="text-2xl font-bold text-accent-orange">{calories}</p>
-                <p className="text-xs text-text-secondary mt-1">kcal burned</p>
+                <p className="text-xs text-text-secondary mt-1">{t('kcal_burned')}</p>
               </div>
             )}
           </div>
@@ -478,7 +480,7 @@ export default function ActiveWorkout() {
             onClick={() => navigate('/exercises')}
             className="w-full max-w-xs bg-accent-green text-white font-bold py-3.5 rounded-2xl text-base shadow-md shadow-accent-green/30 active:scale-95 transition-transform"
           >
-            Back to Plan
+            {t('back_to_plan')}
           </button>
         </div>
       </>
@@ -491,13 +493,13 @@ export default function ActiveWorkout() {
 
     return (
       <div className="fixed inset-0 bg-bg-primary flex flex-col items-center justify-center p-6 z-[60]">
-        <p className="text-text-secondary text-sm uppercase tracking-widest font-semibold mb-2">Rest</p>
+        <p className="text-text-secondary text-sm uppercase tracking-widest font-semibold mb-2">{t('rest_label')}</p>
         <h2 className="text-text-primary text-lg font-bold mb-6">
-          Next: {exercises[currentExIdx + 1]
+          {t('next_label')} {exercises[currentExIdx + 1]
             ? (i18n.language === 'ru' && exercises[currentExIdx + 1].name_ru
               ? exercises[currentExIdx + 1].name_ru
               : exercises[currentExIdx + 1].name_en || exercises[currentExIdx + 1].name)
-            : 'Finish'}
+            : t('finish')}
         </h2>
 
         {/* Circular timer */}
@@ -505,7 +507,7 @@ export default function ActiveWorkout() {
           <RestCircle seconds={restTime} total={restTotal} />
           <div className="absolute flex flex-col items-center">
             <span className="text-4xl font-bold text-text-primary">{restTime}</span>
-            <span className="text-xs text-text-secondary">sec</span>
+            <span className="text-xs text-text-secondary">{t('sec')}</span>
           </div>
         </div>
 
@@ -532,7 +534,7 @@ export default function ActiveWorkout() {
           className="text-accent-green font-semibold text-sm border border-accent-green/40 px-6 py-2.5 rounded-xl hover:bg-accent-green/10 transition-colors"
         >
           <span className="flex items-center gap-1.5">
-            Skip Rest
+            {t('skip_rest')}
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
               <path d="M2.5 7H11.5M11.5 7L7.5 3M11.5 7L7.5 11" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
@@ -547,12 +549,12 @@ export default function ActiveWorkout() {
     return (
       <div className="fixed inset-0 bg-bg-primary flex flex-col items-center justify-center gap-4 p-6 z-[60]">
         <DumbbellIcon className="w-12 h-12 text-text-secondary" />
-        <p className="text-text-secondary text-sm text-center">This is a rest day — no exercises scheduled.</p>
+        <p className="text-text-secondary text-sm text-center">{t('rest_day_message')}</p>
         <button
           onClick={() => navigate('/exercises')}
           className="bg-accent-green text-white px-6 py-2.5 rounded-xl text-sm font-semibold"
         >
-          Back to Plan
+          {t('back_to_plan')}
         </button>
       </div>
     )
@@ -621,7 +623,7 @@ export default function ActiveWorkout() {
           <div className="flex-1 min-w-0">
             {/* Counter label */}
             <p className="text-xs font-semibold text-accent-green uppercase tracking-wide mb-0.5">
-              Exercise {currentExIdx + 1} of {exercises.length}
+              {t('exercise_of', { current: currentExIdx + 1, total: exercises.length })}
             </p>
             {/* Exercise name */}
             <h1 className="text-xl font-bold text-text-primary leading-tight truncate">
@@ -631,17 +633,17 @@ export default function ActiveWorkout() {
             <div className="flex items-center gap-2 mt-1 flex-wrap">
               {currentExercise?.sets && (
                 <span className="text-xs bg-accent-green/10 text-accent-green border border-accent-green/20 px-2 py-0.5 rounded-md font-medium">
-                  {currentExercise.sets} sets
+                  {currentExercise.sets} {t('sets')}
                 </span>
               )}
               {currentExercise?.reps && (
                 <span className="text-xs bg-bg-secondary text-text-secondary border border-border px-2 py-0.5 rounded-md font-medium">
-                  {currentExercise.reps} reps
+                  {currentExercise.reps} {t('reps')}
                 </span>
               )}
               {currentExercise?.duration_mins && (
                 <span className="text-xs bg-accent-blue/10 text-accent-blue border border-accent-blue/20 px-2 py-0.5 rounded-md font-medium">
-                  {currentExercise.duration_mins} min
+                  {currentExercise.duration_mins} {tc('common.min')}
                 </span>
               )}
               {currentExercise?.type && (
@@ -657,7 +659,7 @@ export default function ActiveWorkout() {
         {currentExercise?.instructions && (
           <details className="mb-4 bg-bg-secondary rounded-xl border border-border">
             <summary className="px-3 py-2.5 text-xs text-text-secondary cursor-pointer font-medium select-none">
-              Instructions
+              {t('instructions_label')}
             </summary>
             <p className="px-3 pb-3 text-sm text-text-secondary leading-relaxed">
               {currentExercise.instructions}
@@ -668,7 +670,7 @@ export default function ActiveWorkout() {
         {/* Divider */}
         <div className="flex items-center gap-2 mb-3">
           <div className="flex-1 h-px bg-border" />
-          <span className="text-xs text-text-secondary font-semibold uppercase tracking-wide">Sets</span>
+          <span className="text-xs text-text-secondary font-semibold uppercase tracking-wide">{t('sets_label')}</span>
           <div className="flex-1 h-px bg-border" />
         </div>
 
@@ -695,7 +697,7 @@ export default function ActiveWorkout() {
           className="mt-4 w-full text-text-secondary text-xs border border-dashed border-border py-2.5 rounded-xl hover:border-accent-green/40 hover:text-accent-green transition-colors"
         >
           <span className="flex items-center justify-center gap-1.5">
-            Skip this exercise
+            {t('skip_exercise')}
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
               <path d="M2.5 7H11.5M11.5 7L7.5 3M11.5 7L7.5 11" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
@@ -705,7 +707,7 @@ export default function ActiveWorkout() {
         {/* Upcoming exercises preview */}
         {currentExIdx + 1 < exercises.length && (
           <div className="mt-6">
-            <p className="text-xs text-text-secondary uppercase tracking-wide font-semibold mb-2">Up next</p>
+            <p className="text-xs text-text-secondary uppercase tracking-wide font-semibold mb-2">{t('up_next')}</p>
             <div className="space-y-1.5">
               {exercises.slice(currentExIdx + 1, currentExIdx + 4).map((ex, i) => {
                 const name = i18n.language === 'ru' && ex.name_ru ? ex.name_ru : (ex.name_en || ex.name || 'Exercise')
@@ -717,7 +719,7 @@ export default function ActiveWorkout() {
                     <div className="min-w-0 flex-1">
                       <p className="text-sm font-medium text-text-primary truncate">{name}</p>
                       <p className="text-xs text-text-secondary">
-                        {ex.sets && ex.reps ? `${ex.sets}×${ex.reps}` : ex.duration_mins ? `${ex.duration_mins} min` : ''}
+                        {ex.sets && ex.reps ? `${ex.sets}×${ex.reps}` : ex.duration_mins ? `${ex.duration_mins} ${tc('common.min')}` : ''}
                       </p>
                     </div>
                   </div>
@@ -736,14 +738,14 @@ export default function ActiveWorkout() {
         >
           {currentExIdx + 1 < exercises.length ? (
             <span className="flex items-center justify-center gap-2">
-              Next Exercise
+              {t('next_exercise')}
               <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
                 <path d="M3.5 9H14.5M14.5 9L9.5 4M14.5 9L9.5 14" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </span>
           ) : (
             <span className="flex items-center justify-center gap-2">
-              Finish Workout
+              {t('finish_workout')}
               <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
                 <path d="M3.5 9.5L7 13L14.5 5.5" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>

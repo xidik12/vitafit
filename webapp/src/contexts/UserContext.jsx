@@ -2,6 +2,7 @@ import { createContext, useContext, useState, useEffect } from 'react'
 import { useAuth } from '../hooks/useAuth'
 import { useTelegram } from '../hooks/useTelegram'
 import api from '../utils/api'
+import i18n from '../i18n'
 
 const UserContext = createContext(null)
 
@@ -32,6 +33,13 @@ export function UserProvider({ children }) {
     }
     fetchProfile()
   }, [token, authLoading])
+
+  useEffect(() => {
+    if (profile?.language) {
+      i18n.changeLanguage(profile.language)
+      localStorage.setItem('vitafit-lang', profile.language)
+    }
+  }, [profile?.language])
 
   return (
     <UserContext.Provider value={{ tgUser, profile, setProfile, token, loading: loading || authLoading }}>

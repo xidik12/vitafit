@@ -22,6 +22,21 @@
   "left_thigh": "L Thigh (cm)",
   "right_thigh": "R Thigh (cm)",
   "body_fat": "Body Fat %",
-  "measurement_trend": "Measurement Trend",
-  "workout_history": "Workout History"
+  "measurement_trend": "Measurement Trends",
+  "workout_history": "Workout History",
+  "subtitle": "Track your journey",
+  "waist_cm": "Waist (cm)",
+  "body_fat_pct": "Body Fat (%)",
+  "ach_first_log": "First Log",
+  "ach_streak_3": "3-Day Streak",
+  "ach_streak_7": "7-Day Streak",
+  "ach_streak_14": "14-Day Streak",
+  "ach_streak_30": "30-Day Streak",
+  "ach_streak_60": "60-Day Streak",
+  "ach_streak_100": "100-Day Streak",
+  "ach_workout_10": "10 Workouts",
+  "ach_hydration": "Hydration Pro",
+  "ach_level_5": "Level 5",
+  "ach_level_10": "Level 10",
+  "ach_goal_reached": "Goal Reached"
 }

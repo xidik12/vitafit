@@ -23,5 +23,20 @@
   "right_thigh": "П. бедро (см)",
   "body_fat": "% жира",
   "measurement_trend": "Тренд замеров",
-  "workout_history": "История тренировок"
+  "workout_history": "История тренировок",
+  "subtitle": "Следите за своим прогрессом",
+  "waist_cm": "Талия (см)",
+  "body_fat_pct": "% жира",
+  "ach_first_log": "Первая запись",
+  "ach_streak_3": "Серия 3 дня",
+  "ach_streak_7": "Серия 7 дней",
+  "ach_streak_14": "Серия 14 дней",
+  "ach_streak_30": "Серия 30 дней",
+  "ach_streak_60": "Серия 60 дней",
+  "ach_streak_100": "Серия 100 дней",
+  "ach_workout_10": "10 тренировок",
+  "ach_hydration": "Гидратация",
+  "ach_level_5": "Уровень 5",
+  "ach_level_10": "Уровень 10",
+  "ach_goal_reached": "Цель достигнута"
 }

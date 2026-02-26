@@ -18,5 +18,16 @@
   "recent_foods": "Недавние продукты",
   "custom_food": "Свой продукт",
   "challenge": "Испытание недели",
-  "search_btn": "Поиск"
+  "search_btn": "Поиск",
+  "subtitle": "Отслеживайте питание за день",
+  "goal": "Цель",
+  "no_food_logged": "Ничего не записано",
+  "protein_label": "Белки / 100г",
+  "carbs_label": "Углеводы / 100г",
+  "fat_label": "Жиры / 100г",
+  "kcal_per_100g": "ккал / 100г",
+  "per_100g": "/ 100г",
+  "macro_p": "Б:",
+  "macro_c": "У:",
+  "macro_f": "Ж:"
 }

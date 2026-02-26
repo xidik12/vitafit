@@ -5,6 +5,7 @@ import api from '../utils/api'
 
 export default function FoodSearchModal({ mealType, onAdd, onClose }) {
   const { t, i18n } = useTranslation('calories')
+  const { t: tc } = useTranslation()
   const { token } = useUser()
   const [query, setQuery] = useState('')
   const [results, setResults] = useState([])
@@ -101,7 +102,7 @@ export default function FoodSearchModal({ mealType, onAdd, onClose }) {
                     />
                   </div>
                   <div>
-                    <label className="text-xs text-accent-orange font-medium">kcal / 100g</label>
+                    <label className="text-xs text-accent-orange font-medium">{t('kcal_per_100g')}</label>
                     <input
                       type="number"
                       value={selectedFood.calories_per_100g || ''}
@@ -111,7 +112,7 @@ export default function FoodSearchModal({ mealType, onAdd, onClose }) {
                     />
                   </div>
                   <div>
-                    <label className="text-xs text-accent-blue font-medium">Protein / 100g</label>
+                    <label className="text-xs text-accent-blue font-medium">{t('protein_label')}</label>
                     <input
                       type="number"
                       value={selectedFood.protein_per_100g || ''}
@@ -121,7 +122,7 @@ export default function FoodSearchModal({ mealType, onAdd, onClose }) {
                     />
                   </div>
                   <div>
-                    <label className="text-xs text-accent-green font-medium">Carbs / 100g</label>
+                    <label className="text-xs text-accent-green font-medium">{t('carbs_label')}</label>
                     <input
                       type="number"
                       value={selectedFood.carbs_per_100g || ''}
@@ -131,7 +132,7 @@ export default function FoodSearchModal({ mealType, onAdd, onClose }) {
                     />
                   </div>
                   <div>
-                    <label className="text-xs text-accent-red font-medium">Fat / 100g</label>
+                    <label className="text-xs text-accent-red font-medium">{t('fat_label')}</label>
                     <input
                       type="number"
                       value={selectedFood.fat_per_100g || ''}
@@ -143,16 +144,16 @@ export default function FoodSearchModal({ mealType, onAdd, onClose }) {
                 </div>
                 <div className="flex gap-2 mt-3 flex-wrap">
                   <span className="px-2 py-1 bg-accent-orange/10 text-accent-orange rounded-full text-xs font-semibold">
-                    {Math.round((selectedFood.calories_per_100g || 0) * amount / 100)} kcal
+                    {Math.round((selectedFood.calories_per_100g || 0) * amount / 100)} {tc('common.kcal')}
                   </span>
                   <span className="px-2 py-1 bg-accent-blue/10 text-accent-blue rounded-full text-xs font-semibold">
-                    P: {Math.round((selectedFood.protein_per_100g || 0) * amount / 100)}g
+                    {t('macro_p')} {Math.round((selectedFood.protein_per_100g || 0) * amount / 100)}{tc('common.g')}
                   </span>
                   <span className="px-2 py-1 bg-accent-green/10 text-accent-green rounded-full text-xs font-semibold">
-                    C: {Math.round((selectedFood.carbs_per_100g || 0) * amount / 100)}g
+                    {t('macro_c')} {Math.round((selectedFood.carbs_per_100g || 0) * amount / 100)}{tc('common.g')}
                   </span>
                   <span className="px-2 py-1 bg-accent-red/10 text-accent-red rounded-full text-xs font-semibold">
-                    F: {Math.round((selectedFood.fat_per_100g || 0) * amount / 100)}g
+                    {t('macro_f')} {Math.round((selectedFood.fat_per_100g || 0) * amount / 100)}{tc('common.g')}
                   </span>
                 </div>
               </>
@@ -162,7 +163,7 @@ export default function FoodSearchModal({ mealType, onAdd, onClose }) {
                   {lang === 'ru' ? (selectedFood.name_ru || selectedFood.name_en) : selectedFood.name_en}
                 </h4>
                 <p className="text-xs text-text-secondary mt-1">
-                  {selectedFood.calories_per_100g} kcal / 100g
+                  {selectedFood.calories_per_100g} {t('kcal_per_100g')}
                 </p>
                 <div className="mt-3">
                   <label className="text-xs text-text-secondary font-medium">{t('amount')}</label>
@@ -175,16 +176,16 @@ export default function FoodSearchModal({ mealType, onAdd, onClose }) {
                 </div>
                 <div className="flex gap-2 mt-3 flex-wrap">
                   <span className="px-2 py-1 bg-accent-orange/10 text-accent-orange rounded-full text-xs font-semibold">
-                    {Math.round((selectedFood.calories_per_100g || 0) * amount / 100)} kcal
+                    {Math.round((selectedFood.calories_per_100g || 0) * amount / 100)} {tc('common.kcal')}
                   </span>
                   <span className="px-2 py-1 bg-accent-blue/10 text-accent-blue rounded-full text-xs font-semibold">
-                    P: {Math.round((selectedFood.protein_per_100g || 0) * amount / 100)}g
+                    {t('macro_p')} {Math.round((selectedFood.protein_per_100g || 0) * amount / 100)}{tc('common.g')}
                   </span>
                   <span className="px-2 py-1 bg-accent-green/10 text-accent-green rounded-full text-xs font-semibold">
-                    C: {Math.round((selectedFood.carbs_per_100g || 0) * amount / 100)}g
+                    {t('macro_c')} {Math.round((selectedFood.carbs_per_100g || 0) * amount / 100)}{tc('common.g')}
                   </span>
                   <span className="px-2 py-1 bg-accent-red/10 text-accent-red rounded-full text-xs font-semibold">
-                    F: {Math.round((selectedFood.fat_per_100g || 0) * amount / 100)}g
+                    {t('macro_f')} {Math.round((selectedFood.fat_per_100g || 0) * amount / 100)}{tc('common.g')}
                   </span>
                 </div>
               </>
@@ -218,6 +219,7 @@ export default function FoodSearchModal({ mealType, onAdd, onClose }) {
                         onClick={() => setSelectedFood({
                           name_en: food.name,
                           name_ru: food.name,
+                          image_url: food.image_url,
                           calories_per_100g: food.calories ? Math.round(food.calories * 100 / (food.amount_g || 100)) : 0,
                           protein_per_100g: food.protein ? Math.round(food.protein * 100 / (food.amount_g || 100)) : 0,
                           carbs_per_100g: food.carbs ? Math.round(food.carbs * 100 / (food.amount_g || 100)) : 0,
@@ -225,12 +227,20 @@ export default function FoodSearchModal({ mealType, onAdd, onClose }) {
                         })}
                         className="w-full text-left bg-accent-green/5 rounded-lg p-3 border border-accent-green/20 hover:border-accent-green transition-colors"
                       >
-                        <div className="flex items-center justify-between">
-                          <div className="flex items-center gap-2">
-                            <span className={`w-2 h-2 rounded-full ${dotColors[i % dotColors.length]}`}></span>
-                            <span className="text-sm font-medium text-text-primary">{food.name}</span>
+                        <div className="flex items-center gap-3">
+                          {food.image_url ? (
+                            <img src={food.image_url} alt="" className="w-10 h-10 rounded-lg object-cover flex-shrink-0" />
+                          ) : (
+                            <div className="w-10 h-10 rounded-lg bg-accent-green/10 flex items-center justify-center flex-shrink-0">
+                              <span className="text-accent-green text-xs font-bold">
+                                {(food.name || '?')[0].toUpperCase()}
+                              </span>
+                            </div>
+                          )}
+                          <div className="flex-1 min-w-0">
+                            <div className="text-sm font-medium text-text-primary">{food.name}</div>
                           </div>
-                          <span className="text-xs text-text-secondary">{food.count}x</span>
+                          <span className="text-xs text-text-secondary flex-shrink-0">{food.count}x</span>
                         </div>
                       </button>
                     )
@@ -245,11 +255,24 @@ export default function FoodSearchModal({ mealType, onAdd, onClose }) {
                   onClick={() => setSelectedFood(food)}
                   className="w-full text-left bg-bg-secondary rounded-lg p-3 border border-border hover:border-accent-green transition-colors"
                 >
-                  <div className="text-sm font-medium text-text-primary">
-                    {lang === 'ru' ? (food.name_ru || food.name_en) : food.name_en}
-                  </div>
-                  <div className="text-xs text-text-secondary mt-0.5">
-                    {food.calories_per_100g} kcal · P:{food.protein_per_100g}g · C:{food.carbs_per_100g}g · F:{food.fat_per_100g}g
+                  <div className="flex items-center gap-3">
+                    {food.image_url ? (
+                      <img src={food.image_url} alt="" className="w-10 h-10 rounded-lg object-cover flex-shrink-0" />
+                    ) : (
+                      <div className="w-10 h-10 rounded-lg bg-accent-green/10 flex items-center justify-center flex-shrink-0">
+                        <span className="text-accent-green text-xs font-bold">
+                          {(food.name_en || '?')[0].toUpperCase()}
+                        </span>
+                      </div>
+                    )}
+                    <div className="flex-1 min-w-0">
+                      <div className="text-sm font-medium text-text-primary">
+                        {lang === 'ru' ? (food.name_ru || food.name_en) : food.name_en}
+                      </div>
+                      <div className="text-xs text-text-secondary mt-0.5">
+                        {food.calories_per_100g} {tc('common.kcal')} · {t('macro_p')}{food.protein_per_100g}{tc('common.g')} · {t('macro_c')}{food.carbs_per_100g}{tc('common.g')} · {t('macro_f')}{food.fat_per_100g}{tc('common.g')}
+                      </div>
+                    </div>
                   </div>
                 </button>
               ))}

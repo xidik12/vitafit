@@ -18,5 +18,16 @@
   "recent_foods": "Recent Foods",
   "custom_food": "Add Custom Food",
   "challenge": "Weekly Challenge",
-  "search_btn": "Search"
+  "search_btn": "Search",
+  "subtitle": "Track your daily nutrition",
+  "goal": "Goal",
+  "no_food_logged": "No food logged",
+  "protein_label": "Protein / 100g",
+  "carbs_label": "Carbs / 100g",
+  "fat_label": "Fat / 100g",
+  "kcal_per_100g": "kcal / 100g",
+  "per_100g": "/ 100g",
+  "macro_p": "P:",
+  "macro_c": "C:",
+  "macro_f": "F:"
 }

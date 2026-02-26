@@ -54,6 +54,7 @@ async def _search_local(query: str, limit: int) -> list[dict]:
             "carbs_per_100g": item.carbs_per_100g,
             "fat_per_100g": item.fat_per_100g,
             "serving_size_g": item.serving_size_g or 100,
+            "image_url": item.image_url,
         }
         for item in items
     ]

@@ -11,12 +11,12 @@ const LANGUAGE_OPTIONS = [
 ]
 
 const DIET_OPTIONS = [
-  { value: 'no_restriction', label: 'No restriction' },
-  { value: 'halal', label: 'Halal' },
-  { value: 'vegetarian', label: 'Vegetarian' },
-  { value: 'vegan', label: 'Vegan' },
-  { value: 'gluten_free', label: 'Gluten Free' },
-  { value: 'dairy_free', label: 'Dairy Free' },
+  { value: 'no_restriction', labelKey: 'settings.diet.no_restriction' },
+  { value: 'halal', labelKey: 'settings.diet.halal' },
+  { value: 'vegetarian', labelKey: 'settings.diet.vegetarian' },
+  { value: 'vegan', labelKey: 'settings.diet.vegan' },
+  { value: 'gluten_free', labelKey: 'settings.diet.gluten_free' },
+  { value: 'dairy_free', labelKey: 'settings.diet.dairy_free' },
 ]
 
 export default function Settings() {
@@ -70,12 +70,12 @@ export default function Settings() {
     <div className="p-4 pb-24">
       <div className="bg-gradient-to-br from-accent-green/10 via-accent-teal/5 to-transparent rounded-2xl p-4 mb-4">
         <h1 className="text-2xl font-bold text-text-primary">{t('common.settings')}</h1>
-        <p className="text-accent-green text-xs font-medium mt-1">Customize your experience</p>
+        <p className="text-accent-green text-xs font-medium mt-1">{t('settings.subtitle')}</p>
       </div>
 
       {/* Language */}
       <div className="bg-white rounded-2xl p-4 mb-4 border border-border shadow-sm">
-        <h2 className="text-sm font-semibold text-text-secondary uppercase tracking-wide mb-3">Language</h2>
+        <h2 className="text-sm font-semibold text-text-secondary uppercase tracking-wide mb-3">{t('settings.language')}</h2>
         <div className="flex gap-2">
           {LANGUAGE_OPTIONS.map(opt => (
             <button
@@ -96,23 +96,23 @@ export default function Settings() {
 
       {/* Weight update */}
       <div className="bg-white rounded-2xl p-4 mb-4 border border-border shadow-sm">
-        <h2 className="text-sm font-semibold text-text-secondary uppercase tracking-wide mb-3">Update Weight</h2>
+        <h2 className="text-sm font-semibold text-text-secondary uppercase tracking-wide mb-3">{t('settings.update_weight')}</h2>
         <div className="flex gap-2">
           <input
             type="number"
             step="0.1"
             value={weight}
             onChange={e => setWeight(e.target.value)}
-            placeholder={profile?.weight_kg ? `${profile.weight_kg} kg` : 'Your weight (kg)'}
+            placeholder={profile?.weight_kg ? `${profile.weight_kg} ${t('common.kg')}` : t('settings.weight_placeholder')}
             className="flex-1 bg-bg-secondary rounded-xl px-3 py-2.5 text-sm text-text-primary outline-none border border-border focus:border-accent-green"
           />
-          <span className="text-text-secondary text-sm flex items-center px-2">kg</span>
+          <span className="text-text-secondary text-sm flex items-center px-2">{t('common.kg')}</span>
         </div>
       </div>
 
       {/* Dietary preference */}
       <div className="bg-white rounded-2xl p-4 mb-4 border border-border shadow-sm">
-        <h2 className="text-sm font-semibold text-text-secondary uppercase tracking-wide mb-3">Dietary Preference</h2>
+        <h2 className="text-sm font-semibold text-text-secondary uppercase tracking-wide mb-3">{t('settings.dietary_pref')}</h2>
         <div className="grid grid-cols-2 gap-2">
           {DIET_OPTIONS.map(opt => (
             <button
@@ -124,7 +124,7 @@ export default function Settings() {
                   : 'bg-bg-secondary border-border text-text-secondary'
               }`}
             >
-              {opt.label}
+              {t(opt.labelKey)}
             </button>
           ))}
         </div>
@@ -138,7 +138,7 @@ export default function Settings() {
       )}
       {saved && (
         <div className="bg-accent-green/10 border border-accent-green/30 rounded-xl p-3 mb-4">
-          <p className="text-accent-green text-sm">Saved successfully!</p>
+          <p className="text-accent-green text-sm">{t('settings.saved')}</p>
         </div>
       )}
 
@@ -164,7 +164,7 @@ export default function Settings() {
           onClick={() => navigate('/questionnaire')}
           className="w-full flex items-center justify-between px-4 py-3"
         >
-          <span className="text-sm text-text-primary">Redo Questionnaire</span>
+          <span className="text-sm text-text-primary">{t('settings.redo_questionnaire')}</span>
           <span className="text-text-secondary">›</span>
         </button>
       </div>
@@ -174,7 +174,7 @@ export default function Settings() {
         onClick={handleLogout}
         className="w-full py-3 rounded-xl text-sm font-medium text-accent-red border border-accent-red/30 bg-accent-red/5"
       >
-        Log Out
+        {t('settings.logout')}
       </button>
     </div>
   )

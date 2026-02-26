@@ -64,7 +64,7 @@ export default function Dashboard() {
             {firstName && (
               <p className="text-text-secondary text-sm mt-0.5">{firstName}</p>
             )}
-            <p className="text-accent-green text-xs font-medium mt-1">Let's crush today's goals</p>
+            <p className="text-accent-green text-xs font-medium mt-1">{t('dashboard.subtitle')}</p>
           </div>
           <button
             onClick={() => navigate('/settings')}

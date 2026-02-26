@@ -21,5 +21,8 @@
   "no_image": "No photo available",
   "subtitle": "Delicious & nutritious meals",
   "day": "Day {{n}}",
-  "meals_count": "{{count}} meals"
+  "meals_count": "{{count}} meals",
+  "macro_p": "P:",
+  "macro_c": "C:",
+  "macro_f": "F:"
 }

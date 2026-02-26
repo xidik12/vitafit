@@ -21,5 +21,8 @@
   "no_image": "Фото недоступно",
   "subtitle": "Вкусные и полезные блюда",
   "day": "День {{n}}",
-  "meals_count": "{{count}} блюд"
+  "meals_count": "{{count}} блюд",
+  "macro_p": "Б:",
+  "macro_c": "У:",
+  "macro_f": "Ж:"
 }

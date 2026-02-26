@@ -42,6 +42,7 @@ async def seed_global_foods():
                 carbs_per_100g=item.get("carbs_per_100g"),
                 fat_per_100g=item.get("fat_per_100g"),
                 serving_size_g=item.get("serving_size_g", 100),
+                image_url=item.get("image_url"),
             )
             session.add(fi)
             added += 1

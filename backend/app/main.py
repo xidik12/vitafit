@@ -200,21 +200,11 @@ app = FastAPI(
     lifespan=lifespan,
 )
 
-# CORS
-_cors_origins = [
-    "https://web.telegram.org",
-    "https://webk.telegram.org",
-    "https://webz.telegram.org",
-]
-if settings.debug:
-    _cors_origins.extend(["http://localhost:5173", "http://localhost:3000"])
-if settings.telegram_webapp_url:
-    _cors_origins.append(settings.telegram_webapp_url.rstrip("/"))
-
+# CORS — allow all origins since the app uses JWT auth (not cookies)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=_cors_origins,
-    allow_credentials=True,
+    allow_origins=["*"],
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )

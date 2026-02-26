@@ -37,7 +37,8 @@ export default function ExercisePlan() {
       if (fetched && fetched.days) {
         const firstDay = fetched.days.find(d => d.exercises && d.exercises.length > 0)
         const firstEx = firstDay?.exercises?.[0]
-        if (firstEx && !firstEx.images) {
+        if (firstEx && !firstEx.images && !localStorage.getItem('vitafit-exercise-plan-upgraded')) {
+          localStorage.setItem('vitafit-exercise-plan-upgraded', '1')
           try {
             const fresh = await api.post('/api/exercises/plan/generate', {}, token)
             setPlan(fresh.plan)
