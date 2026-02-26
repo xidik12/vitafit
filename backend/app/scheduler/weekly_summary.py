@@ -3,7 +3,7 @@ import logging
 from datetime import date, timedelta
 from sqlalchemy import select, func
 
-from app.database import async_session, User, UserStreak, DailyTask, WeightLog, CalorieLog
+from app.database import async_session, User, UserStreak, DailyTask, WeightLog, CalorieLog, WorkoutSession, UserProfile
 from app.bot.i18n import t
 
 logger = logging.getLogger(__name__)
@@ -65,6 +65,16 @@ async def send_weekly_summaries():
                 )
                 weights = weight_result.scalars().all()
 
+                # Workout completion
+                workout_result = await session.execute(
+                    select(func.count(WorkoutSession.id)).where(
+                        WorkoutSession.user_id == user.id,
+                        WorkoutSession.date >= week_start,
+                        WorkoutSession.completed == True,
+                    )
+                )
+                workouts_done = workout_result.scalar() or 0
+
             lang = user.language
             if lang == "ru":
                 text = "📊 <b>Недельный отчёт</b>\n\n"
@@ -72,6 +82,7 @@ async def send_weekly_summaries():
                 if streak:
                     text += f"Серия: {streak.current_streak} дней\n"
                     text += f"Уровень: {streak.level} ({streak.xp_total} ОП)\n"
+                text += f"Тренировок выполнено: {workouts_done}\n"
                 if weights:
                     first_w = weights[0].weight_kg
                     last_w = weights[-1].weight_kg
@@ -85,6 +96,7 @@ async def send_weekly_summaries():
                 if streak:
                     text += f"Streak: {streak.current_streak} days\n"
                     text += f"Level: {streak.level} ({streak.xp_total} XP)\n"
+                text += f"Workouts completed: {workouts_done}\n"
                 if weights:
                     first_w = weights[0].weight_kg
                     last_w = weights[-1].weight_kg

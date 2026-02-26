@@ -14,5 +14,9 @@
     "halal": "Halal",
     "vegetarian": "Vegetarian",
     "vegan": "Vegan"
-  }
+  },
+  "watch_video": "Watch Video",
+  "ingredients": "Ingredients",
+  "instructions": "Instructions",
+  "no_image": "No photo available"
 }

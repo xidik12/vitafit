@@ -4,6 +4,7 @@ import { useUser } from '../contexts/UserContext'
 import MacroBar from '../components/MacroBar'
 import FoodSearchModal from '../components/FoodSearchModal'
 import api from '../utils/api'
+import { SunriseIcon, SunIcon, MoonIcon, AppleIcon, DropletIcon } from '../components/Icons'
 
 const MEAL_TYPES = ['breakfast', 'lunch', 'dinner', 'snack']
 
@@ -22,9 +23,10 @@ function MealSection({ mealType, entries, onAddFood }) {
         className="w-full flex items-center justify-between p-3"
       >
         <div className="flex items-center gap-2">
-          <span className="text-base">
-            {mealType === 'breakfast' ? '🌅' : mealType === 'lunch' ? '☀️' : mealType === 'dinner' ? '🌙' : '🍎'}
-          </span>
+          {mealType === 'breakfast' ? <SunriseIcon className="w-5 h-5 text-accent-orange" /> :
+           mealType === 'lunch' ? <SunIcon className="w-5 h-5 text-accent-orange" /> :
+           mealType === 'dinner' ? <MoonIcon className="w-5 h-5 text-accent-blue" /> :
+           <AppleIcon className="w-5 h-5 text-accent-green" />}
           <span className="text-sm font-medium text-text-primary capitalize">
             {t(`meal_types.${mealType}`)}
           </span>
@@ -216,7 +218,7 @@ export default function CalorieTracker() {
       <div className="bg-white rounded-2xl p-4 mb-4 border border-border shadow-sm">
         <div className="flex items-center justify-between mb-2">
           <div className="flex items-center gap-2">
-            <span className="text-xl">💧</span>
+            <DropletIcon className="w-5 h-5 text-accent-blue" />
             <div>
               <p className="text-sm font-medium text-text-primary">{t('water_goal')}</p>
               <p className="text-xs text-text-secondary">{waterMl}/{waterGoal} {tc('common.water_ml')}</p>

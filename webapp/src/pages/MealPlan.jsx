@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { useUser } from '../contexts/UserContext'
 import RecipeCard from '../components/RecipeCard'
+import { UtensilsIcon, ClipboardIcon } from '../components/Icons'
 import api from '../utils/api'
 
 const DAY_NAMES = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
@@ -22,12 +23,21 @@ function RecipeDetail({ recipe, onClose }) {
     ? (recipe.instructions_ru || recipe.instructions_en || [])
     : (recipe.instructions_en || [])
 
+  const steps = recipe.instructions_json
+    || (Array.isArray(instructions) ? instructions : [])
+
   return (
     <div className="fixed inset-0 bg-black/40 z-50 flex items-end">
       <div className="bg-white w-full rounded-t-2xl max-h-[90vh] overflow-y-auto shadow-xl">
-        {recipe.image_url && (
-          <img src={recipe.image_url} alt={title} className="w-full h-40 object-cover" />
+        {/* Hero image */}
+        {recipe.image_url ? (
+          <img src={recipe.image_url} alt={title} className="w-full h-48 object-cover" />
+        ) : (
+          <div className="w-full h-48 bg-gradient-to-br from-accent-green/20 to-accent-orange/20 flex items-center justify-center">
+            <UtensilsIcon className="w-12 h-12 text-text-secondary" />
+          </div>
         )}
+
         <div className="p-4">
           <div className="flex justify-between items-start mb-2">
             <h2 className="text-lg font-bold text-text-primary flex-1 pr-2">{title}</h2>
@@ -38,9 +48,33 @@ function RecipeDetail({ recipe, onClose }) {
             <p className="text-text-secondary text-sm mb-3">{description}</p>
           )}
 
-          <div className="flex gap-3 mb-4 text-xs text-text-secondary">
-            {recipe.calories != null && <span>🔥 {Math.round(recipe.calories)} kcal</span>}
-            {recipe.cook_time_mins && <span>⏱ {t('cook_time', { mins: recipe.cook_time_mins })}</span>}
+          {/* Macro chips */}
+          <div className="flex gap-2 mb-4 flex-wrap">
+            {recipe.calories != null && (
+              <span className="px-2.5 py-1 bg-accent-orange/10 text-accent-orange rounded-full text-xs font-medium">
+                {Math.round(recipe.calories)} kcal
+              </span>
+            )}
+            {recipe.protein != null && (
+              <span className="px-2.5 py-1 bg-accent-blue/10 text-accent-blue rounded-full text-xs font-medium">
+                P: {Math.round(recipe.protein)}g
+              </span>
+            )}
+            {recipe.carbs != null && (
+              <span className="px-2.5 py-1 bg-accent-green/10 text-accent-green rounded-full text-xs font-medium">
+                C: {Math.round(recipe.carbs)}g
+              </span>
+            )}
+            {recipe.fat != null && (
+              <span className="px-2.5 py-1 bg-accent-red/10 text-accent-red rounded-full text-xs font-medium">
+                F: {Math.round(recipe.fat)}g
+              </span>
+            )}
+            {recipe.cook_time_mins && (
+              <span className="px-2.5 py-1 bg-gray-100 text-text-secondary rounded-full text-xs font-medium">
+                {recipe.cook_time_mins} min
+              </span>
+            )}
           </div>
 
           {ingredients.length > 0 && (
@@ -57,11 +91,11 @@ function RecipeDetail({ recipe, onClose }) {
             </>
           )}
 
-          {instructions.length > 0 && (
+          {steps.length > 0 && (
             <>
               <h3 className="text-sm font-semibold text-text-primary mb-2">Instructions</h3>
               <ol className="space-y-2">
-                {instructions.map((step, i) => (
+                {steps.map((step, i) => (
                   <li key={i} className="text-sm text-text-secondary flex items-start gap-2">
                     <span className="text-accent-green font-bold min-w-[20px]">{i + 1}.</span>
                     <span>{step}</span>
@@ -69,6 +103,18 @@ function RecipeDetail({ recipe, onClose }) {
                 ))}
               </ol>
             </>
+          )}
+
+          {/* YouTube button */}
+          {recipe.youtube_url && (
+            <a
+              href={recipe.youtube_url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-2 w-full bg-red-500 text-white py-2.5 rounded-xl text-sm font-semibold mt-4"
+            >
+              Watch Video
+            </a>
           )}
         </div>
       </div>
@@ -101,7 +147,7 @@ export default function MealPlan() {
     setLoading(true)
     try {
       const data = await api.get('/api/recipes/plan', token)
-      setPlan(data)
+      setPlan(data.plan)
     } catch {
       // Plan might not exist
     }
@@ -114,7 +160,7 @@ export default function MealPlan() {
     setError(null)
     try {
       const data = await api.post('/api/recipes/plan/generate', {}, token)
-      setPlan(data)
+      setPlan(data.plan)
     } catch (err) {
       setError(err.message)
     }
@@ -147,7 +193,7 @@ export default function MealPlan() {
 
       {!isOnboarded ? (
         <div className="bg-white rounded-2xl p-6 text-center border border-border shadow-sm">
-          <span className="text-4xl block mb-3">🍽️</span>
+          <UtensilsIcon className="w-10 h-10 text-text-secondary mx-auto mb-3" />
           <p className="text-text-secondary text-sm mb-4">{t('empty')}</p>
           <button
             onClick={() => navigate('/questionnaire')}
@@ -158,7 +204,7 @@ export default function MealPlan() {
         </div>
       ) : !plan ? (
         <div className="bg-white rounded-2xl p-6 text-center border border-border shadow-sm">
-          <span className="text-4xl block mb-3">📋</span>
+          <ClipboardIcon className="w-10 h-10 text-text-secondary mx-auto mb-3" />
           <p className="text-text-secondary text-sm mb-4">{t('empty')}</p>
           <button
             onClick={generatePlan}
@@ -182,7 +228,8 @@ export default function MealPlan() {
             {(plan.days || []).map((day, index) => {
               const isExpanded = expandedDay === index
               const mealCount = MEAL_TYPES.reduce((acc, type) => {
-                return acc + (day[type]?.length || (day[type] ? 1 : 0))
+                const meal = day.meals?.[type]
+                return acc + (Array.isArray(meal) ? meal.length : meal ? 1 : 0)
               }, 0)
 
               return (
@@ -210,10 +257,11 @@ export default function MealPlan() {
                   {isExpanded && (
                     <div className="px-3 pb-3">
                       {MEAL_TYPES.map(mealType => {
-                        const recipes = Array.isArray(day[mealType])
-                          ? day[mealType]
-                          : day[mealType]
-                          ? [day[mealType]]
+                        const meal = day.meals?.[mealType]
+                        const recipes = Array.isArray(meal)
+                          ? meal
+                          : meal
+                          ? [meal]
                           : []
                         if (recipes.length === 0) return null
 

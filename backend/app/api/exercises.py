@@ -154,3 +154,92 @@ async def exercise_library(
             for e in exercises
         ],
     }
+
+
+# ---------------------------------------------------------------------------
+# GET /suggestions — Phase 2: progressive overload suggestions
+# ---------------------------------------------------------------------------
+@router.get("/suggestions", summary="Get progressive overload suggestions")
+async def get_suggestions(user: User = Depends(get_current_user)):
+    """
+    Return progressive overload suggestions for the authenticated user based
+    on their recent exercise history and current plan.
+    """
+    from app.services.exercise_planner import get_progression_suggestions
+    suggestions = await get_progression_suggestions(user.id)
+    return {"suggestions": suggestions}
+
+
+# ---------------------------------------------------------------------------
+# GET /substitutes — Phase 8/9: find substitute exercises
+# ---------------------------------------------------------------------------
+@router.get("/substitutes", summary="Find substitute exercises")
+async def find_substitutes(
+    name: str = Query(..., description="Exercise name to find substitutes for"),
+    user: User = Depends(get_current_user),
+):
+    """
+    Return up to 5 substitute exercises that target the same muscle group
+    as the given exercise, with the same or lower difficulty level.
+
+    Lookup is case-insensitive on the exercise name. Returns HTTP 404 if
+    the original exercise cannot be found in the library.
+    """
+    # Difficulty ordering used to filter same-or-lower difficulty substitutes
+    difficulty_order = {"beginner": 0, "intermediate": 1, "advanced": 2}
+
+    async with async_session() as session:
+        # Look up the original exercise by name (case-insensitive)
+        result = await session.execute(
+            select(Exercise).where(Exercise.name_en.ilike(name.strip()))
+        )
+        original = result.scalar_one_or_none()
+
+        if not original:
+            raise HTTPException(
+                status_code=404,
+                detail=f"Exercise '{name}' not found in the library.",
+            )
+
+        original_difficulty_rank = difficulty_order.get(
+            (original.difficulty or "").lower(), 1
+        )
+
+        # Collect difficulty levels that are same or lower than original
+        allowed_difficulties = [
+            level
+            for level, rank in difficulty_order.items()
+            if rank <= original_difficulty_rank
+        ]
+
+        # Query substitutes: same target_muscle, same/lower difficulty, exclude original
+        sub_query = (
+            select(Exercise)
+            .where(Exercise.target_muscle == original.target_muscle)
+            .where(Exercise.difficulty.in_(allowed_difficulties))
+            .where(Exercise.id != original.id)
+            .limit(5)
+        )
+        sub_result = await session.execute(sub_query)
+        substitutes = sub_result.scalars().all()
+
+    return {
+        "original": original.name_en,
+        "target_muscle": original.target_muscle,
+        "substitutes": [
+            {
+                "id": e.id,
+                "name_en": e.name_en,
+                "name_ru": e.name_ru,
+                "body_part": e.body_part,
+                "target_muscle": e.target_muscle,
+                "equipment": e.equipment,
+                "difficulty": e.difficulty,
+                "exercise_type": e.exercise_type,
+                "instructions": e.instructions,
+                "images": e.images,
+                "source": e.source,
+            }
+            for e in substitutes
+        ],
+    }

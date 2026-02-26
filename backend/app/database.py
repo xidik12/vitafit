@@ -87,6 +87,8 @@ class Exercise(Base):
     images: Mapped[dict | None] = mapped_column(JSON, nullable=True)
     source: Mapped[str | None] = mapped_column(String(50), nullable=True)
     exercise_type: Mapped[str | None] = mapped_column(String(20), nullable=True)  # strength/cardio/flexibility/tai_chi/yoga
+    video_url: Mapped[str | None] = mapped_column(Text, nullable=True)
+    form_tips: Mapped[dict | None] = mapped_column(JSON, nullable=True)  # {setup, execution, mistakes, breathing}
 
 
 class ExercisePlan(Base):
@@ -128,6 +130,8 @@ class Recipe(Base):
     cuisine: Mapped[str | None] = mapped_column(String(50), nullable=True)
     source_api: Mapped[str | None] = mapped_column(String(30), nullable=True)
     spoonacular_id: Mapped[int | None] = mapped_column(Integer, nullable=True)
+    youtube_url: Mapped[str | None] = mapped_column(Text, nullable=True)
+    instructions_json: Mapped[list | None] = mapped_column(JSON, nullable=True)  # Step-by-step array
 
 
 class RecipeIngredient(Base):
@@ -234,6 +238,76 @@ class QuestionnaireAnswer(Base):
     module: Mapped[str] = mapped_column(String(30))  # parq/goals/fitness/diet/sleep/lifestyle
     question_key: Mapped[str] = mapped_column(String(100))
     answer_value: Mapped[str | None] = mapped_column(Text, nullable=True)
+
+
+# Phase 1: Workout Session Logging
+class WorkoutSession(Base):
+    __tablename__ = "workout_sessions"
+    id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
+    user_id: Mapped[int] = mapped_column(Integer, ForeignKey("users.id"), index=True)
+    date: Mapped[date] = mapped_column(Date, index=True)
+    plan_day_index: Mapped[int] = mapped_column(Integer)
+    started_at: Mapped[datetime] = mapped_column(DateTime, default=func.now())
+    ended_at: Mapped[datetime | None] = mapped_column(DateTime, nullable=True)
+    completed: Mapped[bool] = mapped_column(Boolean, default=False)
+    calories_burned: Mapped[float | None] = mapped_column(Float, nullable=True)
+    notes: Mapped[str | None] = mapped_column(Text, nullable=True)
+    duration_mins: Mapped[int | None] = mapped_column(Integer, nullable=True)
+
+
+class WorkoutSetLog(Base):
+    __tablename__ = "workout_set_logs"
+    id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
+    session_id: Mapped[int] = mapped_column(Integer, ForeignKey("workout_sessions.id"), index=True)
+    exercise_name: Mapped[str] = mapped_column(String(255))
+    set_number: Mapped[int] = mapped_column(Integer)
+    reps_planned: Mapped[int | None] = mapped_column(Integer, nullable=True)
+    reps_done: Mapped[int | None] = mapped_column(Integer, nullable=True)
+    weight_kg: Mapped[float | None] = mapped_column(Float, nullable=True)
+    duration_secs: Mapped[int | None] = mapped_column(Integer, nullable=True)
+    completed: Mapped[bool] = mapped_column(Boolean, default=False)
+
+
+# Phase 6: Body Measurements
+class MeasurementLog(Base):
+    __tablename__ = "measurement_logs"
+    id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
+    user_id: Mapped[int] = mapped_column(Integer, ForeignKey("users.id"), index=True)
+    date: Mapped[date] = mapped_column(Date, index=True)
+    waist_cm: Mapped[float | None] = mapped_column(Float, nullable=True)
+    hips_cm: Mapped[float | None] = mapped_column(Float, nullable=True)
+    chest_cm: Mapped[float | None] = mapped_column(Float, nullable=True)
+    left_arm_cm: Mapped[float | None] = mapped_column(Float, nullable=True)
+    right_arm_cm: Mapped[float | None] = mapped_column(Float, nullable=True)
+    left_thigh_cm: Mapped[float | None] = mapped_column(Float, nullable=True)
+    right_thigh_cm: Mapped[float | None] = mapped_column(Float, nullable=True)
+    body_fat_pct: Mapped[float | None] = mapped_column(Float, nullable=True)
+    neck_cm: Mapped[float | None] = mapped_column(Float, nullable=True)
+
+
+# Phase 8: Custom Foods & Weekly Challenges
+class CustomFoodItem(Base):
+    __tablename__ = "custom_food_items"
+    id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
+    user_id: Mapped[int] = mapped_column(Integer, ForeignKey("users.id"), index=True)
+    name_en: Mapped[str] = mapped_column(String(500))
+    name_ru: Mapped[str | None] = mapped_column(String(500), nullable=True)
+    calories_per_100g: Mapped[float | None] = mapped_column(Float, nullable=True)
+    protein_per_100g: Mapped[float | None] = mapped_column(Float, nullable=True)
+    carbs_per_100g: Mapped[float | None] = mapped_column(Float, nullable=True)
+    fat_per_100g: Mapped[float | None] = mapped_column(Float, nullable=True)
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=func.now())
+
+
+class WeeklyChallenge(Base):
+    __tablename__ = "weekly_challenges"
+    id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
+    user_id: Mapped[int] = mapped_column(Integer, ForeignKey("users.id"), index=True)
+    week_start: Mapped[date] = mapped_column(Date)
+    challenge_type: Mapped[str] = mapped_column(String(50))
+    target_value: Mapped[int] = mapped_column(Integer, default=0)
+    current_value: Mapped[int] = mapped_column(Integer, default=0)
+    completed: Mapped[bool] = mapped_column(Boolean, default=False)
 
 
 async def init_db():

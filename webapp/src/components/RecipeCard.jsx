@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next'
+import { UtensilsIcon } from './Icons'
 
 export default function RecipeCard({ recipe, onClick }) {
   const { i18n, t } = useTranslation('meals')
@@ -7,8 +8,12 @@ export default function RecipeCard({ recipe, onClick }) {
 
   return (
     <div className="bg-bg-card rounded-xl overflow-hidden mb-3 cursor-pointer border border-border shadow-sm" onClick={onClick}>
-      {recipe.image_url && (
+      {recipe.image_url ? (
         <img src={recipe.image_url} alt={title} className="w-full h-32 object-cover" loading="lazy" />
+      ) : (
+        <div className="w-full h-32 bg-gradient-to-br from-accent-green/20 to-accent-orange/20 flex items-center justify-center">
+          <UtensilsIcon className="w-10 h-10 text-text-secondary" />
+        </div>
       )}
       <div className="p-3">
         <h4 className="text-sm font-medium text-text-primary">{title}</h4>

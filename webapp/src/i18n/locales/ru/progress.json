@@ -8,5 +8,20 @@
   "xp": "{{xp}} ОП",
   "weekly_compliance": "Выполнение за неделю",
   "achievements": "Достижения",
-  "no_data": "Начните вести дневник, чтобы увидеть прогресс!"
+  "no_data": "Начните вести дневник, чтобы увидеть прогресс!",
+  "measurements": "Замеры тела",
+  "add_measurements": "Добавить",
+  "hide_measurements": "Скрыть",
+  "save_measurements": "Сохранить замеры",
+  "waist": "Талия (см)",
+  "hips": "Бёдра (см)",
+  "chest": "Грудь (см)",
+  "neck": "Шея (см)",
+  "left_arm": "Л. рука (см)",
+  "right_arm": "П. рука (см)",
+  "left_thigh": "Л. бедро (см)",
+  "right_thigh": "П. бедро (см)",
+  "body_fat": "% жира",
+  "measurement_trend": "Тренд замеров",
+  "workout_history": "История тренировок"
 }

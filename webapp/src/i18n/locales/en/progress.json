@@ -8,5 +8,20 @@
   "xp": "{{xp}} XP",
   "weekly_compliance": "Weekly Compliance",
   "achievements": "Achievements",
-  "no_data": "Start logging to see your progress!"
+  "no_data": "Start logging to see your progress!",
+  "measurements": "Body Measurements",
+  "add_measurements": "Add",
+  "hide_measurements": "Hide",
+  "save_measurements": "Save Measurements",
+  "waist": "Waist (cm)",
+  "hips": "Hips (cm)",
+  "chest": "Chest (cm)",
+  "neck": "Neck (cm)",
+  "left_arm": "L Arm (cm)",
+  "right_arm": "R Arm (cm)",
+  "left_thigh": "L Thigh (cm)",
+  "right_thigh": "R Thigh (cm)",
+  "body_fat": "Body Fat %",
+  "measurement_trend": "Measurement Trend",
+  "workout_history": "Workout History"
 }

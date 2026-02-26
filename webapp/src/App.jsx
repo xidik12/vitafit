@@ -12,6 +12,7 @@ const CalorieTracker = lazy(() => import('./pages/CalorieTracker'))
 const Progress = lazy(() => import('./pages/Progress'))
 const Settings = lazy(() => import('./pages/Settings'))
 const About = lazy(() => import('./pages/About'))
+const ActiveWorkout = lazy(() => import('./pages/ActiveWorkout'))
 
 class ErrorBoundary extends Component {
   constructor(props) {
@@ -74,6 +75,7 @@ export default function App() {
                 <Route path="/progress" element={<Progress />} />
                 <Route path="/settings" element={<Settings />} />
                 <Route path="/about" element={<About />} />
+                <Route path="/workout/:dayIndex" element={<ActiveWorkout />} />
               </Routes>
             </Suspense>
           </div>

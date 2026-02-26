@@ -14,5 +14,8 @@
   "over": "Over by",
   "water_goal": "Water Goal",
   "log_water": "Log Water",
-  "empty": "No food logged today. Tap + to start tracking."
+  "empty": "No food logged today. Tap + to start tracking.",
+  "recent_foods": "Recent Foods",
+  "custom_food": "Add Custom Food",
+  "challenge": "Weekly Challenge"
 }

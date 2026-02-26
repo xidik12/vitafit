@@ -4,7 +4,9 @@ import random
 
 from sqlalchemy import select
 
-from app.database import async_session, UserProfile, Recipe, MealPlan
+from app.database import (
+    async_session, UserProfile, Recipe, MealPlan, ExercisePlan, RecipeIngredient,
+)
 
 logger = logging.getLogger(__name__)
 
@@ -49,15 +51,24 @@ HARAM_INGREDIENTS: frozenset[str] = frozenset({
 })
 
 
-def is_halal(recipe: Recipe) -> bool:
+def is_halal(recipe: Recipe, ingredient_names: list[str] | None = None) -> bool:
     """
     Return True if the recipe contains no haram ingredients.
-    Checks the English title against HARAM_INGREDIENTS.
+    Checks the English title *and* ingredient names against HARAM_INGREDIENTS.
     """
     title = (recipe.title_en or "").lower()
     for word in HARAM_INGREDIENTS:
         if word in title:
             return False
+
+    # Ingredient-level check
+    if ingredient_names:
+        for ing_name in ingredient_names:
+            ing_lower = ing_name.lower()
+            for word in HARAM_INGREDIENTS:
+                if word in ing_lower:
+                    return False
+
     return True
 
 
@@ -87,6 +98,27 @@ async def generate_meal_plan(user_id: int) -> dict | None:
         result = await session.execute(select(Recipe))
         all_recipes = result.scalars().all()
 
+        # Pre-load all recipe ingredients for allergen/halal ingredient-level checks
+        recipe_ids = [r.id for r in all_recipes]
+        ingredient_map: dict[int, list[str]] = {}
+        if recipe_ids:
+            ing_result = await session.execute(
+                select(RecipeIngredient).where(
+                    RecipeIngredient.recipe_id.in_(recipe_ids)
+                )
+            )
+            for ing in ing_result.scalars().all():
+                ingredient_map.setdefault(ing.recipe_id, []).append(ing.name)
+
+        # Fetch the latest ExercisePlan for training-day awareness
+        ep_result = await session.execute(
+            select(ExercisePlan)
+            .where(ExercisePlan.user_id == user_id)
+            .order_by(ExercisePlan.week_number.desc())
+            .limit(1)
+        )
+        exercise_plan = ep_result.scalar_one_or_none()
+
     # ------------------------------------------------------------------
     # Profile fields with safe defaults
     # ------------------------------------------------------------------
@@ -95,33 +127,53 @@ async def generate_meal_plan(user_id: int) -> dict | None:
     allergies_raw = profile.allergies or ""
     allergy_words = [a.strip().lower() for a in allergies_raw.split(",") if a.strip()]
 
+    # Macro targets from profile (grams per day)
+    target_protein = profile.target_protein or 0
+    target_carbs = profile.target_carbs or 0
+    target_fat = profile.target_fat or 0
+
     # ------------------------------------------------------------------
-    # Filter recipes by dietary preference
+    # Filter recipes by dietary preference (with ingredient-level checks)
     # ------------------------------------------------------------------
     filtered: list[Recipe] = list(all_recipes)
 
     if dietary_pref in ("halal", "none", ""):
-        filtered = [r for r in filtered if is_halal(r)]
+        filtered = [
+            r for r in filtered
+            if is_halal(r, ingredient_map.get(r.id))
+        ]
     elif dietary_pref == "vegetarian":
         filtered = [r for r in filtered if r.diet_type in ("vegetarian", "vegan")]
     elif dietary_pref == "vegan":
         filtered = [r for r in filtered if r.diet_type == "vegan"]
 
-    # Filter out allergens from the title as a best-effort guard
+    # Filter out allergens from the title AND ingredient names
     if allergy_words:
         def _no_allergens(r: Recipe) -> bool:
             title = (r.title_en or "").lower()
-            return not any(a in title for a in allergy_words)
+            if any(a in title for a in allergy_words):
+                return False
+            # Ingredient-level allergen check
+            for ing_name in ingredient_map.get(r.id, []):
+                if any(a in ing_name.lower() for a in allergy_words):
+                    return False
+            return True
         filtered = [r for r in filtered if _no_allergens(r)]
 
     # ------------------------------------------------------------------
-    # No recipes in DB → return template plan
+    # No recipes in DB -> return template plan
     # ------------------------------------------------------------------
     if not filtered:
         logger.info(f"User {user_id}: no matching recipes in DB — using template plan")
         plan = _generate_template_plan(target_cals, dietary_pref)
     else:
-        plan = _build_plan_from_db(user_id, filtered, target_cals)
+        plan = _build_plan_from_db(
+            user_id, filtered, target_cals,
+            target_protein=target_protein,
+            target_carbs=target_carbs,
+            target_fat=target_fat,
+            exercise_plan=exercise_plan,
+        )
 
     # ------------------------------------------------------------------
     # Persist to DB
@@ -145,18 +197,64 @@ async def generate_meal_plan(user_id: int) -> dict | None:
 
 
 # ---------------------------------------------------------------------------
+# Exercise plan helpers — determine workout vs rest days
+# ---------------------------------------------------------------------------
+def _get_workout_days(exercise_plan: ExercisePlan | None) -> set[int]:
+    """
+    Return a set of day numbers (1-7) that are workout days.
+    Reads from the exercise plan's plan_json["days"] list.
+    Days with type == "rest" or no exercises are rest days.
+    If no exercise plan exists, assume all days are rest days.
+    """
+    if not exercise_plan or not exercise_plan.plan_json:
+        return set()
+
+    plan_data = exercise_plan.plan_json
+    days = plan_data.get("days", [])
+    workout_days: set[int] = set()
+    for day_info in days:
+        day_num = day_info.get("day", 0)
+        day_type = day_info.get("type", "")
+        exercises = day_info.get("exercises", [])
+        if day_type != "rest" and exercises:
+            workout_days.add(day_num)
+    return workout_days
+
+
+# ---------------------------------------------------------------------------
 # DB-backed plan builder
 # ---------------------------------------------------------------------------
 def _build_plan_from_db(
     user_id: int,
     recipes: list[Recipe],
     target_cals: int,
+    *,
+    target_protein: int = 0,
+    target_carbs: int = 0,
+    target_fat: int = 0,
+    exercise_plan: ExercisePlan | None = None,
 ) -> dict:
     """Build a 7-day plan using real recipe rows from the database."""
-    breakfast_cals = int(target_cals * 0.25)
-    lunch_cals = int(target_cals * 0.35)
-    dinner_cals = int(target_cals * 0.30)
-    snack_cals = int(target_cals * 0.10)
+
+    # ------------------------------------------------------------------
+    # Filter out recipes without images (with fallback)
+    # ------------------------------------------------------------------
+    recipes_with_images = [
+        r for r in recipes
+        if r.image_url and r.image_url.strip()
+    ]
+    if len(recipes_with_images) >= 10:
+        recipes = recipes_with_images
+    else:
+        logger.info(
+            f"User {user_id}: only {len(recipes_with_images)} recipes have images "
+            f"(< 10 threshold) — keeping all {len(recipes)} recipes"
+        )
+
+    # ------------------------------------------------------------------
+    # Determine workout vs rest days
+    # ------------------------------------------------------------------
+    workout_days = _get_workout_days(exercise_plan)
 
     plan = {
         "user_id": user_id,
@@ -172,11 +270,74 @@ def _build_plan_from_db(
         "days": [],
     }
 
+    # Track used recipe IDs across the entire week for variety
+    used_ids: set[int] = set()
+
     for day_num in range(1, 8):
-        breakfast = _pick_meal(recipes, breakfast_cals)
-        lunch = _pick_meal(recipes, lunch_cals)
-        dinner = _pick_meal(recipes, dinner_cals)
-        snacks = _pick_meal(recipes, snack_cals)
+        is_workout_day = day_num in workout_days
+
+        # Adjust macros for training vs rest day
+        if target_carbs > 0:
+            if is_workout_day:
+                day_carbs = int(target_carbs * 1.10)  # +10% carbs
+                day_protein = target_protein
+            else:
+                day_carbs = int(target_carbs * 0.90)  # -10% carbs
+                day_protein = int(target_protein * 1.05) if target_protein > 0 else 0  # +5% protein
+        else:
+            day_carbs = target_carbs
+            day_protein = target_protein
+        day_fat = target_fat
+
+        # Per-meal calorie split
+        breakfast_cals = int(target_cals * 0.25)
+        lunch_cals = int(target_cals * 0.35)
+        dinner_cals = int(target_cals * 0.30)
+        snack_cals = int(target_cals * 0.10)
+
+        # Per-meal macro split (same percentages as calories)
+        def _split_macro(daily_val: int, pct: float) -> float:
+            return daily_val * pct if daily_val > 0 else 0.0
+
+        breakfast = _pick_meal(
+            recipes, breakfast_cals,
+            target_protein=_split_macro(day_protein, 0.25),
+            target_carbs=_split_macro(day_carbs, 0.25),
+            target_fat=_split_macro(day_fat, 0.25),
+            exclude_ids=used_ids,
+        )
+        if breakfast and breakfast.get("recipe_id"):
+            used_ids.add(breakfast["recipe_id"])
+
+        lunch = _pick_meal(
+            recipes, lunch_cals,
+            target_protein=_split_macro(day_protein, 0.35),
+            target_carbs=_split_macro(day_carbs, 0.35),
+            target_fat=_split_macro(day_fat, 0.35),
+            exclude_ids=used_ids,
+        )
+        if lunch and lunch.get("recipe_id"):
+            used_ids.add(lunch["recipe_id"])
+
+        dinner = _pick_meal(
+            recipes, dinner_cals,
+            target_protein=_split_macro(day_protein, 0.30),
+            target_carbs=_split_macro(day_carbs, 0.30),
+            target_fat=_split_macro(day_fat, 0.30),
+            exclude_ids=used_ids,
+        )
+        if dinner and dinner.get("recipe_id"):
+            used_ids.add(dinner["recipe_id"])
+
+        snacks = _pick_meal(
+            recipes, snack_cals,
+            target_protein=_split_macro(day_protein, 0.10),
+            target_carbs=_split_macro(day_carbs, 0.10),
+            target_fat=_split_macro(day_fat, 0.10),
+            exclude_ids=used_ids,
+        )
+        if snacks and snacks.get("recipe_id"):
+            used_ids.add(snacks["recipe_id"])
 
         meals = {
             "breakfast": breakfast,
@@ -189,32 +350,66 @@ def _build_plan_from_db(
             for m in meals.values()
             if m is not None
         )
-        plan["days"].append({
+        day_entry: dict = {
             "day": day_num,
             "meals": meals,
             "total_calories": round(total_cals),
-        })
+        }
+        if workout_days:
+            day_entry["is_workout_day"] = is_workout_day
+
+        plan["days"].append(day_entry)
 
     return plan
 
 
-def _pick_meal(recipes: list[Recipe], target_cals: int) -> dict | None:
+def _pick_meal(
+    recipes: list[Recipe],
+    target_cals: int,
+    *,
+    target_protein: float = 0.0,
+    target_carbs: float = 0.0,
+    target_fat: float = 0.0,
+    exclude_ids: set[int] | None = None,
+) -> dict | None:
     """
-    Pick a recipe whose calorie count is closest to target_cals.
+    Pick a recipe whose calories and macros are closest to the targets.
+
+    Scoring: abs(cal_diff) + abs(protein_diff)*2 + abs(carb_diff) + abs(fat_diff)
+    Protein is weighted 2x because hitting protein targets is more important.
+
     Among the 5 closest candidates, choose one randomly for variety.
-    If no recipes have calorie data, pick any random recipe.
+    Recipes in ``exclude_ids`` are skipped for variety enforcement.
+    If no recipes have calorie data, pick any random recipe (not in exclude set).
     """
     if not recipes:
         return None
 
-    with_cals = [r for r in recipes if r.calories_per_serving is not None]
+    _exclude = exclude_ids or set()
+
+    # Filter out already-used recipes for variety
+    available = [r for r in recipes if r.id not in _exclude]
+    if not available:
+        # Fallback: if all recipes exhausted, allow repeats
+        available = list(recipes)
+
+    with_cals = [r for r in available if r.calories_per_serving is not None]
     if not with_cals:
-        r = random.choice(recipes)
+        r = random.choice(available)
         return _recipe_to_dict(r)
 
-    sorted_recipes = sorted(
-        with_cals, key=lambda r: abs((r.calories_per_serving or 0) - target_cals)
-    )
+    use_macros = target_protein > 0 or target_carbs > 0 or target_fat > 0
+
+    def _score(r: Recipe) -> float:
+        cal_diff = abs((r.calories_per_serving or 0) - target_cals)
+        if not use_macros:
+            return cal_diff
+        protein_diff = abs((r.protein or 0) - target_protein)
+        carbs_diff = abs((r.carbs or 0) - target_carbs)
+        fat_diff = abs((r.fat or 0) - target_fat)
+        return cal_diff + protein_diff * 2 + carbs_diff + fat_diff
+
+    sorted_recipes = sorted(with_cals, key=_score)
     pool = sorted_recipes[:5]
     return _recipe_to_dict(random.choice(pool))
 

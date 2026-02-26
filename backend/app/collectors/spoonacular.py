@@ -81,6 +81,10 @@ async def fetch_recipes(diet: str = "halal", number: int = 20) -> int:
                 if spoonacular_id is None:
                     continue
 
+                # Skip recipes without photos
+                if not item.get("image"):
+                    continue
+
                 # Idempotency — skip if already in DB
                 existing = await session.execute(
                     select(Recipe).where(Recipe.spoonacular_id == spoonacular_id)
@@ -109,6 +113,17 @@ async def fetch_recipes(diet: str = "halal", number: int = 20) -> int:
                     source_api="spoonacular",
                     spoonacular_id=spoonacular_id,
                 )
+
+                # Parse step-by-step instructions
+                analyzed = item.get("analyzedInstructions") or []
+                steps = []
+                for instruction in analyzed:
+                    for step in instruction.get("steps", []):
+                        step_text = step.get("step", "").strip()
+                        if step_text:
+                            steps.append(step_text)
+                recipe.instructions_json = steps if steps else None
+
                 session.add(recipe)
                 await session.flush()  # Get recipe.id for FK in ingredients
 

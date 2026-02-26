@@ -1,12 +1,16 @@
 """Exercise plan generation — personalized weekly workout plans."""
 import json
 import logging
+import math
 import random
 from pathlib import Path
 
 from sqlalchemy import select
 
-from app.database import async_session, UserProfile, Exercise, ExercisePlan
+from app.database import (
+    async_session, UserProfile, Exercise, ExercisePlan,
+    WorkoutSession, WorkoutSetLog,
+)
 
 logger = logging.getLogger(__name__)
 
@@ -32,6 +36,288 @@ YOGA_POSES: list[dict] = _load_json("yoga_poses.json")
 PILATES_MOVES: list[dict] = _load_json("pilates_moves.json")
 STRETCHING_ROUTINES: list[dict] = _load_json("stretching_routines.json")
 BODYWEIGHT_EXERCISES: list[dict] = _load_json("bodyweight_exercises.json")
+
+# ---------------------------------------------------------------------------
+# Phase 9: Warm-up / Cool-down classification
+# ---------------------------------------------------------------------------
+# Stretching routines that involve movement/circles/rolls are classified as
+# dynamic (suitable for warm-up); the rest are static (suitable for cool-down).
+_DYNAMIC_KEYWORDS = {
+    "circles", "circle", "rolls", "roll", "cat-cow", "cat cow", "windmill",
+    "hip circles", "ankle circles", "shrugs", "world's greatest",
+}
+
+
+def _is_dynamic_stretch(stretch: dict) -> bool:
+    """Heuristic: stretches with movement-based keywords are dynamic."""
+    name_lower = (stretch.get("name_en") or "").lower()
+    instructions_lower = (stretch.get("instructions") or "").lower()
+    for kw in _DYNAMIC_KEYWORDS:
+        if kw in name_lower or kw in instructions_lower:
+            return True
+    # Short-duration stretches with "sides" and movement cues
+    if stretch.get("duration_secs", 0) <= 30 and any(
+        w in instructions_lower for w in ("rotate", "swing", "flow", "circle", "roll")
+    ):
+        return True
+    return False
+
+
+# Pre-classify at module load
+_DYNAMIC_STRETCHES: list[dict] = [s for s in STRETCHING_ROUTINES if _is_dynamic_stretch(s)]
+_STATIC_STRETCHES: list[dict] = [s for s in STRETCHING_ROUTINES if not _is_dynamic_stretch(s)]
+
+# Body-region to broad muscle group mapping for warm-up/cool-down filtering
+_BODY_PART_TO_REGION: dict[str, list[str]] = {
+    "chest": ["upper_body"],
+    "back": ["upper_body", "core_back"],
+    "shoulders": ["upper_body"],
+    "arms": ["upper_body"],
+    "legs": ["lower_body"],
+    "core": ["core_back"],
+    "glutes": ["lower_body"],
+    "full_body": ["upper_body", "lower_body", "core_back", "full_body"],
+    "hips": ["lower_body"],
+}
+
+
+def _calculate_sleep_hours(bedtime: str | None, waketime: str | None) -> float | None:
+    """Calculate approximate sleep hours from HH:MM strings."""
+    if not bedtime or not waketime:
+        return None
+    try:
+        bed_h, bed_m = map(int, bedtime.split(":"))
+        wake_h, wake_m = map(int, waketime.split(":"))
+        bed_total = bed_h * 60 + bed_m
+        wake_total = wake_h * 60 + wake_m
+        if wake_total <= bed_total:
+            # Crossed midnight (e.g. 23:00 → 07:00)
+            diff = (24 * 60 - bed_total) + wake_total
+        else:
+            # Same-day (e.g. 01:00 → 08:00)
+            diff = wake_total - bed_total
+        return diff / 60.0
+    except (ValueError, AttributeError):
+        return None
+
+
+def _get_warm_up(primary_body_parts: list[str], count: int = 4) -> list[dict]:
+    """Select dynamic stretches relevant to the day's primary muscle groups."""
+    # Determine relevant body regions
+    regions: set[str] = set()
+    for bp in primary_body_parts:
+        regions.update(_BODY_PART_TO_REGION.get(bp.lower(), ["full_body"]))
+    if not regions:
+        regions = {"upper_body", "lower_body", "core_back", "full_body"}
+
+    # Filter dynamic stretches by region; fall back to all dynamic stretches
+    relevant = [
+        s for s in _DYNAMIC_STRETCHES
+        if s.get("body_region", "full_body") in regions
+    ]
+    if len(relevant) < count:
+        # Add any remaining dynamic stretches not already selected
+        remaining = [s for s in _DYNAMIC_STRETCHES if s not in relevant]
+        relevant.extend(remaining)
+    if not relevant:
+        # Ultimate fallback: use all stretching routines
+        relevant = STRETCHING_ROUTINES[:count]
+
+    picks = random.sample(relevant, min(count, len(relevant)))
+    result = []
+    for s in picks:
+        duration_mins = max(1, round(s.get("duration_secs", 30) / 60))
+        result.append({
+            "name_en": s["name_en"],
+            "name_ru": s.get("name_ru", s["name_en"]),
+            "type": "warm_up",
+            "stretch_type": "dynamic",
+            "duration_mins": duration_mins,
+            "instructions": s.get("instructions", ""),
+            "body_region": s.get("body_region", ""),
+            "tips": s.get("tips", ""),
+        })
+    return result
+
+
+def _get_cool_down(primary_body_parts: list[str], count: int = 4) -> list[dict]:
+    """Select static stretches relevant to the day's primary muscle groups."""
+    regions: set[str] = set()
+    for bp in primary_body_parts:
+        regions.update(_BODY_PART_TO_REGION.get(bp.lower(), ["full_body"]))
+    if not regions:
+        regions = {"upper_body", "lower_body", "core_back", "full_body"}
+
+    relevant = [
+        s for s in _STATIC_STRETCHES
+        if s.get("body_region", "full_body") in regions
+    ]
+    if len(relevant) < count:
+        remaining = [s for s in _STATIC_STRETCHES if s not in relevant]
+        relevant.extend(remaining)
+    if not relevant:
+        relevant = STRETCHING_ROUTINES[:count]
+
+    picks = random.sample(relevant, min(count, len(relevant)))
+    result = []
+    for s in picks:
+        duration_mins = max(1, round(s.get("duration_secs", 30) / 60))
+        result.append({
+            "name_en": s["name_en"],
+            "name_ru": s.get("name_ru", s["name_en"]),
+            "type": "cool_down",
+            "stretch_type": "static",
+            "duration_mins": duration_mins,
+            "instructions": s.get("instructions", ""),
+            "body_region": s.get("body_region", ""),
+            "tips": s.get("tips", ""),
+        })
+    return result
+
+
+def _extract_day_body_parts(exercises: list[dict]) -> list[str]:
+    """Extract the primary body parts from a day's exercise list."""
+    parts: set[str] = set()
+    for ex in exercises:
+        bp = ex.get("body_part", "")
+        if bp:
+            parts.add(bp.lower())
+    return list(parts) if parts else ["full_body"]
+
+
+# ---------------------------------------------------------------------------
+# Phase 2: Progressive Overload
+# ---------------------------------------------------------------------------
+async def get_progression_suggestions(user_id: int) -> list[dict]:
+    """
+    Analyze recent workout logs and suggest progressive overload adjustments.
+
+    For each exercise, looks at the last 2 completed sessions. If the user
+    completed all planned reps for 2+ consecutive sessions at the same weight,
+    suggests:
+      - +2.5 kg if weight was used
+      - +2 reps if bodyweight exercise
+    """
+    suggestions: list[dict] = []
+
+    async with async_session() as session:
+        # Get all set logs for the user, ordered by session date desc
+        stmt = (
+            select(
+                WorkoutSetLog.exercise_name,
+                WorkoutSetLog.set_number,
+                WorkoutSetLog.reps_planned,
+                WorkoutSetLog.reps_done,
+                WorkoutSetLog.weight_kg,
+                WorkoutSetLog.completed,
+                WorkoutSession.date,
+                WorkoutSession.id.label("session_id"),
+            )
+            .join(WorkoutSession, WorkoutSetLog.session_id == WorkoutSession.id)
+            .where(WorkoutSession.user_id == user_id)
+            .where(WorkoutSession.completed == True)  # noqa: E712
+            .order_by(WorkoutSetLog.exercise_name, WorkoutSession.date.desc())
+        )
+        result = await session.execute(stmt)
+        rows = result.all()
+
+    if not rows:
+        return suggestions
+
+    # Group by exercise_name
+    exercises_grouped: dict[str, list] = {}
+    for row in rows:
+        name = row.exercise_name
+        if name not in exercises_grouped:
+            exercises_grouped[name] = []
+        exercises_grouped[name].append(row)
+
+    for exercise_name, all_sets in exercises_grouped.items():
+        # Group sets by session_id to identify distinct sessions
+        session_sets: dict[int, list] = {}
+        for s in all_sets:
+            sid = s.session_id
+            if sid not in session_sets:
+                session_sets[sid] = []
+            session_sets[sid].append(s)
+
+        # Order sessions by date desc, take last 2
+        sorted_sessions = sorted(
+            session_sets.values(),
+            key=lambda sets: sets[0].date,
+            reverse=True,
+        )
+        if len(sorted_sessions) < 2:
+            continue  # Need at least 2 sessions to evaluate
+
+        last_two = sorted_sessions[:2]
+
+        # Check if ALL sets were completed in both sessions
+        both_completed = True
+        weights_used: list[float | None] = []
+        max_reps_done: list[int] = []
+
+        for session_set_list in last_two:
+            for s in session_set_list:
+                if not s.completed:
+                    both_completed = False
+                    break
+                if s.reps_planned and s.reps_done and s.reps_done < s.reps_planned:
+                    both_completed = False
+                    break
+            if not both_completed:
+                break
+            # Track weights and reps
+            session_weights = [s.weight_kg for s in session_set_list if s.weight_kg is not None]
+            session_reps = [s.reps_done for s in session_set_list if s.reps_done is not None]
+            weights_used.append(max(session_weights) if session_weights else None)
+            max_reps_done.append(max(session_reps) if session_reps else 0)
+
+        if not both_completed:
+            continue
+
+        # Both sessions completed all planned reps — suggest progression
+        # Check if same weight was used across both sessions
+        w1 = weights_used[0] if len(weights_used) > 0 else None
+        w2 = weights_used[1] if len(weights_used) > 1 else None
+
+        if w1 is not None and w2 is not None and w1 == w2:
+            # Weighted exercise: suggest +2.5 kg
+            suggestions.append({
+                "exercise_name": exercise_name,
+                "suggested_weight_kg": round(w1 + 2.5, 1),
+                "suggested_reps": None,
+                "reason": (
+                    f"Completed all planned reps at {w1}kg for 2 consecutive "
+                    f"sessions. Ready to increase weight by 2.5kg."
+                ),
+            })
+        elif w1 is None and w2 is None:
+            # Bodyweight exercise: suggest +2 reps
+            current_reps = max_reps_done[0] if max_reps_done else 12
+            suggestions.append({
+                "exercise_name": exercise_name,
+                "suggested_weight_kg": None,
+                "suggested_reps": current_reps + 2,
+                "reason": (
+                    f"Completed all planned reps ({current_reps}) for 2 consecutive "
+                    f"sessions. Ready to add 2 more reps."
+                ),
+            })
+        elif w1 is not None and w2 is not None:
+            # Weights differ but both sessions complete — suggest increase from higher
+            higher_w = max(w1, w2)
+            suggestions.append({
+                "exercise_name": exercise_name,
+                "suggested_weight_kg": round(higher_w + 2.5, 1),
+                "suggested_reps": None,
+                "reason": (
+                    f"Completed all planned reps in last 2 sessions "
+                    f"(weights: {w1}kg, {w2}kg). Ready to increase to {round(higher_w + 2.5, 1)}kg."
+                ),
+            })
+
+    return suggestions
 
 
 # ---------------------------------------------------------------------------
@@ -68,6 +354,9 @@ async def generate_exercise_plan(user_id: int) -> dict | None:
     equipment_raw = profile.equipment or ""
     equipment = [e.strip().lower() for e in equipment_raw.split(",") if e.strip()]
     time_per_week = profile.time_per_week_mins or 150
+    stress_level = (profile.stress_level or "medium").lower().strip()
+    job_type = (profile.job_type or "").lower().strip()
+    sleep_hours = _calculate_sleep_hours(profile.sleep_bedtime, profile.sleep_waketime)
 
     # Age group determines intensity caps and exercise selection
     if age >= 65:
@@ -91,6 +380,42 @@ async def generate_exercise_plan(user_id: int) -> dict | None:
         workout_days = min(workout_days, 4)
 
     time_per_session = max(20, time_per_week // workout_days)
+
+    # Phase 5: Equipment filtering — restrict DB exercises to those
+    # matching the user's equipment OR "body only"
+    if equipment:
+        equipment_set = set(equipment)
+        exercises = [
+            e for e in exercises
+            if not e.equipment
+            or e.equipment.lower().strip() in ("body only", "body weight", "bodyweight", "none", "")
+            or e.equipment.lower().strip() in equipment_set
+        ]
+        logger.info(
+            f"User {user_id}: equipment filter applied ({equipment_set}), "
+            f"{len(exercises)} exercises remain"
+        )
+
+    # Phase 5: Age-specific filtering (65+)
+    if age >= 65:
+        _plyometric_keywords = {"plyometric", "jump", "box jump", "jumping", "plyo"}
+        exercises = [
+            e for e in exercises
+            if not any(kw in (e.name_en or "").lower() for kw in _plyometric_keywords)
+        ]
+        # Prefer lower difficulty
+        beginner_exercises = [e for e in exercises if e.difficulty == "beginner"]
+        if len(beginner_exercises) >= 10:
+            exercises = beginner_exercises
+        logger.info(f"User {user_id}: age 65+ filter, {len(exercises)} exercises remain")
+
+    # Build profile context dict for smart adjustments (passed to day builders)
+    profile_ctx = {
+        "stress_level": stress_level,
+        "job_type": job_type,
+        "sleep_hours": sleep_hours,
+        "age": age,
+    }
 
     # ------------------------------------------------------------------
     # PAR-Q failed → gentle plan only (walking + stretching + tai chi beginner)
@@ -116,6 +441,7 @@ async def generate_exercise_plan(user_id: int) -> dict | None:
             time_per_session=time_per_session,
             exercises=exercises,
             equipment=equipment,
+            profile_ctx=profile_ctx,
         )
 
     # ------------------------------------------------------------------
@@ -230,8 +556,14 @@ def _generate_goal_plan(
     time_per_session: int,
     exercises: list,
     equipment: list[str],
+    profile_ctx: dict | None = None,
 ) -> dict:
-    """Route to goal-specific plan builder."""
+    """Route to goal-specific plan builder with smart adjustments."""
+    ctx = profile_ctx or {}
+    stress_level = ctx.get("stress_level", "medium")
+    job_type = ctx.get("job_type", "")
+    sleep_hours = ctx.get("sleep_hours")
+
     plan = {
         "user_id": user_id,
         "goal": goal,
@@ -242,12 +574,26 @@ def _generate_goal_plan(
         "days": [],
     }
 
+    # Phase 5: stress/sleep notes attached to the plan
+    if stress_level == "high":
+        plan["stress_note"] = (
+            "Your stress level is high — workout volume is reduced and "
+            "yoga/stretching has been added to each session."
+        )
+    if sleep_hours is not None and sleep_hours < 6:
+        plan["sleep_note"] = (
+            f"You are getting ~{sleep_hours:.1f}h of sleep. Intensity and "
+            f"sets have been reduced, and recovery exercises added."
+        )
+
     for day_num in range(1, 8):
         if day_num > workout_days:
             plan["days"].append({
                 "day": day_num,
                 "type": "rest",
                 "exercises": [],
+                "warm_up": [],
+                "cool_down": [],
                 "duration_mins": 0,
                 "note": "Rest and recovery day.",
             })
@@ -265,10 +611,118 @@ def _generate_goal_plan(
             # "health" and any unknown goal → balanced plan
             day_exercises = _general_health_day(day_num, age_group, exercises, time_per_session, equipment)
 
+        # --- Phase 5: Smart adjustments ---
+
+        # Stress-aware: reduce exercises by ~20% and add yoga/stretching
+        if stress_level == "high":
+            original_count = len(day_exercises)
+            reduced_count = max(2, math.ceil(original_count * 0.8))
+            if len(day_exercises) > reduced_count:
+                day_exercises = day_exercises[:reduced_count]
+            # Add 1 yoga or stretching exercise for stress relief
+            yoga_pool = [p for p in YOGA_POSES if p.get("difficulty") == "beginner"]
+            if yoga_pool:
+                pick = random.choice(yoga_pool)
+                duration_mins = max(1, round(pick.get("duration_secs", 30) / 60))
+                day_exercises.append({
+                    "name_en": pick["name_en"],
+                    "name_ru": pick.get("name_ru", pick["name_en"]),
+                    "type": "yoga",
+                    "duration_mins": duration_mins,
+                    "instructions": pick.get("instructions", ""),
+                    "difficulty": "beginner",
+                    "note": "Added for stress relief",
+                })
+
+        # Sleep-aware: if < 6 hours, reduce sets and add recovery
+        if sleep_hours is not None and sleep_hours < 6:
+            for ex in day_exercises:
+                if "sets" in ex and ex["sets"] > 2:
+                    ex["sets"] = max(2, ex["sets"] - 1)
+            # Add a recovery/stretching exercise
+            recovery_pool = [
+                s for s in STRETCHING_ROUTINES
+                if s.get("difficulty") == "beginner"
+            ]
+            if recovery_pool:
+                pick = random.choice(recovery_pool)
+                duration_mins = max(1, round(pick.get("duration_secs", 30) / 60))
+                day_exercises.append({
+                    "name_en": pick["name_en"],
+                    "name_ru": pick.get("name_ru", pick["name_en"]),
+                    "type": "flexibility",
+                    "duration_mins": duration_mins,
+                    "instructions": pick.get("instructions", ""),
+                    "difficulty": "beginner",
+                    "note": "Added for recovery (low sleep)",
+                })
+
+        # Job-type adjustment
+        if job_type == "physical":
+            # Reduce lower-body volume: remove one leg exercise, add upper body
+            leg_indices = [
+                i for i, ex in enumerate(day_exercises)
+                if ex.get("body_part", "").lower() in ("legs", "glutes", "hamstrings", "quadriceps")
+            ]
+            if leg_indices:
+                day_exercises.pop(leg_indices[-1])  # Remove last leg exercise
+                # Add an upper body exercise from bodyweight pool
+                upper_pool = [
+                    e for e in BODYWEIGHT_EXERCISES
+                    if e.get("body_part", "").lower() in ("chest", "arms", "shoulders", "back")
+                ]
+                if not upper_pool:
+                    upper_pool = [
+                        e for e in BODYWEIGHT_EXERCISES
+                        if e.get("category") in ("push", "pull")
+                    ]
+                if upper_pool:
+                    pick = random.choice(upper_pool)
+                    day_exercises.append({
+                        "name_en": pick["name_en"],
+                        "name_ru": pick.get("name_ru", pick["name_en"]),
+                        "type": "strength",
+                        "body_part": pick.get("body_part", "upper_body"),
+                        "difficulty": pick.get("difficulty", "beginner"),
+                        "sets": 3,
+                        "reps": pick.get("reps", 12),
+                        "instructions": pick.get("instructions", ""),
+                        "note": "Added to compensate for physical job (lower-body reduced)",
+                    })
+        elif job_type == "sedentary":
+            # Add mobility/flexibility exercise for desk workers
+            mobility_pool = [
+                s for s in STRETCHING_ROUTINES
+                if s.get("body_region") in ("upper_body", "core_back")
+                and s.get("difficulty") == "beginner"
+            ]
+            if not mobility_pool:
+                mobility_pool = [s for s in STRETCHING_ROUTINES if s.get("difficulty") == "beginner"]
+            if mobility_pool:
+                pick = random.choice(mobility_pool)
+                duration_mins = max(1, round(pick.get("duration_secs", 30) / 60))
+                day_exercises.append({
+                    "name_en": pick["name_en"],
+                    "name_ru": pick.get("name_ru", pick["name_en"]),
+                    "type": "flexibility",
+                    "duration_mins": duration_mins,
+                    "instructions": pick.get("instructions", ""),
+                    "difficulty": "beginner",
+                    "body_region": pick.get("body_region", ""),
+                    "note": "Added for mobility (sedentary job)",
+                })
+
+        # --- Phase 9: Warm-up / Cool-down ---
+        body_parts = _extract_day_body_parts(day_exercises)
+        warm_up = _get_warm_up(body_parts, count=random.randint(3, 5))
+        cool_down = _get_cool_down(body_parts, count=random.randint(3, 5))
+
         plan["days"].append({
             "day": day_num,
             "type": "workout",
+            "warm_up": warm_up,
             "exercises": day_exercises,
+            "cool_down": cool_down,
             "duration_mins": time_per_session,
         })
 

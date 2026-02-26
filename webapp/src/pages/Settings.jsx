@@ -6,8 +6,8 @@ import api from '../utils/api'
 import i18n from '../i18n'
 
 const LANGUAGE_OPTIONS = [
-  { code: 'en', label: 'English', flag: '🇬🇧' },
-  { code: 'ru', label: 'Русский', flag: '🇷🇺' },
+  { code: 'en', label: 'English' },
+  { code: 'ru', label: 'Русский' },
 ]
 
 const DIET_OPTIONS = [
@@ -84,7 +84,7 @@ export default function Settings() {
                   : 'bg-bg-secondary border-border text-text-secondary'
               }`}
             >
-              <span>{opt.flag}</span>
+              <span className="text-xs font-bold uppercase text-text-secondary">{opt.code}</span>
               <span>{opt.label}</span>
             </button>
           ))}

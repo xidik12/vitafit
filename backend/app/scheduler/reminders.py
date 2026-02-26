@@ -1,12 +1,29 @@
 """Reminder scheduler — morning/evening check-ins."""
+import json
 import logging
+import random
 from datetime import date, datetime
+from pathlib import Path
 from sqlalchemy import select
 
-from app.database import async_session, User, ReminderSettings, UserStreak, DailyTask
+from app.database import async_session, User, UserProfile, ReminderSettings, UserStreak, DailyTask
 from app.bot.i18n import t
 
 logger = logging.getLogger(__name__)
+
+# ---------- Daily coaching tips ----------
+_tips_path = Path(__file__).parent.parent / "data" / "coaching_tips.json"
+_COACHING_TIPS = {}
+try:
+    with open(_tips_path, encoding="utf-8") as f:
+        _COACHING_TIPS = json.load(f)
+except Exception:
+    pass
+
+
+def _get_daily_tip(goal: str) -> str:
+    tips = _COACHING_TIPS.get(goal) or _COACHING_TIPS.get("general") or []
+    return random.choice(tips) if tips else ""
 
 # Will be set by main.py at startup
 _bot = None
@@ -48,6 +65,17 @@ async def send_morning_reminders():
             for task_info in tasks_result:
                 emoji = "[ ]"
                 text += f"{emoji} {task_info}\n"
+
+            # Daily coaching tip
+            async with async_session() as s:
+                profile_result = await s.execute(
+                    select(UserProfile).where(UserProfile.user_id == user.id)
+                )
+                profile = profile_result.scalar_one_or_none()
+            goal = (profile.goal if profile else None) or "general"
+            tip = _get_daily_tip(goal)
+            if tip:
+                text += f"\n💡 {tip}"
 
             await _bot.send_message(user.telegram_id, text)
         except Exception as e:

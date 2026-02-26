@@ -13,7 +13,7 @@ from apscheduler.schedulers.asyncio import AsyncIOScheduler
 
 from app.config import settings
 from app.database import init_db
-from app.api import auth, profile, questionnaire, exercises, recipes, calories, tasks, progress, admin
+from app.api import auth, profile, questionnaire, exercises, recipes, calories, tasks, progress, admin, workouts, custom_foods
 
 logging.basicConfig(
     level=logging.DEBUG if settings.debug else logging.INFO,
@@ -222,6 +222,8 @@ app.include_router(calories.router)
 app.include_router(tasks.router)
 app.include_router(progress.router)
 app.include_router(admin.router)
+app.include_router(workouts.router)
+app.include_router(custom_foods.router)
 
 
 @app.get("/health")

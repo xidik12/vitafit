@@ -1,5 +1,6 @@
 """TheMealDB collector — free, unlimited recipe data with no API key required."""
 import logging
+import re
 
 import aiohttp
 from sqlalchemy import select
@@ -111,11 +112,22 @@ async def fetch_meals_by_category(category: str = "Chicken") -> int:
                     else:
                         full_instructions = instructions_raw or None
 
+                    # Parse instructions into step array
+                    raw_steps = [s.strip() for s in instructions_raw.replace("\r\n", "\n").split("\n") if s.strip()]
+                    # Remove numbered prefixes like "1." "STEP 1" etc.
+                    clean_steps = []
+                    for s in raw_steps:
+                        cleaned = re.sub(r'^(STEP\s+)?\d+[\.\)]\s*', '', s, flags=re.IGNORECASE).strip()
+                        if cleaned and len(cleaned) > 5:  # Skip very short fragments
+                            clean_steps.append(cleaned)
+
                     recipe = Recipe(
                         title_en=meal_title,
                         source_url=details.get("strSource") or details.get("strYoutube"),
                         image_url=details.get("strMealThumb"),
                         instructions=full_instructions,
+                        instructions_json=clean_steps if clean_steps else None,
+                        youtube_url=details.get("strYoutube") or None,
                         cuisine=details.get("strArea"),
                         source_api="themealdb",
                         # TheMealDB does not provide macro data — left null

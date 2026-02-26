@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { useUser } from '../contexts/UserContext'
 import ExerciseCard from '../components/ExerciseCard'
+import { DumbbellIcon, ClipboardIcon } from '../components/Icons'
 import api from '../utils/api'
 
 const DAY_NAMES = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
@@ -31,7 +32,7 @@ export default function ExercisePlan() {
     setLoading(true)
     try {
       const data = await api.get('/api/exercises/plan', token)
-      setPlan(data)
+      setPlan(data.plan)
     } catch (err) {
       if (!err.message?.includes('Not Found') && !err.message?.includes('404')) setError(err.message)
     }
@@ -44,7 +45,7 @@ export default function ExercisePlan() {
     setError(null)
     try {
       const data = await api.post('/api/exercises/plan/generate', {}, token)
-      setPlan(data)
+      setPlan(data.plan)
     } catch (err) {
       setError(err.message)
     }
@@ -79,7 +80,7 @@ export default function ExercisePlan() {
 
       {!isOnboarded ? (
         <div className="bg-white rounded-2xl p-6 text-center border border-border shadow-sm">
-          <span className="text-4xl block mb-3">💪</span>
+          <DumbbellIcon className="w-10 h-10 text-text-secondary mx-auto mb-3" />
           <p className="text-text-secondary text-sm mb-4">{t('empty')}</p>
           <button
             onClick={() => navigate('/questionnaire')}
@@ -90,7 +91,7 @@ export default function ExercisePlan() {
         </div>
       ) : !plan ? (
         <div className="bg-white rounded-2xl p-6 text-center border border-border shadow-sm">
-          <span className="text-4xl block mb-3">📋</span>
+          <ClipboardIcon className="w-10 h-10 text-text-secondary mx-auto mb-3" />
           <p className="text-text-secondary text-sm mb-4">{t('empty')}</p>
           <button
             onClick={generatePlan}
@@ -150,6 +151,12 @@ export default function ExercisePlan() {
                       {day.exercises.map((ex, i) => (
                         <ExerciseCard key={i} exercise={ex} />
                       ))}
+                      <button
+                        onClick={(e) => { e.stopPropagation(); navigate(`/workout/${index}`) }}
+                        className="w-full mt-2 bg-accent-green text-white py-2.5 rounded-xl text-sm font-semibold"
+                      >
+                        {t('start_workout', 'Start Workout')}
+                      </button>
                     </div>
                   )}
                 </div>

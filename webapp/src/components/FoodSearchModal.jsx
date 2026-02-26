@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react'
+import { useState, useCallback, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useUser } from '../contexts/UserContext'
 import api from '../utils/api'
@@ -11,6 +11,14 @@ export default function FoodSearchModal({ mealType, onAdd, onClose }) {
   const [loading, setLoading] = useState(false)
   const [selectedFood, setSelectedFood] = useState(null)
   const [amount, setAmount] = useState(100)
+  const [recentFoods, setRecentFoods] = useState([])
+
+  useEffect(() => {
+    if (!token) return
+    api.get('/api/foods/recent', token)
+      .then(data => setRecentFoods(data.foods || data || []))
+      .catch(() => {})
+  }, [token])
 
   const search = useCallback(async () => {
     if (!query.trim() || !token) return
@@ -113,25 +121,67 @@ export default function FoodSearchModal({ mealType, onAdd, onClose }) {
             </div>
           </div>
         ) : (
-          <div className="space-y-1">
-            {results.map((food, i) => (
-              <button
-                key={i}
-                onClick={() => setSelectedFood(food)}
-                className="w-full text-left bg-bg-secondary rounded-lg p-3 border border-border hover:border-accent-green transition-colors"
-              >
-                <div className="text-sm font-medium text-text-primary">
-                  {lang === 'ru' ? (food.name_ru || food.name_en) : food.name_en}
+          <>
+            {!query && recentFoods.length > 0 && (
+              <div className="mb-3">
+                <h4 className="text-xs font-semibold text-text-secondary uppercase tracking-wide mb-2">Recent Foods</h4>
+                <div className="space-y-1">
+                  {recentFoods.map((food, i) => (
+                    <button
+                      key={i}
+                      onClick={() => setSelectedFood({
+                        name_en: food.name,
+                        name_ru: food.name,
+                        calories_per_100g: food.calories ? Math.round(food.calories * 100 / (food.amount_g || 100)) : 0,
+                        protein_per_100g: food.protein ? Math.round(food.protein * 100 / (food.amount_g || 100)) : 0,
+                        carbs_per_100g: food.carbs ? Math.round(food.carbs * 100 / (food.amount_g || 100)) : 0,
+                        fat_per_100g: food.fat ? Math.round(food.fat * 100 / (food.amount_g || 100)) : 0,
+                      })}
+                      className="w-full text-left bg-accent-green/5 rounded-lg p-3 border border-accent-green/20 hover:border-accent-green transition-colors"
+                    >
+                      <div className="flex items-center justify-between">
+                        <span className="text-sm font-medium text-text-primary">{food.name}</span>
+                        <span className="text-xs text-text-secondary">{food.count}x</span>
+                      </div>
+                    </button>
+                  ))}
                 </div>
-                <div className="text-xs text-text-secondary mt-0.5">
-                  {food.calories_per_100g} kcal · P:{food.protein_per_100g}g · C:{food.carbs_per_100g}g · F:{food.fat_per_100g}g
-                </div>
-              </button>
-            ))}
-            {results.length === 0 && !loading && query && (
-              <p className="text-center text-text-secondary text-sm py-4">{t('empty')}</p>
+              </div>
             )}
-          </div>
+            <div className="space-y-1">
+              {results.map((food, i) => (
+                <button
+                  key={i}
+                  onClick={() => setSelectedFood(food)}
+                  className="w-full text-left bg-bg-secondary rounded-lg p-3 border border-border hover:border-accent-green transition-colors"
+                >
+                  <div className="text-sm font-medium text-text-primary">
+                    {lang === 'ru' ? (food.name_ru || food.name_en) : food.name_en}
+                  </div>
+                  <div className="text-xs text-text-secondary mt-0.5">
+                    {food.calories_per_100g} kcal · P:{food.protein_per_100g}g · C:{food.carbs_per_100g}g · F:{food.fat_per_100g}g
+                  </div>
+                </button>
+              ))}
+              {results.length === 0 && !loading && query && (
+                <p className="text-center text-text-secondary text-sm py-4">{t('empty')}</p>
+              )}
+            </div>
+            <button
+              onClick={() => setSelectedFood({
+                name_en: query || 'Custom Food',
+                name_ru: query || '',
+                calories_per_100g: 0,
+                protein_per_100g: 0,
+                carbs_per_100g: 0,
+                fat_per_100g: 0,
+                isCustom: true,
+              })}
+              className="w-full mt-3 border-2 border-dashed border-border rounded-lg p-3 text-sm text-text-secondary hover:border-accent-green hover:text-accent-green transition-colors"
+            >
+              + Add Custom Food
+            </button>
+          </>
         )}
       </div>
     </div>

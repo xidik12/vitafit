@@ -19,5 +19,18 @@
     "advanced": "Advanced"
   },
   "generate": "Generate New Plan",
-  "empty": "Complete the questionnaire to get your personalized exercise plan."
+  "empty": "Complete the questionnaire to get your personalized exercise plan.",
+  "start_workout": "Start Workout",
+  "warm_up": "Warm-up",
+  "cool_down": "Cool-down",
+  "how_to": "How to do this",
+  "form_tips": "Form Tips",
+  "setup": "Setup",
+  "execution": "Execution",
+  "mistakes": "Common Mistakes",
+  "breathing": "Breathing",
+  "watch_video": "Watch Video",
+  "swap": "Swap Exercise",
+  "suggested_weight": "Suggested: {{weight}}kg",
+  "suggested_reps": "Suggested: {{reps}} reps"
 }

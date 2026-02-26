@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next'
 import { useUser } from '../contexts/UserContext'
 import ProgressRing from '../components/ProgressRing'
 import api from '../utils/api'
+import { CogIcon, FireIcon, PencilIcon, DumbbellIcon, UtensilsIcon } from '../components/Icons'
 
 export default function Dashboard() {
   const { t } = useTranslation()
@@ -68,7 +69,7 @@ export default function Dashboard() {
           className="text-text-secondary text-xl p-1"
           aria-label={t('common.settings')}
         >
-          ⚙️
+          <CogIcon className="w-5 h-5" />
         </button>
       </div>
 
@@ -131,7 +132,7 @@ export default function Dashboard() {
 
                 {/* Streak */}
                 <div className="flex flex-col items-center justify-center">
-                  <span className="text-3xl">🔥</span>
+                  <FireIcon className="w-8 h-8 text-accent-orange" />
                   <span className="text-xl font-bold text-accent-orange">{streak}</span>
                   <span className="text-xs text-text-secondary">{t('dashboard.days')}</span>
                   <span className="text-xs text-text-secondary mt-0.5">{t('dashboard.streak')}</span>
@@ -149,7 +150,7 @@ export default function Dashboard() {
               onClick={() => navigate('/calories')}
               className="bg-white rounded-xl p-3 flex flex-col items-center gap-1 border border-border shadow-sm"
             >
-              <span className="text-2xl">📝</span>
+              <PencilIcon className="w-6 h-6 text-text-secondary" />
               <span className="text-xs text-text-secondary text-center leading-tight">
                 {t('nav.calories')}
               </span>
@@ -158,7 +159,7 @@ export default function Dashboard() {
               onClick={() => navigate('/exercises')}
               className="bg-white rounded-xl p-3 flex flex-col items-center gap-1 border border-border shadow-sm"
             >
-              <span className="text-2xl">💪</span>
+              <DumbbellIcon className="w-6 h-6 text-text-secondary" />
               <span className="text-xs text-text-secondary text-center leading-tight">
                 {t('nav.exercises')}
               </span>
@@ -167,7 +168,7 @@ export default function Dashboard() {
               onClick={() => navigate('/meals')}
               className="bg-white rounded-xl p-3 flex flex-col items-center gap-1 border border-border shadow-sm"
             >
-              <span className="text-2xl">🍽️</span>
+              <UtensilsIcon className="w-6 h-6 text-text-secondary" />
               <span className="text-xs text-text-secondary text-center leading-tight">
                 {t('nav.meals')}
               </span>
