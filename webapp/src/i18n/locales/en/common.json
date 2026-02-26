@@ -1,0 +1,38 @@
+{
+  "app_name": "VitaFit",
+  "nav": {
+    "home": "Home",
+    "exercises": "Exercises",
+    "meals": "Meals",
+    "calories": "Log",
+    "progress": "Progress"
+  },
+  "dashboard": {
+    "welcome": "Welcome to VitaFit!",
+    "your_plan": "Your Plan",
+    "today": "Today",
+    "streak": "Streak",
+    "days": "days",
+    "calories_left": "Calories left",
+    "water": "Water",
+    "start_questionnaire": "Start Questionnaire",
+    "complete_setup": "Complete your profile to get a personalized plan"
+  },
+  "common": {
+    "loading": "Loading...",
+    "save": "Save",
+    "cancel": "Cancel",
+    "next": "Next",
+    "back": "Back",
+    "done": "Done",
+    "yes": "Yes",
+    "no": "No",
+    "kcal": "kcal",
+    "protein": "Protein",
+    "carbs": "Carbs",
+    "fat": "Fat",
+    "water_ml": "ml",
+    "settings": "Settings",
+    "about": "About"
+  }
+}

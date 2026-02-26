@@ -1,0 +1,32 @@
+{
+  "title": "Health Questionnaire",
+  "subtitle": "Takes about 5 minutes",
+  "modules": {
+    "parq": "Safety Check",
+    "goals": "Your Goals",
+    "fitness": "Fitness Level",
+    "diet": "Diet Preferences",
+    "sleep": "Sleep & Recovery",
+    "lifestyle": "Lifestyle"
+  },
+  "parq": {
+    "title": "Physical Activity Readiness",
+    "q1": "Has a doctor ever said you have a heart condition?",
+    "q2": "Do you feel pain in your chest during physical activity?",
+    "q3": "Have you had chest pain in the past month while not exercising?",
+    "q4": "Do you ever lose balance due to dizziness or lose consciousness?",
+    "q5": "Do you have a bone or joint problem that could worsen with exercise?",
+    "q6": "Is a doctor currently prescribing medication for blood pressure or heart condition?",
+    "q7": "Do you know of any other reason you should not do physical activity?",
+    "warning": "We recommend consulting a doctor before starting an exercise program."
+  },
+  "goals": {
+    "title": "What's your primary goal?",
+    "weight_loss": "Lose Weight",
+    "muscle": "Build Muscle",
+    "flexibility": "Improve Flexibility",
+    "health": "General Health",
+    "stress_relief": "Stress Relief"
+  },
+  "consent": "I understand this is for informational purposes only and not medical advice."
+}

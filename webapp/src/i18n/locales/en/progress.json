@@ -1,0 +1,12 @@
+{
+  "title": "Progress",
+  "weight_trend": "Weight Trend",
+  "streak_info": "Streak & XP",
+  "current_streak": "Current Streak",
+  "longest_streak": "Longest Streak",
+  "level": "Level {{n}}",
+  "xp": "{{xp}} XP",
+  "weekly_compliance": "Weekly Compliance",
+  "achievements": "Achievements",
+  "no_data": "Start logging to see your progress!"
+}

@@ -1,0 +1,9 @@
+[
+  {"key": "q1", "en": "Has a doctor ever said you have a heart condition?", "ru": "Говорил ли вам когда-нибудь врач, что у вас есть заболевание сердца?"},
+  {"key": "q2", "en": "Do you feel pain in your chest during physical activity?", "ru": "Чувствуете ли вы боль в груди при физической нагрузке?"},
+  {"key": "q3", "en": "Have you had chest pain in the past month while not exercising?", "ru": "Была ли у вас боль в груди за последний месяц в состоянии покоя?"},
+  {"key": "q4", "en": "Do you ever lose balance due to dizziness or lose consciousness?", "ru": "Теряете ли вы когда-нибудь равновесие из-за головокружения или теряете сознание?"},
+  {"key": "q5", "en": "Do you have a bone or joint problem that could worsen with exercise?", "ru": "Есть ли у вас проблемы с костями или суставами, которые могут ухудшиться от физических нагрузок?"},
+  {"key": "q6", "en": "Is a doctor currently prescribing medication for blood pressure or heart condition?", "ru": "Принимаете ли вы в настоящее время лекарства от давления или сердечного заболевания по назначению врача?"},
+  {"key": "q7", "en": "Do you know of any other reason you should not do physical activity?", "ru": "Знаете ли вы какую-либо другую причину, по которой вам не следует заниматься физической активностью?"}
+]

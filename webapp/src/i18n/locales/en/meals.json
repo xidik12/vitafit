@@ -1,0 +1,18 @@
+{
+  "title": "Meal Plan",
+  "this_week": "This Week",
+  "breakfast": "Breakfast",
+  "lunch": "Lunch",
+  "dinner": "Dinner",
+  "snacks": "Snacks",
+  "per_serving": "per serving",
+  "cook_time": "{{mins}} min",
+  "view_recipe": "View Recipe",
+  "generate": "Generate New Plan",
+  "empty": "Complete the questionnaire to get your personalized meal plan.",
+  "diet": {
+    "halal": "Halal",
+    "vegetarian": "Vegetarian",
+    "vegan": "Vegan"
+  }
+}

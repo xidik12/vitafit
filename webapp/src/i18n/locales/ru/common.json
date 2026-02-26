@@ -1,0 +1,38 @@
+{
+  "app_name": "VitaFit",
+  "nav": {
+    "home": "Главная",
+    "exercises": "Тренировки",
+    "meals": "Питание",
+    "calories": "Дневник",
+    "progress": "Прогресс"
+  },
+  "dashboard": {
+    "welcome": "Добро пожаловать в VitaFit!",
+    "your_plan": "Ваш план",
+    "today": "Сегодня",
+    "streak": "Серия",
+    "days": "дней",
+    "calories_left": "Осталось калорий",
+    "water": "Вода",
+    "start_questionnaire": "Пройти анкету",
+    "complete_setup": "Заполните анкету, чтобы получить персональный план"
+  },
+  "common": {
+    "loading": "Загрузка...",
+    "save": "Сохранить",
+    "cancel": "Отмена",
+    "next": "Далее",
+    "back": "Назад",
+    "done": "Готово",
+    "yes": "Да",
+    "no": "Нет",
+    "kcal": "ккал",
+    "protein": "Белки",
+    "carbs": "Углеводы",
+    "fat": "Жиры",
+    "water_ml": "мл",
+    "settings": "Настройки",
+    "about": "О приложении"
+  }
+}

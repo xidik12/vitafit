@@ -1,0 +1,23 @@
+{
+  "title": "Exercise Plan",
+  "this_week": "This Week",
+  "day": "Day {{n}}",
+  "sets": "sets",
+  "reps": "reps",
+  "duration": "min",
+  "rest": "Rest day",
+  "types": {
+    "strength": "Strength",
+    "cardio": "Cardio",
+    "flexibility": "Flexibility",
+    "tai_chi": "Tai Chi",
+    "yoga": "Yoga"
+  },
+  "difficulty": {
+    "beginner": "Beginner",
+    "intermediate": "Intermediate",
+    "advanced": "Advanced"
+  },
+  "generate": "Generate New Plan",
+  "empty": "Complete the questionnaire to get your personalized exercise plan."
+}

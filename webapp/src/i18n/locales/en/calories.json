@@ -1,0 +1,18 @@
+{
+  "title": "Calorie Tracker",
+  "search": "Search food...",
+  "add_food": "Add Food",
+  "meal_types": {
+    "breakfast": "Breakfast",
+    "lunch": "Lunch",
+    "dinner": "Dinner",
+    "snack": "Snack"
+  },
+  "amount": "Amount (g)",
+  "daily_total": "Daily Total",
+  "remaining": "Remaining",
+  "over": "Over by",
+  "water_goal": "Water Goal",
+  "log_water": "Log Water",
+  "empty": "No food logged today. Tap + to start tracking."
+}
