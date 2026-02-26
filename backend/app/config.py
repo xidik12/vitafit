@@ -28,6 +28,10 @@ class Settings(BaseSettings):
         url = self.database_url
         if url.startswith("postgres://"):
             url = url.replace("postgres://", "postgresql+asyncpg://", 1)
+        elif url.startswith("postgresql://"):
+            url = url.replace("postgresql://", "postgresql+asyncpg://", 1)
+        elif url.startswith("sqlite"):
+            url = url.replace("sqlite://", "sqlite+aiosqlite://", 1)
         return url
 
     model_config = {"env_file": ".env"}
