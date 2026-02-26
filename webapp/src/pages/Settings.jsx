@@ -67,8 +67,11 @@ export default function Settings() {
   }
 
   return (
-    <div className="p-4">
-      <h1 className="text-xl font-bold text-text-primary mb-6">{t('common.settings')}</h1>
+    <div className="p-4 pb-24">
+      <div className="bg-gradient-to-br from-accent-green/10 via-accent-teal/5 to-transparent rounded-2xl p-4 mb-4">
+        <h1 className="text-2xl font-bold text-text-primary">{t('common.settings')}</h1>
+        <p className="text-accent-green text-xs font-medium mt-1">Customize your experience</p>
+      </div>
 
       {/* Language */}
       <div className="bg-white rounded-2xl p-4 mb-4 border border-border shadow-sm">

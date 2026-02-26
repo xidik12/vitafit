@@ -426,6 +426,10 @@ def _recipe_to_dict(r: Recipe) -> dict:
         "fat": r.fat,
         "cook_time_mins": r.cook_time_mins,
         "source_url": r.source_url,
+        "instructions": r.instructions,
+        "instructions_ru": r.instructions_ru,
+        "instructions_json": r.instructions_json,
+        "youtube_url": r.youtube_url,
     }
 
 

@@ -9,25 +9,46 @@ import { formatDate } from '../utils/format'
 import { ChartBarIcon, FireIcon, MedalIcon, PencilIcon, BoltIcon, SparklesIcon, GemIcon, CrownIcon, TrophyIcon, DumbbellIcon, DropletIcon, StarIcon, TargetIcon } from '../components/Icons'
 
 const ACHIEVEMENTS = [
-  { id: 'first_log', Icon: PencilIcon, label: 'First Log' },
-  { id: 'streak_3', Icon: BoltIcon, label: '3-Day Streak' },
-  { id: 'streak_7', Icon: FireIcon, label: '7-Day Streak' },
-  { id: 'streak_14', Icon: SparklesIcon, label: '14-Day Streak' },
-  { id: 'streak_30', Icon: GemIcon, label: '30-Day Streak' },
-  { id: 'streak_60', Icon: CrownIcon, label: '60-Day Streak' },
-  { id: 'streak_100', Icon: TrophyIcon, label: '100-Day Streak' },
-  { id: 'workout_10', Icon: DumbbellIcon, label: '10 Workouts' },
-  { id: 'hydration', Icon: DropletIcon, label: 'Hydration Pro' },
-  { id: 'level_5', Icon: StarIcon, label: 'Level 5' },
-  { id: 'level_10', Icon: StarIcon, label: 'Level 10' },
-  { id: 'goal_reached', Icon: TargetIcon, label: 'Goal Reached' },
+  { id: 'first_log', Icon: PencilIcon, label: 'First Log', color: 'accent-teal' },
+  { id: 'streak_3', Icon: BoltIcon, label: '3-Day Streak', color: 'accent-orange' },
+  { id: 'streak_7', Icon: FireIcon, label: '7-Day Streak', color: 'accent-orange' },
+  { id: 'streak_14', Icon: SparklesIcon, label: '14-Day Streak', color: 'accent-amber' },
+  { id: 'streak_30', Icon: GemIcon, label: '30-Day Streak', color: 'accent-indigo' },
+  { id: 'streak_60', Icon: CrownIcon, label: '60-Day Streak', color: 'accent-purple' },
+  { id: 'streak_100', Icon: TrophyIcon, label: '100-Day Streak', color: 'accent-pink' },
+  { id: 'workout_10', Icon: DumbbellIcon, label: '10 Workouts', color: 'accent-blue' },
+  { id: 'hydration', Icon: DropletIcon, label: 'Hydration Pro', color: 'accent-cyan' },
+  { id: 'level_5', Icon: StarIcon, label: 'Level 5', color: 'accent-green' },
+  { id: 'level_10', Icon: StarIcon, label: 'Level 10', color: 'accent-emerald' },
+  { id: 'goal_reached', Icon: TargetIcon, label: 'Goal Reached', color: 'accent-red' },
 ]
 
+const achievementColorMap = {
+  'accent-teal': { bg: 'bg-accent-teal/10', border: 'border-accent-teal/30', text: 'text-accent-teal' },
+  'accent-orange': { bg: 'bg-accent-orange/10', border: 'border-accent-orange/30', text: 'text-accent-orange' },
+  'accent-amber': { bg: 'bg-accent-amber/10', border: 'border-accent-amber/30', text: 'text-accent-amber' },
+  'accent-indigo': { bg: 'bg-accent-indigo/10', border: 'border-accent-indigo/30', text: 'text-accent-indigo' },
+  'accent-purple': { bg: 'bg-accent-purple/10', border: 'border-accent-purple/30', text: 'text-accent-purple' },
+  'accent-pink': { bg: 'bg-accent-pink/10', border: 'border-accent-pink/30', text: 'text-accent-pink' },
+  'accent-blue': { bg: 'bg-accent-blue/10', border: 'border-accent-blue/30', text: 'text-accent-blue' },
+  'accent-cyan': { bg: 'bg-accent-cyan/10', border: 'border-accent-cyan/30', text: 'text-accent-cyan' },
+  'accent-green': { bg: 'bg-accent-green/10', border: 'border-accent-green/30', text: 'text-accent-green' },
+  'accent-emerald': { bg: 'bg-accent-emerald/10', border: 'border-accent-emerald/30', text: 'text-accent-emerald' },
+  'accent-red': { bg: 'bg-accent-red/10', border: 'border-accent-red/30', text: 'text-accent-red' },
+}
+
 function AchievementBadge({ achievement, unlocked }) {
+  const colors = unlocked ? achievementColorMap[achievement.color] : null
   return (
-    <div className={`flex flex-col items-center p-3 rounded-xl ${unlocked ? 'bg-accent-green/10 border border-accent-green/30' : 'bg-gray-50 border border-border opacity-40'}`}>
-      <achievement.Icon className={`w-7 h-7 ${unlocked ? 'text-accent-green' : 'text-text-secondary'}`} />
-      <span className="text-xs text-text-secondary mt-1 text-center leading-tight">{achievement.label}</span>
+    <div className={`flex flex-col items-center p-3 rounded-xl border transition-all ${
+      unlocked
+        ? `${colors.bg} ${colors.border} shadow-sm`
+        : 'bg-gray-50 border-border opacity-40'
+    }`}>
+      <achievement.Icon className={`w-7 h-7 ${unlocked ? colors.text : 'text-text-secondary'}`} />
+      <span className={`text-xs mt-1 text-center leading-tight font-medium ${unlocked ? colors.text : 'text-text-secondary'}`}>
+        {achievement.label}
+      </span>
     </div>
   )
 }
@@ -45,13 +66,13 @@ function CustomTooltip({ active, payload, label, lang }) {
 function MeasurementInput({ label, value, onChange }) {
   return (
     <div>
-      <label className="text-xs text-text-secondary">{label}</label>
+      <label className="text-xs text-text-secondary font-medium">{label}</label>
       <input
         type="number"
         step="0.1"
         value={value || ''}
         onChange={e => onChange(e.target.value ? Number(e.target.value) : null)}
-        className="w-full bg-bg-secondary rounded-lg px-2 py-1.5 text-sm text-text-primary outline-none border border-border focus:border-accent-green"
+        className="w-full bg-bg-secondary rounded-lg px-2 py-1.5 text-sm text-text-primary outline-none border border-border focus:border-accent-purple transition-colors"
       />
     </div>
   )
@@ -105,7 +126,7 @@ export default function Progress() {
   if (loading) {
     return (
       <div className="flex items-center justify-center min-h-[60vh]">
-        <div className="w-6 h-6 border-2 border-accent-green border-t-transparent rounded-full animate-spin" />
+        <div className="w-6 h-6 border-2 border-accent-purple border-t-transparent rounded-full animate-spin" />
       </div>
     )
   }
@@ -133,8 +154,12 @@ export default function Progress() {
   })).filter(m => m.waist !== null || m.body_fat !== null)
 
   return (
-    <div className="p-4">
-      <h1 className="text-xl font-bold text-text-primary mb-4">{t('title')}</h1>
+    <div className="p-4 pb-24">
+      {/* Header */}
+      <div className="bg-gradient-to-br from-accent-purple/10 via-accent-indigo/5 to-transparent rounded-2xl p-4 mb-4">
+        <h1 className="text-2xl font-bold text-text-primary">{t('title')}</h1>
+        <p className="text-accent-purple text-xs font-medium mt-1">Track your journey</p>
+      </div>
 
       {!hasData ? (
         <div className="bg-white rounded-2xl p-6 text-center border border-border shadow-sm">
@@ -184,7 +209,7 @@ export default function Progress() {
               <h2 className="text-sm font-semibold text-text-primary">Body Measurements</h2>
               <button
                 onClick={() => setShowMeasurements(!showMeasurements)}
-                className="text-xs text-accent-green"
+                className="text-xs text-accent-purple font-semibold bg-accent-purple/10 px-3 py-1 rounded-lg"
               >
                 {showMeasurements ? 'Hide' : 'Add'}
               </button>
@@ -235,7 +260,7 @@ export default function Progress() {
                 </div>
                 <button
                   onClick={saveMeasurements}
-                  className="w-full bg-accent-green text-white py-2 rounded-xl text-sm font-medium mt-2"
+                  className="w-full bg-gradient-to-r from-accent-purple to-accent-indigo text-white py-2 rounded-xl text-sm font-semibold mt-2 shadow-md shadow-accent-purple/20"
                 >
                   Save Measurements
                 </button>
@@ -294,31 +319,31 @@ export default function Progress() {
           <div className="bg-white rounded-2xl p-4 mb-4 border border-border shadow-sm">
             <h2 className="text-sm font-semibold text-text-primary mb-3">{t('streak_info')}</h2>
             <div className="flex gap-3 mb-4">
-              <div className="flex-1 bg-bg-secondary rounded-xl p-3 text-center">
+              <div className="flex-1 bg-gradient-to-br from-accent-orange/10 to-accent-amber/5 rounded-xl p-3 text-center border border-accent-orange/15">
                 <FireIcon className="w-8 h-8 text-accent-orange mx-auto" />
-                <p className="text-xl font-bold text-accent-orange">{streak}</p>
-                <p className="text-xs text-text-secondary">{t('current_streak')}</p>
+                <p className="text-2xl font-bold text-accent-orange">{streak}</p>
+                <p className="text-xs text-text-secondary font-medium">{t('current_streak')}</p>
               </div>
-              <div className="flex-1 bg-bg-secondary rounded-xl p-3 text-center">
+              <div className="flex-1 bg-gradient-to-br from-accent-blue/10 to-accent-indigo/5 rounded-xl p-3 text-center border border-accent-blue/15">
                 <MedalIcon className="w-8 h-8 text-accent-blue mx-auto" />
-                <p className="text-xl font-bold text-accent-blue">{longestStreak}</p>
-                <p className="text-xs text-text-secondary">{t('longest_streak')}</p>
+                <p className="text-2xl font-bold text-accent-blue">{longestStreak}</p>
+                <p className="text-xs text-text-secondary font-medium">{t('longest_streak')}</p>
               </div>
             </div>
 
             {/* Level & XP */}
-            <div className="bg-bg-secondary rounded-xl p-3">
+            <div className="bg-gradient-to-br from-accent-purple/5 to-accent-indigo/5 rounded-xl p-3 border border-accent-purple/10">
               <div className="flex justify-between items-center mb-2">
-                <span className="text-sm font-medium text-text-primary">
+                <span className="text-sm font-semibold text-text-primary">
                   {t('level', { n: level })}
                 </span>
-                <span className="text-xs text-text-secondary">
+                <span className="text-xs text-text-secondary font-medium">
                   {t('xp', { xp })} / {xpToNext}
                 </span>
               </div>
-              <div className="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
+              <div className="w-full h-2.5 bg-white/60 rounded-full overflow-hidden">
                 <div
-                  className="h-full rounded-full bg-accent-purple transition-all duration-500"
+                  className="h-full rounded-full bg-gradient-to-r from-accent-purple to-accent-indigo transition-all duration-500"
                   style={{ width: `${xpPercent}%` }}
                 />
               </div>
@@ -332,9 +357,9 @@ export default function Progress() {
                 <h2 className="text-sm font-semibold text-text-primary">{t('weekly_compliance')}</h2>
                 <span className="text-sm font-bold text-accent-green">{Math.round(weeklyCompliance)}%</span>
               </div>
-              <div className="w-full h-3 bg-gray-200 rounded-full overflow-hidden">
+              <div className="w-full h-3 bg-gray-100 rounded-full overflow-hidden">
                 <div
-                  className="h-full rounded-full bg-accent-green transition-all duration-500"
+                  className="h-full rounded-full bg-gradient-to-r from-accent-green to-accent-emerald transition-all duration-500"
                   style={{ width: `${weeklyCompliance}%` }}
                 />
               </div>

@@ -1296,6 +1296,12 @@ def _resolve_exercises(
             }
             if item.instructions:
                 d["instructions"] = item.instructions
+            if item.images:
+                d["images"] = item.images  # JSON field
+            if item.form_tips:
+                d["form_tips"] = item.form_tips  # JSON field
+            if item.video_url:
+                d["video_url"] = item.video_url
             out.append(d)
     return out
 

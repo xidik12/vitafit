@@ -8,7 +8,7 @@ export default function About() {
   const navigate = useNavigate()
 
   return (
-    <div className="p-4">
+    <div className="p-4 pb-24">
       <div className="flex items-center gap-2 mb-6">
         <button
           onClick={() => navigate(-1)}

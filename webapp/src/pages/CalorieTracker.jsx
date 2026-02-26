@@ -10,6 +10,13 @@ const MEAL_TYPES = ['breakfast', 'lunch', 'dinner', 'snack']
 
 const WATER_STEP_ML = 250
 
+const mealBorderColors = {
+  breakfast: 'border-l-accent-orange',
+  lunch: 'border-l-accent-amber',
+  dinner: 'border-l-accent-blue',
+  snack: 'border-l-accent-green',
+}
+
 function MealSection({ mealType, entries, onAddFood }) {
   const { t } = useTranslation('calories')
   const [expanded, setExpanded] = useState(true)
@@ -17,22 +24,22 @@ function MealSection({ mealType, entries, onAddFood }) {
   const totalCal = entries.reduce((sum, e) => sum + (e.calories || 0), 0)
 
   return (
-    <div className="bg-white rounded-xl mb-3 overflow-hidden border border-border shadow-sm">
+    <div className={`bg-white rounded-xl mb-3 overflow-hidden border border-border shadow-sm border-l-4 ${mealBorderColors[mealType] || 'border-l-accent-green'}`}>
       <button
         onClick={() => setExpanded(v => !v)}
         className="w-full flex items-center justify-between p-3"
       >
         <div className="flex items-center gap-2">
           {mealType === 'breakfast' ? <SunriseIcon className="w-5 h-5 text-accent-orange" /> :
-           mealType === 'lunch' ? <SunIcon className="w-5 h-5 text-accent-orange" /> :
+           mealType === 'lunch' ? <SunIcon className="w-5 h-5 text-accent-amber" /> :
            mealType === 'dinner' ? <MoonIcon className="w-5 h-5 text-accent-blue" /> :
            <AppleIcon className="w-5 h-5 text-accent-green" />}
-          <span className="text-sm font-medium text-text-primary capitalize">
+          <span className="text-sm font-semibold text-text-primary capitalize">
             {t(`meal_types.${mealType}`)}
           </span>
         </div>
         <div className="flex items-center gap-2">
-          <span className="text-xs text-text-secondary">{Math.round(totalCal)} kcal</span>
+          <span className="text-xs font-medium text-text-secondary bg-gray-50 px-2 py-0.5 rounded-full">{Math.round(totalCal)} kcal</span>
           <span className="text-text-secondary text-xs">{expanded ? '▲' : '▼'}</span>
         </div>
       </button>
@@ -44,19 +51,19 @@ function MealSection({ mealType, entries, onAddFood }) {
           ) : (
             <div className="space-y-1 mb-2">
               {entries.map((entry, i) => (
-                <div key={i} className="flex justify-between items-center py-1 border-b border-border last:border-0">
+                <div key={i} className="flex justify-between items-center py-1.5 border-b border-border/50 last:border-0">
                   <div>
-                    <p className="text-xs text-text-primary">{entry.food_name}</p>
+                    <p className="text-sm text-text-primary">{entry.food_name}</p>
                     <p className="text-xs text-text-secondary">{entry.amount_g}g</p>
                   </div>
-                  <span className="text-xs text-text-secondary">{Math.round(entry.calories)} kcal</span>
+                  <span className="text-xs font-medium text-text-secondary">{Math.round(entry.calories)} kcal</span>
                 </div>
               ))}
             </div>
           )}
           <button
             onClick={() => onAddFood(mealType)}
-            className="w-full flex items-center justify-center gap-1 py-2 text-accent-green text-xs border border-accent-green/30 rounded-lg hover:bg-accent-green/5 transition-colors"
+            className="w-full flex items-center justify-center gap-1 py-2 text-accent-green text-xs font-medium border border-accent-green/30 rounded-lg hover:bg-accent-green/5 transition-colors"
           >
             <span>+</span>
             <span>{t('add_food')}</span>
@@ -148,7 +155,7 @@ export default function CalorieTracker() {
   if (loading) {
     return (
       <div className="flex items-center justify-center min-h-[60vh]">
-        <div className="w-6 h-6 border-2 border-accent-green border-t-transparent rounded-full animate-spin" />
+        <div className="w-6 h-6 border-2 border-accent-teal border-t-transparent rounded-full animate-spin" />
       </div>
     )
   }
@@ -161,38 +168,45 @@ export default function CalorieTracker() {
   const waterPercent = Math.min(100, (waterMl / waterGoal) * 100)
 
   return (
-    <div className="p-4">
+    <div className="p-4 pb-24">
       {/* Header */}
-      <h1 className="text-xl font-bold text-text-primary mb-4">{t('title')}</h1>
+      <div className="bg-gradient-to-br from-accent-teal/10 via-accent-cyan/5 to-transparent rounded-2xl p-4 mb-4">
+        <h1 className="text-2xl font-bold text-text-primary">{t('title')}</h1>
+        <p className="text-accent-teal text-xs font-medium mt-1">Track your daily nutrition</p>
+      </div>
 
       {/* Calorie summary */}
       <div className="bg-white rounded-2xl p-4 mb-4 border border-border shadow-sm">
         <div className="flex justify-between items-center mb-3">
-          <div className="text-center">
-            <p className="text-2xl font-bold text-accent-green">{Math.round(t2.calories)}</p>
-            <p className="text-xs text-text-secondary">{t('daily_total')}</p>
+          <div className="text-center flex-1">
+            <div className="bg-gradient-to-br from-accent-green/10 to-accent-emerald/5 rounded-xl py-2 px-3">
+              <p className="text-2xl font-bold text-accent-green">{Math.round(t2.calories)}</p>
+              <p className="text-xs text-text-secondary font-medium">{t('daily_total')}</p>
+            </div>
           </div>
-          <div className="text-center">
-            <p className="text-lg font-bold text-text-primary">{calGoal}</p>
-            <p className="text-xs text-text-secondary">Goal</p>
+          <div className="text-center flex-1 mx-2">
+            <div className="bg-gradient-to-br from-gray-50 to-gray-100/50 rounded-xl py-2 px-3">
+              <p className="text-xl font-bold text-text-primary">{calGoal}</p>
+              <p className="text-xs text-text-secondary font-medium">Goal</p>
+            </div>
           </div>
-          <div className="text-center">
+          <div className="text-center flex-1">
             {calOver > 0 ? (
-              <>
-                <p className="text-lg font-bold text-accent-red">{Math.round(calOver)}</p>
-                <p className="text-xs text-text-secondary">{t('over')}</p>
-              </>
+              <div className="bg-gradient-to-br from-accent-red/10 to-accent-red/5 rounded-xl py-2 px-3">
+                <p className="text-xl font-bold text-accent-red">{Math.round(calOver)}</p>
+                <p className="text-xs text-text-secondary font-medium">{t('over')}</p>
+              </div>
             ) : (
-              <>
-                <p className="text-lg font-bold text-accent-green">{Math.round(calRemaining)}</p>
-                <p className="text-xs text-text-secondary">{t('remaining')}</p>
-              </>
+              <div className="bg-gradient-to-br from-accent-teal/10 to-accent-cyan/5 rounded-xl py-2 px-3">
+                <p className="text-xl font-bold text-accent-teal">{Math.round(calRemaining)}</p>
+                <p className="text-xs text-text-secondary font-medium">{t('remaining')}</p>
+              </div>
             )}
           </div>
         </div>
 
         {/* Macro bars */}
-        <div className="mt-2">
+        <div className="mt-3">
           <MacroBar
             label={tc('common.protein')}
             current={t2.protein}
@@ -215,32 +229,34 @@ export default function CalorieTracker() {
       </div>
 
       {/* Water tracker */}
-      <div className="bg-white rounded-2xl p-4 mb-4 border border-border shadow-sm">
+      <div className="bg-gradient-to-br from-accent-blue/5 to-accent-cyan/5 rounded-2xl p-4 mb-4 border border-accent-blue/15 shadow-sm">
         <div className="flex items-center justify-between mb-2">
           <div className="flex items-center gap-2">
-            <DropletIcon className="w-5 h-5 text-accent-blue" />
+            <div className="w-9 h-9 rounded-full bg-accent-blue/15 flex items-center justify-center">
+              <DropletIcon className="w-5 h-5 text-accent-blue" />
+            </div>
             <div>
-              <p className="text-sm font-medium text-text-primary">{t('water_goal')}</p>
+              <p className="text-sm font-semibold text-text-primary">{t('water_goal')}</p>
               <p className="text-xs text-text-secondary">{waterMl}/{waterGoal} {tc('common.water_ml')}</p>
             </div>
           </div>
           <div className="flex gap-1">
             <button
               onClick={() => logWater(WATER_STEP_ML)}
-              className="bg-accent-blue/20 text-accent-blue px-3 py-1.5 rounded-lg text-xs font-medium"
+              className="bg-accent-blue/20 text-accent-blue px-3 py-1.5 rounded-lg text-xs font-semibold hover:bg-accent-blue/30 transition-colors"
             >
               +{WATER_STEP_ML}{tc('common.water_ml')}
             </button>
           </div>
         </div>
-        <div className="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
+        <div className="w-full h-3 bg-white/60 rounded-full overflow-hidden">
           <div
-            className="h-full rounded-full transition-all duration-300 bg-accent-blue"
+            className="h-full rounded-full transition-all duration-300 bg-gradient-to-r from-accent-blue to-accent-cyan"
             style={{ width: `${waterPercent}%` }}
           />
         </div>
         <div className="flex justify-between mt-1">
-          <span className="text-xs text-text-secondary">{Math.round(waterPercent)}%</span>
+          <span className="text-xs text-text-secondary font-medium">{Math.round(waterPercent)}%</span>
           <span className="text-xs text-text-secondary">{waterGoal}{tc('common.water_ml')} goal</span>
         </div>
       </div>

@@ -238,10 +238,11 @@ export default function ActiveWorkout() {
     async function init() {
       setLoading(true)
       try {
-        const plan = await api.get('/api/exercises/plan', token)
+        const data = await api.get('/api/exercises/plan', token)
         if (cancelled) return
 
-        const day = plan?.days?.[dayIndex]
+        const planData = data?.plan || data
+        const day = planData?.days?.[dayIndex]
         const exs = day?.exercises || []
         setExercises(exs)
 

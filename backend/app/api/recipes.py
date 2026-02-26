@@ -116,6 +116,8 @@ async def get_recipe(
         "source_url": recipe.source_url,
         "instructions": recipe.instructions,
         "instructions_ru": recipe.instructions_ru,
+        "instructions_json": recipe.instructions_json,
+        "youtube_url": recipe.youtube_url,
         "cook_time_mins": recipe.cook_time_mins,
         "servings": recipe.servings,
         "calories_per_serving": recipe.calories_per_serving,

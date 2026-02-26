@@ -57,25 +57,30 @@ export default function ExercisePlan() {
   if (loading) {
     return (
       <div className="flex items-center justify-center min-h-[60vh]">
-        <div className="w-6 h-6 border-2 border-accent-green border-t-transparent rounded-full animate-spin" />
+        <div className="w-6 h-6 border-2 border-accent-blue border-t-transparent rounded-full animate-spin" />
       </div>
     )
   }
 
   return (
-    <div className="p-4">
+    <div className="p-4 pb-24">
       {/* Header */}
-      <div className="flex items-center justify-between mb-4">
-        <h1 className="text-xl font-bold text-text-primary">{t('title')}</h1>
-        {isOnboarded && (
-          <button
-            onClick={generatePlan}
-            disabled={generating}
-            className="text-xs bg-accent-green/10 text-accent-green border border-accent-green/30 px-3 py-1.5 rounded-lg"
-          >
-            {generating ? '...' : t('generate')}
-          </button>
-        )}
+      <div className="bg-gradient-to-br from-accent-blue/10 via-accent-indigo/5 to-transparent rounded-2xl p-4 mb-4">
+        <div className="flex items-center justify-between">
+          <div>
+            <h1 className="text-2xl font-bold text-text-primary">{t('title')}</h1>
+            <p className="text-accent-blue text-xs font-medium mt-1">Your weekly workout plan</p>
+          </div>
+          {isOnboarded && (
+            <button
+              onClick={generatePlan}
+              disabled={generating}
+              className="text-xs bg-gradient-to-r from-accent-blue to-accent-indigo text-white px-4 py-2 rounded-xl font-semibold shadow-md shadow-accent-blue/20 disabled:opacity-50"
+            >
+              {generating ? '...' : t('generate')}
+            </button>
+          )}
+        </div>
       </div>
 
       {!isOnboarded ? (
@@ -84,7 +89,7 @@ export default function ExercisePlan() {
           <p className="text-text-secondary text-sm mb-4">{t('empty')}</p>
           <button
             onClick={() => navigate('/questionnaire')}
-            className="bg-accent-green text-white px-6 py-2.5 rounded-xl text-sm font-semibold"
+            className="bg-gradient-to-r from-accent-green to-accent-emerald text-white px-6 py-2.5 rounded-xl text-sm font-semibold shadow-md shadow-accent-green/20"
           >
             {tc('dashboard.start_questionnaire')}
           </button>
@@ -96,7 +101,7 @@ export default function ExercisePlan() {
           <button
             onClick={generatePlan}
             disabled={generating}
-            className="bg-accent-green text-white px-6 py-2.5 rounded-xl text-sm font-semibold disabled:opacity-50"
+            className="bg-gradient-to-r from-accent-blue to-accent-indigo text-white px-6 py-2.5 rounded-xl text-sm font-semibold disabled:opacity-50 shadow-md shadow-accent-blue/20"
           >
             {generating ? tc('common.loading') : t('generate')}
           </button>
@@ -104,7 +109,7 @@ export default function ExercisePlan() {
       ) : (
         <>
           {/* Week label */}
-          <p className="text-text-secondary text-xs mb-3">{t('this_week')}</p>
+          <p className="text-text-secondary text-xs mb-3 font-semibold uppercase tracking-wide">{t('this_week')}</p>
 
           {error && (
             <div className="bg-accent-red/10 border border-accent-red/30 rounded-xl p-3 mb-3">
@@ -119,19 +124,21 @@ export default function ExercisePlan() {
               const isRestDay = !day.exercises || day.exercises.length === 0
 
               return (
-                <div key={index} className="bg-white rounded-xl overflow-hidden border border-border shadow-sm">
+                <div key={index} className={`bg-white rounded-xl overflow-hidden border shadow-sm border-l-4 ${
+                  isRestDay ? 'border-l-gray-300 border-border' : 'border-l-accent-green border-border'
+                }`}>
                   <button
                     onClick={() => setExpandedDay(isExpanded ? null : index)}
                     className="w-full flex items-center justify-between p-3"
                   >
                     <div className="flex items-center gap-3">
-                      <div className={`w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold ${
-                        isRestDay ? 'bg-gray-100 text-text-secondary' : 'bg-accent-green/20 text-accent-green'
+                      <div className={`w-9 h-9 rounded-full flex items-center justify-center text-xs font-bold ${
+                        isRestDay ? 'bg-gray-100 text-text-secondary' : 'bg-accent-green/15 text-accent-green'
                       }`}>
                         {dayNames[index] || `D${index + 1}`}
                       </div>
                       <div className="text-left">
-                        <p className="text-sm font-medium text-text-primary">
+                        <p className="text-sm font-semibold text-text-primary">
                           {t('day', { n: index + 1 })}
                         </p>
                         <p className="text-xs text-text-secondary">
@@ -153,7 +160,7 @@ export default function ExercisePlan() {
                       ))}
                       <button
                         onClick={(e) => { e.stopPropagation(); navigate(`/workout/${index}`) }}
-                        className="w-full mt-2 bg-accent-green text-white py-2.5 rounded-xl text-sm font-semibold"
+                        className="w-full mt-2 bg-gradient-to-r from-accent-green to-accent-emerald text-white py-2.5 rounded-xl text-sm font-semibold shadow-md shadow-accent-green/20"
                       >
                         {t('start_workout', 'Start Workout')}
                       </button>

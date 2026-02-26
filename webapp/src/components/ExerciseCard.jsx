@@ -9,11 +9,11 @@ export default function ExerciseCard({ exercise }) {
   const [expanded, setExpanded] = useState(false)
 
   const typeColors = {
-    strength: 'bg-accent-blue/20 text-accent-blue',
-    cardio: 'bg-accent-orange/20 text-accent-orange',
-    flexibility: 'bg-accent-purple/20 text-accent-purple',
-    tai_chi: 'bg-accent-green/20 text-accent-green',
-    yoga: 'bg-accent-green/20 text-accent-green',
+    strength: 'bg-accent-blue/15 text-accent-blue border border-accent-blue/25',
+    cardio: 'bg-accent-orange/15 text-accent-orange border border-accent-orange/25',
+    flexibility: 'bg-accent-purple/15 text-accent-purple border border-accent-purple/25',
+    tai_chi: 'bg-accent-green/15 text-accent-green border border-accent-green/25',
+    yoga: 'bg-accent-teal/15 text-accent-teal border border-accent-teal/25',
   }
 
   const hasImage = exercise.images && exercise.images.length > 0
@@ -33,18 +33,18 @@ export default function ExerciseCard({ exercise }) {
         onClick={() => hasExpandable && setExpanded(prev => !prev)}
       >
         <div className="flex-1 min-w-0">
-          <h4 className="text-sm font-medium text-text-primary">{name}</h4>
-          <div className="flex gap-2 mt-1 flex-wrap">
+          <h4 className="text-sm font-semibold text-text-primary">{name}</h4>
+          <div className="flex gap-2 mt-1.5 flex-wrap">
             {exercise.type && (
-              <span className={`text-xs px-2 py-0.5 rounded-full ${typeColors[exercise.type] || 'bg-gray-100 text-text-secondary'}`}>
+              <span className={`text-xs px-2.5 py-0.5 rounded-full font-semibold ${typeColors[exercise.type] || 'bg-gray-100 text-text-secondary border border-border'}`}>
                 {t(`types.${exercise.type}`, exercise.type)}
               </span>
             )}
             {exercise.sets && exercise.reps && (
-              <span className="text-xs text-text-secondary">{exercise.sets}x{exercise.reps}</span>
+              <span className="text-xs text-text-primary font-bold bg-bg-secondary px-2 py-0.5 rounded-full">{exercise.sets}x{exercise.reps}</span>
             )}
             {exercise.duration_mins && (
-              <span className="text-xs text-text-secondary">{exercise.duration_mins} {t('duration')}</span>
+              <span className="text-xs text-text-secondary bg-bg-secondary px-2 py-0.5 rounded-full">{exercise.duration_mins} {t('duration')}</span>
             )}
           </div>
         </div>
@@ -83,29 +83,29 @@ export default function ExerciseCard({ exercise }) {
 
           {/* Form tips */}
           {hasTips && (
-            <div className="space-y-1.5">
+            <div className="space-y-2">
               <p className="text-xs font-semibold text-text-primary">How to perform</p>
               {exercise.form_tips.setup && (
-                <div>
-                  <span className="text-xs font-medium text-accent-blue">Setup: </span>
+                <div className="border-l-3 border-l-accent-blue pl-3 py-1">
+                  <span className="text-xs font-semibold text-accent-blue">Setup: </span>
                   <span className="text-xs text-text-secondary">{exercise.form_tips.setup}</span>
                 </div>
               )}
               {exercise.form_tips.execution && (
-                <div>
-                  <span className="text-xs font-medium text-accent-green">Execution: </span>
+                <div className="border-l-3 border-l-accent-green pl-3 py-1">
+                  <span className="text-xs font-semibold text-accent-green">Execution: </span>
                   <span className="text-xs text-text-secondary">{exercise.form_tips.execution}</span>
                 </div>
               )}
               {exercise.form_tips.mistakes && (
-                <div>
-                  <span className="text-xs font-medium text-accent-orange">Common Mistakes: </span>
+                <div className="border-l-3 border-l-accent-orange pl-3 py-1">
+                  <span className="text-xs font-semibold text-accent-orange">Common Mistakes: </span>
                   <span className="text-xs text-text-secondary">{exercise.form_tips.mistakes}</span>
                 </div>
               )}
               {exercise.form_tips.breathing && (
-                <div>
-                  <span className="text-xs font-medium text-accent-purple">Breathing: </span>
+                <div className="border-l-3 border-l-accent-purple pl-3 py-1">
+                  <span className="text-xs font-semibold text-accent-purple">Breathing: </span>
                   <span className="text-xs text-text-secondary">{exercise.form_tips.breathing}</span>
                 </div>
               )}
@@ -119,7 +119,7 @@ export default function ExerciseCard({ exercise }) {
               target="_blank"
               rel="noopener noreferrer"
               onClick={e => e.stopPropagation()}
-              className="flex items-center gap-1.5 text-xs text-accent-blue font-medium bg-accent-blue/10 rounded-lg px-3 py-2 w-fit"
+              className="flex items-center gap-1.5 text-xs text-accent-blue font-semibold bg-accent-blue/10 rounded-lg px-3 py-2 w-fit"
             >
               <span>▶</span>
               <span>Watch Video</span>
