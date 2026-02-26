@@ -90,7 +90,7 @@ export default function MealPlan() {
   const [error, setError] = useState(null)
 
   const dayNames = i18n.language === 'ru' ? DAY_NAMES_RU : DAY_NAMES
-  const isOnboarded = profile?.onboarded
+  const isOnboarded = profile?.onboarding_complete
 
   useEffect(() => {
     if (!token) return

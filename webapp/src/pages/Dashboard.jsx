@@ -45,11 +45,11 @@ export default function Dashboard() {
   const calLeft = Math.max(0, calGoal - calConsumed)
   const calPercent = Math.min(100, (calConsumed / calGoal) * 100)
 
-  const waterGoal = profile?.water_goal_ml || 2000
+  const waterGoal = profile?.target_water_ml || 2000
   const waterConsumed = todaySummary?.water_ml || 0
   const waterPercent = Math.min(100, (waterConsumed / waterGoal) * 100)
 
-  const streak = todaySummary?.streak || profile?.streak || 0
+  const streak = todaySummary?.streak || profile?.current_streak || 0
 
   return (
     <div className="p-4">

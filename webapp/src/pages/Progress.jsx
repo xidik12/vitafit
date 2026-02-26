@@ -53,8 +53,8 @@ export default function Progress() {
     setLoading(true)
     try {
       const [prog, weights] = await Promise.all([
-        api.get('/api/progress/summary', token).catch(() => null),
-        api.get('/api/progress/weights', token).catch(() => []),
+        api.get('/api/progress/streak', token).catch(() => null),
+        api.get('/api/progress/weight', token).catch(() => []),
       ])
       setProgressData(prog)
       setWeightData(Array.isArray(weights) ? weights : weights?.entries || [])
@@ -72,11 +72,11 @@ export default function Progress() {
     )
   }
 
-  const streak = progressData?.streak || profile?.streak || 0
+  const streak = progressData?.current_streak || profile?.current_streak || 0
   const longestStreak = progressData?.longest_streak || 0
   const level = progressData?.level || 1
-  const xp = progressData?.xp || 0
-  const xpToNext = progressData?.xp_to_next || 100
+  const xp = progressData?.xp_total || 0
+  const xpToNext = (level) * 100  // simple XP threshold formula
   const xpPercent = Math.min(100, (xp / xpToNext) * 100)
   const weeklyCompliance = progressData?.weekly_compliance || 0
   const unlockedAchievements = new Set(progressData?.achievements || [])

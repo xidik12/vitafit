@@ -26,7 +26,7 @@ export default function Settings() {
 
   const [lang, setLang] = useState(i18n.language || 'ru')
   const [weight, setWeight] = useState(profile?.weight_kg?.toString() || '')
-  const [diet, setDiet] = useState(profile?.diet_preference || 'no_restriction')
+  const [diet, setDiet] = useState(profile?.dietary_pref || 'no_restriction')
   const [saving, setSaving] = useState(false)
   const [saved, setSaved] = useState(false)
   const [error, setError] = useState(null)
@@ -45,11 +45,14 @@ export default function Settings() {
 
     const updates = {}
     if (weight && !isNaN(Number(weight))) updates.weight_kg = Number(weight)
-    if (diet) updates.diet_preference = diet
+    if (diet) updates.dietary_pref = diet
+    updates.language = lang
 
     try {
       const updated = await api.put('/api/profile', updates, token)
-      if (updated) setProfile(updated)
+      if (updated?.status === 'ok') {
+        setProfile(prev => ({ ...prev, ...updates }))
+      }
       setSaved(true)
       setTimeout(() => setSaved(false), 2000)
     } catch (err) {

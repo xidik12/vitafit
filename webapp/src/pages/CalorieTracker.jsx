@@ -75,11 +75,11 @@ export default function CalorieTracker() {
   const [addingMeal, setAddingMeal] = useState(null)
   const [addingWater, setAddingWater] = useState(false)
 
-  const calGoal = profile?.calorie_goal || 2000
-  const proteinGoal = profile?.protein_goal || 150
-  const carbsGoal = profile?.carbs_goal || 250
-  const fatGoal = profile?.fat_goal || 65
-  const waterGoal = profile?.water_goal_ml || 2000
+  const calGoal = dailyData?.targets?.calories || profile?.target_calories || 2000
+  const proteinGoal = dailyData?.targets?.protein || profile?.target_protein || 150
+  const carbsGoal = dailyData?.targets?.carbs || profile?.target_carbs || 250
+  const fatGoal = dailyData?.targets?.fat || profile?.target_fat || 65
+  const waterGoal = dailyData?.targets?.water_ml || profile?.target_water_ml || 2000
 
   useEffect(() => {
     if (!token) return
@@ -92,7 +92,7 @@ export default function CalorieTracker() {
       const data = await api.get('/api/calories/daily', token)
       setDailyData(data)
     } catch {
-      setDailyData({ logs: [], water_ml: 0 })
+      setDailyData({ meals: {}, totals: { calories: 0, protein: 0, carbs: 0, fat: 0 }, water_ml: 0 })
     }
     setLoading(false)
   }
@@ -100,26 +100,18 @@ export default function CalorieTracker() {
   const logsByMeal = useCallback(() => {
     const map = {}
     MEAL_TYPES.forEach(mt => { map[mt] = [] })
-    if (!dailyData?.logs) return map
-    dailyData.logs.forEach(entry => {
-      const mt = entry.meal_type || 'snack'
-      if (!map[mt]) map[mt] = []
-      map[mt].push(entry)
+    if (!dailyData?.meals) return map
+    MEAL_TYPES.forEach(mt => {
+      if (dailyData.meals[mt]) {
+        map[mt] = dailyData.meals[mt]
+      }
     })
     return map
   }, [dailyData])
 
   const totals = useCallback(() => {
-    if (!dailyData?.logs) return { calories: 0, protein: 0, carbs: 0, fat: 0 }
-    return dailyData.logs.reduce(
-      (acc, e) => ({
-        calories: acc.calories + (e.calories || 0),
-        protein: acc.protein + (e.protein || 0),
-        carbs: acc.carbs + (e.carbs || 0),
-        fat: acc.fat + (e.fat || 0),
-      }),
-      { calories: 0, protein: 0, carbs: 0, fat: 0 }
-    )
+    if (dailyData?.totals) return dailyData.totals
+    return { calories: 0, protein: 0, carbs: 0, fat: 0 }
   }, [dailyData])
 
   async function logWater(amount) {
@@ -133,10 +125,22 @@ export default function CalorieTracker() {
   }
 
   function handleFoodAdded(logData) {
-    setDailyData(prev => ({
-      ...prev,
-      logs: [...(prev?.logs || []), logData],
-    }))
+    setDailyData(prev => {
+      const mt = logData.meal_type || 'snack'
+      const meals = { ...(prev?.meals || {}) }
+      meals[mt] = [...(meals[mt] || []), logData]
+      // Recalculate totals
+      const totals = { calories: 0, protein: 0, carbs: 0, fat: 0 }
+      Object.values(meals).forEach(entries => {
+        entries.forEach(e => {
+          totals.calories += e.calories || 0
+          totals.protein += e.protein || 0
+          totals.carbs += e.carbs || 0
+          totals.fat += e.fat || 0
+        })
+      })
+      return { ...prev, meals, totals }
+    })
   }
 
   if (loading) {

@@ -33,7 +33,7 @@ export default function ExercisePlan() {
       const data = await api.get('/api/exercises/plan', token)
       setPlan(data)
     } catch (err) {
-      if (err.message !== '404') setError(err.message)
+      if (!err.message?.includes('Not Found') && !err.message?.includes('404')) setError(err.message)
     }
     setLoading(false)
   }
@@ -51,7 +51,7 @@ export default function ExercisePlan() {
     setGenerating(false)
   }
 
-  const isOnboarded = profile?.onboarded
+  const isOnboarded = profile?.onboarding_complete
 
   if (loading) {
     return (

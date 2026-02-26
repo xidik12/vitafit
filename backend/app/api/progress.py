@@ -2,9 +2,9 @@
 from datetime import date as dt_date
 from fastapi import APIRouter, Depends
 from pydantic import BaseModel
-from sqlalchemy import select
+from sqlalchemy import select, func
 
-from app.database import async_session, User, WeightLog, UserStreak, Achievement
+from app.database import async_session, User, WeightLog, UserStreak, Achievement, CalorieLog, WaterLog
 from app.dependencies import get_current_user
 
 router = APIRouter(prefix="/api/progress", tags=["progress"])
@@ -77,3 +77,35 @@ async def get_achievements(user: User = Depends(get_current_user)):
         {"type": a.achievement_type, "earned_at": a.earned_at.isoformat()}
         for a in achievements
     ]
+
+
+@router.get("/today")
+async def get_today_summary(user: User = Depends(get_current_user)):
+    today = dt_date.today()
+
+    async with async_session() as session:
+        # Sum today's calories
+        cal_result = await session.execute(
+            select(func.coalesce(func.sum(CalorieLog.calories), 0))
+            .where(CalorieLog.user_id == user.id, CalorieLog.date == today)
+        )
+        calories_consumed = cal_result.scalar()
+
+        # Sum today's water intake
+        water_result = await session.execute(
+            select(func.coalesce(func.sum(WaterLog.amount_ml), 0))
+            .where(WaterLog.user_id == user.id, WaterLog.date == today)
+        )
+        water_ml = water_result.scalar()
+
+        # Get current streak
+        streak_result = await session.execute(
+            select(UserStreak).where(UserStreak.user_id == user.id)
+        )
+        streak = streak_result.scalar_one_or_none()
+
+    return {
+        "calories_consumed": int(calories_consumed),
+        "water_ml": int(water_ml),
+        "streak": streak.current_streak if streak else 0,
+    }

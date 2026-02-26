@@ -102,7 +102,7 @@ export default function FoodSearchModal({ mealType, onAdd, onClose }) {
                 onClick={() => setSelectedFood(null)}
                 className="flex-1 bg-gray-100 py-2 rounded-lg text-sm text-text-primary border border-border"
               >
-                {t('common:common.back')}
+                ←
               </button>
               <button
                 onClick={handleAdd}
