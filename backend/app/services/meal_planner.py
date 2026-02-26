@@ -457,6 +457,8 @@ def _generate_template_plan(target_cals: int, dietary_pref: str) -> dict:
             "cook_time_mins": 10, "vegan": True,
             "image_url": "https://images.unsplash.com/photo-1517673400267-0251440c45dc?w=400&h=300&fit=crop",
             "instructions_json": ["Bring water or milk to a boil.", "Add oats and reduce heat, cook 5 minutes.", "Slice banana and drizzle honey on top.", "Serve warm."],
+            "ingredients_en": ["1 cup rolled oats", "1 medium banana", "1 tbsp honey", "1.5 cups water or milk"],
+            "ingredients_ru": ["1 стакан овсяных хлопьев", "1 средний банан", "1 ст.л. мёда", "1.5 стакана воды или молока"],
         },
         {
             "title_en": "Scrambled eggs with wholegrain toast",
@@ -465,6 +467,8 @@ def _generate_template_plan(target_cals: int, dietary_pref: str) -> dict:
             "cook_time_mins": 10, "vegan": False,
             "image_url": "https://images.unsplash.com/photo-1525351484163-7529414344d8?w=400&h=300&fit=crop",
             "instructions_json": ["Crack eggs into a bowl, whisk with salt and pepper.", "Melt butter in a pan over medium heat.", "Pour eggs in and stir gently until just set.", "Toast bread and serve alongside."],
+            "ingredients_en": ["3 large eggs", "1 tbsp butter", "2 slices wholegrain bread", "Salt and pepper to taste"],
+            "ingredients_ru": ["3 крупных яйца", "1 ст.л. сливочного масла", "2 ломтика цельнозернового хлеба", "Соль и перец по вкусу"],
         },
         {
             "title_en": "Greek yogurt with granola and berries",
@@ -473,6 +477,8 @@ def _generate_template_plan(target_cals: int, dietary_pref: str) -> dict:
             "cook_time_mins": 5, "vegan": False,
             "image_url": "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=400&h=300&fit=crop",
             "instructions_json": ["Spoon Greek yogurt into a bowl.", "Top with granola and mixed berries.", "Drizzle with honey if desired.", "Serve immediately."],
+            "ingredients_en": ["200g Greek yogurt", "1/3 cup granola", "1/2 cup mixed berries", "1 tsp honey"],
+            "ingredients_ru": ["200 г греческого йогурта", "80 г гранолы", "80 г смеси ягод", "1 ч.л. мёда"],
         },
         {
             "title_en": "Smoothie bowl with chia seeds",
@@ -481,6 +487,8 @@ def _generate_template_plan(target_cals: int, dietary_pref: str) -> dict:
             "cook_time_mins": 8, "vegan": True,
             "image_url": "https://images.unsplash.com/photo-1502741224143-90386d7f8c82?w=400&h=300&fit=crop",
             "instructions_json": ["Blend frozen berries, banana, and almond milk until thick.", "Pour into a bowl.", "Top with chia seeds, sliced fruit, and granola.", "Serve cold."],
+            "ingredients_en": ["1 cup frozen mixed berries", "1 medium banana", "1/2 cup almond milk", "1 tbsp chia seeds", "2 tbsp granola"],
+            "ingredients_ru": ["150 г замороженных ягод", "1 средний банан", "120 мл миндального молока", "1 ст.л. семян чиа", "2 ст.л. гранолы"],
         },
         {
             "title_en": "Avocado toast with poached eggs",
@@ -489,6 +497,8 @@ def _generate_template_plan(target_cals: int, dietary_pref: str) -> dict:
             "cook_time_mins": 12, "vegan": False,
             "image_url": "https://images.unsplash.com/photo-1541519227354-08fa5d50c44d?w=400&h=300&fit=crop",
             "instructions_json": ["Toast bread until golden.", "Mash avocado with lemon juice, salt and pepper.", "Spread avocado on toast.", "Poach eggs in simmering water for 3 minutes and place on top."],
+            "ingredients_en": ["2 slices sourdough bread", "1 ripe avocado", "2 large eggs", "1 tsp lemon juice", "Salt and pepper to taste"],
+            "ingredients_ru": ["2 ломтика хлеба на закваске", "1 спелое авокадо", "2 крупных яйца", "1 ч.л. лимонного сока", "Соль и перец по вкусу"],
         },
         {
             "title_en": "Overnight oats with almond milk",
@@ -497,6 +507,8 @@ def _generate_template_plan(target_cals: int, dietary_pref: str) -> dict:
             "cook_time_mins": 5, "vegan": True,
             "image_url": "https://images.unsplash.com/photo-1490474418585-ba9bad8fd0ea?w=400&h=300&fit=crop",
             "instructions_json": ["Mix oats, almond milk, and chia seeds in a jar.", "Refrigerate overnight (at least 6 hours).", "In the morning, stir and top with fresh fruit.", "Serve cold."],
+            "ingredients_en": ["1/2 cup rolled oats", "1 cup almond milk", "1 tbsp chia seeds", "1 tbsp maple syrup", "Fresh fruit for topping"],
+            "ingredients_ru": ["80 г овсяных хлопьев", "250 мл миндального молока", "1 ст.л. семян чиа", "1 ст.л. кленового сиропа", "Свежие фрукты для подачи"],
         },
     ]
 
@@ -508,6 +520,8 @@ def _generate_template_plan(target_cals: int, dietary_pref: str) -> dict:
             "cook_time_mins": 25, "vegan": False,
             "image_url": "https://images.unsplash.com/photo-1532550907401-a500c9a57435?w=400&h=300&fit=crop",
             "instructions_json": ["Season chicken breast with salt, pepper, and olive oil.", "Grill on medium-high heat 6-7 minutes per side.", "Cook brown rice according to package directions.", "Steam broccoli for 4 minutes and serve together."],
+            "ingredients_en": ["200g chicken breast", "3/4 cup brown rice", "1 cup broccoli florets", "1 tbsp olive oil", "Salt and pepper to taste"],
+            "ingredients_ru": ["200 г куриной грудки", "150 г бурого риса", "150 г брокколи", "1 ст.л. оливкового масла", "Соль и перец по вкусу"],
         },
         {
             "title_en": "Baked salmon with quinoa salad",
@@ -516,6 +530,8 @@ def _generate_template_plan(target_cals: int, dietary_pref: str) -> dict:
             "cook_time_mins": 30, "vegan": False,
             "image_url": "https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=400&h=300&fit=crop",
             "instructions_json": ["Preheat oven to 200C/400F.", "Season salmon with lemon, dill, salt and pepper.", "Bake for 15-18 minutes.", "Cook quinoa and toss with cucumber, tomato, and olive oil.", "Serve salmon over quinoa salad."],
+            "ingredients_en": ["180g salmon fillet", "1/2 cup quinoa", "1/2 cucumber, diced", "1 medium tomato, diced", "1 tbsp olive oil", "1 tbsp lemon juice", "Fresh dill"],
+            "ingredients_ru": ["180 г филе лосося", "100 г киноа", "1/2 огурца, нарезанного кубиками", "1 средний помидор, нарезанный кубиками", "1 ст.л. оливкового масла", "1 ст.л. лимонного сока", "Свежий укроп"],
         },
         {
             "title_en": "Red lentil soup with wholegrain bread",
@@ -524,6 +540,8 @@ def _generate_template_plan(target_cals: int, dietary_pref: str) -> dict:
             "cook_time_mins": 30, "vegan": True,
             "image_url": "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=400&h=300&fit=crop",
             "instructions_json": ["Saute onion, garlic, and carrots in olive oil.", "Add red lentils, vegetable broth, and cumin.", "Simmer for 20-25 minutes until lentils are soft.", "Blend partially for creamy texture.", "Serve with wholegrain bread."],
+            "ingredients_en": ["1 cup red lentils", "1 medium onion, diced", "2 cloves garlic, minced", "2 medium carrots, diced", "3 cups vegetable broth", "1 tsp cumin", "1 tbsp olive oil", "2 slices wholegrain bread"],
+            "ingredients_ru": ["200 г красной чечевицы", "1 средняя луковица, нарезанная", "2 зубчика чеснока", "2 средних моркови, нарезанных", "750 мл овощного бульона", "1 ч.л. кумина", "1 ст.л. оливкового масла", "2 ломтика цельнозернового хлеба"],
         },
         {
             "title_en": "Turkey and vegetable wrap",
@@ -532,6 +550,8 @@ def _generate_template_plan(target_cals: int, dietary_pref: str) -> dict:
             "cook_time_mins": 15, "vegan": False,
             "image_url": "https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=400&h=300&fit=crop",
             "instructions_json": ["Warm a large tortilla.", "Layer sliced turkey, lettuce, tomato, and avocado.", "Add a drizzle of yogurt sauce.", "Roll tightly and slice in half."],
+            "ingredients_en": ["1 large whole-wheat tortilla", "120g sliced turkey breast", "1/2 avocado, sliced", "Handful of lettuce", "1 medium tomato, sliced", "2 tbsp yogurt sauce"],
+            "ingredients_ru": ["1 большая цельнозерновая тортилья", "120 г нарезанной грудки индейки", "1/2 авокадо, нарезанного", "Горсть листьев салата", "1 средний помидор, нарезанный", "2 ст.л. йогуртового соуса"],
         },
         {
             "title_en": "Chickpea and spinach curry with basmati rice",
@@ -540,6 +560,8 @@ def _generate_template_plan(target_cals: int, dietary_pref: str) -> dict:
             "cook_time_mins": 25, "vegan": True,
             "image_url": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=400&h=300&fit=crop",
             "instructions_json": ["Saute onion, ginger, and garlic in oil.", "Add curry powder, cumin, and turmeric.", "Stir in chickpeas and coconut milk, simmer 15 mins.", "Fold in spinach until wilted.", "Serve over basmati rice."],
+            "ingredients_en": ["1 can (400g) chickpeas, drained", "2 cups fresh spinach", "1/2 cup coconut milk", "1 medium onion, diced", "2 cloves garlic, minced", "1 tsp fresh ginger, grated", "1 tbsp curry powder", "1 tsp cumin", "1/2 tsp turmeric", "3/4 cup basmati rice"],
+            "ingredients_ru": ["1 банка (400 г) нута, без жидкости", "100 г свежего шпината", "120 мл кокосового молока", "1 средняя луковица, нарезанная", "2 зубчика чеснока", "1 ч.л. тёртого имбиря", "1 ст.л. порошка карри", "1 ч.л. кумина", "1/2 ч.л. куркумы", "150 г риса басмати"],
         },
         {
             "title_en": "Tuna salad with mixed greens and olive oil dressing",
@@ -548,6 +570,8 @@ def _generate_template_plan(target_cals: int, dietary_pref: str) -> dict:
             "cook_time_mins": 10, "vegan": False,
             "image_url": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&h=300&fit=crop",
             "instructions_json": ["Drain tuna and flake into a bowl.", "Toss mixed greens with cherry tomatoes and cucumber.", "Add tuna on top.", "Drizzle with olive oil and lemon juice."],
+            "ingredients_en": ["1 can (150g) tuna in water, drained", "2 cups mixed greens", "8 cherry tomatoes, halved", "1/2 cucumber, sliced", "2 tbsp olive oil", "1 tbsp lemon juice"],
+            "ingredients_ru": ["1 банка (150 г) тунца в воде, без жидкости", "100 г салатного микса", "8 помидоров черри, пополам", "1/2 огурца, нарезанного", "2 ст.л. оливкового масла", "1 ст.л. лимонного сока"],
         },
     ]
 
@@ -559,6 +583,8 @@ def _generate_template_plan(target_cals: int, dietary_pref: str) -> dict:
             "cook_time_mins": 30, "vegan": False,
             "image_url": "https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=400&h=300&fit=crop",
             "instructions_json": ["Preheat oven to 200C/400F.", "Place salmon on a lined baking tray, season well.", "Cube sweet potato and roast for 25 minutes.", "Steam broccoli and serve everything together."],
+            "ingredients_en": ["180g salmon fillet", "1 medium sweet potato, cubed", "1 cup broccoli florets", "1 tbsp olive oil", "Salt, pepper, and lemon"],
+            "ingredients_ru": ["180 г филе лосося", "1 средний батат, нарезанный кубиками", "150 г брокколи", "1 ст.л. оливкового масла", "Соль, перец и лимон"],
         },
         {
             "title_en": "Beef and vegetable stir-fry with jasmine rice",
@@ -567,6 +593,8 @@ def _generate_template_plan(target_cals: int, dietary_pref: str) -> dict:
             "cook_time_mins": 20, "vegan": False,
             "image_url": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=400&h=300&fit=crop",
             "instructions_json": ["Slice beef thinly and marinate in soy sauce and ginger.", "Cook jasmine rice.", "Stir-fry beef in a hot wok for 2 minutes, set aside.", "Stir-fry bell peppers, broccoli, and carrots.", "Return beef, toss together and serve over rice."],
+            "ingredients_en": ["150g beef sirloin, thinly sliced", "3/4 cup jasmine rice", "1 bell pepper, sliced", "1 cup broccoli florets", "1 medium carrot, julienned", "2 tbsp soy sauce", "1 tsp fresh ginger, grated", "1 tbsp vegetable oil"],
+            "ingredients_ru": ["150 г говяжьей вырезки, тонко нарезанной", "150 г риса жасмин", "1 болгарский перец, нарезанный", "150 г брокколи", "1 средняя морковь, соломкой", "2 ст.л. соевого соуса", "1 ч.л. тёртого имбиря", "1 ст.л. растительного масла"],
         },
         {
             "title_en": "Chicken tikka masala with brown rice",
@@ -575,6 +603,8 @@ def _generate_template_plan(target_cals: int, dietary_pref: str) -> dict:
             "cook_time_mins": 35, "vegan": False,
             "image_url": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=400&h=300&fit=crop",
             "instructions_json": ["Marinate chicken in yogurt and spices for 30 minutes.", "Grill or pan-fry chicken pieces until charred.", "Simmer tomato sauce with cream and spices.", "Add chicken to sauce and cook 10 more minutes.", "Serve over brown rice."],
+            "ingredients_en": ["200g chicken thigh, cubed", "3 tbsp plain yogurt", "1 tsp garam masala", "1 tsp paprika", "1/2 cup tomato sauce", "3 tbsp heavy cream", "3/4 cup brown rice", "1 tbsp vegetable oil"],
+            "ingredients_ru": ["200 г куриного бедра, кубиками", "3 ст.л. натурального йогурта", "1 ч.л. гарам масалы", "1 ч.л. паприки", "120 мл томатного соуса", "3 ст.л. жирных сливок", "150 г бурого риса", "1 ст.л. растительного масла"],
         },
         {
             "title_en": "Baked cod with roasted sweet potato and greens",
@@ -583,6 +613,8 @@ def _generate_template_plan(target_cals: int, dietary_pref: str) -> dict:
             "cook_time_mins": 30, "vegan": False,
             "image_url": "https://images.unsplash.com/photo-1559737558-2f5a35f4523b?w=400&h=300&fit=crop",
             "instructions_json": ["Preheat oven to 190C/375F.", "Season cod with lemon, garlic, and herbs.", "Roast sweet potato wedges for 20 minutes.", "Bake cod for 12-15 minutes.", "Serve with steamed greens."],
+            "ingredients_en": ["180g cod fillet", "1 medium sweet potato, cut into wedges", "1 cup mixed greens", "1 clove garlic, minced", "1 tbsp olive oil", "1/2 lemon", "Fresh herbs (thyme, parsley)"],
+            "ingredients_ru": ["180 г филе трески", "1 средний батат, нарезанный дольками", "50 г зелёного салата", "1 зубчик чеснока", "1 ст.л. оливкового масла", "1/2 лимона", "Свежие травы (тимьян, петрушка)"],
         },
         {
             "title_en": "Vegetable tofu stir-fry with soba noodles",
@@ -591,6 +623,8 @@ def _generate_template_plan(target_cals: int, dietary_pref: str) -> dict:
             "cook_time_mins": 20, "vegan": True,
             "image_url": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400&h=300&fit=crop",
             "instructions_json": ["Press tofu and cut into cubes.", "Cook soba noodles according to package.", "Stir-fry tofu until golden, add vegetables.", "Toss noodles with soy-sesame sauce and serve."],
+            "ingredients_en": ["200g firm tofu, cubed", "100g soba noodles", "1 cup mixed vegetables (bell pepper, zucchini, mushrooms)", "2 tbsp soy sauce", "1 tsp sesame oil", "1 tbsp vegetable oil"],
+            "ingredients_ru": ["200 г твёрдого тофу, кубиками", "100 г лапши соба", "150 г овощей (перец, цукини, грибы)", "2 ст.л. соевого соуса", "1 ч.л. кунжутного масла", "1 ст.л. растительного масла"],
         },
         {
             "title_en": "Black bean and vegetable burrito bowl",
@@ -599,6 +633,8 @@ def _generate_template_plan(target_cals: int, dietary_pref: str) -> dict:
             "cook_time_mins": 20, "vegan": True,
             "image_url": "https://images.unsplash.com/photo-1512058564366-18510be2db19?w=400&h=300&fit=crop",
             "instructions_json": ["Cook rice and season with lime juice.", "Heat black beans with cumin and garlic.", "Saute peppers and onions.", "Assemble bowl with rice, beans, veggies, salsa, and avocado."],
+            "ingredients_en": ["3/4 cup white rice", "1 can (400g) black beans, drained", "1 bell pepper, sliced", "1/2 onion, sliced", "1/2 avocado, sliced", "3 tbsp salsa", "1 tbsp lime juice", "1 tsp cumin", "1 clove garlic"],
+            "ingredients_ru": ["150 г белого риса", "1 банка (400 г) чёрных бобов, без жидкости", "1 болгарский перец, нарезанный", "1/2 луковицы, нарезанной", "1/2 авокадо, нарезанного", "3 ст.л. сальсы", "1 ст.л. сока лайма", "1 ч.л. кумина", "1 зубчик чеснока"],
         },
     ]
 
@@ -610,6 +646,8 @@ def _generate_template_plan(target_cals: int, dietary_pref: str) -> dict:
             "cook_time_mins": 0, "vegan": True,
             "image_url": "https://images.unsplash.com/photo-1599599810769-bcde5a160d32?w=400&h=300&fit=crop",
             "instructions_json": ["Combine almonds, walnuts, and cashews.", "Add dried cranberries and apricots.", "Mix well and portion into servings."],
+            "ingredients_en": ["15g almonds", "15g walnuts", "10g cashews", "10g dried cranberries", "10g dried apricots"],
+            "ingredients_ru": ["15 г миндаля", "15 г грецких орехов", "10 г кешью", "10 г сушёной клюквы", "10 г кураги"],
         },
         {
             "title_en": "Apple slices with almond butter",
@@ -618,6 +656,8 @@ def _generate_template_plan(target_cals: int, dietary_pref: str) -> dict:
             "cook_time_mins": 2, "vegan": True,
             "image_url": "https://images.unsplash.com/photo-1488459716781-31db52582fe9?w=400&h=300&fit=crop",
             "instructions_json": ["Wash and slice apple into wedges.", "Spread almond butter on each slice.", "Sprinkle with cinnamon if desired."],
+            "ingredients_en": ["1 medium apple", "2 tbsp almond butter", "Pinch of cinnamon"],
+            "ingredients_ru": ["1 среднее яблоко", "2 ст.л. миндальной пасты", "Щепотка корицы"],
         },
         {
             "title_en": "Cottage cheese with fresh berries",
@@ -626,6 +666,8 @@ def _generate_template_plan(target_cals: int, dietary_pref: str) -> dict:
             "cook_time_mins": 2, "vegan": False,
             "image_url": "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=400&h=300&fit=crop",
             "instructions_json": ["Spoon cottage cheese into a bowl.", "Top with fresh strawberries and blueberries.", "Serve immediately."],
+            "ingredients_en": ["150g cottage cheese", "5 fresh strawberries", "1/4 cup blueberries"],
+            "ingredients_ru": ["150 г творога", "5 свежих клубник", "40 г голубики"],
         },
         {
             "title_en": "Rice cakes with avocado",
@@ -634,6 +676,8 @@ def _generate_template_plan(target_cals: int, dietary_pref: str) -> dict:
             "cook_time_mins": 3, "vegan": True,
             "image_url": "https://images.unsplash.com/photo-1541519227354-08fa5d50c44d?w=400&h=300&fit=crop",
             "instructions_json": ["Mash avocado with a fork.", "Spread on rice cakes.", "Season with salt, pepper, and chili flakes."],
+            "ingredients_en": ["2 rice cakes", "1/2 ripe avocado", "Salt and pepper to taste", "Pinch of chili flakes"],
+            "ingredients_ru": ["2 рисовых хлебца", "1/2 спелого авокадо", "Соль и перец по вкусу", "Щепотка хлопьев чили"],
         },
         {
             "title_en": "Greek yogurt with honey",
@@ -642,6 +686,8 @@ def _generate_template_plan(target_cals: int, dietary_pref: str) -> dict:
             "cook_time_mins": 1, "vegan": False,
             "image_url": "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=400&h=300&fit=crop",
             "instructions_json": ["Spoon Greek yogurt into a bowl.", "Drizzle with honey.", "Top with a few walnuts if desired."],
+            "ingredients_en": ["150g Greek yogurt", "1 tbsp honey", "A few walnuts"],
+            "ingredients_ru": ["150 г греческого йогурта", "1 ст.л. мёда", "Несколько грецких орехов"],
         },
         {
             "title_en": "Hummus with carrot and cucumber sticks",
@@ -650,6 +696,8 @@ def _generate_template_plan(target_cals: int, dietary_pref: str) -> dict:
             "cook_time_mins": 5, "vegan": True,
             "image_url": "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=400&h=300&fit=crop",
             "instructions_json": ["Cut carrots and cucumbers into sticks.", "Spoon hummus into a small dish.", "Arrange veggies around the hummus and serve."],
+            "ingredients_en": ["4 tbsp hummus", "1 medium carrot, cut into sticks", "1/2 cucumber, cut into sticks"],
+            "ingredients_ru": ["4 ст.л. хумуса", "1 средняя морковь, нарезанная палочками", "1/2 огурца, нарезанного палочками"],
         },
     ]
 

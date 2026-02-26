@@ -32,5 +32,7 @@
   "watch_video": "Смотреть видео",
   "swap": "Заменить упражнение",
   "suggested_weight": "Рекомендовано: {{weight}}кг",
-  "suggested_reps": "Рекомендовано: {{reps}} повт."
+  "suggested_reps": "Рекомендовано: {{reps}} повт.",
+  "subtitle": "Ваш недельный план тренировок",
+  "exercises_count": "{{count}} упражнений"
 }

@@ -78,7 +78,7 @@ export default function FoodSearchModal({ mealType, onAdd, onClose }) {
             onClick={search}
             className="bg-gradient-to-r from-accent-green to-accent-emerald text-white px-4 py-2.5 rounded-lg text-sm font-semibold shadow-sm hover:shadow-md transition-shadow"
           >
-            {loading ? '...' : 'Search'}
+            {loading ? '...' : t('search_btn', 'Search')}
           </button>
         </div>
 
@@ -208,7 +208,7 @@ export default function FoodSearchModal({ mealType, onAdd, onClose }) {
           <>
             {!query && recentFoods.length > 0 && (
               <div className="mb-3">
-                <h4 className="text-xs font-semibold text-text-secondary uppercase tracking-wide mb-2">Recent Foods</h4>
+                <h4 className="text-xs font-semibold text-text-secondary uppercase tracking-wide mb-2">{t('recent_foods')}</h4>
                 <div className="space-y-1">
                   {recentFoods.map((food, i) => {
                     const dotColors = ['bg-accent-green', 'bg-accent-blue', 'bg-accent-orange', 'bg-accent-teal', 'bg-accent-purple']
@@ -269,7 +269,7 @@ export default function FoodSearchModal({ mealType, onAdd, onClose }) {
               })}
               className="w-full mt-3 border-2 border-dashed border-border rounded-lg p-3 text-sm text-text-secondary hover:border-accent-green hover:text-accent-green transition-colors"
             >
-              + Add Custom Food
+              {'+ ' + t('custom_food')}
             </button>
           </>
         )}

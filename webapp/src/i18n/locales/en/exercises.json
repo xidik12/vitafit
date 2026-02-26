@@ -32,5 +32,7 @@
   "watch_video": "Watch Video",
   "swap": "Swap Exercise",
   "suggested_weight": "Suggested: {{weight}}kg",
-  "suggested_reps": "Suggested: {{reps}} reps"
+  "suggested_reps": "Suggested: {{reps}} reps",
+  "subtitle": "Your weekly workout plan",
+  "exercises_count": "{{count}} exercises"
 }

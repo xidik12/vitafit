@@ -20,25 +20,66 @@ const mealDotColors = {
 
 function RecipeDetail({ recipe, onClose }) {
   const { i18n, t } = useTranslation('meals')
+  const { token } = useUser()
   const lang = i18n.language
-  const title = lang === 'ru' ? (recipe.title_ru || recipe.title_en) : recipe.title_en
-  const description = lang === 'ru' ? (recipe.description_ru || recipe.description_en) : recipe.description_en
-  const ingredients = lang === 'ru'
-    ? (recipe.ingredients_ru || recipe.ingredients_en || [])
-    : (recipe.ingredients_en || [])
-  const instructions = lang === 'ru'
-    ? (recipe.instructions_ru || recipe.instructions_en || [])
-    : (recipe.instructions_en || [])
 
-  const steps = recipe.instructions_json
-    || (Array.isArray(instructions) ? instructions : [])
+  const [fullRecipe, setFullRecipe] = useState(null)
+  const [fetchLoading, setFetchLoading] = useState(false)
+
+  // Fetch full recipe details from API when recipe_id exists
+  useEffect(() => {
+    if (!recipe.recipe_id || !token) return
+    setFetchLoading(true)
+    api.get(`/api/recipes/${recipe.recipe_id}`, token)
+      .then(data => setFullRecipe(data.recipe || data))
+      .catch(() => {})
+      .finally(() => setFetchLoading(false))
+  }, [recipe.recipe_id, token])
+
+  // Merge fetched data with embedded plan data
+  const r = fullRecipe || recipe
+
+  const title = lang === 'ru' ? (r.title_ru || r.title_en) : r.title_en
+  const description = lang === 'ru' ? (r.description_ru || r.description_en) : r.description_en
+
+  // Build ingredients list
+  // API returns `ingredients` as [{name, amount, unit}], plan_json has no ingredients
+  const ingredients = (() => {
+    if (r.ingredients && Array.isArray(r.ingredients) && r.ingredients.length > 0) {
+      return r.ingredients.map(ing =>
+        typeof ing === 'string'
+          ? ing
+          : [ing.amount, ing.unit, ing.name].filter(Boolean).join(' ')
+      )
+    }
+    // Fallback to legacy fields if present
+    const legacy = lang === 'ru'
+      ? (r.ingredients_ru || r.ingredients_en || [])
+      : (r.ingredients_en || [])
+    return Array.isArray(legacy) ? legacy : []
+  })()
+
+  // Build instructions steps
+  const steps = (() => {
+    if (r.instructions_json && Array.isArray(r.instructions_json) && r.instructions_json.length > 0) {
+      return r.instructions_json
+    }
+    // For RU, prefer instructions_ru text
+    const textBlob = lang === 'ru'
+      ? (r.instructions_ru || r.instructions || '')
+      : (r.instructions || '')
+    if (textBlob && typeof textBlob === 'string') {
+      return textBlob.split('\n').map(s => s.trim()).filter(Boolean)
+    }
+    return []
+  })()
 
   return (
     <div className="fixed inset-0 bg-black/40 z-[60] flex items-end">
       <div className="bg-white w-full rounded-t-2xl max-h-[90vh] overflow-y-auto shadow-xl">
         {/* Hero image */}
-        {recipe.image_url ? (
-          <img src={recipe.image_url} alt={title} className="w-full h-48 object-cover" />
+        {r.image_url ? (
+          <img src={r.image_url} alt={title} className="w-full h-48 object-cover" />
         ) : (
           <div className="w-full h-48 bg-gradient-to-br from-accent-orange/20 via-accent-amber/10 to-accent-green/20 flex items-center justify-center">
             <UtensilsIcon className="w-12 h-12 text-text-secondary" />
@@ -57,36 +98,43 @@ function RecipeDetail({ recipe, onClose }) {
 
           {/* Macro chips */}
           <div className="flex gap-2 mb-4 flex-wrap">
-            {recipe.calories != null && (
+            {(r.calories ?? recipe.calories) != null && (
               <span className="px-2.5 py-1 bg-accent-orange/10 text-accent-orange rounded-full text-xs font-semibold">
-                {Math.round(recipe.calories)} kcal
+                {Math.round(r.calories ?? recipe.calories)} kcal
               </span>
             )}
-            {recipe.protein != null && (
+            {(r.protein ?? recipe.protein) != null && (
               <span className="px-2.5 py-1 bg-accent-blue/10 text-accent-blue rounded-full text-xs font-semibold">
-                P: {Math.round(recipe.protein)}g
+                P: {Math.round(r.protein ?? recipe.protein)}g
               </span>
             )}
-            {recipe.carbs != null && (
+            {(r.carbs ?? recipe.carbs) != null && (
               <span className="px-2.5 py-1 bg-accent-green/10 text-accent-green rounded-full text-xs font-semibold">
-                C: {Math.round(recipe.carbs)}g
+                C: {Math.round(r.carbs ?? recipe.carbs)}g
               </span>
             )}
-            {recipe.fat != null && (
+            {(r.fat ?? recipe.fat) != null && (
               <span className="px-2.5 py-1 bg-accent-red/10 text-accent-red rounded-full text-xs font-semibold">
-                F: {Math.round(recipe.fat)}g
+                F: {Math.round(r.fat ?? recipe.fat)}g
               </span>
             )}
-            {recipe.cook_time_mins && (
+            {(r.cook_time_mins || recipe.cook_time_mins) && (
               <span className="px-2.5 py-1 bg-gray-100 text-text-secondary rounded-full text-xs font-medium">
-                {recipe.cook_time_mins} min
+                {r.cook_time_mins || recipe.cook_time_mins} min
               </span>
             )}
           </div>
 
-          {ingredients.length > 0 && (
+          {/* Loading spinner while fetching full recipe */}
+          {fetchLoading && (
+            <div className="flex justify-center py-4">
+              <div className="w-5 h-5 border-2 border-accent-orange border-t-transparent rounded-full animate-spin" />
+            </div>
+          )}
+
+          {!fetchLoading && ingredients.length > 0 && (
             <>
-              <h3 className="text-sm font-semibold text-text-primary mb-2">Ingredients</h3>
+              <h3 className="text-sm font-semibold text-text-primary mb-2">{t('ingredients')}</h3>
               <ul className="space-y-1 mb-4">
                 {ingredients.map((ing, i) => (
                   <li key={i} className="text-sm text-text-secondary flex items-start gap-2">
@@ -98,9 +146,9 @@ function RecipeDetail({ recipe, onClose }) {
             </>
           )}
 
-          {steps.length > 0 && (
+          {!fetchLoading && steps.length > 0 && (
             <>
-              <h3 className="text-sm font-semibold text-text-primary mb-2">Instructions</h3>
+              <h3 className="text-sm font-semibold text-text-primary mb-2">{t('instructions')}</h3>
               <ol className="space-y-2">
                 {steps.map((step, i) => (
                   <li key={i} className="text-sm text-text-secondary flex items-start gap-2">
@@ -113,14 +161,14 @@ function RecipeDetail({ recipe, onClose }) {
           )}
 
           {/* YouTube button */}
-          {recipe.youtube_url && (
+          {(r.youtube_url || recipe.youtube_url) && (
             <a
-              href={recipe.youtube_url}
+              href={r.youtube_url || recipe.youtube_url}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 w-full bg-red-500 text-white py-2.5 rounded-xl text-sm font-semibold mt-4"
             >
-              Watch Video
+              {t('watch_video')}
             </a>
           )}
         </div>
@@ -189,7 +237,7 @@ export default function MealPlan() {
         <div className="flex items-center justify-between">
           <div>
             <h1 className="text-2xl font-bold text-text-primary">{t('title')}</h1>
-            <p className="text-accent-orange text-xs font-medium mt-1">Delicious & nutritious meals</p>
+            <p className="text-accent-orange text-xs font-medium mt-1">{t('subtitle')}</p>
           </div>
           {isOnboarded && (
             <button
@@ -256,10 +304,10 @@ export default function MealPlan() {
                       </div>
                       <div className="text-left">
                         <p className="text-sm font-semibold text-text-primary">
-                          Day {index + 1}
+                          {t('day', { n: index + 1 })}
                         </p>
                         <p className="text-xs text-text-secondary">
-                          {mealCount} meals
+                          {t('meals_count', { count: mealCount })}
                         </p>
                       </div>
                     </div>

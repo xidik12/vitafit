@@ -18,5 +18,8 @@
   "watch_video": "Watch Video",
   "ingredients": "Ingredients",
   "instructions": "Instructions",
-  "no_image": "No photo available"
+  "no_image": "No photo available",
+  "subtitle": "Delicious & nutritious meals",
+  "day": "Day {{n}}",
+  "meals_count": "{{count}} meals"
 }

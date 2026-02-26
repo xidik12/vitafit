@@ -84,28 +84,28 @@ export default function ExerciseCard({ exercise }) {
           {/* Form tips */}
           {hasTips && (
             <div className="space-y-2">
-              <p className="text-xs font-semibold text-text-primary">How to perform</p>
+              <p className="text-xs font-semibold text-text-primary">{t('how_to')}</p>
               {exercise.form_tips.setup && (
                 <div className="border-l-3 border-l-accent-blue pl-3 py-1">
-                  <span className="text-xs font-semibold text-accent-blue">Setup: </span>
+                  <span className="text-xs font-semibold text-accent-blue">{t('setup') + ': '}</span>
                   <span className="text-xs text-text-secondary">{exercise.form_tips.setup}</span>
                 </div>
               )}
               {exercise.form_tips.execution && (
                 <div className="border-l-3 border-l-accent-green pl-3 py-1">
-                  <span className="text-xs font-semibold text-accent-green">Execution: </span>
+                  <span className="text-xs font-semibold text-accent-green">{t('execution') + ': '}</span>
                   <span className="text-xs text-text-secondary">{exercise.form_tips.execution}</span>
                 </div>
               )}
               {exercise.form_tips.mistakes && (
                 <div className="border-l-3 border-l-accent-orange pl-3 py-1">
-                  <span className="text-xs font-semibold text-accent-orange">Common Mistakes: </span>
+                  <span className="text-xs font-semibold text-accent-orange">{t('mistakes') + ': '}</span>
                   <span className="text-xs text-text-secondary">{exercise.form_tips.mistakes}</span>
                 </div>
               )}
               {exercise.form_tips.breathing && (
                 <div className="border-l-3 border-l-accent-purple pl-3 py-1">
-                  <span className="text-xs font-semibold text-accent-purple">Breathing: </span>
+                  <span className="text-xs font-semibold text-accent-purple">{t('breathing') + ': '}</span>
                   <span className="text-xs text-text-secondary">{exercise.form_tips.breathing}</span>
                 </div>
               )}
@@ -122,7 +122,7 @@ export default function ExerciseCard({ exercise }) {
               className="flex items-center gap-1.5 text-xs text-accent-blue font-semibold bg-accent-blue/10 rounded-lg px-3 py-2 w-fit"
             >
               <span>▶</span>
-              <span>Watch Video</span>
+              <span>{t('watch_video')}</span>
             </a>
           )}
         </div>

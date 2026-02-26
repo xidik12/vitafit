@@ -17,5 +17,6 @@
   "empty": "No food logged today. Tap + to start tracking.",
   "recent_foods": "Recent Foods",
   "custom_food": "Add Custom Food",
-  "challenge": "Weekly Challenge"
+  "challenge": "Weekly Challenge",
+  "search_btn": "Search"
 }

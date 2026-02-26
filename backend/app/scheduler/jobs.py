@@ -10,29 +10,31 @@ logger = logging.getLogger(__name__)
 
 
 async def seed_global_foods():
-    """Load comprehensive global food database into the database."""
+    """Load comprehensive global food database into the database (incremental)."""
     foods_path = Path(__file__).parent.parent / "data" / "common_foods_global.json"
     if not foods_path.exists():
         logger.warning("common_foods_global.json not found — skipping seed")
         return
 
-    async with async_session() as session:
-        # Check if already seeded
-        result = await session.execute(
-            select(FoodItem).where(FoodItem.source == "custom_global").limit(1)
-        )
-        if result.scalar_one_or_none():
-            logger.info("Global foods already seeded")
-            return
-
     with open(foods_path, encoding="utf-8") as f:
         foods = json.load(f)
 
+    # Query all existing name_en values for source="custom_global" in one shot
     async with async_session() as session:
-        count = 0
+        result = await session.execute(
+            select(FoodItem.name_en).where(FoodItem.source == "custom_global")
+        )
+        existing_names: set[str] = {row[0] for row in result.all()}
+
+    # Insert only foods whose name_en is not already in the DB
+    async with async_session() as session:
+        added = 0
         for item in foods:
+            name_en = item.get("name_en", "")
+            if name_en in existing_names:
+                continue
             fi = FoodItem(
-                name_en=item.get("name_en", ""),
+                name_en=name_en,
                 name_ru=item.get("name_ru", ""),
                 source="custom_global",
                 calories_per_100g=item.get("calories_per_100g"),
@@ -42,9 +44,13 @@ async def seed_global_foods():
                 serving_size_g=item.get("serving_size_g", 100),
             )
             session.add(fi)
-            count += 1
+            added += 1
         await session.commit()
-        logger.info(f"Seeded {count} global food items")
+        skipped = len(existing_names)
+        logger.info(
+            f"Global foods: {added} new items added, {skipped} already existed "
+            f"(total in JSON: {len(foods)})"
+        )
 
 
 async def seed_recipes():

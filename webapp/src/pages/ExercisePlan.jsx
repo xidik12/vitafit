@@ -69,7 +69,7 @@ export default function ExercisePlan() {
         <div className="flex items-center justify-between">
           <div>
             <h1 className="text-2xl font-bold text-text-primary">{t('title')}</h1>
-            <p className="text-accent-blue text-xs font-medium mt-1">Your weekly workout plan</p>
+            <p className="text-accent-blue text-xs font-medium mt-1">{t('subtitle')}</p>
           </div>
           {isOnboarded && (
             <button
@@ -142,7 +142,7 @@ export default function ExercisePlan() {
                           {t('day', { n: index + 1 })}
                         </p>
                         <p className="text-xs text-text-secondary">
-                          {isRestDay ? t('rest') : `${day.exercises.length} exercises`}
+                          {isRestDay ? t('rest') : t('exercises_count', { count: day.exercises.length })}
                         </p>
                       </div>
                     </div>
