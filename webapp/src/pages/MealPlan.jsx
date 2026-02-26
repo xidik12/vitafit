@@ -34,7 +34,7 @@ function RecipeDetail({ recipe, onClose }) {
     || (Array.isArray(instructions) ? instructions : [])
 
   return (
-    <div className="fixed inset-0 bg-black/40 z-50 flex items-end">
+    <div className="fixed inset-0 bg-black/40 z-[60] flex items-end">
       <div className="bg-white w-full rounded-t-2xl max-h-[90vh] overflow-y-auto shadow-xl">
         {/* Hero image */}
         {recipe.image_url ? (

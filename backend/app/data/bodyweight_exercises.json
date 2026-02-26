@@ -4,701 +4,1452 @@
     "name_ru": "Отжимания",
     "category": "push",
     "body_part": "chest",
-    "target_muscles": ["pectoralis_major", "triceps_brachii", "anterior_deltoids"],
+    "target_muscles": [
+      "pectoralis_major",
+      "triceps_brachii",
+      "anterior_deltoids"
+    ],
     "difficulty": "beginner",
     "sets": 3,
     "reps": 12,
     "instructions": "Start in a high plank position with hands slightly wider than shoulder-width apart, body in a straight line from head to heels. Lower the chest toward the floor by bending the elbows to about 90 degrees. Push back up to the starting position by fully extending the arms. Keep the core tight throughout.",
     "progression": "Wall push-ups → Incline push-ups → Knee push-ups → Standard → Decline push-ups",
-    "common_mistakes": "Sagging hips, flaring elbows wider than 45 degrees, not achieving full range of motion, lifting the head"
+    "common_mistakes": "Sagging hips, flaring elbows wider than 45 degrees, not achieving full range of motion, lifting the head",
+    "images": [
+      "https://images.unsplash.com/photo-1598971639058-fab3c3109a00?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "High plank position, hands slightly wider than shoulder-width, body straight from head to heels.",
+      "execution": "Lower chest to floor by bending elbows to 90 degrees, then press back up to full extension.",
+      "mistakes": "Avoid sagging hips, flaring elbows wider than 45 degrees, and incomplete range of motion.",
+      "breathing": "Inhale as you lower down, exhale as you push up."
+    }
   },
   {
     "name_en": "Wide Push-ups",
     "name_ru": "Широкие отжимания",
     "category": "push",
     "body_part": "chest",
-    "target_muscles": ["pectoralis_major", "anterior_deltoids", "triceps_brachii"],
+    "target_muscles": [
+      "pectoralis_major",
+      "anterior_deltoids",
+      "triceps_brachii"
+    ],
     "difficulty": "beginner",
     "sets": 3,
     "reps": 12,
     "instructions": "Set up like a standard push-up but place the hands about 1.5 times shoulder-width apart. Lower the chest toward the floor, allowing the elbows to flare out to the sides more than a standard push-up. Press back up. This variation emphasizes the chest muscles more than the triceps.",
     "progression": "Knee wide push-ups → Standard wide push-ups → Tempo wide push-ups",
-    "common_mistakes": "Going too wide (shoulder strain), not engaging the core, partial range of motion"
+    "common_mistakes": "Going too wide (shoulder strain), not engaging the core, partial range of motion",
+    "images": [
+      "https://images.unsplash.com/photo-1598971639058-fab3c3109a00?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "High plank with hands placed about 1.5 times shoulder-width apart.",
+      "execution": "Lower chest to floor allowing elbows to flare out, then press back up.",
+      "mistakes": "Avoid going too wide causing shoulder strain, not engaging core, partial range of motion.",
+      "breathing": "Inhale on the way down, exhale on the way up."
+    }
   },
   {
     "name_en": "Diamond Push-ups",
     "name_ru": "Алмазные отжимания",
     "category": "push",
     "body_part": "triceps",
-    "target_muscles": ["triceps_brachii", "pectoralis_major", "anterior_deltoids"],
+    "target_muscles": [
+      "triceps_brachii",
+      "pectoralis_major",
+      "anterior_deltoids"
+    ],
     "difficulty": "intermediate",
     "sets": 3,
     "reps": 10,
     "instructions": "Start in a plank position with hands close together, index fingers and thumbs touching to form a diamond shape directly under the chest. Lower the chest toward the hands by bending the elbows, keeping them close to the body. Press back up. This variation heavily targets the triceps.",
     "progression": "Knee diamond push-ups → Standard → Elevated feet diamond push-ups",
-    "common_mistakes": "Elbows flaring out, hands too far forward, dropping the head"
+    "common_mistakes": "Elbows flaring out, hands too far forward, dropping the head",
+    "images": [
+      "https://images.unsplash.com/photo-1598971639058-fab3c3109a00?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Plank position with hands close together forming a diamond shape under the chest.",
+      "execution": "Lower chest toward hands keeping elbows close to body, then press back up.",
+      "mistakes": "Avoid elbows flaring out, hands too far forward, and dropping the head.",
+      "breathing": "Inhale as you lower, exhale as you press up."
+    }
   },
   {
     "name_en": "Decline Push-ups",
     "name_ru": "Отжимания с ногами на возвышении",
     "category": "push",
     "body_part": "upper_chest",
-    "target_muscles": ["upper_pectoralis", "anterior_deltoids", "triceps_brachii"],
+    "target_muscles": [
+      "upper_pectoralis",
+      "anterior_deltoids",
+      "triceps_brachii"
+    ],
     "difficulty": "intermediate",
     "sets": 3,
     "reps": 10,
     "instructions": "Place the feet on an elevated surface (bench, step, or chair) and the hands on the floor shoulder-width apart. The body forms a straight line from head to heels at a downward angle. Lower the chest to the floor and press back up. The higher the feet, the more the upper chest and shoulders are engaged.",
     "progression": "Low surface (step) → Medium (bench) → High (chair) → Feet on wall",
-    "common_mistakes": "Piking the hips, not maintaining a straight body line, placing feet too high too soon"
+    "common_mistakes": "Piking the hips, not maintaining a straight body line, placing feet too high too soon",
+    "images": [
+      "https://images.unsplash.com/photo-1598971639058-fab3c3109a00?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Feet on an elevated surface, hands on floor shoulder-width apart, body in straight line.",
+      "execution": "Lower chest to the floor and press back up maintaining the downward angle.",
+      "mistakes": "Avoid piking the hips, not maintaining straight body line, feet too high too soon.",
+      "breathing": "Inhale during the lowering phase, exhale while pressing up."
+    }
   },
   {
     "name_en": "Incline Push-ups",
     "name_ru": "Отжимания с руками на возвышении",
     "category": "push",
     "body_part": "lower_chest",
-    "target_muscles": ["lower_pectoralis", "triceps_brachii", "anterior_deltoids"],
+    "target_muscles": [
+      "lower_pectoralis",
+      "triceps_brachii",
+      "anterior_deltoids"
+    ],
     "difficulty": "beginner",
     "sets": 3,
     "reps": 15,
     "instructions": "Place the hands on an elevated surface (bench, step, countertop) shoulder-width apart with feet on the floor. Lower the chest toward the surface by bending the elbows. Press back up. The higher the surface, the easier the exercise. This is an excellent entry-level push-up variation.",
     "progression": "High countertop → Low bench → Floor push-ups",
-    "common_mistakes": "Sagging hips, bending at the waist, not achieving full range of motion"
+    "common_mistakes": "Sagging hips, bending at the waist, not achieving full range of motion",
+    "images": [
+      "https://images.unsplash.com/photo-1598971639058-fab3c3109a00?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Hands on an elevated surface shoulder-width apart, feet on the floor.",
+      "execution": "Lower chest toward the surface by bending elbows, then press back up.",
+      "mistakes": "Avoid sagging hips, bending at the waist, and incomplete range of motion.",
+      "breathing": "Inhale as you lower, exhale as you push up."
+    }
   },
   {
     "name_en": "Pike Push-ups",
     "name_ru": "Отжимания «щука»",
     "category": "push",
     "body_part": "shoulders",
-    "target_muscles": ["anterior_deltoids", "medial_deltoids", "triceps_brachii", "upper_trapezius"],
+    "target_muscles": [
+      "anterior_deltoids",
+      "medial_deltoids",
+      "triceps_brachii",
+      "upper_trapezius"
+    ],
     "difficulty": "intermediate",
     "sets": 3,
     "reps": 8,
     "instructions": "Start in a downward dog position with hips high and hands shoulder-width apart on the floor. Bend the elbows and lower the top of the head toward the floor between the hands. Press back up. Keep the hips high throughout — the body forms an inverted V. This is a progression toward the handstand push-up.",
     "progression": "Standard pike → Feet elevated pike → Handstand push-up against wall",
-    "common_mistakes": "Lowering the hips into a standard push-up, not going deep enough, elbows flaring excessively"
+    "common_mistakes": "Lowering the hips into a standard push-up, not going deep enough, elbows flaring excessively",
+    "images": [
+      "https://images.unsplash.com/photo-1598971639058-fab3c3109a00?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Downward dog position with hips high and hands shoulder-width apart on the floor.",
+      "execution": "Bend elbows and lower top of head toward the floor between hands, then press up.",
+      "mistakes": "Avoid lowering hips into a standard push-up, not going deep enough, elbows flaring.",
+      "breathing": "Inhale as you lower your head down, exhale as you press back up."
+    }
   },
   {
     "name_en": "Bench Dips",
     "name_ru": "Обратные отжимания от скамьи",
     "category": "push",
     "body_part": "triceps",
-    "target_muscles": ["triceps_brachii", "anterior_deltoids", "pectoralis_major"],
+    "target_muscles": [
+      "triceps_brachii",
+      "anterior_deltoids",
+      "pectoralis_major"
+    ],
     "difficulty": "beginner",
     "sets": 3,
     "reps": 12,
     "instructions": "Sit on the edge of a bench or chair with hands gripping the edge beside the hips. Walk the feet forward and lift the hips off the bench. Lower the body by bending the elbows to about 90 degrees. Press back up by straightening the arms. Keep the back close to the bench.",
     "progression": "Feet close (bent knees) → Feet extended straight → Feet elevated on another bench",
-    "common_mistakes": "Going too deep (shoulder strain), shoulders shrugging up, elbows flaring sideways"
+    "common_mistakes": "Going too deep (shoulder strain), shoulders shrugging up, elbows flaring sideways",
+    "images": [
+      "https://images.unsplash.com/photo-1597347316205-36f6c451902a?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Sit on edge of bench, hands gripping edge beside hips, walk feet forward.",
+      "execution": "Lower body by bending elbows to 90 degrees, then press back up.",
+      "mistakes": "Avoid going too deep causing shoulder strain, shrugging shoulders, elbows flaring.",
+      "breathing": "Inhale as you lower, exhale as you press up."
+    }
   },
   {
     "name_en": "Parallel Bar Dips",
     "name_ru": "Отжимания на брусьях",
     "category": "push",
     "body_part": "chest_triceps",
-    "target_muscles": ["pectoralis_major", "triceps_brachii", "anterior_deltoids"],
+    "target_muscles": [
+      "pectoralis_major",
+      "triceps_brachii",
+      "anterior_deltoids"
+    ],
     "difficulty": "intermediate",
     "sets": 3,
     "reps": 8,
     "instructions": "Grip the parallel bars and lift the body, arms straight, shoulders down. Lean slightly forward for chest emphasis or stay upright for triceps emphasis. Lower the body by bending the elbows until the upper arms are parallel to the floor or slightly below. Press back up to full arm extension.",
     "progression": "Assisted band dips → Bodyweight → Weighted dips",
-    "common_mistakes": "Going too deep (shoulder injury risk), excessive forward lean, shrugging shoulders"
+    "common_mistakes": "Going too deep (shoulder injury risk), excessive forward lean, shrugging shoulders",
+    "images": [
+      "https://images.unsplash.com/photo-1597347316205-36f6c451902a?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Grip parallel bars with arms straight, shoulders down and back.",
+      "execution": "Lower body by bending elbows until upper arms are parallel to floor, then press up.",
+      "mistakes": "Avoid going too deep, excessive forward lean, and shrugging shoulders.",
+      "breathing": "Inhale on the descent, exhale on the push up."
+    }
   },
   {
     "name_en": "Handstand Push-ups (Wall-Assisted)",
     "name_ru": "Отжимания в стойке на руках (у стены)",
     "category": "push",
     "body_part": "shoulders",
-    "target_muscles": ["anterior_deltoids", "medial_deltoids", "triceps_brachii", "upper_trapezius"],
+    "target_muscles": [
+      "anterior_deltoids",
+      "medial_deltoids",
+      "triceps_brachii",
+      "upper_trapezius"
+    ],
     "difficulty": "advanced",
     "sets": 3,
     "reps": 5,
     "instructions": "Kick up into a handstand against a wall with hands shoulder-width apart about 6 inches from the wall. Lower the head toward the floor by bending the elbows. Press back up to full arm extension. Keep the core tight and body as straight as possible.",
     "progression": "Pike push-ups → Elevated pike → Wall headstand hold → Wall handstand push-ups → Freestanding",
-    "common_mistakes": "Hands too close to wall, arching the back excessively, kicking up without control"
+    "common_mistakes": "Hands too close to wall, arching the back excessively, kicking up without control",
+    "images": [
+      "https://images.unsplash.com/photo-1598971639058-fab3c3109a00?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Kick up into handstand against wall, hands shoulder-width apart about 6 inches from wall.",
+      "execution": "Lower head toward floor by bending elbows, then press back to full extension.",
+      "mistakes": "Avoid hands too close to wall, arching back excessively, kicking up without control.",
+      "breathing": "Inhale as you lower, exhale forcefully as you press up."
+    }
   },
   {
     "name_en": "Planche Lean",
     "name_ru": "Наклон в планш",
     "category": "push",
     "body_part": "shoulders",
-    "target_muscles": ["anterior_deltoids", "pectoralis_major", "biceps_brachii", "core"],
+    "target_muscles": [
+      "anterior_deltoids",
+      "pectoralis_major",
+      "biceps_brachii",
+      "core"
+    ],
     "difficulty": "advanced",
     "sets": 3,
     "reps": 1,
     "instructions": "Start in a plank position with arms straight and hands turned slightly outward. Lean the body forward over the hands by shifting the shoulders past the wrists, keeping the arms straight. The further you lean, the harder it is. Hold the leaned position for 10–20 seconds. Return to plank.",
     "progression": "Slight lean (shoulders over fingertips) → Moderate lean → Full planche lean (shoulders well past wrists)",
-    "common_mistakes": "Bending the elbows, piking the hips, insufficient shoulder protraction"
+    "common_mistakes": "Bending the elbows, piking the hips, insufficient shoulder protraction",
+    "images": [
+      "https://images.unsplash.com/photo-1566241142559-40e1dab266c6?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Plank position with arms straight and hands turned slightly outward.",
+      "execution": "Lean body forward over hands by shifting shoulders past wrists, hold 10-20 seconds.",
+      "mistakes": "Avoid bending the elbows, piking the hips, insufficient shoulder protraction.",
+      "breathing": "Breathe steadily throughout the hold, do not hold your breath."
+    }
   },
   {
     "name_en": "Pull-ups",
     "name_ru": "Подтягивания",
     "category": "pull",
     "body_part": "back",
-    "target_muscles": ["latissimus_dorsi", "biceps_brachii", "brachialis", "posterior_deltoids", "rhomboids"],
+    "target_muscles": [
+      "latissimus_dorsi",
+      "biceps_brachii",
+      "brachialis",
+      "posterior_deltoids",
+      "rhomboids"
+    ],
     "difficulty": "intermediate",
     "sets": 3,
     "reps": 8,
     "instructions": "Hang from a pull-up bar with an overhand (pronated) grip, hands slightly wider than shoulder-width. From a dead hang, pull the body upward by driving the elbows down and back. Continue until the chin clears the bar. Lower with control back to a dead hang. Avoid kipping or swinging.",
     "progression": "Dead hangs → Negative pull-ups → Band-assisted → Full pull-ups → Weighted pull-ups",
-    "common_mistakes": "Kipping or swinging, not achieving full range of motion, crossing the legs, shrugging the shoulders"
+    "common_mistakes": "Kipping or swinging, not achieving full range of motion, crossing the legs, shrugging the shoulders",
+    "images": [
+      "https://images.unsplash.com/photo-1598971457999-ca4ef48a9a71?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Hang from pull-up bar with overhand grip, hands slightly wider than shoulder-width.",
+      "execution": "Pull body up by driving elbows down and back until chin clears the bar, lower with control.",
+      "mistakes": "Avoid kipping or swinging, not achieving full range, crossing legs, shrugging shoulders.",
+      "breathing": "Exhale as you pull up, inhale as you lower down."
+    }
   },
   {
     "name_en": "Chin-ups",
     "name_ru": "Подтягивания обратным хватом",
     "category": "pull",
     "body_part": "back_biceps",
-    "target_muscles": ["latissimus_dorsi", "biceps_brachii", "brachialis", "pectoralis_major"],
+    "target_muscles": [
+      "latissimus_dorsi",
+      "biceps_brachii",
+      "brachialis",
+      "pectoralis_major"
+    ],
     "difficulty": "intermediate",
     "sets": 3,
     "reps": 8,
     "instructions": "Hang from a pull-up bar with an underhand (supinated) grip, hands shoulder-width apart. Pull the body upward until the chin is over the bar. Lower with control back to a dead hang. This variation emphasizes the biceps more than pull-ups.",
     "progression": "Negative chin-ups → Band-assisted → Full chin-ups → Weighted chin-ups",
-    "common_mistakes": "Using momentum, not fully extending at the bottom, excessive body swing"
+    "common_mistakes": "Using momentum, not fully extending at the bottom, excessive body swing",
+    "images": [
+      "https://images.unsplash.com/photo-1598971457999-ca4ef48a9a71?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Hang from bar with underhand (supinated) grip, hands shoulder-width apart.",
+      "execution": "Pull body up until chin is over the bar, then lower with control to dead hang.",
+      "mistakes": "Avoid using momentum, not fully extending at the bottom, excessive body swing.",
+      "breathing": "Exhale as you pull up, inhale as you lower."
+    }
   },
   {
     "name_en": "Inverted Rows (Body Rows)",
     "name_ru": "Горизонтальные подтягивания (австралийские)",
     "category": "pull",
     "body_part": "back",
-    "target_muscles": ["rhomboids", "latissimus_dorsi", "posterior_deltoids", "biceps_brachii", "trapezius"],
+    "target_muscles": [
+      "rhomboids",
+      "latissimus_dorsi",
+      "posterior_deltoids",
+      "biceps_brachii",
+      "trapezius"
+    ],
     "difficulty": "beginner",
     "sets": 3,
     "reps": 12,
     "instructions": "Set a bar at waist height (smith machine, barbell in rack, or sturdy table edge). Lie underneath, grip the bar with hands shoulder-width apart and an overhand grip. Extend the legs so the body is straight. Pull the chest up to the bar by squeezing the shoulder blades together. Lower with control. The more horizontal the body, the harder the exercise.",
     "progression": "Bent knees (feet flat) → Straight legs → Feet elevated → Weighted vest",
-    "common_mistakes": "Sagging hips, pulling with the arms only (not engaging the back), incomplete range of motion"
+    "common_mistakes": "Sagging hips, pulling with the arms only (not engaging the back), incomplete range of motion",
+    "images": [
+      "https://images.unsplash.com/photo-1598971457999-ca4ef48a9a71?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Lie under a bar at waist height, grip with overhand hands shoulder-width apart, body straight.",
+      "execution": "Pull chest up to bar by squeezing shoulder blades together, then lower with control.",
+      "mistakes": "Avoid sagging hips, pulling with arms only, and incomplete range of motion.",
+      "breathing": "Exhale as you pull up, inhale as you lower."
+    }
   },
   {
     "name_en": "Scapula Pull-ups",
     "name_ru": "Подтягивания на лопатках",
     "category": "pull",
     "body_part": "back",
-    "target_muscles": ["lower_trapezius", "rhomboids", "serratus_anterior", "latissimus_dorsi"],
+    "target_muscles": [
+      "lower_trapezius",
+      "rhomboids",
+      "serratus_anterior",
+      "latissimus_dorsi"
+    ],
     "difficulty": "beginner",
     "sets": 3,
     "reps": 10,
     "instructions": "Hang from a pull-up bar in a dead hang. Without bending the elbows, retract and depress the shoulder blades, pulling the body upward slightly. You should rise 2–3 inches. Hold the retracted position for 1 second, then return to the dead hang. This trains scapular control essential for full pull-ups.",
     "progression": "Scapula pull-ups → Negative pull-ups → Full pull-ups",
-    "common_mistakes": "Bending the elbows, using momentum, shrugging instead of depressing the scapulae"
+    "common_mistakes": "Bending the elbows, using momentum, shrugging instead of depressing the scapulae",
+    "images": [
+      "https://images.unsplash.com/photo-1598971457999-ca4ef48a9a71?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Hang from pull-up bar in a dead hang position.",
+      "execution": "Without bending elbows, retract and depress shoulder blades to rise 2-3 inches, hold, return.",
+      "mistakes": "Avoid bending the elbows, using momentum, shrugging instead of depressing scapulae.",
+      "breathing": "Exhale as you retract, inhale as you release."
+    }
   },
   {
     "name_en": "Bodyweight Squats",
     "name_ru": "Приседания с собственным весом",
     "category": "legs",
     "body_part": "legs",
-    "target_muscles": ["quadriceps", "gluteals", "hamstrings", "hip_adductors", "calves"],
+    "target_muscles": [
+      "quadriceps",
+      "gluteals",
+      "hamstrings",
+      "hip_adductors",
+      "calves"
+    ],
     "difficulty": "beginner",
     "sets": 3,
     "reps": 15,
     "instructions": "Stand with feet shoulder-width apart, toes pointed slightly outward. Extend the arms forward for balance. Push the hips back and bend the knees as though sitting into a chair. Lower until the thighs are at least parallel to the floor. Drive through the heels to stand back up. Keep the chest up and the back straight throughout.",
     "progression": "Assisted (holding something) → Bodyweight → Tempo → Jump squats → Pistol squats",
-    "common_mistakes": "Knees caving inward, rising on toes, rounding the back, insufficient depth"
+    "common_mistakes": "Knees caving inward, rising on toes, rounding the back, insufficient depth",
+    "images": [
+      "https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Stand with feet shoulder-width apart, toes slightly outward, arms forward for balance.",
+      "execution": "Push hips back and bend knees to lower until thighs are parallel, drive through heels to stand.",
+      "mistakes": "Avoid knees caving inward, rising on toes, rounding the back, insufficient depth.",
+      "breathing": "Inhale as you lower, exhale as you stand up."
+    }
   },
   {
     "name_en": "Sumo Squats",
     "name_ru": "Приседания сумо",
     "category": "legs",
     "body_part": "inner_thigh",
-    "target_muscles": ["hip_adductors", "quadriceps", "gluteals", "hamstrings"],
+    "target_muscles": [
+      "hip_adductors",
+      "quadriceps",
+      "gluteals",
+      "hamstrings"
+    ],
     "difficulty": "beginner",
     "sets": 3,
     "reps": 15,
     "instructions": "Stand with feet significantly wider than shoulder-width, toes pointed out at about 45 degrees. Keep the hands clasped at the chest or on the hips. Lower the body by bending the knees and pushing the hips back. Keep the knees tracking over the toes. Lower until the thighs are parallel to the floor. Press through the heels to return to standing.",
     "progression": "Partial depth → Full depth → Tempo sumo → Sumo pulse squats",
-    "common_mistakes": "Knees collapsing inward, leaning forward, not squatting deep enough"
+    "common_mistakes": "Knees collapsing inward, leaning forward, not squatting deep enough",
+    "images": [
+      "https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Stand with feet wider than shoulder-width, toes pointed out at 45 degrees.",
+      "execution": "Lower body by bending knees and pushing hips back, keep knees tracking over toes.",
+      "mistakes": "Avoid knees collapsing inward, leaning forward, and not squatting deep enough.",
+      "breathing": "Inhale on the way down, exhale on the way up."
+    }
   },
   {
     "name_en": "Pistol Squats (Single-Leg Squat)",
     "name_ru": "Приседания «пистолет» (на одной ноге)",
     "category": "legs",
     "body_part": "legs",
-    "target_muscles": ["quadriceps", "gluteals", "hamstrings", "hip_stabilizers", "calves"],
+    "target_muscles": [
+      "quadriceps",
+      "gluteals",
+      "hamstrings",
+      "hip_stabilizers",
+      "calves"
+    ],
     "difficulty": "advanced",
     "sets": 3,
     "reps": 5,
     "instructions": "Stand on the right leg. Extend the left leg straight forward. Extend the arms forward for balance. Slowly lower into a deep single-leg squat, keeping the extended leg off the floor. Lower as deep as possible while keeping the heel flat. Drive through the heel to stand back up. Switch legs.",
     "progression": "Assisted (holding pole or TRX) → Pistol to box → Full pistol squat",
-    "common_mistakes": "Heel lifting off the floor, knee caving inward, losing balance backward, insufficient ankle mobility"
+    "common_mistakes": "Heel lifting off the floor, knee caving inward, losing balance backward, insufficient ankle mobility",
+    "images": [
+      "https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Stand on one leg, extend the other leg straight forward, arms forward for balance.",
+      "execution": "Slowly lower into a deep single-leg squat keeping extended leg off floor, drive up through heel.",
+      "mistakes": "Avoid heel lifting, knee caving inward, losing balance backward.",
+      "breathing": "Inhale as you descend, exhale as you drive up."
+    }
   },
   {
     "name_en": "Jump Squats",
     "name_ru": "Приседания с прыжком",
     "category": "legs",
     "body_part": "legs",
-    "target_muscles": ["quadriceps", "gluteals", "hamstrings", "calves", "core"],
+    "target_muscles": [
+      "quadriceps",
+      "gluteals",
+      "hamstrings",
+      "calves",
+      "core"
+    ],
     "difficulty": "intermediate",
     "sets": 3,
     "reps": 10,
     "instructions": "Start in a squat position with thighs at or near parallel to the floor. Swing the arms and explode upward into a jump, extending through the ankles, knees, and hips. Land softly with the knees slightly bent, immediately descending into the next squat. Absorb the landing through the entire foot, not just the toes.",
     "progression": "Half squat jumps → Full depth → Tuck jumps → Box jump squats",
-    "common_mistakes": "Landing with straight legs (joint stress), not squatting deep enough before the jump, landing too loudly"
+    "common_mistakes": "Landing with straight legs (joint stress), not squatting deep enough before the jump, landing too loudly",
+    "images": [
+      "https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Stand with feet shoulder-width apart in a squat-ready position.",
+      "execution": "Squat down to parallel then explode upward into a jump, land softly into next squat.",
+      "mistakes": "Avoid landing with straight legs, not squatting deep enough, landing too loudly.",
+      "breathing": "Inhale during the squat, exhale explosively as you jump."
+    }
   },
   {
     "name_en": "Bulgarian Split Squats",
     "name_ru": "Болгарские сплит-приседания",
     "category": "legs",
     "body_part": "legs",
-    "target_muscles": ["quadriceps", "gluteals", "hamstrings", "hip_flexors"],
+    "target_muscles": [
+      "quadriceps",
+      "gluteals",
+      "hamstrings",
+      "hip_flexors"
+    ],
     "difficulty": "intermediate",
     "sets": 3,
     "reps": 10,
     "instructions": "Stand about 2 feet in front of a bench or step. Place the top of the right foot on the bench behind you. Lower the body by bending the front knee until the left thigh is parallel to the floor. The back knee drops toward the floor. Drive through the left heel to stand back up. Complete all reps on one side before switching.",
     "progression": "Assisted (holding support) → Bodyweight → Tempo → Weighted (holding dumbbells)",
-    "common_mistakes": "Front knee extending past the toes, torso leaning too far forward, back foot placement too close or too far"
+    "common_mistakes": "Front knee extending past the toes, torso leaning too far forward, back foot placement too close or too far",
+    "images": [
+      "https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Stand 2 feet from bench, place rear foot top-down on bench behind you.",
+      "execution": "Lower body by bending front knee until thigh is parallel, drive through front heel to stand.",
+      "mistakes": "Avoid front knee past toes, torso leaning too far forward, incorrect foot placement.",
+      "breathing": "Inhale as you lower, exhale as you push up."
+    }
   },
   {
     "name_en": "Forward Lunges",
     "name_ru": "Выпады вперёд",
     "category": "legs",
     "body_part": "legs",
-    "target_muscles": ["quadriceps", "gluteals", "hamstrings", "hip_flexors"],
+    "target_muscles": [
+      "quadriceps",
+      "gluteals",
+      "hamstrings",
+      "hip_flexors"
+    ],
     "difficulty": "beginner",
     "sets": 3,
     "reps": 12,
     "instructions": "Stand tall with feet together. Step the right foot forward about 2–3 feet. Lower the body until both knees are bent at approximately 90 degrees. The front knee stays directly over the ankle. The back knee hovers just above the floor. Push off the front foot to return to the starting position. Alternate legs.",
     "progression": "Stationary lunges → Walking lunges → Reverse lunges → Jump lunges",
-    "common_mistakes": "Front knee going past the toes, leaning the torso forward, short or long steps, pushing off the back foot"
+    "common_mistakes": "Front knee going past the toes, leaning the torso forward, short or long steps, pushing off the back foot",
+    "images": [
+      "https://images.unsplash.com/photo-1434682881908-b43d0467b798?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Stand tall with feet together, prepare to step forward.",
+      "execution": "Step forward 2-3 feet, lower until both knees at 90 degrees, push off front foot to return.",
+      "mistakes": "Avoid front knee going past toes, leaning forward, short or long steps.",
+      "breathing": "Inhale as you step and lower, exhale as you push back up."
+    }
   },
   {
     "name_en": "Reverse Lunges",
     "name_ru": "Обратные выпады",
     "category": "legs",
     "body_part": "legs",
-    "target_muscles": ["gluteals", "quadriceps", "hamstrings"],
+    "target_muscles": [
+      "gluteals",
+      "quadriceps",
+      "hamstrings"
+    ],
     "difficulty": "beginner",
     "sets": 3,
     "reps": 12,
     "instructions": "Stand tall with feet together. Step the right foot back about 2–3 feet. Lower the body until both knees are bent at 90 degrees. The front knee remains over the ankle. Press through the front heel to bring the back foot forward to the starting position. Alternate legs. This variation is gentler on the knees than forward lunges.",
     "progression": "Bodyweight → Deficit (front foot elevated) → Walking reverse lunges → Weighted",
-    "common_mistakes": "Not stepping far enough back, leaning forward, front knee caving inward"
+    "common_mistakes": "Not stepping far enough back, leaning forward, front knee caving inward",
+    "images": [
+      "https://images.unsplash.com/photo-1434682881908-b43d0467b798?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Stand tall with feet together, prepare to step backward.",
+      "execution": "Step one foot back 2-3 feet, lower until both knees at 90 degrees, press through front heel.",
+      "mistakes": "Avoid not stepping far enough back, leaning forward, front knee caving inward.",
+      "breathing": "Inhale as you step back and lower, exhale as you return."
+    }
   },
   {
     "name_en": "Lateral Lunges",
     "name_ru": "Боковые выпады",
     "category": "legs",
     "body_part": "inner_thigh",
-    "target_muscles": ["hip_adductors", "quadriceps", "gluteals", "hamstrings"],
+    "target_muscles": [
+      "hip_adductors",
+      "quadriceps",
+      "gluteals",
+      "hamstrings"
+    ],
     "difficulty": "beginner",
     "sets": 3,
     "reps": 10,
     "instructions": "Stand with feet together. Step the right foot wide to the right. Bend the right knee and push the hips back while keeping the left leg straight with the foot flat on the floor. Lower as far as comfortable. Push off the right foot to return to the starting position. Complete all reps on one side or alternate.",
     "progression": "Shallow lateral lunge → Full depth → Cossack squats",
-    "common_mistakes": "Knee caving inward, lifting the heel, rounding the back"
+    "common_mistakes": "Knee caving inward, lifting the heel, rounding the back",
+    "images": [
+      "https://images.unsplash.com/photo-1434682881908-b43d0467b798?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Stand with feet together, prepare to step wide to the side.",
+      "execution": "Step wide to one side, bend that knee and push hips back, keep other leg straight, return.",
+      "mistakes": "Avoid knee caving inward, lifting the heel, rounding the back.",
+      "breathing": "Inhale as you lunge to the side, exhale as you push back."
+    }
   },
   {
     "name_en": "Walking Lunges",
     "name_ru": "Шагающие выпады",
     "category": "legs",
     "body_part": "legs",
-    "target_muscles": ["quadriceps", "gluteals", "hamstrings", "calves"],
+    "target_muscles": [
+      "quadriceps",
+      "gluteals",
+      "hamstrings",
+      "calves"
+    ],
     "difficulty": "intermediate",
     "sets": 3,
     "reps": 20,
     "instructions": "Stand tall. Step the right foot forward into a lunge position with both knees at 90 degrees. Instead of stepping back, drive through the front foot and bring the back leg forward into the next lunge step. Continue walking forward, alternating legs with each step. Keep the torso upright throughout.",
     "progression": "Stationary lunges → Walking lunges → Overhead walking lunges → Weighted walking lunges",
-    "common_mistakes": "Short steps, torso leaning forward, loss of balance between steps"
+    "common_mistakes": "Short steps, torso leaning forward, loss of balance between steps",
+    "images": [
+      "https://images.unsplash.com/photo-1434682881908-b43d0467b798?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Stand tall with enough space to walk forward.",
+      "execution": "Step forward into a lunge, then drive through front foot to bring back leg forward into next lunge.",
+      "mistakes": "Avoid short steps, torso leaning forward, loss of balance between steps.",
+      "breathing": "Inhale as you step and lower, exhale as you drive forward."
+    }
   },
   {
     "name_en": "Curtsy Lunges",
     "name_ru": "Выпады-реверанс",
     "category": "legs",
     "body_part": "glutes",
-    "target_muscles": ["gluteus_medius", "gluteus_maximus", "quadriceps", "hip_adductors"],
+    "target_muscles": [
+      "gluteus_medius",
+      "gluteus_maximus",
+      "quadriceps",
+      "hip_adductors"
+    ],
     "difficulty": "intermediate",
     "sets": 3,
     "reps": 10,
     "instructions": "Stand with feet hip-width apart. Step the right foot behind and to the left of the left foot, as if performing a curtsy. Bend both knees to lower the body. The front knee stays over the front ankle. Press through the front heel to return to standing. This variation emphasizes the gluteus medius and outer hip.",
     "progression": "Shallow range → Full depth → Pulse at bottom → Weighted curtsy lunges",
-    "common_mistakes": "Front knee caving inward, not crossing far enough behind, leaning to one side"
+    "common_mistakes": "Front knee caving inward, not crossing far enough behind, leaning to one side",
+    "images": [
+      "https://images.unsplash.com/photo-1434682881908-b43d0467b798?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Stand with feet hip-width apart.",
+      "execution": "Step one foot behind and across the other leg, bend both knees to lower, return to standing.",
+      "mistakes": "Avoid front knee caving inward, not crossing far enough behind, leaning to one side.",
+      "breathing": "Inhale as you step behind and lower, exhale as you return."
+    }
   },
   {
     "name_en": "Step-ups",
     "name_ru": "Зашагивания на платформу",
     "category": "legs",
     "body_part": "legs",
-    "target_muscles": ["quadriceps", "gluteals", "hamstrings", "calves"],
+    "target_muscles": [
+      "quadriceps",
+      "gluteals",
+      "hamstrings",
+      "calves"
+    ],
     "difficulty": "beginner",
     "sets": 3,
     "reps": 12,
     "instructions": "Stand facing a sturdy bench, box, or step. Place the right foot fully on top of the surface. Drive through the right heel and step up, bringing the left foot onto the box. Step back down with the left foot first, then the right. Complete all reps on one side, then switch the leading leg.",
     "progression": "Low step → Higher surface → Weighted step-ups → Explosive step-ups",
-    "common_mistakes": "Pushing off with the back leg, not placing the full foot on the step, leaning forward excessively"
+    "common_mistakes": "Pushing off with the back leg, not placing the full foot on the step, leaning forward excessively",
+    "images": [
+      "https://images.unsplash.com/photo-1434682881908-b43d0467b798?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Stand facing a sturdy bench or step, place one foot fully on top.",
+      "execution": "Drive through the top heel to step up fully, then step back down with control.",
+      "mistakes": "Avoid pushing off with the back leg, not placing full foot on step, leaning forward.",
+      "breathing": "Exhale as you step up, inhale as you step down."
+    }
   },
   {
     "name_en": "Wall Sit",
     "name_ru": "Стульчик у стены",
     "category": "legs",
     "body_part": "legs",
-    "target_muscles": ["quadriceps", "gluteals", "calves"],
+    "target_muscles": [
+      "quadriceps",
+      "gluteals",
+      "calves"
+    ],
     "difficulty": "beginner",
     "sets": 3,
     "reps": 1,
     "instructions": "Stand with the back against a wall. Slide down until the thighs are parallel to the floor and the knees are at 90 degrees. Keep the feet hip-width apart and the knees directly over the ankles. Press the entire back flat against the wall. Hold the position for 30–60 seconds.",
     "progression": "Higher position → Parallel thighs → Single-leg wall sit → Weighted vest wall sit",
-    "common_mistakes": "Knees going past the toes, sitting too high, pushing off the wall with the hands"
+    "common_mistakes": "Knees going past the toes, sitting too high, pushing off the wall with the hands",
+    "images": [
+      "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Stand with back flat against a wall, feet hip-width apart.",
+      "execution": "Slide down until thighs are parallel to floor, knees at 90 degrees, hold the position.",
+      "mistakes": "Avoid knees going past toes, sitting too high, pushing off wall with hands.",
+      "breathing": "Breathe steadily and continuously, do not hold your breath."
+    }
   },
   {
     "name_en": "Calf Raises",
     "name_ru": "Подъёмы на носки",
     "category": "legs",
     "body_part": "calves",
-    "target_muscles": ["gastrocnemius", "soleus"],
+    "target_muscles": [
+      "gastrocnemius",
+      "soleus"
+    ],
     "difficulty": "beginner",
     "sets": 3,
     "reps": 20,
     "instructions": "Stand on the edge of a step with the balls of the feet on the edge and the heels hanging off. Lower the heels below the step for a full stretch. Rise up onto the toes as high as possible, squeezing the calves at the top. Lower slowly. On flat ground: stand with feet shoulder-width apart and rise onto the toes, hold, and lower.",
     "progression": "Double-leg flat ground → Double-leg on step → Single-leg → Weighted",
-    "common_mistakes": "Rushing the movement, not achieving full range of motion, bouncing at the bottom"
+    "common_mistakes": "Rushing the movement, not achieving full range of motion, bouncing at the bottom",
+    "images": [
+      "https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Stand on edge of a step with balls of feet on edge, heels hanging off.",
+      "execution": "Lower heels below step for full stretch, then rise onto toes as high as possible.",
+      "mistakes": "Avoid rushing the movement, not achieving full range of motion, bouncing at bottom.",
+      "breathing": "Exhale as you rise up, inhale as you lower."
+    }
   },
   {
     "name_en": "Glute Bridges",
     "name_ru": "Ягодичный мост",
     "category": "legs",
     "body_part": "glutes",
-    "target_muscles": ["gluteus_maximus", "hamstrings", "erector_spinae"],
+    "target_muscles": [
+      "gluteus_maximus",
+      "hamstrings",
+      "erector_spinae"
+    ],
     "difficulty": "beginner",
     "sets": 3,
     "reps": 15,
     "instructions": "Lie on your back with knees bent and feet flat on the floor, hip-width apart. Press through the heels and lift the hips toward the ceiling until the body forms a straight line from shoulders to knees. Squeeze the glutes hard at the top. Hold for 1–2 seconds. Lower slowly.",
     "progression": "Double-leg → Marching bridge → Single-leg bridge → Weighted bridge",
-    "common_mistakes": "Hyperextending the lower back at the top, pushing through the toes instead of heels, not squeezing the glutes"
+    "common_mistakes": "Hyperextending the lower back at the top, pushing through the toes instead of heels, not squeezing the glutes",
+    "images": [
+      "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Lie on back with knees bent, feet flat on floor hip-width apart.",
+      "execution": "Press through heels to lift hips until body is straight from shoulders to knees, squeeze glutes.",
+      "mistakes": "Avoid hyperextending lower back, pushing through toes, not squeezing glutes.",
+      "breathing": "Exhale as you lift hips, inhale as you lower."
+    }
   },
   {
     "name_en": "Single-Leg Deadlift",
     "name_ru": "Становая тяга на одной ноге",
     "category": "legs",
     "body_part": "posterior_chain",
-    "target_muscles": ["hamstrings", "gluteus_maximus", "erector_spinae", "hip_stabilizers"],
+    "target_muscles": [
+      "hamstrings",
+      "gluteus_maximus",
+      "erector_spinae",
+      "hip_stabilizers"
+    ],
     "difficulty": "intermediate",
     "sets": 3,
     "reps": 10,
     "instructions": "Stand on the right leg with a slight knee bend. Hinge at the hips and lower the torso forward while the left leg extends straight back. Reach the hands toward the floor. Keep the hips square (do not rotate). Lower until the torso and back leg are roughly parallel to the floor. Drive through the right heel to return to standing. Switch legs.",
     "progression": "Assisted (holding support) → Bodyweight → Weighted (dumbbell)",
-    "common_mistakes": "Rounding the back, opening the hip of the raised leg, looking up (straining neck), locking the standing knee"
+    "common_mistakes": "Rounding the back, opening the hip of the raised leg, looking up (straining neck), locking the standing knee",
+    "images": [
+      "https://images.unsplash.com/photo-1434682881908-b43d0467b798?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Stand on one leg with a slight knee bend.",
+      "execution": "Hinge at hips lowering torso forward while extending other leg back, return to standing.",
+      "mistakes": "Avoid rounding the back, opening the hip of raised leg, locking the standing knee.",
+      "breathing": "Inhale as you hinge forward, exhale as you return to standing."
+    }
   },
   {
     "name_en": "Box Jumps",
     "name_ru": "Прыжки на тумбу",
     "category": "legs",
     "body_part": "legs",
-    "target_muscles": ["quadriceps", "gluteals", "calves", "hamstrings", "hip_flexors"],
+    "target_muscles": [
+      "quadriceps",
+      "gluteals",
+      "calves",
+      "hamstrings",
+      "hip_flexors"
+    ],
     "difficulty": "intermediate",
     "sets": 3,
     "reps": 8,
     "instructions": "Stand facing a sturdy box or platform at an appropriate height. Swing the arms back, then explosively jump onto the box, landing softly with both feet fully on top. Stand tall on the box. Step back down one foot at a time (do not jump down). Reset and repeat.",
     "progression": "Low box (12 inches) → Medium (20 inches) → High (24+ inches) → Weighted vest",
-    "common_mistakes": "Landing on the edge of the box, jumping down instead of stepping, insufficient hip drive"
+    "common_mistakes": "Landing on the edge of the box, jumping down instead of stepping, insufficient hip drive",
+    "images": [
+      "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Stand facing a sturdy box at appropriate height, feet shoulder-width apart.",
+      "execution": "Swing arms back, explosively jump onto box landing softly with both feet, step back down.",
+      "mistakes": "Avoid landing on the edge, jumping down instead of stepping, insufficient hip drive.",
+      "breathing": "Exhale as you jump, inhale as you land and reset."
+    }
   },
   {
     "name_en": "Plank",
     "name_ru": "Планка",
     "category": "core",
     "body_part": "core",
-    "target_muscles": ["rectus_abdominis", "transverse_abdominis", "obliques", "erector_spinae", "deltoids"],
+    "target_muscles": [
+      "rectus_abdominis",
+      "transverse_abdominis",
+      "obliques",
+      "erector_spinae",
+      "deltoids"
+    ],
     "difficulty": "beginner",
     "sets": 3,
     "reps": 1,
     "instructions": "Start on the forearms and toes with the body in a straight line from head to heels. Elbows directly under the shoulders, forearms parallel. Engage the core by pulling the navel toward the spine. Do not let the hips sag or pike. Hold for 30–60 seconds. Keep breathing steadily.",
     "progression": "Knee plank → Standard plank → Extended plank (arms further forward) → Weighted plank",
-    "common_mistakes": "Sagging hips, piking the hips, holding breath, head dropping"
+    "common_mistakes": "Sagging hips, piking the hips, holding breath, head dropping",
+    "images": [
+      "https://images.unsplash.com/photo-1566241142559-40e1dab266c6?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Forearms and toes on floor, elbows directly under shoulders, body in straight line.",
+      "execution": "Engage core by pulling navel toward spine, hold position for 30-60 seconds.",
+      "mistakes": "Avoid sagging hips, piking the hips, holding breath, head dropping.",
+      "breathing": "Breathe steadily and rhythmically throughout the hold."
+    }
   },
   {
     "name_en": "Side Plank",
     "name_ru": "Боковая планка",
     "category": "core",
     "body_part": "obliques",
-    "target_muscles": ["obliques", "gluteus_medius", "quadratus_lumborum", "transverse_abdominis"],
+    "target_muscles": [
+      "obliques",
+      "gluteus_medius",
+      "quadratus_lumborum",
+      "transverse_abdominis"
+    ],
     "difficulty": "beginner",
     "sets": 3,
     "reps": 1,
     "instructions": "Lie on the right side. Prop up on the right forearm with the elbow directly under the shoulder. Stack the feet or stagger them. Lift the hips off the floor, creating a straight line from head to feet. Hold for 20–40 seconds. Keep the hips from dipping toward the floor. Switch sides.",
     "progression": "Knee side plank → Standard → Star side plank (top leg raised) → Side plank with hip dips",
-    "common_mistakes": "Hips dropping, torso rotating forward, shoulder not directly over the elbow"
+    "common_mistakes": "Hips dropping, torso rotating forward, shoulder not directly over the elbow",
+    "images": [
+      "https://images.unsplash.com/photo-1566241142559-40e1dab266c6?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Lie on side, prop up on forearm with elbow under shoulder, stack or stagger feet.",
+      "execution": "Lift hips off floor creating a straight line from head to feet, hold 20-40 seconds.",
+      "mistakes": "Avoid hips dropping, torso rotating forward, shoulder not over elbow.",
+      "breathing": "Breathe steadily throughout, avoid holding your breath."
+    }
   },
   {
     "name_en": "Reverse Plank",
     "name_ru": "Обратная планка",
     "category": "core",
     "body_part": "posterior_chain",
-    "target_muscles": ["gluteals", "hamstrings", "erector_spinae", "triceps_brachii", "posterior_deltoids"],
+    "target_muscles": [
+      "gluteals",
+      "hamstrings",
+      "erector_spinae",
+      "triceps_brachii",
+      "posterior_deltoids"
+    ],
     "difficulty": "intermediate",
     "sets": 3,
     "reps": 1,
     "instructions": "Sit on the floor with legs extended and hands behind the hips, fingers pointing toward the feet. Press through the hands and heels to lift the hips off the floor. Create a straight line from head to heels. Squeeze the glutes and open the chest. Hold for 20–30 seconds.",
     "progression": "Bent-knee reverse plank → Straight-leg → Reverse plank with leg lifts",
-    "common_mistakes": "Hips sagging, head dropping back, insufficient glute engagement"
+    "common_mistakes": "Hips sagging, head dropping back, insufficient glute engagement",
+    "images": [
+      "https://images.unsplash.com/photo-1566241142559-40e1dab266c6?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Sit on floor with legs extended, hands behind hips with fingers toward feet.",
+      "execution": "Press through hands and heels to lift hips, create straight line from head to heels, hold.",
+      "mistakes": "Avoid hips sagging, head dropping back, insufficient glute engagement.",
+      "breathing": "Breathe steadily throughout the hold."
+    }
   },
   {
     "name_en": "Hollow Hold",
     "name_ru": "Полая лодочка",
     "category": "core",
     "body_part": "core",
-    "target_muscles": ["rectus_abdominis", "transverse_abdominis", "hip_flexors"],
+    "target_muscles": [
+      "rectus_abdominis",
+      "transverse_abdominis",
+      "hip_flexors"
+    ],
     "difficulty": "intermediate",
     "sets": 3,
     "reps": 1,
     "instructions": "Lie on your back. Press the lower back firmly into the floor. Lift the shoulders and legs off the floor simultaneously. Extend the arms overhead alongside the ears. The body forms a slight banana shape. Keep the lower back glued to the floor. Hold for 20–30 seconds.",
     "progression": "Arms at sides → Arms overhead → Hollow rocks → Weighted hollow hold",
-    "common_mistakes": "Lower back arching off the floor, legs too high (reduces difficulty), holding breath"
+    "common_mistakes": "Lower back arching off the floor, legs too high (reduces difficulty), holding breath",
+    "images": [
+      "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Lie on back and press lower back firmly into the floor.",
+      "execution": "Lift shoulders and legs off floor simultaneously, extend arms overhead, hold banana shape.",
+      "mistakes": "Avoid lower back arching off floor, legs too high, holding breath.",
+      "breathing": "Breathe steadily and shallowly, keeping core braced."
+    }
   },
   {
     "name_en": "V-ups",
     "name_ru": "Складка",
     "category": "core",
     "body_part": "core",
-    "target_muscles": ["rectus_abdominis", "hip_flexors", "obliques"],
+    "target_muscles": [
+      "rectus_abdominis",
+      "hip_flexors",
+      "obliques"
+    ],
     "difficulty": "intermediate",
     "sets": 3,
     "reps": 12,
     "instructions": "Lie on your back with arms extended overhead and legs straight. Simultaneously lift the torso and legs, reaching the hands toward the toes at the top. The body forms a V-shape. Lower back to the starting position with control — do not slam the back or legs down. Repeat.",
     "progression": "Tuck-ups (bent knees) → Single-leg V-ups → Full V-ups → Weighted V-ups",
-    "common_mistakes": "Using momentum instead of controlled strength, not reaching full V-shape, landing heavily"
+    "common_mistakes": "Using momentum instead of controlled strength, not reaching full V-shape, landing heavily",
+    "images": [
+      "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Lie on back with arms extended overhead and legs straight.",
+      "execution": "Simultaneously lift torso and legs, reaching hands toward toes forming a V-shape.",
+      "mistakes": "Avoid using momentum, not reaching full V-shape, landing heavily.",
+      "breathing": "Exhale as you fold up into the V, inhale as you lower back down."
+    }
   },
   {
     "name_en": "Bicycle Crunches",
     "name_ru": "Велосипедные скручивания",
     "category": "core",
     "body_part": "obliques",
-    "target_muscles": ["obliques", "rectus_abdominis", "hip_flexors"],
+    "target_muscles": [
+      "obliques",
+      "rectus_abdominis",
+      "hip_flexors"
+    ],
     "difficulty": "beginner",
     "sets": 3,
     "reps": 20,
     "instructions": "Lie on your back with hands behind the head and knees bent at 90 degrees. Lift the shoulders off the floor. Extend the right leg out while rotating the torso to bring the right elbow toward the left knee. Switch sides in a pedaling motion. Move with control, not speed.",
     "progression": "Slow tempo → Standard tempo → Weighted → Hanging oblique raises",
-    "common_mistakes": "Pulling on the neck, moving too fast, not fully extending the leg, minimal torso rotation"
+    "common_mistakes": "Pulling on the neck, moving too fast, not fully extending the leg, minimal torso rotation",
+    "images": [
+      "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Lie on back with hands behind head, knees bent at 90 degrees, shoulders lifted.",
+      "execution": "Extend one leg while rotating torso to bring opposite elbow toward bent knee, alternate.",
+      "mistakes": "Avoid pulling on neck, moving too fast, not fully extending the leg.",
+      "breathing": "Exhale as you rotate and crunch, inhale as you switch sides."
+    }
   },
   {
     "name_en": "Mountain Climbers",
     "name_ru": "Скалолаз",
     "category": "core",
     "body_part": "core",
-    "target_muscles": ["rectus_abdominis", "hip_flexors", "deltoids", "quadriceps"],
+    "target_muscles": [
+      "rectus_abdominis",
+      "hip_flexors",
+      "deltoids",
+      "quadriceps"
+    ],
     "difficulty": "beginner",
     "sets": 3,
     "reps": 20,
     "instructions": "Start in a high plank position with hands under the shoulders. Drive the right knee toward the chest, then quickly switch and drive the left knee toward the chest. Continue alternating at a brisk pace. Keep the hips level and the core engaged. Each knee drive counts as one rep.",
     "progression": "Slow mountain climbers → Standard speed → Cross-body mountain climbers → Spider-man mountain climbers",
-    "common_mistakes": "Hips bouncing up and down, hands drifting forward, not bringing the knee far enough"
+    "common_mistakes": "Hips bouncing up and down, hands drifting forward, not bringing the knee far enough",
+    "images": [
+      "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "High plank position with hands directly under shoulders.",
+      "execution": "Drive knees toward chest alternately at a brisk pace, keeping hips level.",
+      "mistakes": "Avoid hips bouncing up and down, hands drifting forward, knees not far enough.",
+      "breathing": "Breathe rhythmically matching the pace of your knees."
+    }
   },
   {
     "name_en": "Hanging Leg Raises",
     "name_ru": "Подъём ног в висе",
     "category": "core",
     "body_part": "lower_abs",
-    "target_muscles": ["rectus_abdominis", "hip_flexors", "obliques", "grip"],
+    "target_muscles": [
+      "rectus_abdominis",
+      "hip_flexors",
+      "obliques",
+      "grip"
+    ],
     "difficulty": "intermediate",
     "sets": 3,
     "reps": 10,
     "instructions": "Hang from a pull-up bar with an overhand grip, arms fully extended. With legs straight, raise them until they are parallel to the floor or higher. Lower slowly with control. Avoid swinging. For a harder variation, raise the legs all the way to the bar (toes to bar).",
     "progression": "Hanging knee raises → Straight-leg to parallel → Toes to bar → Windshield wipers",
-    "common_mistakes": "Swinging, using momentum, bending the knees (when doing straight-leg), insufficient range"
+    "common_mistakes": "Swinging, using momentum, bending the knees (when doing straight-leg), insufficient range",
+    "images": [
+      "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Hang from pull-up bar with overhand grip, arms fully extended.",
+      "execution": "With legs straight, raise them to parallel or higher, lower slowly with control.",
+      "mistakes": "Avoid swinging, using momentum, bending knees when doing straight-leg version.",
+      "breathing": "Exhale as you raise legs, inhale as you lower."
+    }
   },
   {
     "name_en": "Lying Leg Raises",
     "name_ru": "Подъём ног лёжа",
     "category": "core",
     "body_part": "lower_abs",
-    "target_muscles": ["rectus_abdominis", "hip_flexors"],
+    "target_muscles": [
+      "rectus_abdominis",
+      "hip_flexors"
+    ],
     "difficulty": "beginner",
     "sets": 3,
     "reps": 12,
     "instructions": "Lie on your back with legs straight and hands tucked under the glutes or alongside the body. Press the lower back into the floor. Raise both legs toward the ceiling, keeping them straight. Lower the legs slowly toward the floor, stopping just before the lower back begins to arch off the floor. Raise again.",
     "progression": "Bent-knee raises → Single-leg raises → Double straight-leg raises → Weighted ankle raises",
-    "common_mistakes": "Lower back arching, using momentum, lowering the legs too far (back lifts)"
+    "common_mistakes": "Lower back arching, using momentum, lowering the legs too far (back lifts)",
+    "images": [
+      "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Lie on back with legs straight, hands under glutes or alongside body, lower back pressed down.",
+      "execution": "Raise both legs toward ceiling keeping them straight, lower slowly stopping before back arches.",
+      "mistakes": "Avoid lower back arching, using momentum, lowering legs too far.",
+      "breathing": "Exhale as you raise legs, inhale as you lower."
+    }
   },
   {
     "name_en": "Russian Twists",
     "name_ru": "Русские скручивания",
     "category": "core",
     "body_part": "obliques",
-    "target_muscles": ["obliques", "rectus_abdominis", "hip_flexors"],
+    "target_muscles": [
+      "obliques",
+      "rectus_abdominis",
+      "hip_flexors"
+    ],
     "difficulty": "beginner",
     "sets": 3,
     "reps": 20,
     "instructions": "Sit on the floor with knees bent and feet slightly elevated off the floor. Lean back to about 45 degrees. Clasp the hands together or hold a weight at chest level. Rotate the torso to the right, touching the hands to the floor beside the hip. Rotate to the left. Each side counts as one rep. Keep the core engaged and the back straight.",
     "progression": "Feet on floor → Feet elevated → With weight → Medicine ball Russian twists",
-    "common_mistakes": "Moving only the arms without rotating the torso, rounding the back, feet touching the floor (when elevated)"
+    "common_mistakes": "Moving only the arms without rotating the torso, rounding the back, feet touching the floor (when elevated)",
+    "images": [
+      "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Sit on floor with knees bent, feet slightly elevated, lean back to 45 degrees.",
+      "execution": "Rotate torso side to side, touching hands to floor beside each hip.",
+      "mistakes": "Avoid moving only arms without torso rotation, rounding back, feet touching floor.",
+      "breathing": "Exhale as you rotate to each side."
+    }
   },
   {
     "name_en": "Dead Bug",
     "name_ru": "Мёртвый жук",
     "category": "core",
     "body_part": "core",
-    "target_muscles": ["transverse_abdominis", "rectus_abdominis", "obliques"],
+    "target_muscles": [
+      "transverse_abdominis",
+      "rectus_abdominis",
+      "obliques"
+    ],
     "difficulty": "beginner",
     "sets": 3,
     "reps": 10,
     "instructions": "Lie on your back with arms extended toward the ceiling and knees bent at 90 degrees. Press the lower back into the floor. Slowly extend the right arm overhead and the left leg out straight, hovering both just above the floor. Return to starting position and switch sides. The lower back must remain in contact with the floor at all times.",
     "progression": "Arms only → Legs only → Opposite arm-leg → Weighted dead bug (holding light dumbbell)",
-    "common_mistakes": "Lower back arching, moving too quickly, not coordinating breath with movement"
+    "common_mistakes": "Lower back arching, moving too quickly, not coordinating breath with movement",
+    "images": [
+      "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Lie on back with arms toward ceiling, knees bent at 90 degrees, lower back pressed down.",
+      "execution": "Extend opposite arm and leg toward floor, return to start, switch sides.",
+      "mistakes": "Avoid lower back arching, moving too quickly, not coordinating breath.",
+      "breathing": "Exhale as you extend arm and leg, inhale as you return."
+    }
   },
   {
     "name_en": "Flutter Kicks",
     "name_ru": "Махи ногами (ножницы)",
     "category": "core",
     "body_part": "lower_abs",
-    "target_muscles": ["rectus_abdominis", "hip_flexors", "quadriceps"],
+    "target_muscles": [
+      "rectus_abdominis",
+      "hip_flexors",
+      "quadriceps"
+    ],
     "difficulty": "beginner",
     "sets": 3,
     "reps": 30,
     "instructions": "Lie on your back with hands under the glutes or alongside the body. Press the lower back into the floor. Lift both legs about 6 inches off the ground. Alternate kicking the legs up and down in small, rapid motions. Keep the legs straight and the movements controlled. Each kick counts as one rep.",
     "progression": "Higher legs → Lower legs (closer to floor) → Weighted ankles → Hanging flutter kicks",
-    "common_mistakes": "Lower back arching off the floor, legs going too high, holding the breath"
+    "common_mistakes": "Lower back arching off the floor, legs going too high, holding the breath",
+    "images": [
+      "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Lie on back with hands under glutes, lower back pressed into floor, legs slightly elevated.",
+      "execution": "Alternate kicking legs up and down in small rapid motions while keeping them straight.",
+      "mistakes": "Avoid lower back arching, legs going too high, holding breath.",
+      "breathing": "Breathe steadily and rhythmically throughout the movement."
+    }
   },
   {
     "name_en": "L-Sit",
     "name_ru": "L-сидение",
     "category": "core",
     "body_part": "core",
-    "target_muscles": ["rectus_abdominis", "hip_flexors", "triceps_brachii", "quadriceps"],
+    "target_muscles": [
+      "rectus_abdominis",
+      "hip_flexors",
+      "triceps_brachii",
+      "quadriceps"
+    ],
     "difficulty": "advanced",
     "sets": 3,
     "reps": 1,
     "instructions": "Sit on the floor with legs extended. Place hands flat on the floor beside the hips or slightly forward. Press into the hands and lift the entire body off the floor, keeping the legs extended straight and parallel to the floor. The body forms an L-shape. Hold for 10–20 seconds.",
     "progression": "Tuck L-sit (knees bent) → Single-leg L-sit → Full L-sit → Parallel bars L-sit",
-    "common_mistakes": "Shoulders shrugging up, legs not parallel to the floor, bent knees, insufficient wrist flexibility"
+    "common_mistakes": "Shoulders shrugging up, legs not parallel to the floor, bent knees, insufficient wrist flexibility",
+    "images": [
+      "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Sit on floor with legs extended, hands flat on floor beside hips.",
+      "execution": "Press into hands to lift entire body off floor, keep legs straight and parallel to floor.",
+      "mistakes": "Avoid shrugging shoulders, legs not parallel, bent knees, insufficient wrist flexibility.",
+      "breathing": "Breathe steadily, avoid holding breath during the hold."
+    }
   },
   {
     "name_en": "Dragon Flags",
     "name_ru": "Флаг дракона",
     "category": "core",
     "body_part": "core",
-    "target_muscles": ["rectus_abdominis", "transverse_abdominis", "obliques", "hip_flexors", "erector_spinae"],
+    "target_muscles": [
+      "rectus_abdominis",
+      "transverse_abdominis",
+      "obliques",
+      "hip_flexors",
+      "erector_spinae"
+    ],
     "difficulty": "advanced",
     "sets": 3,
     "reps": 5,
     "instructions": "Lie on a flat bench or the floor. Grip the edge of the bench behind the head or hold a sturdy post. Lift the entire body off the bench from the shoulders down, forming a straight line. Slowly lower the body toward the bench while maintaining the rigid straight line — only the upper back and shoulders remain on the bench. Do not let the hips bend. Raise back up.",
     "progression": "Negative dragon flags (lowering only) → Tuck dragon flags → Single-leg → Full dragon flag",
-    "common_mistakes": "Bending at the hips, using momentum, lowering too fast, insufficient core tension"
+    "common_mistakes": "Bending at the hips, using momentum, lowering too fast, insufficient core tension",
+    "images": [
+      "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Lie on bench or floor, grip edge behind head or hold a sturdy post.",
+      "execution": "Lift body from shoulders down forming straight line, lower slowly maintaining rigid form.",
+      "mistakes": "Avoid bending at hips, using momentum, lowering too fast, insufficient core tension.",
+      "breathing": "Inhale at the top, exhale as you lower with control."
+    }
   },
   {
     "name_en": "Ab Wheel Rollout",
     "name_ru": "Выкатывание с колесом для пресса",
     "category": "core",
     "body_part": "core",
-    "target_muscles": ["rectus_abdominis", "transverse_abdominis", "latissimus_dorsi", "obliques", "hip_flexors"],
+    "target_muscles": [
+      "rectus_abdominis",
+      "transverse_abdominis",
+      "latissimus_dorsi",
+      "obliques",
+      "hip_flexors"
+    ],
     "difficulty": "intermediate",
     "sets": 3,
     "reps": 8,
     "instructions": "Kneel on the floor and grip the ab wheel with both hands. Engage the core and slowly roll the wheel forward, extending the body. Go as far as you can while maintaining a tight core and not letting the hips sag. Pull the wheel back toward the knees by contracting the abs. Keep the arms straight throughout.",
     "progression": "Partial rollout → Full rollout from knees → Standing rollout (advanced)",
-    "common_mistakes": "Hips sagging, lower back arching, leading with the arms instead of the core, going too far too soon"
+    "common_mistakes": "Hips sagging, lower back arching, leading with the arms instead of the core, going too far too soon",
+    "images": [
+      "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Kneel on floor, grip ab wheel with both hands, core engaged.",
+      "execution": "Roll wheel forward extending body, pull back by contracting abs, keep arms straight.",
+      "mistakes": "Avoid hips sagging, lower back arching, leading with arms, going too far too soon.",
+      "breathing": "Inhale as you roll out, exhale as you pull back."
+    }
   },
   {
     "name_en": "Windshield Wipers",
     "name_ru": "Дворники",
     "category": "core",
     "body_part": "obliques",
-    "target_muscles": ["obliques", "rectus_abdominis", "hip_flexors"],
+    "target_muscles": [
+      "obliques",
+      "rectus_abdominis",
+      "hip_flexors"
+    ],
     "difficulty": "advanced",
     "sets": 3,
     "reps": 8,
     "instructions": "Lie on your back with arms extended to the sides for support. Raise both legs straight up toward the ceiling. Keeping the legs together and straight, slowly lower them to the right side toward the floor. Before they touch the floor, reverse the movement and bring them to the left side. Continue alternating sides in a controlled wiping motion.",
     "progression": "Bent-knee wipers → Straight-leg floor wipers → Hanging windshield wipers",
-    "common_mistakes": "Shoulders lifting off the floor, lowering the legs too fast, bending the knees"
+    "common_mistakes": "Shoulders lifting off the floor, lowering the legs too fast, bending the knees",
+    "images": [
+      "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Lie on back with arms extended to sides, both legs raised straight toward ceiling.",
+      "execution": "Keeping legs together and straight, lower them to one side then the other in a wiping motion.",
+      "mistakes": "Avoid shoulders lifting off floor, lowering legs too fast, bending knees.",
+      "breathing": "Exhale as you lower legs to the side, inhale as you bring them back up."
+    }
   },
   {
     "name_en": "Burpees",
     "name_ru": "Бёрпи",
     "category": "cardio",
     "body_part": "full_body",
-    "target_muscles": ["quadriceps", "gluteals", "pectoralis_major", "deltoids", "triceps_brachii", "core"],
+    "target_muscles": [
+      "quadriceps",
+      "gluteals",
+      "pectoralis_major",
+      "deltoids",
+      "triceps_brachii",
+      "core"
+    ],
     "difficulty": "intermediate",
     "sets": 3,
     "reps": 10,
     "instructions": "Stand with feet shoulder-width apart. Squat down and place the hands on the floor. Jump the feet back into a plank position. Perform a push-up (optional). Jump the feet forward to the hands. Explode upward into a jump with arms overhead. Land softly and immediately go into the next rep.",
     "progression": "Step-back burpees (no jump) → Standard burpees → Burpee with push-up → Burpee with tuck jump",
-    "common_mistakes": "Not going all the way to the floor, skipping the push-up, landing with stiff legs, resting between reps"
+    "common_mistakes": "Not going all the way to the floor, skipping the push-up, landing with stiff legs, resting between reps",
+    "images": [
+      "https://images.unsplash.com/photo-1601422407692-ec4eeec1d9b3?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Stand with feet shoulder-width apart.",
+      "execution": "Squat down, jump feet back to plank, optional push-up, jump feet forward, leap up with arms overhead.",
+      "mistakes": "Avoid not going to the floor, skipping push-up, landing with stiff legs.",
+      "breathing": "Inhale during the squat, exhale during the jump up."
+    }
   },
   {
     "name_en": "Jumping Jacks",
     "name_ru": "Прыжки «ноги вместе — ноги врозь»",
     "category": "cardio",
     "body_part": "full_body",
-    "target_muscles": ["calves", "quadriceps", "hip_abductors", "deltoids", "latissimus_dorsi"],
+    "target_muscles": [
+      "calves",
+      "quadriceps",
+      "hip_abductors",
+      "deltoids",
+      "latissimus_dorsi"
+    ],
     "difficulty": "beginner",
     "sets": 3,
     "reps": 30,
     "instructions": "Stand with feet together and arms at the sides. Jump and simultaneously spread the feet wider than shoulder-width and raise the arms overhead. Jump again to return to the starting position with feet together and arms at the sides. Maintain a brisk, steady rhythm.",
     "progression": "Half jacks (arms only to shoulder height) → Standard → Plyo jacks (deeper squat) → Star jumps",
-    "common_mistakes": "Flat-footed landing, arms not reaching full extension, uneven rhythm"
+    "common_mistakes": "Flat-footed landing, arms not reaching full extension, uneven rhythm",
+    "images": [
+      "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Stand with feet together and arms at sides.",
+      "execution": "Jump feet apart while raising arms overhead, jump back to start. Maintain steady rhythm.",
+      "mistakes": "Avoid flat-footed landing, arms not reaching full extension, uneven rhythm.",
+      "breathing": "Inhale as you jump out, exhale as you jump back together."
+    }
   },
   {
     "name_en": "High Knees",
     "name_ru": "Бег с высоким подниманием колен",
     "category": "cardio",
     "body_part": "legs",
-    "target_muscles": ["hip_flexors", "quadriceps", "calves", "core"],
+    "target_muscles": [
+      "hip_flexors",
+      "quadriceps",
+      "calves",
+      "core"
+    ],
     "difficulty": "beginner",
     "sets": 3,
     "reps": 30,
     "instructions": "Stand with feet hip-width apart. Run in place, driving the knees up to hip height or higher with each step. Pump the arms in opposition to the legs (right arm with left knee). Land on the balls of the feet. Maintain a fast pace while keeping the core engaged.",
     "progression": "March in place → Standard high knees → Sprinting high knees → Banded high knees",
-    "common_mistakes": "Leaning backward, knees not reaching hip height, landing flat-footed"
+    "common_mistakes": "Leaning backward, knees not reaching hip height, landing flat-footed",
+    "images": [
+      "https://images.unsplash.com/photo-1538805060514-97d9cc17730c?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Stand with feet hip-width apart, arms ready at sides.",
+      "execution": "Run in place driving knees to hip height, pump arms opposite to legs at a fast pace.",
+      "mistakes": "Avoid leaning backward, knees not reaching hip height, landing flat-footed.",
+      "breathing": "Breathe rhythmically matching your running pace."
+    }
   },
   {
     "name_en": "Butt Kicks",
     "name_ru": "Бег с захлёстом голени",
     "category": "cardio",
     "body_part": "legs",
-    "target_muscles": ["hamstrings", "calves", "quadriceps"],
+    "target_muscles": [
+      "hamstrings",
+      "calves",
+      "quadriceps"
+    ],
     "difficulty": "beginner",
     "sets": 3,
     "reps": 30,
     "instructions": "Stand with feet hip-width apart. Jog in place, kicking the heels up toward the buttocks with each step. Keep the thighs relatively stationary — the movement comes from bending the knee. Pump the arms naturally. Maintain a quick rhythm.",
     "progression": "Slow jog kicks → Standard pace → Sprinting butt kicks",
-    "common_mistakes": "Leaning forward excessively, heels not reaching the buttocks, slow pace"
+    "common_mistakes": "Leaning forward excessively, heels not reaching the buttocks, slow pace",
+    "images": [
+      "https://images.unsplash.com/photo-1538805060514-97d9cc17730c?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Stand with feet hip-width apart.",
+      "execution": "Jog in place kicking heels up toward buttocks, pump arms naturally at quick rhythm.",
+      "mistakes": "Avoid leaning forward excessively, heels not reaching buttocks, slow pace.",
+      "breathing": "Breathe rhythmically matching your jogging pace."
+    }
   },
   {
     "name_en": "Skaters",
     "name_ru": "Конькобежец",
     "category": "cardio",
     "body_part": "legs",
-    "target_muscles": ["gluteals", "quadriceps", "hip_abductors", "calves", "core"],
+    "target_muscles": [
+      "gluteals",
+      "quadriceps",
+      "hip_abductors",
+      "calves",
+      "core"
+    ],
     "difficulty": "intermediate",
     "sets": 3,
     "reps": 20,
     "instructions": "Stand on the right leg. Jump laterally to the left, landing on the left foot. Swing the right leg behind the left ankle. Touch the floor with the right hand if desired. Immediately jump to the right, landing on the right foot with the left leg behind. Continue alternating in a skating motion.",
     "progression": "Small lateral hops → Standard skaters → Wide skaters with floor touch → Bounding skaters",
-    "common_mistakes": "Landing with a stiff knee, not absorbing the landing, insufficient lateral reach"
+    "common_mistakes": "Landing with a stiff knee, not absorbing the landing, insufficient lateral reach",
+    "images": [
+      "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Stand on one leg, ready to jump laterally.",
+      "execution": "Jump laterally landing on opposite foot, swing trailing leg behind, alternate sides.",
+      "mistakes": "Avoid landing with stiff knee, not absorbing landing, insufficient lateral reach.",
+      "breathing": "Exhale as you jump, inhale as you land and absorb."
+    }
   },
   {
     "name_en": "Bear Crawl",
     "name_ru": "Медвежья ходьба",
     "category": "cardio",
     "body_part": "full_body",
-    "target_muscles": ["deltoids", "core", "quadriceps", "hip_flexors", "pectoralis_major"],
+    "target_muscles": [
+      "deltoids",
+      "core",
+      "quadriceps",
+      "hip_flexors",
+      "pectoralis_major"
+    ],
     "difficulty": "intermediate",
     "sets": 3,
     "reps": 1,
     "instructions": "Start on hands and knees. Lift the knees 1–2 inches off the floor. Move forward by stepping the right hand and left foot forward simultaneously, then the left hand and right foot. Keep the hips low and the back flat. Crawl forward for 20–30 feet, then crawl backward to the starting point.",
     "progression": "Slow bear crawl → Standard pace → Backward bear crawl → Lateral bear crawl",
-    "common_mistakes": "Hips rising too high, same-side hand and foot moving together, holding breath"
+    "common_mistakes": "Hips rising too high, same-side hand and foot moving together, holding breath",
+    "images": [
+      "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Start on hands and knees, lift knees 1-2 inches off floor.",
+      "execution": "Move forward stepping opposite hand and foot simultaneously, keep hips low and back flat.",
+      "mistakes": "Avoid hips rising too high, same-side hand and foot moving together, holding breath.",
+      "breathing": "Breathe steadily throughout the crawl."
+    }
   },
   {
     "name_en": "Broad Jumps",
     "name_ru": "Прыжки в длину",
     "category": "cardio",
     "body_part": "legs",
-    "target_muscles": ["quadriceps", "gluteals", "hamstrings", "calves", "core"],
+    "target_muscles": [
+      "quadriceps",
+      "gluteals",
+      "hamstrings",
+      "calves",
+      "core"
+    ],
     "difficulty": "intermediate",
     "sets": 3,
     "reps": 6,
     "instructions": "Stand with feet shoulder-width apart. Swing the arms back while bending the knees. Explosively jump forward as far as possible, swinging the arms forward and driving through the hips. Land softly with the knees bent, absorbing the impact. Stand, reset, and repeat.",
     "progression": "Half-effort jumps → Full effort → Consecutive broad jumps (no reset) → Weighted vest",
-    "common_mistakes": "Landing with stiff legs, not using the arms, poor hip extension at takeoff"
+    "common_mistakes": "Landing with stiff legs, not using the arms, poor hip extension at takeoff",
+    "images": [
+      "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Stand with feet shoulder-width apart, ready to jump forward.",
+      "execution": "Swing arms back, explosively jump forward as far as possible, land softly with bent knees.",
+      "mistakes": "Avoid landing with stiff legs, not using arms, poor hip extension at takeoff.",
+      "breathing": "Exhale as you jump, inhale as you land and reset."
+    }
   },
   {
     "name_en": "Tuck Jumps",
     "name_ru": "Прыжки с подтягиванием колен",
     "category": "cardio",
     "body_part": "legs",
-    "target_muscles": ["quadriceps", "gluteals", "calves", "hip_flexors", "core"],
+    "target_muscles": [
+      "quadriceps",
+      "gluteals",
+      "calves",
+      "hip_flexors",
+      "core"
+    ],
     "difficulty": "intermediate",
     "sets": 3,
     "reps": 8,
     "instructions": "Stand with feet shoulder-width apart. Bend the knees slightly and jump vertically as high as possible. At the peak of the jump, tuck the knees toward the chest, grabbing the shins briefly if possible. Release and land softly with knees bent. Reset and repeat immediately.",
     "progression": "Squat jumps → Half tuck → Full tuck jumps → Consecutive rapid tuck jumps",
-    "common_mistakes": "Not jumping high enough, landing with stiff legs, leaning forward during the tuck"
+    "common_mistakes": "Not jumping high enough, landing with stiff legs, leaning forward during the tuck",
+    "images": [
+      "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=400&h=300&fit=crop"
+    ],
+    "form_tips": {
+      "setup": "Stand with feet shoulder-width apart, knees slightly bent.",
+      "execution": "Jump vertically as high as possible, tuck knees toward chest at peak, land softly.",
+      "mistakes": "Avoid not jumping high enough, landing with stiff legs, leaning forward during tuck.",
+      "breathing": "Exhale as you jump and tuck, inhale as you land."
+    }
   }
 ]

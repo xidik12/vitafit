@@ -754,14 +754,19 @@ def _weight_loss_day(
         picks = random.sample(bw_cardio, min(2, len(bw_cardio)))
         each_mins = max(1, cardio_mins // len(picks))
         for c in picks:
-            day_exercises.append({
+            entry = {
                 "name_en": c["name_en"],
                 "name_ru": c["name_ru"],
                 "type": "cardio",
                 "duration_mins": each_mins,
                 "instructions": c.get("instructions", ""),
                 "difficulty": c.get("difficulty", "beginner"),
-            })
+            }
+            if c.get("images"):
+                entry["images"] = c["images"]
+            if c.get("form_tips"):
+                entry["form_tips"] = c["form_tips"]
+            day_exercises.append(entry)
     else:
         cardio_pool = _bodyweight_fallback("cardio", 2)
         for c in cardio_pool:
@@ -791,7 +796,7 @@ def _weight_loss_day(
         needed = 3 - len(resolved)
         picks = random.sample(bw_strength, min(needed, len(bw_strength)))
         for e in picks:
-            resolved.append({
+            entry = {
                 "name_en": e["name_en"],
                 "name_ru": e["name_ru"],
                 "type": "strength",
@@ -800,7 +805,12 @@ def _weight_loss_day(
                 "sets": sets,
                 "reps": e.get("reps", reps),
                 "instructions": e.get("instructions", ""),
-            })
+            }
+            if e.get("images"):
+                entry["images"] = e["images"]
+            if e.get("form_tips"):
+                entry["form_tips"] = e["form_tips"]
+            resolved.append(entry)
     day_exercises.extend(resolved)
 
     # --- Cool-down stretch (prefer stretching_routines.json) ---
@@ -881,7 +891,7 @@ def _muscle_day(
         needed = 4 - len(day_exercises)
         picks = random.sample(bw_pool, min(needed, len(bw_pool)))
         for e in picks:
-            day_exercises.append({
+            entry = {
                 "name_en": e["name_en"],
                 "name_ru": e["name_ru"],
                 "type": "strength",
@@ -890,7 +900,12 @@ def _muscle_day(
                 "sets": sets,
                 "reps": e.get("reps", reps),
                 "instructions": e.get("instructions", ""),
-            })
+            }
+            if e.get("images"):
+                entry["images"] = e["images"]
+            if e.get("form_tips"):
+                entry["form_tips"] = e["form_tips"]
+            day_exercises.append(entry)
     elif len(day_exercises) < 4:
         # Last resort: hardcoded fallback
         fallback = _bodyweight_fallback("strength", 4 - len(day_exercises))
@@ -1130,14 +1145,19 @@ def _general_health_day(
     if bw_cardio:
         cardio_pick = random.sample(bw_cardio, min(1, len(bw_cardio)))
         for c in cardio_pick:
-            day_exercises.append({
+            entry = {
                 "name_en": c["name_en"],
                 "name_ru": c["name_ru"],
                 "type": "cardio",
                 "duration_mins": 10,
                 "instructions": c.get("instructions", ""),
                 "difficulty": c.get("difficulty", "beginner"),
-            })
+            }
+            if c.get("images"):
+                entry["images"] = c["images"]
+            if c.get("form_tips"):
+                entry["form_tips"] = c["form_tips"]
+            day_exercises.append(entry)
     else:
         cardio = _bodyweight_fallback("cardio", 1)
         for c in cardio:
@@ -1160,7 +1180,7 @@ def _general_health_day(
         if bw_strength:
             picks = random.sample(bw_strength, min(needed, len(bw_strength)))
             for e in picks:
-                resolved.append({
+                entry = {
                     "name_en": e["name_en"],
                     "name_ru": e["name_ru"],
                     "type": "strength",
@@ -1169,7 +1189,12 @@ def _general_health_day(
                     "sets": 3,
                     "reps": e.get("reps", 12),
                     "instructions": e.get("instructions", ""),
-                })
+                }
+                if e.get("images"):
+                    entry["images"] = e["images"]
+                if e.get("form_tips"):
+                    entry["form_tips"] = e["form_tips"]
+                resolved.append(entry)
     day_exercises.extend(resolved)
 
     # Cool-down rotation
@@ -1322,6 +1347,13 @@ def _bodyweight_fallback(ex_type: str, count: int) -> list[dict]:
                 "reps": 12,
                 "instructions_en": "Start in a high plank. Lower chest to floor, then press back up. Keep body straight.",
                 "instructions_ru": "Примите упор лёжа. Опустите грудь к полу, затем выжмитесь вверх. Держите тело прямым.",
+                "images": ["https://images.unsplash.com/photo-1598971639058-fab3c3109a00?w=400&h=300&fit=crop"],
+                "form_tips": {
+                    "setup": "High plank position, hands slightly wider than shoulder-width, body straight from head to heels.",
+                    "execution": "Lower chest to floor by bending elbows to 90 degrees, then press back up to full extension.",
+                    "mistakes": "Avoid sagging hips, flaring elbows wider than 45 degrees, and incomplete range of motion.",
+                    "breathing": "Inhale as you lower down, exhale as you push up."
+                },
             },
             {
                 "name_en": "Squats",
@@ -1332,6 +1364,13 @@ def _bodyweight_fallback(ex_type: str, count: int) -> list[dict]:
                 "reps": 15,
                 "instructions_en": "Stand feet shoulder-width apart. Sit hips back and down to parallel, then drive up through heels.",
                 "instructions_ru": "Встаньте на ширину плеч. Отведите бёдра назад и вниз до параллели, затем поднимитесь через пятки.",
+                "images": ["https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=400&h=300&fit=crop"],
+                "form_tips": {
+                    "setup": "Stand with feet shoulder-width apart, toes slightly outward, arms forward for balance.",
+                    "execution": "Push hips back and bend knees to lower until thighs are parallel, drive through heels to stand.",
+                    "mistakes": "Avoid knees caving inward, rising on toes, rounding the back, insufficient depth.",
+                    "breathing": "Inhale as you lower, exhale as you stand up."
+                },
             },
             {
                 "name_en": "Reverse Lunges",
@@ -1342,6 +1381,13 @@ def _bodyweight_fallback(ex_type: str, count: int) -> list[dict]:
                 "reps": 12,
                 "instructions_en": "Step one foot back and lower the rear knee toward the floor. Return to standing. Alternate legs.",
                 "instructions_ru": "Шагните одной ногой назад и опустите заднее колено к полу. Вернитесь в исходное положение. Чередуйте ноги.",
+                "images": ["https://images.unsplash.com/photo-1434682881908-b43d0467b798?w=400&h=300&fit=crop"],
+                "form_tips": {
+                    "setup": "Stand tall with feet together, prepare to step backward.",
+                    "execution": "Step one foot back 2-3 feet, lower until both knees at 90 degrees, press through front heel.",
+                    "mistakes": "Avoid not stepping far enough back, leaning forward, front knee caving inward.",
+                    "breathing": "Inhale as you step back and lower, exhale as you return."
+                },
             },
             {
                 "name_en": "Plank Hold",
@@ -1351,6 +1397,13 @@ def _bodyweight_fallback(ex_type: str, count: int) -> list[dict]:
                 "duration_mins": 1,
                 "instructions_en": "Hold a forearm plank with body in a straight line from head to heels. Brace the abs and glutes.",
                 "instructions_ru": "Удерживайте планку на предплечьях, тело — прямая линия от головы до пяток. Напрягите пресс и ягодицы.",
+                "images": ["https://images.unsplash.com/photo-1566241142559-40e1dab266c6?w=400&h=300&fit=crop"],
+                "form_tips": {
+                    "setup": "Forearms and toes on floor, elbows directly under shoulders, body in straight line.",
+                    "execution": "Engage core by pulling navel toward spine, hold position for the prescribed duration.",
+                    "mistakes": "Avoid sagging hips, piking the hips, holding breath, head dropping.",
+                    "breathing": "Breathe steadily and rhythmically throughout the hold."
+                },
             },
             {
                 "name_en": "Glute Bridges",
@@ -1361,6 +1414,13 @@ def _bodyweight_fallback(ex_type: str, count: int) -> list[dict]:
                 "reps": 15,
                 "instructions_en": "Lie on back with knees bent. Drive hips up by squeezing glutes, hold 2 seconds at top, lower.",
                 "instructions_ru": "Лягте на спину, колени согнуты. Поднимите бёдра, сжимая ягодицы, удержите 2 секунды, опустите.",
+                "images": ["https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop"],
+                "form_tips": {
+                    "setup": "Lie on back with knees bent, feet flat on floor hip-width apart.",
+                    "execution": "Press through heels to lift hips until body is straight from shoulders to knees, squeeze glutes.",
+                    "mistakes": "Avoid hyperextending lower back, pushing through toes, not squeezing glutes.",
+                    "breathing": "Exhale as you lift hips, inhale as you lower."
+                },
             },
             {
                 "name_en": "Tricep Dips",
@@ -1371,6 +1431,13 @@ def _bodyweight_fallback(ex_type: str, count: int) -> list[dict]:
                 "reps": 12,
                 "instructions_en": "Place hands on a chair behind you. Lower body by bending elbows to 90°, then press back up.",
                 "instructions_ru": "Поставьте руки на стул сзади. Опуститесь, сгибая локти до 90°, затем поднимитесь.",
+                "images": ["https://images.unsplash.com/photo-1597347316205-36f6c451902a?w=400&h=300&fit=crop"],
+                "form_tips": {
+                    "setup": "Sit on edge of chair, hands gripping edge beside hips, walk feet forward.",
+                    "execution": "Lower body by bending elbows to 90 degrees, then press back up to full extension.",
+                    "mistakes": "Avoid going too deep causing shoulder strain, shrugging shoulders, elbows flaring.",
+                    "breathing": "Inhale as you lower, exhale as you press up."
+                },
             },
             {
                 "name_en": "Superman Hold",
@@ -1381,6 +1448,13 @@ def _bodyweight_fallback(ex_type: str, count: int) -> list[dict]:
                 "reps": 12,
                 "instructions_en": "Lie face down. Simultaneously lift arms, chest, and legs off floor. Hold 2 seconds. Lower slowly.",
                 "instructions_ru": "Лягте лицом вниз. Одновременно поднимите руки, грудь и ноги от пола. Задержите на 2 секунды.",
+                "images": ["https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=400&h=300&fit=crop"],
+                "form_tips": {
+                    "setup": "Lie face down on the floor with arms extended overhead and legs straight.",
+                    "execution": "Simultaneously lift arms, chest, and legs off the floor, hold 2 seconds, lower slowly.",
+                    "mistakes": "Avoid jerking up, hyperextending the neck, not lifting legs enough.",
+                    "breathing": "Inhale to prepare, exhale as you lift, breathe steadily during hold."
+                },
             },
             {
                 "name_en": "Burpees",
@@ -1391,6 +1465,13 @@ def _bodyweight_fallback(ex_type: str, count: int) -> list[dict]:
                 "reps": 8,
                 "instructions_en": "Stand, drop to plank, do a push-up, jump feet to hands, then leap up with arms overhead.",
                 "instructions_ru": "Встаньте, примите упор лёжа, сделайте отжимание, прыжком подтяните ноги к рукам, выпрыгните вверх.",
+                "images": ["https://images.unsplash.com/photo-1601422407692-ec4eeec1d9b3?w=400&h=300&fit=crop"],
+                "form_tips": {
+                    "setup": "Stand with feet shoulder-width apart.",
+                    "execution": "Squat down, jump feet back to plank, optional push-up, jump feet forward, leap up with arms overhead.",
+                    "mistakes": "Avoid not going all the way to the floor, skipping push-up, landing with stiff legs.",
+                    "breathing": "Inhale during the squat, exhale during the jump up."
+                },
             },
         ],
         "cardio": [
@@ -1402,6 +1483,13 @@ def _bodyweight_fallback(ex_type: str, count: int) -> list[dict]:
                 "duration_mins": 5,
                 "instructions_en": "Jump feet apart while raising arms overhead, then jump feet together while lowering arms. Continuous rhythm.",
                 "instructions_ru": "Прыгайте, расставляя ноги и поднимая руки над головой, затем сводите ноги и опускайте руки. Непрерывный ритм.",
+                "images": ["https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=400&h=300&fit=crop"],
+                "form_tips": {
+                    "setup": "Stand with feet together and arms at sides.",
+                    "execution": "Jump feet apart while raising arms overhead, jump back to start. Maintain steady rhythm.",
+                    "mistakes": "Avoid flat-footed landing, arms not reaching full extension, uneven rhythm.",
+                    "breathing": "Inhale as you jump out, exhale as you jump back together."
+                },
             },
             {
                 "name_en": "High Knees",
@@ -1411,6 +1499,13 @@ def _bodyweight_fallback(ex_type: str, count: int) -> list[dict]:
                 "duration_mins": 3,
                 "instructions_en": "Run in place, driving knees up to hip height alternately. Pump arms naturally. Keep a fast pace.",
                 "instructions_ru": "Бегите на месте, поднимая колени до уровня бёдер. Работайте руками. Поддерживайте быстрый темп.",
+                "images": ["https://images.unsplash.com/photo-1538805060514-97d9cc17730c?w=400&h=300&fit=crop"],
+                "form_tips": {
+                    "setup": "Stand with feet hip-width apart, arms ready at sides.",
+                    "execution": "Run in place driving knees to hip height, pump arms opposite to legs at a fast pace.",
+                    "mistakes": "Avoid leaning backward, knees not reaching hip height, landing flat-footed.",
+                    "breathing": "Breathe rhythmically matching your running pace."
+                },
             },
             {
                 "name_en": "Brisk Walking",
@@ -1421,6 +1516,13 @@ def _bodyweight_fallback(ex_type: str, count: int) -> list[dict]:
                 "intensity": "moderate",
                 "instructions_en": "Walk at a brisk pace where you can speak but feel slightly breathless. Swing arms naturally.",
                 "instructions_ru": "Идите в быстром темпе — вы можете говорить, но слегка задыхаетесь. Естественно работайте руками.",
+                "images": ["https://images.unsplash.com/photo-1538805060514-97d9cc17730c?w=400&h=300&fit=crop"],
+                "form_tips": {
+                    "setup": "Wear comfortable shoes, stand tall with shoulders relaxed.",
+                    "execution": "Walk at a brisk pace, swing arms naturally, maintain an upright posture.",
+                    "mistakes": "Avoid slouching, looking down at the ground, taking too-short steps.",
+                    "breathing": "Breathe naturally and rhythmically, in through the nose and out through the mouth."
+                },
             },
             {
                 "name_en": "Running in Place",
@@ -1430,6 +1532,13 @@ def _bodyweight_fallback(ex_type: str, count: int) -> list[dict]:
                 "duration_mins": 10,
                 "instructions_en": "Run on the spot with light footsteps. Land softly on the balls of the feet. Maintain upright posture.",
                 "instructions_ru": "Бегите на месте с лёгкими шагами. Мягко приземляйтесь на подушечки стоп. Держите прямую осанку.",
+                "images": ["https://images.unsplash.com/photo-1538805060514-97d9cc17730c?w=400&h=300&fit=crop"],
+                "form_tips": {
+                    "setup": "Stand with feet hip-width apart in an open space.",
+                    "execution": "Run on the spot with light footsteps, landing softly on balls of feet, upright posture.",
+                    "mistakes": "Avoid landing flat-footed, leaning too far forward, excessive arm swing.",
+                    "breathing": "Breathe rhythmically, in through the nose and out through the mouth."
+                },
             },
             {
                 "name_en": "Mountain Climbers",
@@ -1439,6 +1548,13 @@ def _bodyweight_fallback(ex_type: str, count: int) -> list[dict]:
                 "duration_mins": 2,
                 "instructions_en": "In high plank, drive knees to chest alternately in a running motion. Keep hips level. Move fast.",
                 "instructions_ru": "В упоре лёжа поочерёдно подтягивайте колени к груди в беговом движении. Удерживайте бёдра ровно.",
+                "images": ["https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=400&h=300&fit=crop"],
+                "form_tips": {
+                    "setup": "High plank position with hands directly under shoulders.",
+                    "execution": "Drive knees toward chest alternately at a brisk pace, keeping hips level.",
+                    "mistakes": "Avoid hips bouncing up and down, hands drifting forward, knees not far enough.",
+                    "breathing": "Breathe rhythmically matching the pace of your knees."
+                },
             },
         ],
         "flexibility": [
@@ -1450,6 +1566,13 @@ def _bodyweight_fallback(ex_type: str, count: int) -> list[dict]:
                 "duration_mins": 2,
                 "instructions_en": "Sit on the floor, one leg extended. Reach toward the toes of the extended leg. Hold 30 seconds each side.",
                 "instructions_ru": "Сядьте на пол, одна нога вытянута. Потянитесь к носку вытянутой ноги. Удержите 30 секунд с каждой стороны.",
+                "images": ["https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=400&h=300&fit=crop"],
+                "form_tips": {
+                    "setup": "Sit on the floor with one leg extended and the other bent.",
+                    "execution": "Reach toward the toes of the extended leg, feeling the stretch in the hamstring.",
+                    "mistakes": "Avoid rounding the back excessively, bouncing in the stretch, forcing the range.",
+                    "breathing": "Breathe deeply, exhale as you reach further into the stretch."
+                },
             },
             {
                 "name_en": "Cat-Cow Stretch",
@@ -1459,6 +1582,13 @@ def _bodyweight_fallback(ex_type: str, count: int) -> list[dict]:
                 "duration_mins": 2,
                 "instructions_en": "On hands and knees: arch back up (cat) on exhale, dip back down (cow) on inhale. Flow slowly 10 times.",
                 "instructions_ru": "На четвереньках: на выдохе выгните спину вверх (кошка), на вдохе — вниз (корова). Медленно 10 раз.",
+                "images": ["https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=400&h=300&fit=crop"],
+                "form_tips": {
+                    "setup": "Start on hands and knees, wrists under shoulders, knees under hips.",
+                    "execution": "Arch back up on exhale (cat), dip back down on inhale (cow), flow slowly.",
+                    "mistakes": "Avoid rushing the movement, not engaging the core, straining the neck.",
+                    "breathing": "Exhale as you round the back (cat), inhale as you arch down (cow)."
+                },
             },
             {
                 "name_en": "Child's Pose",
@@ -1468,6 +1598,13 @@ def _bodyweight_fallback(ex_type: str, count: int) -> list[dict]:
                 "duration_mins": 2,
                 "instructions_en": "Kneel and sit back on heels. Stretch arms forward on the floor and rest forehead down. Hold and breathe.",
                 "instructions_ru": "Встаньте на колени и сядьте на пятки. Вытяните руки вперёд по полу, лоб — вниз. Удерживайте и дышите.",
+                "images": ["https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=400&h=300&fit=crop"],
+                "form_tips": {
+                    "setup": "Kneel on the floor and sit back on your heels.",
+                    "execution": "Stretch arms forward on the floor, rest forehead down, relax and hold.",
+                    "mistakes": "Avoid tensing the shoulders, not sitting back far enough, holding breath.",
+                    "breathing": "Breathe deeply and slowly, allowing the body to relax with each exhale."
+                },
             },
             {
                 "name_en": "Seated Forward Bend",
@@ -1477,6 +1614,13 @@ def _bodyweight_fallback(ex_type: str, count: int) -> list[dict]:
                 "duration_mins": 2,
                 "instructions_en": "Sit with both legs extended. Hinge forward from the hips (not waist) reaching hands toward feet. Hold 30 seconds.",
                 "instructions_ru": "Сядьте с вытянутыми ногами. Наклонитесь вперёд от тазобедренных суставов, тянитесь руками к стопам. Удержите 30 секунд.",
+                "images": ["https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=400&h=300&fit=crop"],
+                "form_tips": {
+                    "setup": "Sit on the floor with both legs extended straight in front.",
+                    "execution": "Hinge forward from the hips reaching hands toward feet, hold the stretch.",
+                    "mistakes": "Avoid rounding the back, hinging from the waist instead of hips, bouncing.",
+                    "breathing": "Exhale as you fold forward, breathe deeply in the hold."
+                },
             },
             {
                 "name_en": "Pigeon Pose (Hip Opener)",
@@ -1486,6 +1630,13 @@ def _bodyweight_fallback(ex_type: str, count: int) -> list[dict]:
                 "duration_mins": 3,
                 "instructions_en": "From high plank, bring right knee forward and place it behind right wrist. Extend left leg back. Fold forward. Hold 60 seconds each side.",
                 "instructions_ru": "Из упора лёжа подтяните правое колено к правому запястью. Вытяните левую ногу назад. Наклонитесь вперёд. Удержите 60 секунд на сторону.",
+                "images": ["https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=400&h=300&fit=crop"],
+                "form_tips": {
+                    "setup": "From high plank, bring one knee forward behind the same-side wrist.",
+                    "execution": "Extend the back leg, fold forward over the front leg, hold 60 seconds each side.",
+                    "mistakes": "Avoid forcing the stretch, not squaring the hips, collapsing into the front knee.",
+                    "breathing": "Breathe deeply, exhale to relax further into the stretch."
+                },
             },
         ],
     }

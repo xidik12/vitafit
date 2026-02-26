@@ -43,6 +43,13 @@ async def lifespan(app: FastAPI):
     except Exception as e:
         logger.error(f"Seed global foods failed: {e}")
 
+    # Seed recipes with images and ingredients
+    try:
+        from app.scheduler.jobs import seed_recipes
+        await seed_recipes()
+    except Exception as e:
+        logger.error(f"Seed recipes failed: {e}")
+
     # Load exercises from Free Exercise DB
     try:
         from app.collectors.exercise_db import load_exercises

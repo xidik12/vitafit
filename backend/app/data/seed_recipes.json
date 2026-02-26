@@ -1,0 +1,2932 @@
+[
+  {
+    "title_en": "Classic Oatmeal with Banana and Honey",
+    "title_ru": "Классическая овсянка с бананом и мёдом",
+    "image_url": "https://images.unsplash.com/photo-1517673400267-0251440c45dc?w=400&h=300&fit=crop",
+    "calories_per_serving": 350,
+    "protein": 12,
+    "carbs": 58,
+    "fat": 7,
+    "cook_time_mins": 10,
+    "servings": 1,
+    "diet_type": "halal",
+    "cuisine": "international",
+    "instructions_json": [
+      "Bring 1 cup of water or milk to a boil.",
+      "Add oats, reduce heat, and cook for 5 minutes.",
+      "Slice banana and place on top.",
+      "Drizzle with honey and serve."
+    ],
+    "instructions": "Bring 1 cup of water or milk to a boil. Add oats, reduce heat, and cook for 5 minutes. Slice banana and place on top. Drizzle with honey and serve.",
+    "instructions_ru": "Доведите 1 стакан воды или молока до кипения. Добавьте овсянку, уменьшите огонь и варите 5 минут. Нарежьте банан и выложите сверху. Полейте мёдом и подавайте.",
+    "youtube_url": null,
+    "ingredients": [
+      {
+        "name": "Rolled oats",
+        "amount": "80",
+        "unit": "g"
+      },
+      {
+        "name": "Banana",
+        "amount": "1",
+        "unit": "pc"
+      },
+      {
+        "name": "Honey",
+        "amount": "1",
+        "unit": "tbsp"
+      },
+      {
+        "name": "Milk",
+        "amount": "200",
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "title_en": "Scrambled Eggs with Wholegrain Toast",
+    "title_ru": "Яичница-болтунья с цельнозерновым тостом",
+    "image_url": "https://images.unsplash.com/photo-1525351484163-7529414344d8?w=400&h=300&fit=crop",
+    "calories_per_serving": 420,
+    "protein": 22,
+    "carbs": 38,
+    "fat": 18,
+    "cook_time_mins": 10,
+    "servings": 1,
+    "diet_type": "halal",
+    "cuisine": "international",
+    "instructions_json": [
+      "Crack 3 eggs into a bowl and whisk with salt and pepper.",
+      "Melt butter in a non-stick pan over medium heat.",
+      "Pour eggs and stir gently until just set.",
+      "Serve with toasted wholegrain bread."
+    ],
+    "instructions": "Crack 3 eggs into a bowl and whisk with salt and pepper. Melt butter in a non-stick pan over medium heat. Pour eggs and stir gently until just set. Serve with toasted wholegrain bread.",
+    "instructions_ru": "Разбейте 3 яйца в миску и взбейте с солью и перцем. Растопите масло в сковороде на среднем огне. Вылейте яйца и аккуратно помешивайте до готовности. Подавайте с цельнозерновым тостом.",
+    "youtube_url": null,
+    "ingredients": [
+      {
+        "name": "Eggs",
+        "amount": "3",
+        "unit": "pc"
+      },
+      {
+        "name": "Butter",
+        "amount": "10",
+        "unit": "g"
+      },
+      {
+        "name": "Wholegrain bread",
+        "amount": "2",
+        "unit": "slices"
+      },
+      {
+        "name": "Salt",
+        "amount": "1",
+        "unit": "pinch"
+      }
+    ]
+  },
+  {
+    "title_en": "Greek Yogurt Parfait with Granola and Berries",
+    "title_ru": "Парфе из греческого йогурта с гранолой и ягодами",
+    "image_url": "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=400&h=300&fit=crop",
+    "calories_per_serving": 310,
+    "protein": 16,
+    "carbs": 42,
+    "fat": 9,
+    "cook_time_mins": 5,
+    "servings": 1,
+    "diet_type": "halal",
+    "cuisine": "international",
+    "instructions_json": [
+      "Layer Greek yogurt in a glass.",
+      "Add a layer of granola.",
+      "Top with mixed berries.",
+      "Repeat layers and drizzle with honey."
+    ],
+    "instructions": "Layer Greek yogurt in a glass. Add a layer of granola. Top with mixed berries. Repeat layers and drizzle with honey.",
+    "instructions_ru": "Выложите слой греческого йогурта в стакан. Добавьте слой гранолы. Сверху положите ягоды. Повторите слои и полейте мёдом.",
+    "youtube_url": null,
+    "ingredients": [
+      {
+        "name": "Greek yogurt",
+        "amount": "200",
+        "unit": "g"
+      },
+      {
+        "name": "Granola",
+        "amount": "40",
+        "unit": "g"
+      },
+      {
+        "name": "Mixed berries",
+        "amount": "100",
+        "unit": "g"
+      },
+      {
+        "name": "Honey",
+        "amount": "1",
+        "unit": "tsp"
+      }
+    ]
+  },
+  {
+    "title_en": "Berry Smoothie Bowl with Chia Seeds",
+    "title_ru": "Смузи боул с ягодами и семенами чиа",
+    "image_url": "https://images.unsplash.com/photo-1502741224143-90386d7f8c82?w=400&h=300&fit=crop",
+    "calories_per_serving": 370,
+    "protein": 10,
+    "carbs": 62,
+    "fat": 11,
+    "cook_time_mins": 8,
+    "servings": 1,
+    "diet_type": "halal",
+    "cuisine": "international",
+    "instructions_json": [
+      "Blend frozen berries, banana, and almond milk until thick.",
+      "Pour into a bowl.",
+      "Top with chia seeds, sliced banana, and granola.",
+      "Serve immediately."
+    ],
+    "instructions": "Blend frozen berries, banana, and almond milk until thick. Pour into a bowl. Top with chia seeds, sliced banana, and granola. Serve immediately.",
+    "instructions_ru": "Смешайте замороженные ягоды, банан и миндальное молоко до густой консистенции. Вылейте в миску. Посыпьте семенами чиа, нарезанным бананом и гранолой. Подавайте сразу.",
+    "youtube_url": null,
+    "ingredients": [
+      {
+        "name": "Frozen mixed berries",
+        "amount": "150",
+        "unit": "g"
+      },
+      {
+        "name": "Banana",
+        "amount": "1",
+        "unit": "pc"
+      },
+      {
+        "name": "Almond milk",
+        "amount": "100",
+        "unit": "ml"
+      },
+      {
+        "name": "Chia seeds",
+        "amount": "15",
+        "unit": "g"
+      },
+      {
+        "name": "Granola",
+        "amount": "30",
+        "unit": "g"
+      }
+    ]
+  },
+  {
+    "title_en": "Avocado Toast with Poached Eggs",
+    "title_ru": "Тост с авокадо и яйцом пашот",
+    "image_url": "https://images.unsplash.com/photo-1541519227354-08fa5d50c44d?w=400&h=300&fit=crop",
+    "calories_per_serving": 440,
+    "protein": 18,
+    "carbs": 40,
+    "fat": 22,
+    "cook_time_mins": 12,
+    "servings": 1,
+    "diet_type": "halal",
+    "cuisine": "international",
+    "instructions_json": [
+      "Toast sourdough bread.",
+      "Mash avocado with lemon juice, salt, and pepper.",
+      "Spread on toast.",
+      "Poach eggs in simmering water for 3 minutes and place on top."
+    ],
+    "instructions": "Toast sourdough bread. Mash avocado with lemon juice, salt, and pepper. Spread on toast. Poach eggs in simmering water for 3 minutes and place on top.",
+    "instructions_ru": "Поджарьте хлеб. Разомните авокадо с лимонным соком, солью и перцем. Намажьте на тост. Сварите яйца пашот в кипящей воде 3 минуты и положите сверху.",
+    "youtube_url": null,
+    "ingredients": [
+      {
+        "name": "Sourdough bread",
+        "amount": "2",
+        "unit": "slices"
+      },
+      {
+        "name": "Avocado",
+        "amount": "1",
+        "unit": "pc"
+      },
+      {
+        "name": "Eggs",
+        "amount": "2",
+        "unit": "pc"
+      },
+      {
+        "name": "Lemon juice",
+        "amount": "1",
+        "unit": "tsp"
+      }
+    ]
+  },
+  {
+    "title_en": "Overnight Oats with Almond Milk",
+    "title_ru": "Ночная овсянка на миндальном молоке",
+    "image_url": "https://images.unsplash.com/photo-1490474418585-ba9bad8fd0ea?w=400&h=300&fit=crop",
+    "calories_per_serving": 330,
+    "protein": 11,
+    "carbs": 55,
+    "fat": 8,
+    "cook_time_mins": 5,
+    "servings": 1,
+    "diet_type": "halal",
+    "cuisine": "international",
+    "instructions_json": [
+      "Mix oats, almond milk, chia seeds, and honey in a jar.",
+      "Refrigerate overnight.",
+      "In the morning, stir and top with fresh fruit.",
+      "Serve cold."
+    ],
+    "instructions": "Mix oats, almond milk, chia seeds, and honey in a jar. Refrigerate overnight. In the morning, stir and top with fresh fruit. Serve cold.",
+    "instructions_ru": "Смешайте овсянку, миндальное молоко, семена чиа и мёд в банке. Оставьте в холодильнике на ночь. Утром перемешайте и украсьте свежими фруктами. Подавайте холодным.",
+    "youtube_url": null,
+    "ingredients": [
+      {
+        "name": "Rolled oats",
+        "amount": "80",
+        "unit": "g"
+      },
+      {
+        "name": "Almond milk",
+        "amount": "200",
+        "unit": "ml"
+      },
+      {
+        "name": "Chia seeds",
+        "amount": "10",
+        "unit": "g"
+      },
+      {
+        "name": "Honey",
+        "amount": "1",
+        "unit": "tbsp"
+      }
+    ]
+  },
+  {
+    "title_en": "Fluffy Protein Pancakes",
+    "title_ru": "Пышные протеиновые панкейки",
+    "image_url": "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=400&h=300&fit=crop",
+    "calories_per_serving": 390,
+    "protein": 28,
+    "carbs": 42,
+    "fat": 12,
+    "cook_time_mins": 15,
+    "servings": 2,
+    "diet_type": "halal",
+    "cuisine": "american",
+    "instructions_json": [
+      "Mix oat flour, protein powder, baking powder, and a pinch of salt.",
+      "Whisk egg, milk, and vanilla in a separate bowl.",
+      "Combine wet and dry ingredients.",
+      "Cook on a greased pan until bubbles form, then flip.",
+      "Serve with fresh berries."
+    ],
+    "instructions": "Mix oat flour, protein powder, baking powder, and a pinch of salt. Whisk egg, milk, and vanilla in a separate bowl. Combine wet and dry ingredients. Cook on a greased pan until bubbles form, then flip. Serve with fresh berries.",
+    "instructions_ru": "Смешайте овсяную муку, протеин, разрыхлитель и щепотку соли. Взбейте яйцо, молоко и ваниль в отдельной миске. Соедините сухие и влажные ингредиенты. Жарьте на смазанной сковороде до появления пузырей, затем переверните. Подавайте со свежими ягодами.",
+    "youtube_url": null,
+    "ingredients": [
+      {
+        "name": "Oat flour",
+        "amount": "100",
+        "unit": "g"
+      },
+      {
+        "name": "Protein powder",
+        "amount": "30",
+        "unit": "g"
+      },
+      {
+        "name": "Egg",
+        "amount": "1",
+        "unit": "pc"
+      },
+      {
+        "name": "Milk",
+        "amount": "150",
+        "unit": "ml"
+      },
+      {
+        "name": "Baking powder",
+        "amount": "1",
+        "unit": "tsp"
+      }
+    ]
+  },
+  {
+    "title_en": "Shakshuka (Eggs in Tomato Sauce)",
+    "title_ru": "Шакшука (яйца в томатном соусе)",
+    "image_url": "https://images.unsplash.com/photo-1525351484163-7529414344d8?w=400&h=300&fit=crop",
+    "calories_per_serving": 380,
+    "protein": 20,
+    "carbs": 28,
+    "fat": 22,
+    "cook_time_mins": 20,
+    "servings": 2,
+    "diet_type": "halal",
+    "cuisine": "middle_eastern",
+    "instructions_json": [
+      "Saute onion, garlic, and bell pepper in olive oil.",
+      "Add canned tomatoes, cumin, paprika, and chili.",
+      "Simmer for 10 minutes.",
+      "Make wells in the sauce and crack eggs in.",
+      "Cover and cook until eggs are set. Serve with bread."
+    ],
+    "instructions": "Saute onion, garlic, and bell pepper in olive oil. Add canned tomatoes, cumin, paprika, and chili. Simmer for 10 minutes. Make wells in the sauce and crack eggs in. Cover and cook until eggs are set. Serve with bread.",
+    "instructions_ru": "Обжарьте лук, чеснок и болгарский перец на оливковом масле. Добавьте консервированные помидоры, кумин, паприку и чили. Тушите 10 минут. Сделайте углубления в соусе и разбейте яйца. Накройте крышкой и готовьте до схватывания яиц. Подавайте с хлебом.",
+    "youtube_url": null,
+    "ingredients": [
+      {
+        "name": "Eggs",
+        "amount": "4",
+        "unit": "pc"
+      },
+      {
+        "name": "Canned tomatoes",
+        "amount": "400",
+        "unit": "g"
+      },
+      {
+        "name": "Onion",
+        "amount": "1",
+        "unit": "pc"
+      },
+      {
+        "name": "Bell pepper",
+        "amount": "1",
+        "unit": "pc"
+      },
+      {
+        "name": "Olive oil",
+        "amount": "2",
+        "unit": "tbsp"
+      },
+      {
+        "name": "Cumin",
+        "amount": "1",
+        "unit": "tsp"
+      }
+    ]
+  },
+  {
+    "title_en": "Banana Peanut Butter Smoothie",
+    "title_ru": "Банановый смузи с арахисовой пастой",
+    "image_url": "https://images.unsplash.com/photo-1502741224143-90386d7f8c82?w=400&h=300&fit=crop",
+    "calories_per_serving": 360,
+    "protein": 15,
+    "carbs": 48,
+    "fat": 14,
+    "cook_time_mins": 5,
+    "servings": 1,
+    "diet_type": "halal",
+    "cuisine": "international",
+    "instructions_json": [
+      "Add banana, peanut butter, milk, and honey to a blender.",
+      "Blend until smooth.",
+      "Pour into a glass.",
+      "Add ice cubes if desired."
+    ],
+    "instructions": "Add banana, peanut butter, milk, and honey to a blender. Blend until smooth. Pour into a glass. Add ice cubes if desired.",
+    "instructions_ru": "Добавьте банан, арахисовую пасту, молоко и мёд в блендер. Взбейте до однородности. Перелейте в стакан. По желанию добавьте лёд.",
+    "youtube_url": null,
+    "ingredients": [
+      {
+        "name": "Banana",
+        "amount": "1",
+        "unit": "pc"
+      },
+      {
+        "name": "Peanut butter",
+        "amount": "2",
+        "unit": "tbsp"
+      },
+      {
+        "name": "Milk",
+        "amount": "250",
+        "unit": "ml"
+      },
+      {
+        "name": "Honey",
+        "amount": "1",
+        "unit": "tsp"
+      }
+    ]
+  },
+  {
+    "title_en": "Turkish Menemen (Egg and Tomato Scramble)",
+    "title_ru": "Менемен (турецкая яичница с помидорами)",
+    "image_url": "https://images.unsplash.com/photo-1525351484163-7529414344d8?w=400&h=300&fit=crop",
+    "calories_per_serving": 340,
+    "protein": 18,
+    "carbs": 22,
+    "fat": 20,
+    "cook_time_mins": 15,
+    "servings": 2,
+    "diet_type": "halal",
+    "cuisine": "turkish",
+    "instructions_json": [
+      "Dice tomatoes, peppers, and onion.",
+      "Saute vegetables in olive oil until soft.",
+      "Add eggs and stir gently until just set.",
+      "Season with salt, pepper, and red pepper flakes.",
+      "Serve with crusty bread."
+    ],
+    "instructions": "Dice tomatoes, peppers, and onion. Saute vegetables in olive oil until soft. Add eggs and stir gently until just set. Season with salt, pepper, and red pepper flakes. Serve with crusty bread.",
+    "instructions_ru": "Нарежьте помидоры, перец и лук кубиками. Обжарьте овощи на оливковом масле до мягкости. Добавьте яйца и аккуратно помешивайте до готовности. Приправьте солью, перцем и хлопьями чили. Подавайте с хрустящим хлебом.",
+    "youtube_url": null,
+    "ingredients": [
+      {
+        "name": "Eggs",
+        "amount": "4",
+        "unit": "pc"
+      },
+      {
+        "name": "Tomatoes",
+        "amount": "3",
+        "unit": "pc"
+      },
+      {
+        "name": "Green pepper",
+        "amount": "2",
+        "unit": "pc"
+      },
+      {
+        "name": "Onion",
+        "amount": "1",
+        "unit": "pc"
+      },
+      {
+        "name": "Olive oil",
+        "amount": "2",
+        "unit": "tbsp"
+      }
+    ]
+  },
+  {
+    "title_en": "Grilled Chicken Breast with Brown Rice and Broccoli",
+    "title_ru": "Куриная грудка на гриле с бурым рисом и брокколи",
+    "image_url": "https://images.unsplash.com/photo-1532550907401-a500c9a57435?w=400&h=300&fit=crop",
+    "calories_per_serving": 550,
+    "protein": 42,
+    "carbs": 58,
+    "fat": 10,
+    "cook_time_mins": 25,
+    "servings": 2,
+    "diet_type": "halal",
+    "cuisine": "international",
+    "instructions_json": [
+      "Season chicken breast with salt, pepper, and olive oil.",
+      "Grill on medium-high heat for 6-7 minutes per side.",
+      "Cook brown rice according to package directions.",
+      "Steam broccoli for 4 minutes.",
+      "Serve together."
+    ],
+    "instructions": "Season chicken breast with salt, pepper, and olive oil. Grill on medium-high heat for 6-7 minutes per side. Cook brown rice according to package directions. Steam broccoli for 4 minutes. Serve together.",
+    "instructions_ru": "Приправьте куриную грудку солью, перцем и оливковым маслом. Жарьте на гриле по 6-7 минут с каждой стороны. Сварите бурый рис по инструкции. Приготовьте брокколи на пару 4 минуты. Подавайте вместе.",
+    "youtube_url": null,
+    "ingredients": [
+      {
+        "name": "Chicken breast",
+        "amount": "300",
+        "unit": "g"
+      },
+      {
+        "name": "Brown rice",
+        "amount": "150",
+        "unit": "g"
+      },
+      {
+        "name": "Broccoli",
+        "amount": "200",
+        "unit": "g"
+      },
+      {
+        "name": "Olive oil",
+        "amount": "1",
+        "unit": "tbsp"
+      }
+    ]
+  },
+  {
+    "title_en": "Baked Salmon with Quinoa Salad",
+    "title_ru": "Запечённый лосось с салатом из киноа",
+    "image_url": "https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=400&h=300&fit=crop",
+    "calories_per_serving": 520,
+    "protein": 38,
+    "carbs": 42,
+    "fat": 20,
+    "cook_time_mins": 30,
+    "servings": 2,
+    "diet_type": "halal",
+    "cuisine": "international",
+    "instructions_json": [
+      "Preheat oven to 200C/400F.",
+      "Season salmon with lemon, dill, and salt.",
+      "Bake for 15-18 minutes.",
+      "Cook quinoa and toss with cucumber, tomato, and olive oil.",
+      "Serve salmon over quinoa salad."
+    ],
+    "instructions": "Preheat oven to 200C/400F. Season salmon with lemon, dill, and salt. Bake for 15-18 minutes. Cook quinoa and toss with cucumber, tomato, and olive oil. Serve salmon over quinoa salad.",
+    "instructions_ru": "Разогрейте духовку до 200С. Приправьте лосось лимоном, укропом и солью. Запекайте 15-18 минут. Сварите киноа и смешайте с огурцом, помидором и оливковым маслом. Подавайте лосось на салате из киноа.",
+    "youtube_url": null,
+    "ingredients": [
+      {
+        "name": "Salmon fillet",
+        "amount": "300",
+        "unit": "g"
+      },
+      {
+        "name": "Quinoa",
+        "amount": "150",
+        "unit": "g"
+      },
+      {
+        "name": "Cucumber",
+        "amount": "1",
+        "unit": "pc"
+      },
+      {
+        "name": "Cherry tomatoes",
+        "amount": "100",
+        "unit": "g"
+      },
+      {
+        "name": "Olive oil",
+        "amount": "2",
+        "unit": "tbsp"
+      },
+      {
+        "name": "Lemon",
+        "amount": "1",
+        "unit": "pc"
+      }
+    ]
+  },
+  {
+    "title_en": "Red Lentil Soup with Wholegrain Bread",
+    "title_ru": "Суп из красной чечевицы с цельнозерновым хлебом",
+    "image_url": "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=400&h=300&fit=crop",
+    "calories_per_serving": 380,
+    "protein": 22,
+    "carbs": 58,
+    "fat": 6,
+    "cook_time_mins": 30,
+    "servings": 4,
+    "diet_type": "halal",
+    "cuisine": "middle_eastern",
+    "instructions_json": [
+      "Saute diced onion, carrot, and garlic in olive oil.",
+      "Add red lentils, vegetable broth, cumin, and turmeric.",
+      "Simmer for 20-25 minutes until lentils are soft.",
+      "Blend partially for a creamy texture.",
+      "Serve hot with wholegrain bread."
+    ],
+    "instructions": "Saute diced onion, carrot, and garlic in olive oil. Add red lentils, vegetable broth, cumin, and turmeric. Simmer for 20-25 minutes until lentils are soft. Blend partially for a creamy texture. Serve hot with wholegrain bread.",
+    "instructions_ru": "Обжарьте нарезанный лук, морковь и чеснок на оливковом масле. Добавьте красную чечевицу, овощной бульон, кумин и куркуму. Тушите 20-25 минут до мягкости чечевицы. Частично измельчите блендером. Подавайте горячим с цельнозерновым хлебом.",
+    "youtube_url": null,
+    "ingredients": [
+      {
+        "name": "Red lentils",
+        "amount": "200",
+        "unit": "g"
+      },
+      {
+        "name": "Onion",
+        "amount": "1",
+        "unit": "pc"
+      },
+      {
+        "name": "Carrot",
+        "amount": "2",
+        "unit": "pc"
+      },
+      {
+        "name": "Garlic",
+        "amount": "3",
+        "unit": "cloves"
+      },
+      {
+        "name": "Vegetable broth",
+        "amount": "1000",
+        "unit": "ml"
+      },
+      {
+        "name": "Cumin",
+        "amount": "1",
+        "unit": "tsp"
+      }
+    ]
+  },
+  {
+    "title_en": "Turkey and Vegetable Wrap",
+    "title_ru": "Ролл с индейкой и овощами",
+    "image_url": "https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=400&h=300&fit=crop",
+    "calories_per_serving": 490,
+    "protein": 32,
+    "carbs": 52,
+    "fat": 14,
+    "cook_time_mins": 15,
+    "servings": 2,
+    "diet_type": "halal",
+    "cuisine": "international",
+    "instructions_json": [
+      "Warm a large tortilla.",
+      "Layer sliced turkey, lettuce, tomato, and avocado.",
+      "Add yogurt sauce.",
+      "Roll tightly and slice in half."
+    ],
+    "instructions": "Warm a large tortilla. Layer sliced turkey, lettuce, tomato, and avocado. Add yogurt sauce. Roll tightly and slice in half.",
+    "instructions_ru": "Разогрейте лаваш. Выложите нарезанную индейку, салат, помидор и авокадо. Добавьте йогуртовый соус. Сверните рулетом и разрежьте пополам.",
+    "youtube_url": null,
+    "ingredients": [
+      {
+        "name": "Turkey breast slices",
+        "amount": "200",
+        "unit": "g"
+      },
+      {
+        "name": "Tortilla wrap",
+        "amount": "2",
+        "unit": "pc"
+      },
+      {
+        "name": "Lettuce",
+        "amount": "50",
+        "unit": "g"
+      },
+      {
+        "name": "Tomato",
+        "amount": "1",
+        "unit": "pc"
+      },
+      {
+        "name": "Avocado",
+        "amount": "1",
+        "unit": "pc"
+      }
+    ]
+  },
+  {
+    "title_en": "Tuna Salad with Mixed Greens",
+    "title_ru": "Салат с тунцом и зеленью",
+    "image_url": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&h=300&fit=crop",
+    "calories_per_serving": 430,
+    "protein": 35,
+    "carbs": 20,
+    "fat": 24,
+    "cook_time_mins": 10,
+    "servings": 1,
+    "diet_type": "halal",
+    "cuisine": "international",
+    "instructions_json": [
+      "Drain tuna and flake into a bowl.",
+      "Toss mixed greens with cherry tomatoes and cucumber.",
+      "Add tuna on top.",
+      "Drizzle with olive oil and lemon juice."
+    ],
+    "instructions": "Drain tuna and flake into a bowl. Toss mixed greens with cherry tomatoes and cucumber. Add tuna on top. Drizzle with olive oil and lemon juice.",
+    "instructions_ru": "Слейте воду из тунца и разомните вилкой. Смешайте зелень с помидорами черри и огурцом. Выложите тунец сверху. Полейте оливковым маслом и лимонным соком.",
+    "youtube_url": null,
+    "ingredients": [
+      {
+        "name": "Canned tuna",
+        "amount": "160",
+        "unit": "g"
+      },
+      {
+        "name": "Mixed greens",
+        "amount": "100",
+        "unit": "g"
+      },
+      {
+        "name": "Cherry tomatoes",
+        "amount": "80",
+        "unit": "g"
+      },
+      {
+        "name": "Cucumber",
+        "amount": "1",
+        "unit": "pc"
+      },
+      {
+        "name": "Olive oil",
+        "amount": "2",
+        "unit": "tbsp"
+      }
+    ]
+  },
+  {
+    "title_en": "Chicken Caesar Salad",
+    "title_ru": "Салат Цезарь с курицей",
+    "image_url": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&h=300&fit=crop",
+    "calories_per_serving": 480,
+    "protein": 38,
+    "carbs": 22,
+    "fat": 28,
+    "cook_time_mins": 20,
+    "servings": 2,
+    "diet_type": "halal",
+    "cuisine": "american",
+    "instructions_json": [
+      "Grill chicken breast and slice.",
+      "Tear romaine lettuce into bite-sized pieces.",
+      "Toss with Caesar dressing and croutons.",
+      "Top with grilled chicken and Parmesan shavings."
+    ],
+    "instructions": "Grill chicken breast and slice. Tear romaine lettuce into bite-sized pieces. Toss with Caesar dressing and croutons. Top with grilled chicken and Parmesan shavings.",
+    "instructions_ru": "Обжарьте куриную грудку и нарежьте. Порвите листья романо. Смешайте с заправкой Цезарь и сухариками. Выложите курицу и стружку пармезана сверху.",
+    "youtube_url": null,
+    "ingredients": [
+      {
+        "name": "Chicken breast",
+        "amount": "250",
+        "unit": "g"
+      },
+      {
+        "name": "Romaine lettuce",
+        "amount": "200",
+        "unit": "g"
+      },
+      {
+        "name": "Caesar dressing",
+        "amount": "3",
+        "unit": "tbsp"
+      },
+      {
+        "name": "Croutons",
+        "amount": "30",
+        "unit": "g"
+      },
+      {
+        "name": "Parmesan cheese",
+        "amount": "20",
+        "unit": "g"
+      }
+    ]
+  },
+  {
+    "title_en": "Chicken Shawarma Rice Bowl",
+    "title_ru": "Боул с шавармой из курицы и рисом",
+    "image_url": "https://images.unsplash.com/photo-1512058564366-18510be2db19?w=400&h=300&fit=crop",
+    "calories_per_serving": 560,
+    "protein": 40,
+    "carbs": 62,
+    "fat": 14,
+    "cook_time_mins": 30,
+    "servings": 2,
+    "diet_type": "halal",
+    "cuisine": "middle_eastern",
+    "instructions_json": [
+      "Marinate chicken in yogurt, cumin, turmeric, and garlic.",
+      "Grill or pan-fry chicken until cooked.",
+      "Cook basmati rice.",
+      "Assemble bowls with rice, sliced chicken, pickled turnips, and garlic sauce."
+    ],
+    "instructions": "Marinate chicken in yogurt, cumin, turmeric, and garlic. Grill or pan-fry chicken until cooked. Cook basmati rice. Assemble bowls with rice, sliced chicken, pickled turnips, and garlic sauce.",
+    "instructions_ru": "Замаринуйте курицу в йогурте, кумине, куркуме и чесноке. Обжарьте курицу до готовности. Сварите рис басмати. Соберите боул из риса, нарезанной курицы, маринованной репы и чесночного соуса.",
+    "youtube_url": null,
+    "ingredients": [
+      {
+        "name": "Chicken thigh",
+        "amount": "400",
+        "unit": "g"
+      },
+      {
+        "name": "Basmati rice",
+        "amount": "200",
+        "unit": "g"
+      },
+      {
+        "name": "Yogurt",
+        "amount": "100",
+        "unit": "g"
+      },
+      {
+        "name": "Cumin",
+        "amount": "1",
+        "unit": "tsp"
+      },
+      {
+        "name": "Garlic",
+        "amount": "3",
+        "unit": "cloves"
+      }
+    ]
+  },
+  {
+    "title_en": "Beef Burger with Sweet Potato Fries",
+    "title_ru": "Бургер из говядины с бататовым фри",
+    "image_url": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&h=300&fit=crop",
+    "calories_per_serving": 620,
+    "protein": 35,
+    "carbs": 58,
+    "fat": 28,
+    "cook_time_mins": 30,
+    "servings": 2,
+    "diet_type": "halal",
+    "cuisine": "american",
+    "instructions_json": [
+      "Form ground beef into patties with salt and pepper.",
+      "Grill or pan-fry for 4-5 minutes per side.",
+      "Cut sweet potatoes into fries, toss with olive oil, and bake at 200C for 25 mins.",
+      "Assemble burgers with lettuce, tomato, and bun."
+    ],
+    "instructions": "Form ground beef into patties with salt and pepper. Grill or pan-fry for 4-5 minutes per side. Cut sweet potatoes into fries, toss with olive oil, and bake at 200C for 25 mins. Assemble burgers with lettuce, tomato, and bun.",
+    "instructions_ru": "Сформируйте котлеты из говяжьего фарша с солью и перцем. Жарьте на гриле 4-5 минут с каждой стороны. Нарежьте батат соломкой, полейте маслом и запекайте при 200С 25 минут. Соберите бургер с салатом, помидором и булочкой.",
+    "youtube_url": null,
+    "ingredients": [
+      {
+        "name": "Ground beef (lean)",
+        "amount": "300",
+        "unit": "g"
+      },
+      {
+        "name": "Sweet potato",
+        "amount": "300",
+        "unit": "g"
+      },
+      {
+        "name": "Burger buns",
+        "amount": "2",
+        "unit": "pc"
+      },
+      {
+        "name": "Lettuce",
+        "amount": "30",
+        "unit": "g"
+      },
+      {
+        "name": "Tomato",
+        "amount": "1",
+        "unit": "pc"
+      }
+    ]
+  },
+  {
+    "title_en": "Mediterranean Grilled Chicken Salad",
+    "title_ru": "Средиземноморский салат с курицей на гриле",
+    "image_url": "https://images.unsplash.com/photo-1532550907401-a500c9a57435?w=400&h=300&fit=crop",
+    "calories_per_serving": 450,
+    "protein": 36,
+    "carbs": 28,
+    "fat": 22,
+    "cook_time_mins": 20,
+    "servings": 2,
+    "diet_type": "halal",
+    "cuisine": "mediterranean",
+    "instructions_json": [
+      "Grill chicken breast with herbs and lemon.",
+      "Chop cucumber, tomato, olives, and red onion.",
+      "Combine vegetables and crumble feta on top.",
+      "Slice chicken and arrange over salad.",
+      "Dress with olive oil and lemon juice."
+    ],
+    "instructions": "Grill chicken breast with herbs and lemon. Chop cucumber, tomato, olives, and red onion. Combine vegetables and crumble feta on top. Slice chicken and arrange over salad. Dress with olive oil and lemon juice.",
+    "instructions_ru": "Обжарьте куриную грудку с травами и лимоном. Нарежьте огурец, помидор, оливки и красный лук. Смешайте овощи и раскрошите фету сверху. Нарежьте курицу и выложите на салат. Заправьте оливковым маслом и лимонным соком.",
+    "youtube_url": null,
+    "ingredients": [
+      {
+        "name": "Chicken breast",
+        "amount": "250",
+        "unit": "g"
+      },
+      {
+        "name": "Cucumber",
+        "amount": "1",
+        "unit": "pc"
+      },
+      {
+        "name": "Tomato",
+        "amount": "2",
+        "unit": "pc"
+      },
+      {
+        "name": "Olives",
+        "amount": "50",
+        "unit": "g"
+      },
+      {
+        "name": "Feta cheese",
+        "amount": "50",
+        "unit": "g"
+      },
+      {
+        "name": "Olive oil",
+        "amount": "2",
+        "unit": "tbsp"
+      }
+    ]
+  },
+  {
+    "title_en": "Shrimp and Avocado Rice Bowl",
+    "title_ru": "Боул с креветками, авокадо и рисом",
+    "image_url": "https://images.unsplash.com/photo-1559737558-2f5a35f4523b?w=400&h=300&fit=crop",
+    "calories_per_serving": 510,
+    "protein": 30,
+    "carbs": 55,
+    "fat": 18,
+    "cook_time_mins": 20,
+    "servings": 2,
+    "diet_type": "halal",
+    "cuisine": "asian",
+    "instructions_json": [
+      "Cook jasmine rice.",
+      "Saute shrimp in garlic and olive oil until pink.",
+      "Slice avocado and prepare edamame.",
+      "Assemble bowls with rice, shrimp, avocado, edamame, and soy sauce."
+    ],
+    "instructions": "Cook jasmine rice. Saute shrimp in garlic and olive oil until pink. Slice avocado and prepare edamame. Assemble bowls with rice, shrimp, avocado, edamame, and soy sauce.",
+    "instructions_ru": "Сварите рис жасмин. Обжарьте креветки с чесноком и оливковым маслом до розового цвета. Нарежьте авокадо и подготовьте эдамаме. Соберите боулы с рисом, креветками, авокадо, эдамаме и соевым соусом.",
+    "youtube_url": null,
+    "ingredients": [
+      {
+        "name": "Shrimp",
+        "amount": "250",
+        "unit": "g"
+      },
+      {
+        "name": "Jasmine rice",
+        "amount": "200",
+        "unit": "g"
+      },
+      {
+        "name": "Avocado",
+        "amount": "1",
+        "unit": "pc"
+      },
+      {
+        "name": "Garlic",
+        "amount": "2",
+        "unit": "cloves"
+      },
+      {
+        "name": "Soy sauce",
+        "amount": "2",
+        "unit": "tbsp"
+      }
+    ]
+  },
+  {
+    "title_en": "Grilled Fish Tacos with Mango Salsa",
+    "title_ru": "Тако с рыбой на гриле и сальсой из манго",
+    "image_url": "https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?w=400&h=300&fit=crop",
+    "calories_per_serving": 440,
+    "protein": 30,
+    "carbs": 48,
+    "fat": 14,
+    "cook_time_mins": 20,
+    "servings": 2,
+    "diet_type": "halal",
+    "cuisine": "mexican",
+    "instructions_json": [
+      "Season white fish with cumin, chili powder, and lime.",
+      "Grill fish for 3-4 minutes per side.",
+      "Dice mango, red onion, cilantro, and jalapeno for salsa.",
+      "Warm tortillas and assemble tacos with fish, salsa, and cabbage slaw."
+    ],
+    "instructions": "Season white fish with cumin, chili powder, and lime. Grill fish for 3-4 minutes per side. Dice mango, red onion, cilantro, and jalapeno for salsa. Warm tortillas and assemble tacos with fish, salsa, and cabbage slaw.",
+    "instructions_ru": "Приправьте рыбу кумином, чили и лаймом. Обжарьте на гриле 3-4 минуты с каждой стороны. Нарежьте манго, лук, кинзу и халапеньо для сальсы. Разогрейте тортильи и соберите тако с рыбой, сальсой и капустным салатом.",
+    "youtube_url": null,
+    "ingredients": [
+      {
+        "name": "White fish fillet",
+        "amount": "300",
+        "unit": "g"
+      },
+      {
+        "name": "Corn tortillas",
+        "amount": "6",
+        "unit": "pc"
+      },
+      {
+        "name": "Mango",
+        "amount": "1",
+        "unit": "pc"
+      },
+      {
+        "name": "Red cabbage",
+        "amount": "100",
+        "unit": "g"
+      },
+      {
+        "name": "Lime",
+        "amount": "1",
+        "unit": "pc"
+      }
+    ]
+  },
+  {
+    "title_en": "Chicken and Vegetable Soup",
+    "title_ru": "Куриный суп с овощами",
+    "image_url": "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=400&h=300&fit=crop",
+    "calories_per_serving": 350,
+    "protein": 28,
+    "carbs": 35,
+    "fat": 10,
+    "cook_time_mins": 40,
+    "servings": 4,
+    "diet_type": "halal",
+    "cuisine": "international",
+    "instructions_json": [
+      "Saute diced onion, carrot, and celery in olive oil.",
+      "Add chicken breast and brown on all sides.",
+      "Pour in chicken broth and bring to a boil.",
+      "Add potatoes and simmer 20 minutes.",
+      "Shred chicken, return to pot, and season."
+    ],
+    "instructions": "Saute diced onion, carrot, and celery in olive oil. Add chicken breast and brown on all sides. Pour in chicken broth and bring to a boil. Add potatoes and simmer 20 minutes. Shred chicken, return to pot, and season.",
+    "instructions_ru": "Обжарьте нарезанный лук, морковь и сельдерей на оливковом масле. Добавьте куриную грудку и обжарьте. Залейте куриным бульоном и доведите до кипения. Добавьте картофель и варите 20 минут. Разберите курицу, верните в суп и приправьте.",
+    "youtube_url": null,
+    "ingredients": [
+      {
+        "name": "Chicken breast",
+        "amount": "400",
+        "unit": "g"
+      },
+      {
+        "name": "Potato",
+        "amount": "2",
+        "unit": "pc"
+      },
+      {
+        "name": "Carrot",
+        "amount": "2",
+        "unit": "pc"
+      },
+      {
+        "name": "Celery",
+        "amount": "2",
+        "unit": "stalks"
+      },
+      {
+        "name": "Chicken broth",
+        "amount": "1500",
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "title_en": "Falafel Wrap with Tahini Sauce",
+    "title_ru": "Ролл с фалафелем и тахини",
+    "image_url": "https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=400&h=300&fit=crop",
+    "calories_per_serving": 520,
+    "protein": 18,
+    "carbs": 62,
+    "fat": 22,
+    "cook_time_mins": 25,
+    "servings": 2,
+    "diet_type": "halal",
+    "cuisine": "middle_eastern",
+    "instructions_json": [
+      "Blend chickpeas, herbs, garlic, and spices in a food processor.",
+      "Form into balls and bake at 200C for 20 minutes.",
+      "Mix tahini with lemon juice and water for sauce.",
+      "Assemble wraps with falafel, salad, and tahini sauce."
+    ],
+    "instructions": "Blend chickpeas, herbs, garlic, and spices in a food processor. Form into balls and bake at 200C for 20 minutes. Mix tahini with lemon juice and water for sauce. Assemble wraps with falafel, salad, and tahini sauce.",
+    "instructions_ru": "Измельчите нут, зелень, чеснок и специи в блендере. Сформируйте шарики и запекайте при 200С 20 минут. Смешайте тахини с лимонным соком и водой. Соберите роллы с фалафелем, салатом и соусом тахини.",
+    "youtube_url": null,
+    "ingredients": [
+      {
+        "name": "Chickpeas (canned)",
+        "amount": "400",
+        "unit": "g"
+      },
+      {
+        "name": "Flatbread",
+        "amount": "2",
+        "unit": "pc"
+      },
+      {
+        "name": "Tahini",
+        "amount": "3",
+        "unit": "tbsp"
+      },
+      {
+        "name": "Parsley",
+        "amount": "30",
+        "unit": "g"
+      },
+      {
+        "name": "Garlic",
+        "amount": "2",
+        "unit": "cloves"
+      }
+    ]
+  },
+  {
+    "title_en": "Sushi Bowl (Deconstructed Roll)",
+    "title_ru": "Суши боул (деконструированный ролл)",
+    "image_url": "https://images.unsplash.com/photo-1579871494447-9811cf80d66c?w=400&h=300&fit=crop",
+    "calories_per_serving": 470,
+    "protein": 25,
+    "carbs": 65,
+    "fat": 12,
+    "cook_time_mins": 25,
+    "servings": 2,
+    "diet_type": "halal",
+    "cuisine": "japanese",
+    "instructions_json": [
+      "Cook sushi rice and season with rice vinegar.",
+      "Slice salmon or tuna into cubes.",
+      "Prepare toppings: avocado, cucumber, edamame, nori strips.",
+      "Assemble bowls and drizzle with soy sauce and sesame oil."
+    ],
+    "instructions": "Cook sushi rice and season with rice vinegar. Slice salmon or tuna into cubes. Prepare toppings: avocado, cucumber, edamame, nori strips. Assemble bowls and drizzle with soy sauce and sesame oil.",
+    "instructions_ru": "Сварите рис для суши и заправьте рисовым уксусом. Нарежьте лосось или тунец кубиками. Подготовьте топпинги: авокадо, огурец, эдамаме, полоски нори. Соберите боулы и полейте соевым соусом и кунжутным маслом.",
+    "youtube_url": null,
+    "ingredients": [
+      {
+        "name": "Sushi rice",
+        "amount": "200",
+        "unit": "g"
+      },
+      {
+        "name": "Salmon fillet (sushi grade)",
+        "amount": "200",
+        "unit": "g"
+      },
+      {
+        "name": "Avocado",
+        "amount": "1",
+        "unit": "pc"
+      },
+      {
+        "name": "Cucumber",
+        "amount": "1",
+        "unit": "pc"
+      },
+      {
+        "name": "Nori sheets",
+        "amount": "2",
+        "unit": "pc"
+      },
+      {
+        "name": "Soy sauce",
+        "amount": "2",
+        "unit": "tbsp"
+      }
+    ]
+  },
+  {
+    "title_en": "Grilled Chicken Sandwich with Pesto",
+    "title_ru": "Сэндвич с курицей гриль и песто",
+    "image_url": "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=400&h=300&fit=crop",
+    "calories_per_serving": 500,
+    "protein": 36,
+    "carbs": 44,
+    "fat": 20,
+    "cook_time_mins": 15,
+    "servings": 2,
+    "diet_type": "halal",
+    "cuisine": "italian",
+    "instructions_json": [
+      "Grill chicken breast until fully cooked and slice.",
+      "Toast ciabatta bread.",
+      "Spread pesto on both sides of bread.",
+      "Layer chicken, mozzarella, tomato, and arugula.",
+      "Close sandwich and serve."
+    ],
+    "instructions": "Grill chicken breast until fully cooked and slice. Toast ciabatta bread. Spread pesto on both sides of bread. Layer chicken, mozzarella, tomato, and arugula. Close sandwich and serve.",
+    "instructions_ru": "Обжарьте куриную грудку и нарежьте. Поджарьте чиабатту. Намажьте песто с обеих сторон хлеба. Выложите курицу, моцареллу, помидор и рукколу. Закройте сэндвич и подавайте.",
+    "youtube_url": null,
+    "ingredients": [
+      {
+        "name": "Chicken breast",
+        "amount": "250",
+        "unit": "g"
+      },
+      {
+        "name": "Ciabatta bread",
+        "amount": "2",
+        "unit": "pc"
+      },
+      {
+        "name": "Pesto",
+        "amount": "2",
+        "unit": "tbsp"
+      },
+      {
+        "name": "Mozzarella",
+        "amount": "60",
+        "unit": "g"
+      },
+      {
+        "name": "Tomato",
+        "amount": "1",
+        "unit": "pc"
+      }
+    ]
+  },
+  {
+    "title_en": "Baked Salmon with Steamed Broccoli and Sweet Potato",
+    "title_ru": "Запечённый лосось с брокколи и бататом",
+    "image_url": "https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=400&h=300&fit=crop",
+    "calories_per_serving": 470,
+    "protein": 36,
+    "carbs": 40,
+    "fat": 16,
+    "cook_time_mins": 30,
+    "servings": 2,
+    "diet_type": "halal",
+    "cuisine": "international",
+    "instructions_json": [
+      "Preheat oven to 200C/400F.",
+      "Season salmon and place on a baking tray.",
+      "Cube sweet potato and roast for 25 minutes.",
+      "Steam broccoli and serve everything together."
+    ],
+    "instructions": "Preheat oven to 200C/400F. Season salmon and place on a baking tray. Cube sweet potato and roast for 25 minutes. Steam broccoli and serve everything together.",
+    "instructions_ru": "Разогрейте духовку до 200С. Приправьте лосось и выложите на противень. Нарежьте батат кубиками и запекайте 25 минут. Приготовьте брокколи на пару и подавайте вместе.",
+    "youtube_url": null,
+    "ingredients": [
+      {
+        "name": "Salmon fillet",
+        "amount": "300",
+        "unit": "g"
+      },
+      {
+        "name": "Sweet potato",
+        "amount": "300",
+        "unit": "g"
+      },
+      {
+        "name": "Broccoli",
+        "amount": "200",
+        "unit": "g"
+      },
+      {
+        "name": "Olive oil",
+        "amount": "1",
+        "unit": "tbsp"
+      },
+      {
+        "name": "Lemon",
+        "amount": "1",
+        "unit": "pc"
+      }
+    ]
+  },
+  {
+    "title_en": "Beef and Vegetable Stir-Fry with Jasmine Rice",
+    "title_ru": "Говядина с овощами и рисом жасмин",
+    "image_url": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=400&h=300&fit=crop",
+    "calories_per_serving": 530,
+    "protein": 32,
+    "carbs": 52,
+    "fat": 18,
+    "cook_time_mins": 20,
+    "servings": 2,
+    "diet_type": "halal",
+    "cuisine": "asian",
+    "instructions_json": [
+      "Slice beef thinly and marinate in soy sauce and ginger.",
+      "Cook jasmine rice.",
+      "Stir-fry beef in a hot wok for 2 minutes.",
+      "Add bell peppers, broccoli, and carrots and stir-fry 3 minutes.",
+      "Serve over rice."
+    ],
+    "instructions": "Slice beef thinly and marinate in soy sauce and ginger. Cook jasmine rice. Stir-fry beef in a hot wok for 2 minutes. Add bell peppers, broccoli, and carrots and stir-fry 3 minutes. Serve over rice.",
+    "instructions_ru": "Нарежьте говядину тонко и замаринуйте в соевом соусе и имбире. Сварите рис жасмин. Обжарьте говядину в воке 2 минуты. Добавьте перец, брокколи и морковь, жарьте 3 минуты. Подавайте с рисом.",
+    "youtube_url": null,
+    "ingredients": [
+      {
+        "name": "Beef sirloin",
+        "amount": "300",
+        "unit": "g"
+      },
+      {
+        "name": "Jasmine rice",
+        "amount": "200",
+        "unit": "g"
+      },
+      {
+        "name": "Bell pepper",
+        "amount": "1",
+        "unit": "pc"
+      },
+      {
+        "name": "Broccoli",
+        "amount": "150",
+        "unit": "g"
+      },
+      {
+        "name": "Soy sauce",
+        "amount": "2",
+        "unit": "tbsp"
+      },
+      {
+        "name": "Ginger",
+        "amount": "10",
+        "unit": "g"
+      }
+    ]
+  },
+  {
+    "title_en": "Chicken Tikka Masala with Brown Rice",
+    "title_ru": "Куриная тикка масала с бурым рисом",
+    "image_url": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=400&h=300&fit=crop",
+    "calories_per_serving": 540,
+    "protein": 36,
+    "carbs": 56,
+    "fat": 14,
+    "cook_time_mins": 35,
+    "servings": 4,
+    "diet_type": "halal",
+    "cuisine": "indian",
+    "instructions_json": [
+      "Marinate chicken in yogurt and spices for 30 minutes.",
+      "Grill or pan-fry chicken until charred.",
+      "Simmer tomato sauce with cream and spices.",
+      "Add chicken to sauce and cook 10 minutes.",
+      "Serve over brown rice."
+    ],
+    "instructions": "Marinate chicken in yogurt and spices for 30 minutes. Grill or pan-fry chicken until charred. Simmer tomato sauce with cream and spices. Add chicken to sauce and cook 10 minutes. Serve over brown rice.",
+    "instructions_ru": "Замаринуйте курицу в йогурте и специях на 30 минут. Обжарьте до румяной корочки. Сварите томатный соус со сливками и специями. Добавьте курицу и готовьте 10 минут. Подавайте с бурым рисом.",
+    "youtube_url": null,
+    "ingredients": [
+      {
+        "name": "Chicken thigh",
+        "amount": "500",
+        "unit": "g"
+      },
+      {
+        "name": "Yogurt",
+        "amount": "100",
+        "unit": "g"
+      },
+      {
+        "name": "Tomato sauce",
+        "amount": "400",
+        "unit": "g"
+      },
+      {
+        "name": "Cream",
+        "amount": "100",
+        "unit": "ml"
+      },
+      {
+        "name": "Brown rice",
+        "amount": "200",
+        "unit": "g"
+      },
+      {
+        "name": "Garam masala",
+        "amount": "2",
+        "unit": "tsp"
+      }
+    ]
+  },
+  {
+    "title_en": "Baked Cod with Roasted Sweet Potato and Greens",
+    "title_ru": "Запечённая треска с бататом и зеленью",
+    "image_url": "https://images.unsplash.com/photo-1559737558-2f5a35f4523b?w=400&h=300&fit=crop",
+    "calories_per_serving": 400,
+    "protein": 32,
+    "carbs": 44,
+    "fat": 8,
+    "cook_time_mins": 30,
+    "servings": 2,
+    "diet_type": "halal",
+    "cuisine": "international",
+    "instructions_json": [
+      "Preheat oven to 190C/375F.",
+      "Season cod with lemon, garlic, and herbs.",
+      "Roast sweet potato wedges for 20 minutes.",
+      "Bake cod for 12-15 minutes.",
+      "Serve with steamed greens."
+    ],
+    "instructions": "Preheat oven to 190C/375F. Season cod with lemon, garlic, and herbs. Roast sweet potato wedges for 20 minutes. Bake cod for 12-15 minutes. Serve with steamed greens.",
+    "instructions_ru": "Разогрейте духовку до 190С. Приправьте треску лимоном, чесноком и травами. Запекайте дольки батата 20 минут. Запекайте треску 12-15 минут. Подавайте с зеленью на пару.",
+    "youtube_url": null,
+    "ingredients": [
+      {
+        "name": "Cod fillet",
+        "amount": "300",
+        "unit": "g"
+      },
+      {
+        "name": "Sweet potato",
+        "amount": "300",
+        "unit": "g"
+      },
+      {
+        "name": "Spinach",
+        "amount": "100",
+        "unit": "g"
+      },
+      {
+        "name": "Lemon",
+        "amount": "1",
+        "unit": "pc"
+      },
+      {
+        "name": "Garlic",
+        "amount": "2",
+        "unit": "cloves"
+      }
+    ]
+  },
+  {
+    "title_en": "Lamb Kofta with Hummus and Flatbread",
+    "title_ru": "Кофта из баранины с хумусом и лепёшкой",
+    "image_url": "https://images.unsplash.com/photo-1532550907401-a500c9a57435?w=400&h=300&fit=crop",
+    "calories_per_serving": 580,
+    "protein": 34,
+    "carbs": 48,
+    "fat": 26,
+    "cook_time_mins": 25,
+    "servings": 4,
+    "diet_type": "halal",
+    "cuisine": "middle_eastern",
+    "instructions_json": [
+      "Mix ground lamb with onion, parsley, cumin, and coriander.",
+      "Form into elongated patties on skewers.",
+      "Grill for 4-5 minutes per side.",
+      "Serve with hummus, flatbread, and fresh salad."
+    ],
+    "instructions": "Mix ground lamb with onion, parsley, cumin, and coriander. Form into elongated patties on skewers. Grill for 4-5 minutes per side. Serve with hummus, flatbread, and fresh salad.",
+    "instructions_ru": "Смешайте бараний фарш с луком, петрушкой, кумином и кориандром. Сформируйте котлеты на шпажках. Жарьте на гриле 4-5 минут с каждой стороны. Подавайте с хумусом, лепёшкой и свежим салатом.",
+    "youtube_url": null,
+    "ingredients": [
+      {
+        "name": "Ground lamb",
+        "amount": "500",
+        "unit": "g"
+      },
+      {
+        "name": "Onion",
+        "amount": "1",
+        "unit": "pc"
+      },
+      {
+        "name": "Flatbread",
+        "amount": "4",
+        "unit": "pc"
+      },
+      {
+        "name": "Hummus",
+        "amount": "200",
+        "unit": "g"
+      },
+      {
+        "name": "Parsley",
+        "amount": "30",
+        "unit": "g"
+      }
+    ]
+  },
+  {
+    "title_en": "Pasta with Turkey Bolognese",
+    "title_ru": "Паста с индейкой болоньезе",
+    "image_url": "https://images.unsplash.com/photo-1563379926898-05f4575a45d8?w=400&h=300&fit=crop",
+    "calories_per_serving": 520,
+    "protein": 32,
+    "carbs": 62,
+    "fat": 14,
+    "cook_time_mins": 30,
+    "servings": 4,
+    "diet_type": "halal",
+    "cuisine": "italian",
+    "instructions_json": [
+      "Saute onion, carrot, and celery in olive oil.",
+      "Add ground turkey and brown.",
+      "Pour in crushed tomatoes and simmer 20 minutes.",
+      "Cook pasta al dente.",
+      "Serve sauce over pasta with fresh basil."
+    ],
+    "instructions": "Saute onion, carrot, and celery in olive oil. Add ground turkey and brown. Pour in crushed tomatoes and simmer 20 minutes. Cook pasta al dente. Serve sauce over pasta with fresh basil.",
+    "instructions_ru": "Обжарьте лук, морковь и сельдерей на оливковом масле. Добавьте фарш индейки и обжарьте. Влейте измельчённые помидоры и тушите 20 минут. Сварите пасту аль денте. Подавайте соус на пасте со свежим базиликом.",
+    "youtube_url": null,
+    "ingredients": [
+      {
+        "name": "Ground turkey",
+        "amount": "400",
+        "unit": "g"
+      },
+      {
+        "name": "Spaghetti",
+        "amount": "320",
+        "unit": "g"
+      },
+      {
+        "name": "Crushed tomatoes",
+        "amount": "400",
+        "unit": "g"
+      },
+      {
+        "name": "Onion",
+        "amount": "1",
+        "unit": "pc"
+      },
+      {
+        "name": "Carrot",
+        "amount": "1",
+        "unit": "pc"
+      },
+      {
+        "name": "Olive oil",
+        "amount": "2",
+        "unit": "tbsp"
+      }
+    ]
+  },
+  {
+    "title_en": "Grilled Shrimp with Garlic Butter and Rice",
+    "title_ru": "Креветки на гриле с чесночным маслом и рисом",
+    "image_url": "https://images.unsplash.com/photo-1559737558-2f5a35f4523b?w=400&h=300&fit=crop",
+    "calories_per_serving": 480,
+    "protein": 30,
+    "carbs": 50,
+    "fat": 16,
+    "cook_time_mins": 20,
+    "servings": 2,
+    "diet_type": "halal",
+    "cuisine": "international",
+    "instructions_json": [
+      "Marinate shrimp with garlic, butter, lemon, and parsley.",
+      "Cook rice.",
+      "Grill shrimp 2-3 minutes per side.",
+      "Serve shrimp over rice with grilled vegetables."
+    ],
+    "instructions": "Marinate shrimp with garlic, butter, lemon, and parsley. Cook rice. Grill shrimp 2-3 minutes per side. Serve shrimp over rice with grilled vegetables.",
+    "instructions_ru": "Замаринуйте креветки в чесноке, масле, лимоне и петрушке. Сварите рис. Обжарьте креветки 2-3 минуты с каждой стороны. Подавайте с рисом и овощами гриль.",
+    "youtube_url": null,
+    "ingredients": [
+      {
+        "name": "Shrimp (peeled)",
+        "amount": "300",
+        "unit": "g"
+      },
+      {
+        "name": "Basmati rice",
+        "amount": "200",
+        "unit": "g"
+      },
+      {
+        "name": "Butter",
+        "amount": "30",
+        "unit": "g"
+      },
+      {
+        "name": "Garlic",
+        "amount": "4",
+        "unit": "cloves"
+      },
+      {
+        "name": "Lemon",
+        "amount": "1",
+        "unit": "pc"
+      }
+    ]
+  },
+  {
+    "title_en": "Chicken Fajitas with Bell Peppers",
+    "title_ru": "Фахитас с курицей и болгарским перцем",
+    "image_url": "https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?w=400&h=300&fit=crop",
+    "calories_per_serving": 490,
+    "protein": 34,
+    "carbs": 44,
+    "fat": 18,
+    "cook_time_mins": 20,
+    "servings": 4,
+    "diet_type": "halal",
+    "cuisine": "mexican",
+    "instructions_json": [
+      "Slice chicken and bell peppers into strips.",
+      "Season with cumin, chili powder, and lime.",
+      "Cook chicken in a hot skillet, then add peppers and onions.",
+      "Warm tortillas.",
+      "Serve with sour cream and guacamole."
+    ],
+    "instructions": "Slice chicken and bell peppers into strips. Season with cumin, chili powder, and lime. Cook chicken in a hot skillet, then add peppers and onions. Warm tortillas. Serve with sour cream and guacamole.",
+    "instructions_ru": "Нарежьте курицу и перец полосками. Приправьте кумином, чили и лаймом. Обжарьте курицу, затем добавьте перец и лук. Разогрейте тортильи. Подавайте со сметаной и гуакамоле.",
+    "youtube_url": null,
+    "ingredients": [
+      {
+        "name": "Chicken breast",
+        "amount": "500",
+        "unit": "g"
+      },
+      {
+        "name": "Bell peppers (mixed)",
+        "amount": "3",
+        "unit": "pc"
+      },
+      {
+        "name": "Onion",
+        "amount": "1",
+        "unit": "pc"
+      },
+      {
+        "name": "Flour tortillas",
+        "amount": "8",
+        "unit": "pc"
+      },
+      {
+        "name": "Lime",
+        "amount": "1",
+        "unit": "pc"
+      }
+    ]
+  },
+  {
+    "title_en": "Herb-Crusted Baked Chicken Thighs",
+    "title_ru": "Куриные бёдра в травяной корочке",
+    "image_url": "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?w=400&h=300&fit=crop",
+    "calories_per_serving": 450,
+    "protein": 38,
+    "carbs": 12,
+    "fat": 28,
+    "cook_time_mins": 35,
+    "servings": 4,
+    "diet_type": "halal",
+    "cuisine": "international",
+    "instructions_json": [
+      "Preheat oven to 200C/400F.",
+      "Mix breadcrumbs with rosemary, thyme, garlic, and olive oil.",
+      "Press herb mixture onto chicken thighs.",
+      "Bake for 30-35 minutes until golden.",
+      "Serve with roasted vegetables."
+    ],
+    "instructions": "Preheat oven to 200C/400F. Mix breadcrumbs with rosemary, thyme, garlic, and olive oil. Press herb mixture onto chicken thighs. Bake for 30-35 minutes until golden. Serve with roasted vegetables.",
+    "instructions_ru": "Разогрейте духовку до 200С. Смешайте панировочные сухари с розмарином, тимьяном, чесноком и оливковым маслом. Обмажьте куриные бёдра смесью. Запекайте 30-35 минут до золотистой корочки. Подавайте с запечёнными овощами.",
+    "youtube_url": null,
+    "ingredients": [
+      {
+        "name": "Chicken thighs",
+        "amount": "600",
+        "unit": "g"
+      },
+      {
+        "name": "Breadcrumbs",
+        "amount": "50",
+        "unit": "g"
+      },
+      {
+        "name": "Rosemary",
+        "amount": "1",
+        "unit": "tbsp"
+      },
+      {
+        "name": "Garlic",
+        "amount": "3",
+        "unit": "cloves"
+      },
+      {
+        "name": "Olive oil",
+        "amount": "2",
+        "unit": "tbsp"
+      }
+    ]
+  },
+  {
+    "title_en": "Beef and Broccoli with Noodles",
+    "title_ru": "Говядина с брокколи и лапшой",
+    "image_url": "https://images.unsplash.com/photo-1512058564366-18510be2db19?w=400&h=300&fit=crop",
+    "calories_per_serving": 510,
+    "protein": 34,
+    "carbs": 52,
+    "fat": 16,
+    "cook_time_mins": 20,
+    "servings": 2,
+    "diet_type": "halal",
+    "cuisine": "asian",
+    "instructions_json": [
+      "Cook egg noodles according to package.",
+      "Slice beef and stir-fry in a hot wok.",
+      "Add broccoli florets and soy-oyster sauce.",
+      "Toss noodles with the beef and broccoli.",
+      "Garnish with sesame seeds."
+    ],
+    "instructions": "Cook egg noodles according to package. Slice beef and stir-fry in a hot wok. Add broccoli florets and soy-oyster sauce. Toss noodles with the beef and broccoli. Garnish with sesame seeds.",
+    "instructions_ru": "Сварите яичную лапшу по инструкции. Нарежьте говядину и обжарьте в воке. Добавьте брокколи и соус. Смешайте лапшу с говядиной и брокколи. Посыпьте кунжутом.",
+    "youtube_url": null,
+    "ingredients": [
+      {
+        "name": "Beef sirloin",
+        "amount": "300",
+        "unit": "g"
+      },
+      {
+        "name": "Egg noodles",
+        "amount": "200",
+        "unit": "g"
+      },
+      {
+        "name": "Broccoli",
+        "amount": "200",
+        "unit": "g"
+      },
+      {
+        "name": "Soy sauce",
+        "amount": "3",
+        "unit": "tbsp"
+      },
+      {
+        "name": "Sesame oil",
+        "amount": "1",
+        "unit": "tbsp"
+      }
+    ]
+  },
+  {
+    "title_en": "Mediterranean Baked Fish with Vegetables",
+    "title_ru": "Рыба по-средиземноморски с овощами",
+    "image_url": "https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=400&h=300&fit=crop",
+    "calories_per_serving": 380,
+    "protein": 34,
+    "carbs": 22,
+    "fat": 18,
+    "cook_time_mins": 30,
+    "servings": 2,
+    "diet_type": "halal",
+    "cuisine": "mediterranean",
+    "instructions_json": [
+      "Preheat oven to 190C/375F.",
+      "Place fish fillets on a bed of sliced tomatoes, olives, and capers.",
+      "Drizzle with olive oil and lemon juice.",
+      "Bake for 20 minutes.",
+      "Serve with a side of couscous."
+    ],
+    "instructions": "Preheat oven to 190C/375F. Place fish fillets on a bed of sliced tomatoes, olives, and capers. Drizzle with olive oil and lemon juice. Bake for 20 minutes. Serve with a side of couscous.",
+    "instructions_ru": "Разогрейте духовку до 190С. Выложите рыбу на подушку из помидоров, оливок и каперсов. Полейте оливковым маслом и лимонным соком. Запекайте 20 минут. Подавайте с кускусом.",
+    "youtube_url": null,
+    "ingredients": [
+      {
+        "name": "White fish fillet",
+        "amount": "300",
+        "unit": "g"
+      },
+      {
+        "name": "Tomatoes",
+        "amount": "3",
+        "unit": "pc"
+      },
+      {
+        "name": "Olives",
+        "amount": "50",
+        "unit": "g"
+      },
+      {
+        "name": "Olive oil",
+        "amount": "2",
+        "unit": "tbsp"
+      },
+      {
+        "name": "Lemon",
+        "amount": "1",
+        "unit": "pc"
+      }
+    ]
+  },
+  {
+    "title_en": "Chicken Biryani",
+    "title_ru": "Куриный бирьяни",
+    "image_url": "https://images.unsplash.com/photo-1512058564366-18510be2db19?w=400&h=300&fit=crop",
+    "calories_per_serving": 580,
+    "protein": 34,
+    "carbs": 68,
+    "fat": 16,
+    "cook_time_mins": 45,
+    "servings": 4,
+    "diet_type": "halal",
+    "cuisine": "indian",
+    "instructions_json": [
+      "Marinate chicken in yogurt and biryani spices.",
+      "Par-cook basmati rice.",
+      "Layer chicken and rice in a pot.",
+      "Seal with foil and cook on low heat for 25 minutes.",
+      "Garnish with fried onions and fresh cilantro."
+    ],
+    "instructions": "Marinate chicken in yogurt and biryani spices. Par-cook basmati rice. Layer chicken and rice in a pot. Seal with foil and cook on low heat for 25 minutes. Garnish with fried onions and fresh cilantro.",
+    "instructions_ru": "Замаринуйте курицу в йогурте и специях бирьяни. Частично сварите рис басмати. Выложите слоями курицу и рис в кастрюлю. Запечатайте фольгой и готовьте на слабом огне 25 минут. Украсьте жареным луком и кинзой.",
+    "youtube_url": null,
+    "ingredients": [
+      {
+        "name": "Chicken thigh",
+        "amount": "500",
+        "unit": "g"
+      },
+      {
+        "name": "Basmati rice",
+        "amount": "300",
+        "unit": "g"
+      },
+      {
+        "name": "Yogurt",
+        "amount": "100",
+        "unit": "g"
+      },
+      {
+        "name": "Onion",
+        "amount": "2",
+        "unit": "pc"
+      },
+      {
+        "name": "Biryani spice mix",
+        "amount": "2",
+        "unit": "tbsp"
+      },
+      {
+        "name": "Saffron",
+        "amount": "1",
+        "unit": "pinch"
+      }
+    ]
+  },
+  {
+    "title_en": "Margherita Pizza (Homemade)",
+    "title_ru": "Пицца Маргарита (домашняя)",
+    "image_url": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&h=300&fit=crop",
+    "calories_per_serving": 460,
+    "protein": 20,
+    "carbs": 58,
+    "fat": 16,
+    "cook_time_mins": 25,
+    "servings": 4,
+    "diet_type": "halal",
+    "cuisine": "italian",
+    "instructions_json": [
+      "Stretch pizza dough on a floured surface.",
+      "Spread tomato sauce evenly.",
+      "Top with sliced mozzarella and fresh basil.",
+      "Bake at 250C/480F for 10-12 minutes.",
+      "Drizzle with olive oil before serving."
+    ],
+    "instructions": "Stretch pizza dough on a floured surface. Spread tomato sauce evenly. Top with sliced mozzarella and fresh basil. Bake at 250C/480F for 10-12 minutes. Drizzle with olive oil before serving.",
+    "instructions_ru": "Раскатайте тесто на присыпанной мукой поверхности. Распределите томатный соус. Выложите моцареллу и свежий базилик. Запекайте при 250С 10-12 минут. Полейте оливковым маслом перед подачей.",
+    "youtube_url": null,
+    "ingredients": [
+      {
+        "name": "Pizza dough",
+        "amount": "400",
+        "unit": "g"
+      },
+      {
+        "name": "Tomato sauce",
+        "amount": "150",
+        "unit": "g"
+      },
+      {
+        "name": "Fresh mozzarella",
+        "amount": "200",
+        "unit": "g"
+      },
+      {
+        "name": "Fresh basil",
+        "amount": "10",
+        "unit": "leaves"
+      },
+      {
+        "name": "Olive oil",
+        "amount": "1",
+        "unit": "tbsp"
+      }
+    ]
+  },
+  {
+    "title_en": "Teriyaki Chicken with Steamed Rice",
+    "title_ru": "Курица терияки с рисом на пару",
+    "image_url": "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?w=400&h=300&fit=crop",
+    "calories_per_serving": 520,
+    "protein": 36,
+    "carbs": 60,
+    "fat": 12,
+    "cook_time_mins": 25,
+    "servings": 2,
+    "diet_type": "halal",
+    "cuisine": "japanese",
+    "instructions_json": [
+      "Mix soy sauce, honey, garlic, and ginger for teriyaki sauce.",
+      "Pan-fry chicken thighs until golden.",
+      "Pour sauce over chicken and simmer until thickened.",
+      "Cook rice.",
+      "Serve chicken over rice with steamed vegetables."
+    ],
+    "instructions": "Mix soy sauce, honey, garlic, and ginger for teriyaki sauce. Pan-fry chicken thighs until golden. Pour sauce over chicken and simmer until thickened. Cook rice. Serve chicken over rice with steamed vegetables.",
+    "instructions_ru": "Смешайте соевый соус, мёд, чеснок и имбирь для соуса терияки. Обжарьте куриные бёдра до золотистой корочки. Полейте соусом и тушите до загустения. Сварите рис. Подавайте курицу с рисом и овощами на пару.",
+    "youtube_url": null,
+    "ingredients": [
+      {
+        "name": "Chicken thigh",
+        "amount": "400",
+        "unit": "g"
+      },
+      {
+        "name": "Jasmine rice",
+        "amount": "200",
+        "unit": "g"
+      },
+      {
+        "name": "Soy sauce",
+        "amount": "3",
+        "unit": "tbsp"
+      },
+      {
+        "name": "Honey",
+        "amount": "2",
+        "unit": "tbsp"
+      },
+      {
+        "name": "Ginger",
+        "amount": "10",
+        "unit": "g"
+      },
+      {
+        "name": "Garlic",
+        "amount": "2",
+        "unit": "cloves"
+      }
+    ]
+  },
+  {
+    "title_en": "Stuffed Bell Peppers with Ground Beef and Rice",
+    "title_ru": "Фаршированный перец с говядиной и рисом",
+    "image_url": "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=400&h=300&fit=crop",
+    "calories_per_serving": 450,
+    "protein": 28,
+    "carbs": 42,
+    "fat": 18,
+    "cook_time_mins": 40,
+    "servings": 4,
+    "diet_type": "halal",
+    "cuisine": "international",
+    "instructions_json": [
+      "Cut tops off bell peppers and remove seeds.",
+      "Mix cooked rice, ground beef, onion, and tomato sauce.",
+      "Stuff peppers with the mixture.",
+      "Place in a baking dish, top with cheese.",
+      "Bake at 190C for 30 minutes."
+    ],
+    "instructions": "Cut tops off bell peppers and remove seeds. Mix cooked rice, ground beef, onion, and tomato sauce. Stuff peppers with the mixture. Place in a baking dish, top with cheese. Bake at 190C for 30 minutes.",
+    "instructions_ru": "Срежьте верхушки перцев и удалите семена. Смешайте варёный рис, говяжий фарш, лук и томатный соус. Начините перцы смесью. Выложите в форму, посыпьте сыром. Запекайте при 190С 30 минут.",
+    "youtube_url": null,
+    "ingredients": [
+      {
+        "name": "Bell peppers",
+        "amount": "4",
+        "unit": "pc"
+      },
+      {
+        "name": "Ground beef",
+        "amount": "300",
+        "unit": "g"
+      },
+      {
+        "name": "Rice",
+        "amount": "150",
+        "unit": "g"
+      },
+      {
+        "name": "Tomato sauce",
+        "amount": "200",
+        "unit": "g"
+      },
+      {
+        "name": "Cheese",
+        "amount": "80",
+        "unit": "g"
+      }
+    ]
+  },
+  {
+    "title_en": "Mixed Nuts and Dried Fruit Trail Mix",
+    "title_ru": "Ореховый микс с сухофруктами",
+    "image_url": "https://images.unsplash.com/photo-1599599810769-bcde5a160d32?w=400&h=300&fit=crop",
+    "calories_per_serving": 200,
+    "protein": 5,
+    "carbs": 18,
+    "fat": 14,
+    "cook_time_mins": 2,
+    "servings": 4,
+    "diet_type": "halal",
+    "cuisine": "international",
+    "instructions_json": [
+      "Combine almonds, walnuts, and cashews in a bowl.",
+      "Add dried cranberries, raisins, and apricots.",
+      "Mix well.",
+      "Portion into small bags or containers."
+    ],
+    "instructions": "Combine almonds, walnuts, and cashews in a bowl. Add dried cranberries, raisins, and apricots. Mix well. Portion into small bags or containers.",
+    "instructions_ru": "Смешайте миндаль, грецкие орехи и кешью в миске. Добавьте сушёную клюкву, изюм и курагу. Хорошо перемешайте. Разложите по пакетикам или контейнерам.",
+    "youtube_url": null,
+    "ingredients": [
+      {
+        "name": "Almonds",
+        "amount": "50",
+        "unit": "g"
+      },
+      {
+        "name": "Walnuts",
+        "amount": "50",
+        "unit": "g"
+      },
+      {
+        "name": "Cashews",
+        "amount": "50",
+        "unit": "g"
+      },
+      {
+        "name": "Dried cranberries",
+        "amount": "30",
+        "unit": "g"
+      },
+      {
+        "name": "Raisins",
+        "amount": "30",
+        "unit": "g"
+      }
+    ]
+  },
+  {
+    "title_en": "Apple Slices with Almond Butter",
+    "title_ru": "Яблочные дольки с миндальной пастой",
+    "image_url": "https://images.unsplash.com/photo-1488459716781-31db52582fe9?w=400&h=300&fit=crop",
+    "calories_per_serving": 210,
+    "protein": 5,
+    "carbs": 28,
+    "fat": 10,
+    "cook_time_mins": 3,
+    "servings": 1,
+    "diet_type": "halal",
+    "cuisine": "international",
+    "instructions_json": [
+      "Wash and core the apple.",
+      "Slice into thin wedges.",
+      "Spread almond butter on each slice.",
+      "Sprinkle with cinnamon."
+    ],
+    "instructions": "Wash and core the apple. Slice into thin wedges. Spread almond butter on each slice. Sprinkle with cinnamon.",
+    "instructions_ru": "Вымойте и удалите сердцевину яблока. Нарежьте тонкими дольками. Намажьте миндальной пастой. Посыпьте корицей.",
+    "youtube_url": null,
+    "ingredients": [
+      {
+        "name": "Apple",
+        "amount": "1",
+        "unit": "pc"
+      },
+      {
+        "name": "Almond butter",
+        "amount": "2",
+        "unit": "tbsp"
+      },
+      {
+        "name": "Cinnamon",
+        "amount": "1",
+        "unit": "pinch"
+      }
+    ]
+  },
+  {
+    "title_en": "Hummus with Vegetable Sticks",
+    "title_ru": "Хумус с овощными палочками",
+    "image_url": "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=400&h=300&fit=crop",
+    "calories_per_serving": 175,
+    "protein": 6,
+    "carbs": 22,
+    "fat": 8,
+    "cook_time_mins": 5,
+    "servings": 2,
+    "diet_type": "halal",
+    "cuisine": "middle_eastern",
+    "instructions_json": [
+      "Cut carrots, cucumbers, and celery into sticks.",
+      "Spoon hummus into a small dish.",
+      "Arrange vegetables around the hummus.",
+      "Serve as a healthy snack."
+    ],
+    "instructions": "Cut carrots, cucumbers, and celery into sticks. Spoon hummus into a small dish. Arrange vegetables around the hummus. Serve as a healthy snack.",
+    "instructions_ru": "Нарежьте морковь, огурцы и сельдерей палочками. Выложите хумус в маленькую тарелку. Разложите овощи вокруг хумуса. Подавайте как здоровый перекус.",
+    "youtube_url": null,
+    "ingredients": [
+      {
+        "name": "Hummus",
+        "amount": "100",
+        "unit": "g"
+      },
+      {
+        "name": "Carrot",
+        "amount": "1",
+        "unit": "pc"
+      },
+      {
+        "name": "Cucumber",
+        "amount": "1",
+        "unit": "pc"
+      },
+      {
+        "name": "Celery",
+        "amount": "2",
+        "unit": "stalks"
+      }
+    ]
+  },
+  {
+    "title_en": "Greek Yogurt with Honey and Walnuts",
+    "title_ru": "Греческий йогурт с мёдом и грецкими орехами",
+    "image_url": "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=400&h=300&fit=crop",
+    "calories_per_serving": 180,
+    "protein": 14,
+    "carbs": 18,
+    "fat": 7,
+    "cook_time_mins": 2,
+    "servings": 1,
+    "diet_type": "halal",
+    "cuisine": "international",
+    "instructions_json": [
+      "Spoon Greek yogurt into a bowl.",
+      "Drizzle with honey.",
+      "Top with chopped walnuts.",
+      "Serve immediately."
+    ],
+    "instructions": "Spoon Greek yogurt into a bowl. Drizzle with honey. Top with chopped walnuts. Serve immediately.",
+    "instructions_ru": "Выложите греческий йогурт в миску. Полейте мёдом. Посыпьте измельчёнными грецкими орехами. Подавайте сразу.",
+    "youtube_url": null,
+    "ingredients": [
+      {
+        "name": "Greek yogurt",
+        "amount": "150",
+        "unit": "g"
+      },
+      {
+        "name": "Honey",
+        "amount": "1",
+        "unit": "tbsp"
+      },
+      {
+        "name": "Walnuts",
+        "amount": "20",
+        "unit": "g"
+      }
+    ]
+  },
+  {
+    "title_en": "Rice Cakes with Avocado and Seeds",
+    "title_ru": "Рисовые хлебцы с авокадо и семечками",
+    "image_url": "https://images.unsplash.com/photo-1541519227354-08fa5d50c44d?w=400&h=300&fit=crop",
+    "calories_per_serving": 190,
+    "protein": 4,
+    "carbs": 22,
+    "fat": 10,
+    "cook_time_mins": 3,
+    "servings": 1,
+    "diet_type": "halal",
+    "cuisine": "international",
+    "instructions_json": [
+      "Mash half an avocado.",
+      "Spread on rice cakes.",
+      "Sprinkle with pumpkin and sunflower seeds.",
+      "Season with salt and chili flakes."
+    ],
+    "instructions": "Mash half an avocado. Spread on rice cakes. Sprinkle with pumpkin and sunflower seeds. Season with salt and chili flakes.",
+    "instructions_ru": "Разомните половину авокадо. Намажьте на рисовые хлебцы. Посыпьте тыквенными и подсолнечными семечками. Приправьте солью и хлопьями чили.",
+    "youtube_url": null,
+    "ingredients": [
+      {
+        "name": "Rice cakes",
+        "amount": "2",
+        "unit": "pc"
+      },
+      {
+        "name": "Avocado",
+        "amount": "0.5",
+        "unit": "pc"
+      },
+      {
+        "name": "Pumpkin seeds",
+        "amount": "10",
+        "unit": "g"
+      },
+      {
+        "name": "Sunflower seeds",
+        "amount": "10",
+        "unit": "g"
+      }
+    ]
+  },
+  {
+    "title_en": "Cottage Cheese with Fresh Berries",
+    "title_ru": "Творог со свежими ягодами",
+    "image_url": "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=400&h=300&fit=crop",
+    "calories_per_serving": 155,
+    "protein": 16,
+    "carbs": 14,
+    "fat": 4,
+    "cook_time_mins": 2,
+    "servings": 1,
+    "diet_type": "halal",
+    "cuisine": "international",
+    "instructions_json": [
+      "Spoon cottage cheese into a bowl.",
+      "Top with fresh strawberries and blueberries.",
+      "Drizzle with a little honey if desired.",
+      "Serve immediately."
+    ],
+    "instructions": "Spoon cottage cheese into a bowl. Top with fresh strawberries and blueberries. Drizzle with a little honey if desired. Serve immediately.",
+    "instructions_ru": "Выложите творог в миску. Сверху положите свежую клубнику и чернику. По желанию полейте мёдом. Подавайте сразу.",
+    "youtube_url": null,
+    "ingredients": [
+      {
+        "name": "Cottage cheese",
+        "amount": "150",
+        "unit": "g"
+      },
+      {
+        "name": "Strawberries",
+        "amount": "50",
+        "unit": "g"
+      },
+      {
+        "name": "Blueberries",
+        "amount": "50",
+        "unit": "g"
+      }
+    ]
+  },
+  {
+    "title_en": "Protein Energy Balls",
+    "title_ru": "Протеиновые энергетические шарики",
+    "image_url": "https://images.unsplash.com/photo-1599599810769-bcde5a160d32?w=400&h=300&fit=crop",
+    "calories_per_serving": 160,
+    "protein": 8,
+    "carbs": 20,
+    "fat": 7,
+    "cook_time_mins": 10,
+    "servings": 8,
+    "diet_type": "halal",
+    "cuisine": "international",
+    "instructions_json": [
+      "Mix oats, peanut butter, honey, and protein powder.",
+      "Add chocolate chips and mix well.",
+      "Roll into small balls.",
+      "Refrigerate for 30 minutes before serving."
+    ],
+    "instructions": "Mix oats, peanut butter, honey, and protein powder. Add chocolate chips and mix well. Roll into small balls. Refrigerate for 30 minutes before serving.",
+    "instructions_ru": "Смешайте овсянку, арахисовую пасту, мёд и протеиновый порошок. Добавьте шоколадные капли и перемешайте. Скатайте маленькие шарики. Охладите 30 минут перед подачей.",
+    "youtube_url": null,
+    "ingredients": [
+      {
+        "name": "Rolled oats",
+        "amount": "100",
+        "unit": "g"
+      },
+      {
+        "name": "Peanut butter",
+        "amount": "60",
+        "unit": "g"
+      },
+      {
+        "name": "Honey",
+        "amount": "40",
+        "unit": "g"
+      },
+      {
+        "name": "Protein powder",
+        "amount": "30",
+        "unit": "g"
+      },
+      {
+        "name": "Dark chocolate chips",
+        "amount": "30",
+        "unit": "g"
+      }
+    ]
+  },
+  {
+    "title_en": "Banana with Peanut Butter",
+    "title_ru": "Банан с арахисовой пастой",
+    "image_url": "https://images.unsplash.com/photo-1488459716781-31db52582fe9?w=400&h=300&fit=crop",
+    "calories_per_serving": 220,
+    "protein": 7,
+    "carbs": 30,
+    "fat": 10,
+    "cook_time_mins": 2,
+    "servings": 1,
+    "diet_type": "halal",
+    "cuisine": "international",
+    "instructions_json": [
+      "Peel and slice banana lengthwise.",
+      "Spread peanut butter on one half.",
+      "Close like a sandwich or leave open.",
+      "Enjoy as a quick snack."
+    ],
+    "instructions": "Peel and slice banana lengthwise. Spread peanut butter on one half. Close like a sandwich or leave open. Enjoy as a quick snack.",
+    "instructions_ru": "Очистите и разрежьте банан вдоль. Намажьте арахисовую пасту на одну половину. Сложите как сэндвич или оставьте открытым. Наслаждайтесь быстрым перекусом.",
+    "youtube_url": null,
+    "ingredients": [
+      {
+        "name": "Banana",
+        "amount": "1",
+        "unit": "pc"
+      },
+      {
+        "name": "Peanut butter",
+        "amount": "1.5",
+        "unit": "tbsp"
+      }
+    ]
+  },
+  {
+    "title_en": "Dark Chocolate and Almonds",
+    "title_ru": "Тёмный шоколад с миндалём",
+    "image_url": "https://images.unsplash.com/photo-1599599810769-bcde5a160d32?w=400&h=300&fit=crop",
+    "calories_per_serving": 190,
+    "protein": 4,
+    "carbs": 16,
+    "fat": 14,
+    "cook_time_mins": 0,
+    "servings": 1,
+    "diet_type": "halal",
+    "cuisine": "international",
+    "instructions_json": [
+      "Break dark chocolate into squares.",
+      "Pair with a handful of almonds.",
+      "Enjoy as an antioxidant-rich snack."
+    ],
+    "instructions": "Break dark chocolate into squares. Pair with a handful of almonds. Enjoy as an antioxidant-rich snack.",
+    "instructions_ru": "Разломайте тёмный шоколад на кусочки. Ешьте вместе с горстью миндаля. Наслаждайтесь перекусом, богатым антиоксидантами.",
+    "youtube_url": null,
+    "ingredients": [
+      {
+        "name": "Dark chocolate (70%+)",
+        "amount": "30",
+        "unit": "g"
+      },
+      {
+        "name": "Almonds",
+        "amount": "20",
+        "unit": "g"
+      }
+    ]
+  },
+  {
+    "title_en": "Fresh Fruit Salad",
+    "title_ru": "Салат из свежих фруктов",
+    "image_url": "https://images.unsplash.com/photo-1488459716781-31db52582fe9?w=400&h=300&fit=crop",
+    "calories_per_serving": 120,
+    "protein": 2,
+    "carbs": 28,
+    "fat": 1,
+    "cook_time_mins": 5,
+    "servings": 2,
+    "diet_type": "halal",
+    "cuisine": "international",
+    "instructions_json": [
+      "Dice apple, banana, orange, and kiwi.",
+      "Add berries and grapes.",
+      "Toss gently with lime juice.",
+      "Serve chilled."
+    ],
+    "instructions": "Dice apple, banana, orange, and kiwi. Add berries and grapes. Toss gently with lime juice. Serve chilled.",
+    "instructions_ru": "Нарежьте кубиками яблоко, банан, апельсин и киви. Добавьте ягоды и виноград. Аккуратно перемешайте с соком лайма. Подавайте охлаждённым.",
+    "youtube_url": null,
+    "ingredients": [
+      {
+        "name": "Apple",
+        "amount": "1",
+        "unit": "pc"
+      },
+      {
+        "name": "Banana",
+        "amount": "1",
+        "unit": "pc"
+      },
+      {
+        "name": "Orange",
+        "amount": "1",
+        "unit": "pc"
+      },
+      {
+        "name": "Kiwi",
+        "amount": "1",
+        "unit": "pc"
+      },
+      {
+        "name": "Mixed berries",
+        "amount": "50",
+        "unit": "g"
+      }
+    ]
+  },
+  {
+    "title_en": "Tofu and Vegetable Stir-Fry",
+    "title_ru": "Тофу с овощами по-азиатски",
+    "image_url": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400&h=300&fit=crop",
+    "calories_per_serving": 380,
+    "protein": 22,
+    "carbs": 42,
+    "fat": 14,
+    "cook_time_mins": 20,
+    "servings": 2,
+    "diet_type": "vegan",
+    "cuisine": "asian",
+    "instructions_json": [
+      "Press tofu and cut into cubes.",
+      "Stir-fry tofu in sesame oil until golden.",
+      "Add broccoli, bell pepper, and snap peas.",
+      "Pour soy-ginger sauce and toss.",
+      "Serve over rice or noodles."
+    ],
+    "instructions": "Press tofu and cut into cubes. Stir-fry tofu in sesame oil until golden. Add broccoli, bell pepper, and snap peas. Pour soy-ginger sauce and toss. Serve over rice or noodles.",
+    "instructions_ru": "Отожмите тофу и нарежьте кубиками. Обжарьте тофу на кунжутном масле до золотистого цвета. Добавьте брокколи, перец и горошек. Влейте соево-имбирный соус и перемешайте. Подавайте с рисом или лапшой.",
+    "youtube_url": null,
+    "ingredients": [
+      {
+        "name": "Firm tofu",
+        "amount": "300",
+        "unit": "g"
+      },
+      {
+        "name": "Broccoli",
+        "amount": "150",
+        "unit": "g"
+      },
+      {
+        "name": "Bell pepper",
+        "amount": "1",
+        "unit": "pc"
+      },
+      {
+        "name": "Snap peas",
+        "amount": "100",
+        "unit": "g"
+      },
+      {
+        "name": "Soy sauce",
+        "amount": "2",
+        "unit": "tbsp"
+      },
+      {
+        "name": "Sesame oil",
+        "amount": "1",
+        "unit": "tbsp"
+      }
+    ]
+  },
+  {
+    "title_en": "Lentil and Sweet Potato Stew",
+    "title_ru": "Рагу из чечевицы и батата",
+    "image_url": "https://images.unsplash.com/photo-1505253716362-afaea1d3d1af?w=400&h=300&fit=crop",
+    "calories_per_serving": 360,
+    "protein": 18,
+    "carbs": 58,
+    "fat": 6,
+    "cook_time_mins": 35,
+    "servings": 4,
+    "diet_type": "vegan",
+    "cuisine": "international",
+    "instructions_json": [
+      "Saute onion, garlic, and ginger in olive oil.",
+      "Add cubed sweet potato and green lentils.",
+      "Pour in vegetable broth and coconut milk.",
+      "Simmer for 25-30 minutes.",
+      "Season with cumin and serve with bread."
+    ],
+    "instructions": "Saute onion, garlic, and ginger in olive oil. Add cubed sweet potato and green lentils. Pour in vegetable broth and coconut milk. Simmer for 25-30 minutes. Season with cumin and serve with bread.",
+    "instructions_ru": "Обжарьте лук, чеснок и имбирь на оливковом масле. Добавьте нарезанный батат и зелёную чечевицу. Влейте овощной бульон и кокосовое молоко. Тушите 25-30 минут. Приправьте кумином и подавайте с хлебом.",
+    "youtube_url": null,
+    "ingredients": [
+      {
+        "name": "Green lentils",
+        "amount": "200",
+        "unit": "g"
+      },
+      {
+        "name": "Sweet potato",
+        "amount": "300",
+        "unit": "g"
+      },
+      {
+        "name": "Coconut milk",
+        "amount": "200",
+        "unit": "ml"
+      },
+      {
+        "name": "Vegetable broth",
+        "amount": "500",
+        "unit": "ml"
+      },
+      {
+        "name": "Onion",
+        "amount": "1",
+        "unit": "pc"
+      }
+    ]
+  },
+  {
+    "title_en": "Quinoa and Black Bean Power Bowl",
+    "title_ru": "Боул из киноа и чёрных бобов",
+    "image_url": "https://images.unsplash.com/photo-1505576399279-0d06b8405b4c?w=400&h=300&fit=crop",
+    "calories_per_serving": 420,
+    "protein": 16,
+    "carbs": 62,
+    "fat": 12,
+    "cook_time_mins": 20,
+    "servings": 2,
+    "diet_type": "vegan",
+    "cuisine": "mexican",
+    "instructions_json": [
+      "Cook quinoa according to package.",
+      "Heat black beans with cumin and garlic.",
+      "Prepare toppings: corn, avocado, tomato, cilantro.",
+      "Assemble bowls and squeeze lime on top.",
+      "Drizzle with olive oil."
+    ],
+    "instructions": "Cook quinoa according to package. Heat black beans with cumin and garlic. Prepare toppings: corn, avocado, tomato, cilantro. Assemble bowls and squeeze lime on top. Drizzle with olive oil.",
+    "instructions_ru": "Сварите киноа по инструкции. Разогрейте чёрные бобы с кумином и чесноком. Подготовьте топпинги: кукуруза, авокадо, помидор, кинза. Соберите боулы и выжмите лайм. Полейте оливковым маслом.",
+    "youtube_url": null,
+    "ingredients": [
+      {
+        "name": "Quinoa",
+        "amount": "150",
+        "unit": "g"
+      },
+      {
+        "name": "Black beans (canned)",
+        "amount": "200",
+        "unit": "g"
+      },
+      {
+        "name": "Corn",
+        "amount": "100",
+        "unit": "g"
+      },
+      {
+        "name": "Avocado",
+        "amount": "1",
+        "unit": "pc"
+      },
+      {
+        "name": "Lime",
+        "amount": "1",
+        "unit": "pc"
+      }
+    ]
+  },
+  {
+    "title_en": "Chickpea and Spinach Curry",
+    "title_ru": "Карри из нута со шпинатом",
+    "image_url": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=400&h=300&fit=crop",
+    "calories_per_serving": 400,
+    "protein": 16,
+    "carbs": 52,
+    "fat": 14,
+    "cook_time_mins": 25,
+    "servings": 4,
+    "diet_type": "vegan",
+    "cuisine": "indian",
+    "instructions_json": [
+      "Saute onion, garlic, and ginger.",
+      "Add curry paste and cook 1 minute.",
+      "Add chickpeas and coconut milk.",
+      "Simmer 15 minutes, then stir in spinach.",
+      "Serve over basmati rice."
+    ],
+    "instructions": "Saute onion, garlic, and ginger. Add curry paste and cook 1 minute. Add chickpeas and coconut milk. Simmer 15 minutes, then stir in spinach. Serve over basmati rice.",
+    "instructions_ru": "Обжарьте лук, чеснок и имбирь. Добавьте карри пасту и готовьте 1 минуту. Добавьте нут и кокосовое молоко. Тушите 15 минут, затем добавьте шпинат. Подавайте с рисом басмати.",
+    "youtube_url": null,
+    "ingredients": [
+      {
+        "name": "Chickpeas (canned)",
+        "amount": "400",
+        "unit": "g"
+      },
+      {
+        "name": "Spinach",
+        "amount": "200",
+        "unit": "g"
+      },
+      {
+        "name": "Coconut milk",
+        "amount": "400",
+        "unit": "ml"
+      },
+      {
+        "name": "Curry paste",
+        "amount": "2",
+        "unit": "tbsp"
+      },
+      {
+        "name": "Basmati rice",
+        "amount": "200",
+        "unit": "g"
+      }
+    ]
+  },
+  {
+    "title_en": "Roasted Vegetable and Couscous Salad",
+    "title_ru": "Салат с запечёнными овощами и кускусом",
+    "image_url": "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=400&h=300&fit=crop",
+    "calories_per_serving": 370,
+    "protein": 10,
+    "carbs": 52,
+    "fat": 14,
+    "cook_time_mins": 30,
+    "servings": 2,
+    "diet_type": "vegan",
+    "cuisine": "mediterranean",
+    "instructions_json": [
+      "Cube zucchini, eggplant, and bell pepper.",
+      "Toss with olive oil and roast at 200C for 20 minutes.",
+      "Cook couscous with vegetable broth.",
+      "Mix roasted vegetables with couscous.",
+      "Season with lemon juice, cumin, and fresh herbs."
+    ],
+    "instructions": "Cube zucchini, eggplant, and bell pepper. Toss with olive oil and roast at 200C for 20 minutes. Cook couscous with vegetable broth. Mix roasted vegetables with couscous. Season with lemon juice, cumin, and fresh herbs.",
+    "instructions_ru": "Нарежьте кубиками цуккини, баклажан и перец. Полейте оливковым маслом и запекайте при 200С 20 минут. Сварите кускус на овощном бульоне. Смешайте овощи с кускусом. Приправьте лимонным соком, кумином и свежими травами.",
+    "youtube_url": null,
+    "ingredients": [
+      {
+        "name": "Zucchini",
+        "amount": "1",
+        "unit": "pc"
+      },
+      {
+        "name": "Eggplant",
+        "amount": "1",
+        "unit": "pc"
+      },
+      {
+        "name": "Bell pepper",
+        "amount": "1",
+        "unit": "pc"
+      },
+      {
+        "name": "Couscous",
+        "amount": "150",
+        "unit": "g"
+      },
+      {
+        "name": "Olive oil",
+        "amount": "2",
+        "unit": "tbsp"
+      }
+    ]
+  },
+  {
+    "title_en": "Penne Pasta with Creamy Tomato Sauce",
+    "title_ru": "Паста пенне со сливочно-томатным соусом",
+    "image_url": "https://images.unsplash.com/photo-1563379926898-05f4575a45d8?w=400&h=300&fit=crop",
+    "calories_per_serving": 480,
+    "protein": 16,
+    "carbs": 66,
+    "fat": 16,
+    "cook_time_mins": 20,
+    "servings": 4,
+    "diet_type": "vegetarian",
+    "cuisine": "italian",
+    "instructions_json": [
+      "Cook penne pasta al dente.",
+      "Saute garlic in olive oil.",
+      "Add crushed tomatoes and cream, simmer 10 minutes.",
+      "Toss pasta with sauce.",
+      "Top with fresh basil and Parmesan."
+    ],
+    "instructions": "Cook penne pasta al dente. Saute garlic in olive oil. Add crushed tomatoes and cream, simmer 10 minutes. Toss pasta with sauce. Top with fresh basil and Parmesan.",
+    "instructions_ru": "Сварите пенне аль денте. Обжарьте чеснок на оливковом масле. Добавьте помидоры и сливки, тушите 10 минут. Смешайте пасту с соусом. Подавайте со свежим базиликом и пармезаном.",
+    "youtube_url": null,
+    "ingredients": [
+      {
+        "name": "Penne pasta",
+        "amount": "320",
+        "unit": "g"
+      },
+      {
+        "name": "Crushed tomatoes",
+        "amount": "400",
+        "unit": "g"
+      },
+      {
+        "name": "Cream",
+        "amount": "100",
+        "unit": "ml"
+      },
+      {
+        "name": "Garlic",
+        "amount": "3",
+        "unit": "cloves"
+      },
+      {
+        "name": "Parmesan cheese",
+        "amount": "40",
+        "unit": "g"
+      },
+      {
+        "name": "Fresh basil",
+        "amount": "10",
+        "unit": "leaves"
+      }
+    ]
+  },
+  {
+    "title_en": "Caprese Grilled Cheese Sandwich",
+    "title_ru": "Горячий сэндвич Капрезе",
+    "image_url": "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=400&h=300&fit=crop",
+    "calories_per_serving": 440,
+    "protein": 18,
+    "carbs": 38,
+    "fat": 24,
+    "cook_time_mins": 10,
+    "servings": 2,
+    "diet_type": "vegetarian",
+    "cuisine": "italian",
+    "instructions_json": [
+      "Butter the outside of sourdough bread slices.",
+      "Layer mozzarella, tomato slices, and fresh basil inside.",
+      "Grill in a pan until golden on both sides.",
+      "Drizzle with balsamic glaze.",
+      "Slice and serve."
+    ],
+    "instructions": "Butter the outside of sourdough bread slices. Layer mozzarella, tomato slices, and fresh basil inside. Grill in a pan until golden on both sides. Drizzle with balsamic glaze. Slice and serve.",
+    "instructions_ru": "Смажьте маслом внешнюю сторону хлеба. Выложите моцареллу, помидоры и базилик. Обжарьте на сковороде до золотистой корочки с обеих сторон. Полейте бальзамическим кремом. Нарежьте и подавайте.",
+    "youtube_url": null,
+    "ingredients": [
+      {
+        "name": "Sourdough bread",
+        "amount": "4",
+        "unit": "slices"
+      },
+      {
+        "name": "Fresh mozzarella",
+        "amount": "120",
+        "unit": "g"
+      },
+      {
+        "name": "Tomato",
+        "amount": "1",
+        "unit": "pc"
+      },
+      {
+        "name": "Fresh basil",
+        "amount": "8",
+        "unit": "leaves"
+      },
+      {
+        "name": "Butter",
+        "amount": "20",
+        "unit": "g"
+      }
+    ]
+  },
+  {
+    "title_en": "Vegetable Curry with Coconut Milk",
+    "title_ru": "Овощное карри на кокосовом молоке",
+    "image_url": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=400&h=300&fit=crop",
+    "calories_per_serving": 380,
+    "protein": 10,
+    "carbs": 48,
+    "fat": 18,
+    "cook_time_mins": 30,
+    "servings": 4,
+    "diet_type": "vegetarian",
+    "cuisine": "indian",
+    "instructions_json": [
+      "Saute onion, garlic, and ginger.",
+      "Add curry powder, cauliflower, potato, and bell pepper.",
+      "Pour in coconut milk and simmer 20 minutes.",
+      "Stir in peas and cook 5 more minutes.",
+      "Serve over rice with naan bread."
+    ],
+    "instructions": "Saute onion, garlic, and ginger. Add curry powder, cauliflower, potato, and bell pepper. Pour in coconut milk and simmer 20 minutes. Stir in peas and cook 5 more minutes. Serve over rice with naan bread.",
+    "instructions_ru": "Обжарьте лук, чеснок и имбирь. Добавьте карри, цветную капусту, картофель и перец. Влейте кокосовое молоко и тушите 20 минут. Добавьте горошек и готовьте ещё 5 минут. Подавайте с рисом и лепёшкой наан.",
+    "youtube_url": null,
+    "ingredients": [
+      {
+        "name": "Cauliflower",
+        "amount": "200",
+        "unit": "g"
+      },
+      {
+        "name": "Potato",
+        "amount": "2",
+        "unit": "pc"
+      },
+      {
+        "name": "Coconut milk",
+        "amount": "400",
+        "unit": "ml"
+      },
+      {
+        "name": "Curry powder",
+        "amount": "2",
+        "unit": "tbsp"
+      },
+      {
+        "name": "Green peas",
+        "amount": "100",
+        "unit": "g"
+      },
+      {
+        "name": "Basmati rice",
+        "amount": "200",
+        "unit": "g"
+      }
+    ]
+  },
+  {
+    "title_en": "Spinach and Ricotta Stuffed Shells",
+    "title_ru": "Ракушки с начинкой из шпината и рикотты",
+    "image_url": "https://images.unsplash.com/photo-1563379926898-05f4575a45d8?w=400&h=300&fit=crop",
+    "calories_per_serving": 430,
+    "protein": 20,
+    "carbs": 50,
+    "fat": 16,
+    "cook_time_mins": 40,
+    "servings": 4,
+    "diet_type": "vegetarian",
+    "cuisine": "italian",
+    "instructions_json": [
+      "Cook jumbo pasta shells al dente.",
+      "Mix ricotta, spinach, egg, and Parmesan.",
+      "Stuff each shell with the mixture.",
+      "Place in a baking dish with marinara sauce.",
+      "Top with mozzarella and bake at 190C for 20 minutes."
+    ],
+    "instructions": "Cook jumbo pasta shells al dente. Mix ricotta, spinach, egg, and Parmesan. Stuff each shell with the mixture. Place in a baking dish with marinara sauce. Top with mozzarella and bake at 190C for 20 minutes.",
+    "instructions_ru": "Сварите крупные ракушки аль денте. Смешайте рикотту, шпинат, яйцо и пармезан. Начините каждую ракушку смесью. Выложите в форму с томатным соусом. Посыпьте моцареллой и запекайте при 190С 20 минут.",
+    "youtube_url": null,
+    "ingredients": [
+      {
+        "name": "Jumbo pasta shells",
+        "amount": "250",
+        "unit": "g"
+      },
+      {
+        "name": "Ricotta cheese",
+        "amount": "300",
+        "unit": "g"
+      },
+      {
+        "name": "Spinach (frozen)",
+        "amount": "200",
+        "unit": "g"
+      },
+      {
+        "name": "Marinara sauce",
+        "amount": "400",
+        "unit": "g"
+      },
+      {
+        "name": "Mozzarella",
+        "amount": "100",
+        "unit": "g"
+      },
+      {
+        "name": "Egg",
+        "amount": "1",
+        "unit": "pc"
+      }
+    ]
+  },
+  {
+    "title_en": "Mushroom and Cheese Omelette",
+    "title_ru": "Омлет с грибами и сыром",
+    "image_url": "https://images.unsplash.com/photo-1525351484163-7529414344d8?w=400&h=300&fit=crop",
+    "calories_per_serving": 350,
+    "protein": 24,
+    "carbs": 6,
+    "fat": 26,
+    "cook_time_mins": 10,
+    "servings": 1,
+    "diet_type": "vegetarian",
+    "cuisine": "french",
+    "instructions_json": [
+      "Whisk 3 eggs with salt and pepper.",
+      "Saute sliced mushrooms in butter.",
+      "Pour eggs into the pan over mushrooms.",
+      "When nearly set, add grated cheese on one half.",
+      "Fold omelette and serve."
+    ],
+    "instructions": "Whisk 3 eggs with salt and pepper. Saute sliced mushrooms in butter. Pour eggs into the pan over mushrooms. When nearly set, add grated cheese on one half. Fold omelette and serve.",
+    "instructions_ru": "Взбейте 3 яйца с солью и перцем. Обжарьте нарезанные грибы на масле. Вылейте яйца в сковороду поверх грибов. Когда почти схватится, добавьте тёртый сыр на одну половину. Сложите омлет и подавайте.",
+    "youtube_url": null,
+    "ingredients": [
+      {
+        "name": "Eggs",
+        "amount": "3",
+        "unit": "pc"
+      },
+      {
+        "name": "Mushrooms",
+        "amount": "100",
+        "unit": "g"
+      },
+      {
+        "name": "Cheese (cheddar)",
+        "amount": "40",
+        "unit": "g"
+      },
+      {
+        "name": "Butter",
+        "amount": "10",
+        "unit": "g"
+      }
+    ]
+  }
+]

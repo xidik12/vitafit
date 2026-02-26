@@ -57,7 +57,7 @@ export default function FoodSearchModal({ mealType, onAdd, onClose }) {
   const lang = i18n.language
 
   return (
-    <div className="fixed inset-0 bg-black/40 z-50 flex items-end">
+    <div className="fixed inset-0 bg-black/40 z-[60] flex items-end">
       <div className="bg-white w-full rounded-t-2xl p-4 max-h-[85vh] overflow-y-auto shadow-xl">
         <div className="flex justify-between items-center mb-3">
           <h3 className="text-lg font-bold text-text-primary">{t('add_food')}</h3>

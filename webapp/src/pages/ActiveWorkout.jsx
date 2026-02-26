@@ -42,7 +42,7 @@ function Confetti() {
   }))
 
   return (
-    <div className="pointer-events-none fixed inset-0 overflow-hidden z-50">
+    <div className="pointer-events-none fixed inset-0 overflow-hidden z-[70]">
       <style>{`
         @keyframes confetti-fall {
           0%   { transform: translateY(-20px) rotate(0deg); opacity: 1; }
@@ -397,7 +397,7 @@ export default function ActiveWorkout() {
   // -- Loading --------------------------------------------------------------
   if (loading) {
     return (
-      <div className="fixed inset-0 bg-bg-primary flex flex-col items-center justify-center gap-4">
+      <div className="fixed inset-0 bg-bg-primary flex flex-col items-center justify-center gap-4 z-[60]">
         <div className="w-8 h-8 border-2 border-accent-green border-t-transparent rounded-full animate-spin" />
         <p className="text-text-secondary text-sm">Loading workout...</p>
       </div>
@@ -406,7 +406,7 @@ export default function ActiveWorkout() {
 
   if (error) {
     return (
-      <div className="fixed inset-0 bg-bg-primary flex flex-col items-center justify-center gap-4 p-6">
+      <div className="fixed inset-0 bg-bg-primary flex flex-col items-center justify-center gap-4 p-6 z-[60]">
         <svg width="48" height="48" viewBox="0 0 48 48" fill="none" className="text-accent-red">
           <path d="M24 6L44 42H4L24 6Z" stroke="currentColor" strokeWidth="3" strokeLinejoin="round" fill="none"/>
           <path d="M24 20V30" stroke="currentColor" strokeWidth="3" strokeLinecap="round"/>
@@ -433,7 +433,7 @@ export default function ActiveWorkout() {
     return (
       <>
         <Confetti />
-        <div className="fixed inset-0 bg-bg-primary flex flex-col items-center justify-center p-6 z-40">
+        <div className="fixed inset-0 bg-bg-primary flex flex-col items-center justify-center p-6 z-[60]">
           {/* Big checkmark */}
           <div className="w-24 h-24 rounded-full bg-accent-green/15 border-4 border-accent-green flex items-center justify-center mb-6 shadow-lg shadow-accent-green/20">
             <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
@@ -490,7 +490,7 @@ export default function ActiveWorkout() {
     const presets = [30, 60, 90, 120]
 
     return (
-      <div className="fixed inset-0 bg-bg-primary flex flex-col items-center justify-center p-6 z-40">
+      <div className="fixed inset-0 bg-bg-primary flex flex-col items-center justify-center p-6 z-[60]">
         <p className="text-text-secondary text-sm uppercase tracking-widest font-semibold mb-2">Rest</p>
         <h2 className="text-text-primary text-lg font-bold mb-6">
           Next: {exercises[currentExIdx + 1]
@@ -545,7 +545,7 @@ export default function ActiveWorkout() {
   // -- No exercises guard ----------------------------------------------------
   if (exercises.length === 0) {
     return (
-      <div className="fixed inset-0 bg-bg-primary flex flex-col items-center justify-center gap-4 p-6">
+      <div className="fixed inset-0 bg-bg-primary flex flex-col items-center justify-center gap-4 p-6 z-[60]">
         <DumbbellIcon className="w-12 h-12 text-text-secondary" />
         <p className="text-text-secondary text-sm text-center">This is a rest day — no exercises scheduled.</p>
         <button
@@ -560,7 +560,7 @@ export default function ActiveWorkout() {
 
   // -- Main workout UI ------------------------------------------------------
   return (
-    <div className="fixed inset-0 bg-bg-primary flex flex-col overflow-hidden">
+    <div className="fixed inset-0 bg-bg-primary flex flex-col overflow-hidden z-[60]">
 
       {/* -- Top bar ------------------------------------------------------- */}
       <div className="flex items-center justify-between px-4 pt-4 pb-3 border-b border-border bg-white flex-shrink-0">
