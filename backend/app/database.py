@@ -316,10 +316,39 @@ async def init_db():
         await conn.run_sync(Base.metadata.create_all)
     _db_logger.info("Database tables created/verified")
 
-    # Ensure new columns exist on older databases (ALTER TABLE is idempotent)
+    # Ensure new columns exist on older databases (ALTER TABLE is idempotent with IF NOT EXISTS)
+    _migrations = [
+        # Recipes — added for rich recipe data
+        "ALTER TABLE recipes ADD COLUMN IF NOT EXISTS youtube_url TEXT",
+        "ALTER TABLE recipes ADD COLUMN IF NOT EXISTS instructions_json JSON",
+        # Exercises — added for visual instructions and form guidance
+        "ALTER TABLE exercises ADD COLUMN IF NOT EXISTS video_url TEXT",
+        "ALTER TABLE exercises ADD COLUMN IF NOT EXISTS form_tips JSON",
+        "ALTER TABLE exercises ADD COLUMN IF NOT EXISTS instructions_ru TEXT",
+        # User profiles — added for smart plan generation
+        "ALTER TABLE user_profiles ADD COLUMN IF NOT EXISTS target_protein INTEGER",
+        "ALTER TABLE user_profiles ADD COLUMN IF NOT EXISTS target_carbs INTEGER",
+        "ALTER TABLE user_profiles ADD COLUMN IF NOT EXISTS target_fat INTEGER",
+        "ALTER TABLE user_profiles ADD COLUMN IF NOT EXISTS target_water_ml INTEGER",
+        "ALTER TABLE user_profiles ADD COLUMN IF NOT EXISTS sleep_bedtime VARCHAR(5)",
+        "ALTER TABLE user_profiles ADD COLUMN IF NOT EXISTS sleep_waketime VARCHAR(5)",
+        "ALTER TABLE user_profiles ADD COLUMN IF NOT EXISTS job_type VARCHAR(20)",
+        "ALTER TABLE user_profiles ADD COLUMN IF NOT EXISTS stress_level VARCHAR(10)",
+        "ALTER TABLE user_profiles ADD COLUMN IF NOT EXISTS equipment TEXT",
+        "ALTER TABLE user_profiles ADD COLUMN IF NOT EXISTS time_per_week_mins INTEGER",
+        "ALTER TABLE user_profiles ADD COLUMN IF NOT EXISTS parq_passed BOOLEAN",
+        # Food items — added for food images
+        "ALTER TABLE food_items ADD COLUMN IF NOT EXISTS image_url TEXT",
+        # Workout tracking tables are created by create_all if they don't exist,
+        # but add columns for safety
+        "ALTER TABLE users ADD COLUMN IF NOT EXISTS onboarding_complete BOOLEAN DEFAULT FALSE",
+        "ALTER TABLE users ADD COLUMN IF NOT EXISTS consent_given BOOLEAN DEFAULT FALSE",
+    ]
     async with engine.connect() as conn:
-        try:
-            await conn.execute(text("ALTER TABLE food_items ADD COLUMN IF NOT EXISTS image_url TEXT"))
-            await conn.commit()
-        except Exception:
-            pass
+        for sql in _migrations:
+            try:
+                await conn.execute(text(sql))
+            except Exception as e:
+                _db_logger.debug(f"Migration skipped ({sql[:50]}...): {e}")
+        await conn.commit()
+    _db_logger.info(f"Ran {len(_migrations)} column migrations")
