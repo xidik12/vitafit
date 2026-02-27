@@ -18,7 +18,7 @@ async def search(
     limit: int = 20,
     user: User = Depends(get_current_user),
 ):
-    results = await search_food(q, lang, limit)
+    results = await search_food(q, lang, limit, user_id=user.id)
     return {"results": results}
 
 

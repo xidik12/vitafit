@@ -133,6 +133,28 @@ async def generate_meal_plan(user_id: int) -> dict | None:
     target_fat = profile.target_fat or 0
 
     # ------------------------------------------------------------------
+    # Health vitals adjustments (denormalized from latest health check)
+    # ------------------------------------------------------------------
+    health_notes: list[str] = []
+
+    if profile.latest_blood_glucose and profile.latest_blood_glucose > 7.0:
+        health_notes.append("glucose_note")
+        # Reduce carb target by 20% for elevated blood glucose
+        if target_carbs > 0:
+            target_carbs = int(target_carbs * 0.80)
+            logger.info(
+                f"User {user_id}: blood glucose {profile.latest_blood_glucose} mmol/L "
+                f"> 7.0 — carb target reduced 20% to {target_carbs}g"
+            )
+
+    if profile.latest_bp_systolic and profile.latest_bp_systolic > 140:
+        health_notes.append("bp_note")
+        logger.info(
+            f"User {user_id}: BP systolic {profile.latest_bp_systolic} mmHg "
+            f"> 140 — low-sodium preference noted"
+        )
+
+    # ------------------------------------------------------------------
     # Filter recipes by dietary preference (with ingredient-level checks)
     # ------------------------------------------------------------------
     filtered: list[Recipe] = list(all_recipes)
@@ -173,6 +195,21 @@ async def generate_meal_plan(user_id: int) -> dict | None:
             target_carbs=target_carbs,
             target_fat=target_fat,
             exercise_plan=exercise_plan,
+        )
+
+    # ------------------------------------------------------------------
+    # Attach health notes to plan
+    # ------------------------------------------------------------------
+    if "glucose_note" in health_notes:
+        plan["glucose_note"] = (
+            "Your blood glucose is elevated (>7.0 mmol/L). "
+            "Carbohydrate targets have been reduced by 20% and "
+            "lower-carb recipes are preferred."
+        )
+    if "bp_note" in health_notes:
+        plan["bp_note"] = (
+            "Your blood pressure is elevated (>140 mmHg systolic). "
+            "Consider choosing low-sodium meal options."
         )
 
     # ------------------------------------------------------------------

@@ -6,7 +6,7 @@ import {
 } from 'recharts'
 import api from '../utils/api'
 import { formatDate } from '../utils/format'
-import { ChartBarIcon, FireIcon, MedalIcon, PencilIcon, BoltIcon, SparklesIcon, GemIcon, CrownIcon, TrophyIcon, DumbbellIcon, DropletIcon, StarIcon, TargetIcon } from '../components/Icons'
+import { ChartBarIcon, FireIcon, MedalIcon, PencilIcon, BoltIcon, SparklesIcon, GemIcon, CrownIcon, TrophyIcon, DumbbellIcon, DropletIcon, StarIcon, TargetIcon, HeartPulseIcon, ActivityIcon, SmileIcon, BloodDropIcon } from '../components/Icons'
 
 const ACHIEVEMENTS = [
   { id: 'first_log', Icon: PencilIcon, labelKey: 'ach_first_log', color: 'accent-teal' },
@@ -91,6 +91,10 @@ export default function Progress() {
   const [showMeasurements, setShowMeasurements] = useState(false)
   const [measurements, setMeasurements] = useState({})
   const [measurementHistory, setMeasurementHistory] = useState([])
+  const [showHealthCheck, setShowHealthCheck] = useState(false)
+  const [healthCheck, setHealthCheck] = useState({})
+  const [healthHistory, setHealthHistory] = useState([])
+  const [healthStatus, setHealthStatus] = useState(null)
 
   useEffect(() => {
     if (!token) return
@@ -100,14 +104,18 @@ export default function Progress() {
   async function fetchProgress() {
     setLoading(true)
     try {
-      const [prog, weights, measHistory] = await Promise.all([
+      const [prog, weights, measHistory, healthHist, hStatus] = await Promise.all([
         api.get('/api/progress/streak', token).catch(() => null),
         api.get('/api/progress/weight', token).catch(() => []),
         api.get('/api/progress/measurements', token).catch(() => []),
+        api.get('/api/progress/health-check', token).catch(() => []),
+        api.get('/api/progress/health-status', token).catch(() => null),
       ])
       setProgressData(prog)
       setWeightData(Array.isArray(weights) ? weights : weights?.entries || [])
       setMeasurementHistory(Array.isArray(measHistory) ? measHistory : [])
+      setHealthHistory(Array.isArray(healthHist) ? healthHist : [])
+      setHealthStatus(hStatus)
     } catch {
       // Non-critical
     }
@@ -119,6 +127,17 @@ export default function Progress() {
       await api.post('/api/progress/measurements', measurements, token)
       setMeasurements({})
       setShowMeasurements(false)
+      fetchProgress()
+    } catch (err) {
+      console.error(err)
+    }
+  }
+
+  async function saveHealthCheck() {
+    try {
+      await api.post('/api/progress/health-check', healthCheck, token)
+      setHealthCheck({})
+      setShowHealthCheck(false)
       fetchProgress()
     } catch (err) {
       console.error(err)
@@ -309,6 +328,202 @@ export default function Progress() {
                     stroke="#a855f7"
                     strokeWidth={2}
                     dot={{ fill: '#a855f7', r: 3 }}
+                    activeDot={{ r: 5 }}
+                    connectNulls
+                  />
+                </LineChart>
+              </ResponsiveContainer>
+            </div>
+          )}
+
+          {/* Health Check form */}
+          <div className="bg-white rounded-2xl p-4 mb-4 border border-border shadow-sm">
+            <div className="flex justify-between items-center mb-3">
+              <h2 className="text-sm font-semibold text-text-primary flex items-center gap-1.5">
+                <HeartPulseIcon className="w-4 h-4 text-accent-red" />
+                {t('health_check')}
+              </h2>
+              <button
+                onClick={() => setShowHealthCheck(!showHealthCheck)}
+                className="text-xs text-accent-purple font-semibold bg-accent-purple/10 px-3 py-1 rounded-lg"
+              >
+                {showHealthCheck ? t('hide_health_check') : t('add_health_check')}
+              </button>
+            </div>
+            {showHealthCheck && (
+              <div className="space-y-2">
+                {/* Blood Pressure */}
+                <div className="grid grid-cols-2 gap-2">
+                  <MeasurementInput
+                    label={t('bp_systolic')}
+                    value={healthCheck.bp_systolic}
+                    onChange={v => setHealthCheck(h => ({ ...h, bp_systolic: v }))}
+                  />
+                  <MeasurementInput
+                    label={t('bp_diastolic')}
+                    value={healthCheck.bp_diastolic}
+                    onChange={v => setHealthCheck(h => ({ ...h, bp_diastolic: v }))}
+                  />
+                </div>
+                {/* Heart Rate, SpO2 */}
+                <div className="grid grid-cols-2 gap-2">
+                  <MeasurementInput
+                    label={t('resting_hr')}
+                    value={healthCheck.resting_heart_rate}
+                    onChange={v => setHealthCheck(h => ({ ...h, resting_heart_rate: v }))}
+                  />
+                  <MeasurementInput
+                    label={t('spo2')}
+                    value={healthCheck.spo2}
+                    onChange={v => setHealthCheck(h => ({ ...h, spo2: v }))}
+                  />
+                </div>
+                {/* Blood Glucose */}
+                <MeasurementInput
+                  label={t('blood_glucose')}
+                  value={healthCheck.blood_glucose}
+                  onChange={v => setHealthCheck(h => ({ ...h, blood_glucose: v }))}
+                />
+                {/* Energy Level 1-10 */}
+                <div>
+                  <label className="text-xs text-text-secondary font-medium">{t('energy_level')}</label>
+                  <div className="flex gap-1 mt-1">
+                    {[1,2,3,4,5,6,7,8,9,10].map(n => (
+                      <button
+                        key={n}
+                        onClick={() => setHealthCheck(h => ({ ...h, energy_level: n }))}
+                        className={`flex-1 py-1.5 rounded-lg text-xs font-semibold transition-colors ${
+                          healthCheck.energy_level === n
+                            ? 'bg-accent-amber text-white'
+                            : 'bg-bg-secondary text-text-secondary border border-border'
+                        }`}
+                      >
+                        {n}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+                {/* Mood 1-5 */}
+                <div>
+                  <label className="text-xs text-text-secondary font-medium">{t('mood_label')}</label>
+                  <div className="flex gap-2 mt-1">
+                    {[1,2,3,4,5].map(n => {
+                      const moodColors = ['bg-accent-red', 'bg-accent-orange', 'bg-accent-amber', 'bg-accent-teal', 'bg-accent-green']
+                      return (
+                        <button
+                          key={n}
+                          onClick={() => setHealthCheck(h => ({ ...h, mood: n }))}
+                          className={`w-8 h-8 rounded-full transition-all ${moodColors[n - 1]} ${
+                            healthCheck.mood === n
+                              ? 'ring-2 ring-offset-2 ring-accent-purple scale-110'
+                              : 'opacity-40'
+                          }`}
+                        />
+                      )
+                    })}
+                  </div>
+                </div>
+                {/* Recovery 1-5 */}
+                <div>
+                  <label className="text-xs text-text-secondary font-medium">{t('recovery')}</label>
+                  <div className="flex gap-2 mt-1">
+                    {[1,2,3,4,5].map(n => {
+                      const recColors = ['bg-accent-red', 'bg-accent-orange', 'bg-accent-amber', 'bg-accent-blue', 'bg-accent-green']
+                      return (
+                        <button
+                          key={n}
+                          onClick={() => setHealthCheck(h => ({ ...h, recovery_score: n }))}
+                          className={`w-8 h-8 rounded-full transition-all ${recColors[n - 1]} ${
+                            healthCheck.recovery_score === n
+                              ? 'ring-2 ring-offset-2 ring-accent-purple scale-110'
+                              : 'opacity-40'
+                          }`}
+                        />
+                      )
+                    })}
+                  </div>
+                </div>
+                <button
+                  onClick={saveHealthCheck}
+                  className="w-full bg-gradient-to-r from-accent-purple to-accent-indigo text-white py-2 rounded-xl text-sm font-semibold mt-2 shadow-md shadow-accent-purple/20"
+                >
+                  {t('save_health_check')}
+                </button>
+              </div>
+            )}
+          </div>
+
+          {/* Health Status summary */}
+          {healthStatus?.indicators && healthStatus.indicators.length > 0 && (
+            <div className="bg-white rounded-2xl p-4 mb-4 border border-border shadow-sm">
+              <h2 className="text-sm font-semibold text-text-primary mb-3 flex items-center gap-1.5">
+                <ActivityIcon className="w-4 h-4 text-accent-purple" />
+                {t('health_status')}
+              </h2>
+              <div className="grid grid-cols-2 gap-2">
+                {healthStatus.indicators.map((ind, i) => {
+                  const statusMap = {
+                    good: { bg: 'bg-accent-green/10', text: 'text-accent-green', label: t('status_good') },
+                    warning: { bg: 'bg-accent-amber/10', text: 'text-accent-amber', label: t('status_warning') },
+                    danger: { bg: 'bg-accent-red/10', text: 'text-accent-red', label: t('status_danger') },
+                    info: { bg: 'bg-accent-blue/10', text: 'text-accent-blue', label: t('status_info') },
+                  }
+                  const s = statusMap[ind.status] || statusMap.info
+                  return (
+                    <div key={i} className={`${s.bg} rounded-xl p-3`}>
+                      <p className={`text-xs font-semibold ${s.text}`}>{ind.name}</p>
+                      <p className={`text-lg font-bold ${s.text}`}>{ind.value}</p>
+                      <p className={`text-[10px] ${s.text} opacity-70`}>{s.label}</p>
+                    </div>
+                  )
+                })}
+              </div>
+            </div>
+          )}
+
+          {/* Vitals trend chart */}
+          {healthHistory.length > 0 && (
+            <div className="bg-white rounded-2xl p-4 mb-4 border border-border shadow-sm">
+              <h2 className="text-sm font-semibold text-text-primary mb-3">{t('vitals_trend')}</h2>
+              <ResponsiveContainer width="100%" height={160}>
+                <LineChart data={healthHistory.map(h => ({
+                  date: h.date,
+                  resting_heart_rate: h.resting_heart_rate ?? null,
+                  bp_systolic: h.bp_systolic ?? null,
+                })).filter(h => h.resting_heart_rate !== null || h.bp_systolic !== null)}>
+                  <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
+                  <XAxis
+                    dataKey="date"
+                    tick={{ fill: '#6b7b6b', fontSize: 10 }}
+                    tickFormatter={d => {
+                      const date = new Date(d)
+                      return `${date.getMonth() + 1}/${date.getDate()}`
+                    }}
+                    interval="preserveStartEnd"
+                  />
+                  <YAxis tick={{ fill: '#6b7b6b', fontSize: 10 }} />
+                  <Tooltip
+                    contentStyle={{ fontSize: 11, borderRadius: 8, border: '1px solid #e5e7eb' }}
+                    labelFormatter={d => formatDate(d, lang)}
+                  />
+                  <Legend wrapperStyle={{ fontSize: 11 }} />
+                  <Line
+                    type="monotone"
+                    dataKey="resting_heart_rate"
+                    name={t('heart_rate_label')}
+                    stroke="#ef4444"
+                    strokeWidth={2}
+                    dot={{ fill: '#ef4444', r: 3 }}
+                    activeDot={{ r: 5 }}
+                    connectNulls
+                  />
+                  <Line
+                    type="monotone"
+                    dataKey="bp_systolic"
+                    name={t('blood_pressure_label')}
+                    stroke="#3b82f6"
+                    strokeWidth={2}
+                    dot={{ fill: '#3b82f6', r: 3 }}
                     activeDot={{ r: 5 }}
                     connectNulls
                   />

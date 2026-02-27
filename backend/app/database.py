@@ -71,6 +71,10 @@ class UserProfile(Base):
     stress_level: Mapped[str | None] = mapped_column(String(10), nullable=True)  # low/medium/high
     equipment: Mapped[str | None] = mapped_column(Text, nullable=True)  # comma-separated
     time_per_week_mins: Mapped[int | None] = mapped_column(Integer, nullable=True)
+    latest_resting_hr: Mapped[int | None] = mapped_column(Integer, nullable=True)
+    latest_bp_systolic: Mapped[int | None] = mapped_column(Integer, nullable=True)
+    latest_bp_diastolic: Mapped[int | None] = mapped_column(Integer, nullable=True)
+    latest_blood_glucose: Mapped[float | None] = mapped_column(Float, nullable=True)
 
 
 class Exercise(Base):
@@ -286,6 +290,27 @@ class MeasurementLog(Base):
     neck_cm: Mapped[float | None] = mapped_column(Float, nullable=True)
 
 
+# Health Check Logs — vitals tracking for safer plan generation
+class HealthCheckLog(Base):
+    __tablename__ = "health_check_logs"
+    id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
+    user_id: Mapped[int] = mapped_column(Integer, ForeignKey("users.id"), index=True)
+    date: Mapped[date] = mapped_column(Date, index=True)
+    # Cardiovascular
+    resting_heart_rate: Mapped[int | None] = mapped_column(Integer, nullable=True)  # bpm
+    bp_systolic: Mapped[int | None] = mapped_column(Integer, nullable=True)  # mmHg
+    bp_diastolic: Mapped[int | None] = mapped_column(Integer, nullable=True)  # mmHg
+    spo2_pct: Mapped[float | None] = mapped_column(Float, nullable=True)  # %
+    # Metabolic
+    blood_glucose_mmol: Mapped[float | None] = mapped_column(Float, nullable=True)
+    # Subjective
+    energy_level: Mapped[int | None] = mapped_column(Integer, nullable=True)  # 1-10
+    mood: Mapped[int | None] = mapped_column(Integer, nullable=True)  # 1-5
+    recovery_score: Mapped[int | None] = mapped_column(Integer, nullable=True)  # 1-5
+    notes: Mapped[str | None] = mapped_column(Text, nullable=True)
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=func.now())
+
+
 # Phase 8: Custom Foods & Weekly Challenges
 class CustomFoodItem(Base):
     __tablename__ = "custom_food_items"
@@ -343,6 +368,11 @@ async def init_db():
         # but add columns for safety
         "ALTER TABLE users ADD COLUMN IF NOT EXISTS onboarding_complete BOOLEAN DEFAULT FALSE",
         "ALTER TABLE users ADD COLUMN IF NOT EXISTS consent_given BOOLEAN DEFAULT FALSE",
+        # Health vitals on user_profiles (denormalized for planner)
+        "ALTER TABLE user_profiles ADD COLUMN IF NOT EXISTS latest_resting_hr INTEGER",
+        "ALTER TABLE user_profiles ADD COLUMN IF NOT EXISTS latest_bp_systolic INTEGER",
+        "ALTER TABLE user_profiles ADD COLUMN IF NOT EXISTS latest_bp_diastolic INTEGER",
+        "ALTER TABLE user_profiles ADD COLUMN IF NOT EXISTS latest_blood_glucose FLOAT",
     ]
     async with engine.connect() as conn:
         for sql in _migrations:

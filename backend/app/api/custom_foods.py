@@ -44,6 +44,7 @@ class RecentFoodOut(BaseModel):
     protein: float | None
     carbs: float | None
     fat: float | None
+    amount_g: float | None = None
 
 
 class ChallengeOut(BaseModel):
@@ -142,6 +143,7 @@ async def recent_foods(user: User = Depends(get_current_user)):
                 CalorieLog.protein,
                 CalorieLog.carbs,
                 CalorieLog.fat,
+                CalorieLog.amount_g,
             ).join(CalorieLog, CalorieLog.id == freq_q.c.latest_id)
         )
         results = rows.all()
@@ -154,6 +156,7 @@ async def recent_foods(user: User = Depends(get_current_user)):
             protein=row.protein,
             carbs=row.carbs,
             fat=row.fat,
+            amount_g=row.amount_g,
         )
         for row in results
     ]

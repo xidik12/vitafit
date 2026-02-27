@@ -68,3 +68,12 @@ export const PlusIcon = s(<path strokeLinecap="round" strokeLinejoin="round" d="
 export const ScaleIcon = s(<path strokeLinecap="round" strokeLinejoin="round" d="M12 3v1.5M18.364 5.636l-1.06 1.06M21 12h-1.5M18.364 18.364l-1.06-1.06M12 19.5V21M7.696 7.696l-1.06-1.06M4.5 12H3m3.696 6.364l1.06-1.06M12 16.5a4.5 4.5 0 100-9 4.5 4.5 0 000 9z" />)
 
 export const FlameIcon = s(<path strokeLinecap="round" strokeLinejoin="round" d="M15.362 5.214A8.252 8.252 0 0112 21 8.25 8.25 0 016.038 7.048 8.287 8.287 0 009 9.6a8.983 8.983 0 013.361-6.867 8.21 8.21 0 003 2.48z" />)
+
+// Health check
+export const HeartPulseIcon = s(<><path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" /><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 12h3.75l1.5-3 3 6 1.5-3h3.75" /></>)
+
+export const ActivityIcon = s(<path strokeLinecap="round" strokeLinejoin="round" d="M3.75 12h4.5l1.5-6 3 12 1.5-6h6" />)
+
+export const SmileIcon = s(<><circle cx="12" cy="12" r="9" strokeWidth="1.5" /><path strokeLinecap="round" strokeLinejoin="round" d="M9 10h.01M15 10h.01M9.5 15a3.5 3.5 0 005 0" /></>)
+
+export const BloodDropIcon = s(<path strokeLinecap="round" strokeLinejoin="round" d="M12 2.25c0 0-7.5 8.25-7.5 12.75a7.5 7.5 0 0015 0c0-4.5-7.5-12.75-7.5-12.75z" />)

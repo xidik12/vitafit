@@ -425,6 +425,7 @@ async def generate_exercise_plan(user_id: int) -> dict | None:
         "job_type": job_type,
         "sleep_hours": sleep_hours,
         "age": age,
+        "_profile": profile,  # full profile for health vitals access
     }
 
     # ------------------------------------------------------------------
@@ -595,6 +596,39 @@ def _generate_goal_plan(
             f"You are getting ~{sleep_hours:.1f}h of sleep. Intensity and "
             f"sets have been reduced, and recovery exercises added."
         )
+
+    # Health vitals safety gates (denormalized from latest health check)
+    profile = ctx.get("_profile")
+    if profile:
+        # Blood pressure safety gate
+        if profile.latest_bp_systolic and profile.latest_bp_systolic > 140:
+            plan["bp_note"] = (
+                "Your blood pressure is elevated (>140 mmHg systolic). "
+                "Heavy compound lifts have been moderated. Please consult your doctor."
+            )
+        if profile.latest_bp_systolic and profile.latest_bp_systolic < 90:
+            plan["low_bp_note"] = (
+                "Your blood pressure is low (<90 mmHg systolic). "
+                "Avoid sudden position changes and stay hydrated."
+            )
+        # Heart rate awareness
+        if profile.latest_resting_hr and profile.latest_resting_hr > 100:
+            plan["high_hr_note"] = (
+                "Your resting heart rate is elevated (>100 bpm). "
+                "High-intensity intervals have been reduced."
+            )
+        if (profile.latest_resting_hr and profile.latest_resting_hr < 50
+                and (profile.activity_level or "").lower() not in ("active", "very_active")):
+            plan["low_hr_note"] = (
+                "Your resting heart rate is unusually low (<50 bpm). "
+                "If you feel dizzy or fatigued, please consult your doctor."
+            )
+        # Blood glucose awareness
+        if profile.latest_blood_glucose and profile.latest_blood_glucose > 7.0:
+            plan["glucose_note"] = (
+                "Your blood glucose is elevated (>7.0 mmol/L). "
+                "Steady-state cardio is preferred over high-intensity bursts."
+            )
 
     for day_num in range(1, 8):
         if day_num > workout_days:

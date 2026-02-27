@@ -3,17 +3,17 @@ import logging
 import aiohttp
 from app.config import settings
 from sqlalchemy import select, or_
-from app.database import async_session, FoodItem
+from app.database import async_session, FoodItem, CustomFoodItem
 
 logger = logging.getLogger(__name__)
 
 
-async def search_food(query: str, lang: str = "ru", limit: int = 20) -> list[dict]:
+async def search_food(query: str, lang: str = "ru", limit: int = 20, user_id: int | None = None) -> list[dict]:
     """Search food across all sources."""
     results = []
 
-    # 1. Search local DB first
-    local = await _search_local(query, limit)
+    # 1. Search local DB first (including user's custom foods)
+    local = await _search_local(query, limit, user_id=user_id)
     results.extend(local)
 
     # 2. Search USDA if we have API key and need more results
@@ -29,35 +29,74 @@ async def search_food(query: str, lang: str = "ru", limit: int = 20) -> list[dic
     return results[:limit]
 
 
-async def _search_local(query: str, limit: int) -> list[dict]:
-    """Search local food database."""
-    async with async_session() as session:
-        q = query.lower()
-        result = await session.execute(
-            select(FoodItem).where(
-                or_(
-                    FoodItem.name_en.ilike(f"%{q}%"),
-                    FoodItem.name_ru.ilike(f"%{q}%"),
-                )
-            ).limit(limit)
-        )
-        items = result.scalars().all()
+async def _search_local(query: str, limit: int, user_id: int | None = None) -> list[dict]:
+    """Search local food database and user's custom foods."""
+    q = query.lower()
+    custom_results: list[dict] = []
 
-    return [
-        {
-            "id": item.id,
-            "name_en": item.name_en,
-            "name_ru": item.name_ru,
-            "source": item.source or "local",
-            "calories_per_100g": item.calories_per_100g,
-            "protein_per_100g": item.protein_per_100g,
-            "carbs_per_100g": item.carbs_per_100g,
-            "fat_per_100g": item.fat_per_100g,
-            "serving_size_g": item.serving_size_g or 100,
-            "image_url": item.image_url,
-        }
-        for item in items
-    ]
+    # Search user's custom foods first (prepended to results)
+    if user_id is not None:
+        async with async_session() as session:
+            result = await session.execute(
+                select(CustomFoodItem).where(
+                    CustomFoodItem.user_id == user_id,
+                    or_(
+                        CustomFoodItem.name_en.ilike(f"%{q}%"),
+                        CustomFoodItem.name_ru.ilike(f"%{q}%"),
+                    ),
+                ).limit(limit)
+            )
+            custom_items = result.scalars().all()
+
+        custom_results = [
+            {
+                "id": f"custom_{item.id}",
+                "name_en": item.name_en,
+                "name_ru": item.name_ru,
+                "source": "custom",
+                "calories_per_100g": item.calories_per_100g,
+                "protein_per_100g": item.protein_per_100g,
+                "carbs_per_100g": item.carbs_per_100g,
+                "fat_per_100g": item.fat_per_100g,
+                "serving_size_g": 100,
+                "image_url": None,
+            }
+            for item in custom_items
+        ]
+
+    # Search global food_items table
+    remaining = limit - len(custom_results)
+    global_results: list[dict] = []
+    if remaining > 0:
+        async with async_session() as session:
+            result = await session.execute(
+                select(FoodItem).where(
+                    or_(
+                        FoodItem.name_en.ilike(f"%{q}%"),
+                        FoodItem.name_ru.ilike(f"%{q}%"),
+                    )
+                ).limit(remaining)
+            )
+            items = result.scalars().all()
+
+        global_results = [
+            {
+                "id": item.id,
+                "name_en": item.name_en,
+                "name_ru": item.name_ru,
+                "source": item.source or "local",
+                "calories_per_100g": item.calories_per_100g,
+                "protein_per_100g": item.protein_per_100g,
+                "carbs_per_100g": item.carbs_per_100g,
+                "fat_per_100g": item.fat_per_100g,
+                "serving_size_g": item.serving_size_g or 100,
+                "image_url": item.image_url,
+            }
+            for item in items
+        ]
+
+    # Custom foods prepended before global results
+    return custom_results + global_results
 
 
 async def _search_usda(query: str, limit: int) -> list[dict]:
