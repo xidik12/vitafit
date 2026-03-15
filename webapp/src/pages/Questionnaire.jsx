@@ -64,13 +64,13 @@ export default function Questionnaire() {
       return
     }
     if (step === STEP_GOALS && !goal) {
-      setError('Please select a goal')
+      setError(t('errors.select_goal'))
       return
     }
     if (step === STEP_METRICS) {
       const { age, height_cm, weight_kg } = metrics
       if (!age || !height_cm || !weight_kg) {
-        setError('Please fill all required fields')
+        setError(t('errors.fill_required'))
         return
       }
     }
@@ -222,35 +222,35 @@ export default function Questionnaire() {
             </h2>
             <div className="space-y-3">
               <div>
-                <label className="text-xs text-text-secondary mb-1 block">Age *</label>
+                <label className="text-sm text-text-secondary mb-1 block">{t('body.age')} *</label>
                 <input
                   type="number"
                   value={metrics.age}
                   onChange={e => setMetrics(m => ({ ...m, age: e.target.value }))}
-                  placeholder="25"
+                  placeholder="50"
                   className="w-full bg-white rounded-xl px-3 py-2.5 text-sm text-text-primary outline-none border border-border focus:border-accent-green"
                 />
               </div>
               <div>
-                <label className="text-xs text-text-secondary mb-1 block">Gender</label>
+                <label className="text-sm text-text-secondary mb-1 block">{t('body.gender')}</label>
                 <div className="flex gap-2">
                   {['male', 'female', 'other'].map(g => (
                     <button
                       key={g}
                       onClick={() => setMetrics(m => ({ ...m, gender: g }))}
-                      className={`flex-1 py-2 rounded-xl text-sm border transition-colors ${
+                      className={`flex-1 py-2.5 rounded-xl text-sm border transition-colors min-h-[44px] ${
                         metrics.gender === g
                           ? 'bg-accent-green/20 border-accent-green text-accent-dark'
                           : 'bg-white border-border text-text-secondary'
                       }`}
                     >
-                      {g.charAt(0).toUpperCase() + g.slice(1)}
+                      {t(`body.${g}`)}
                     </button>
                   ))}
                 </div>
               </div>
               <div>
-                <label className="text-xs text-text-secondary mb-1 block">Height (cm) *</label>
+                <label className="text-sm text-text-secondary mb-1 block">{t('body.height')} *</label>
                 <input
                   type="number"
                   value={metrics.height_cm}
@@ -260,7 +260,7 @@ export default function Questionnaire() {
                 />
               </div>
               <div>
-                <label className="text-xs text-text-secondary mb-1 block">Current Weight (kg) *</label>
+                <label className="text-sm text-text-secondary mb-1 block">{t('body.weight')} *</label>
                 <input
                   type="number"
                   step="0.1"
@@ -271,7 +271,7 @@ export default function Questionnaire() {
                 />
               </div>
               <div>
-                <label className="text-xs text-text-secondary mb-1 block">Target Weight (kg)</label>
+                <label className="text-sm text-text-secondary mb-1 block">{t('body.target_weight')}</label>
                 <input
                   type="number"
                   step="0.1"
@@ -302,7 +302,7 @@ export default function Questionnaire() {
                       : 'bg-white border-border text-text-primary shadow-sm'
                   }`}
                 >
-                  {d === 'no_restriction' ? 'No restriction' : d.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase())}
+                  {t(`diet_options.${d}`, d.replace(/_/g, ' '))}
                 </button>
               ))}
             </div>
@@ -317,8 +317,8 @@ export default function Questionnaire() {
             </h2>
             <div className="space-y-4">
               <div>
-                <label className="text-xs text-text-secondary mb-2 block">
-                  Sleep Hours per Night: <span className="text-accent-green font-semibold">{sleep.sleep_hours}h</span>
+                <label className="text-sm text-text-secondary mb-2 block">
+                  {t('sleep_labels.hours')}: <span className="text-accent-green font-semibold">{sleep.sleep_hours}h</span>
                 </label>
                 <input
                   type="range"
@@ -335,19 +335,19 @@ export default function Questionnaire() {
                 </div>
               </div>
               <div>
-                <label className="text-xs text-text-secondary mb-2 block">Sleep Quality</label>
+                <label className="text-sm text-text-secondary mb-2 block">{t('sleep_labels.quality')}</label>
                 <div className="flex gap-2">
                   {['poor', 'fair', 'good', 'excellent'].map(q => (
                     <button
                       key={q}
                       onClick={() => setSleep(s => ({ ...s, sleep_quality: q }))}
-                      className={`flex-1 py-2 rounded-xl text-xs border transition-colors ${
+                      className={`flex-1 py-2.5 rounded-xl text-sm border transition-colors min-h-[44px] ${
                         sleep.sleep_quality === q
                           ? 'bg-accent-green/20 border-accent-green text-accent-dark'
                           : 'bg-white border-border text-text-secondary'
                       }`}
                     >
-                      {q.charAt(0).toUpperCase() + q.slice(1)}
+                      {t(`sleep_labels.${q}`, q)}
                     </button>
                   ))}
                 </div>
@@ -364,55 +364,55 @@ export default function Questionnaire() {
             </h2>
             <div className="space-y-4">
               <div>
-                <label className="text-xs text-text-secondary mb-2 block">Activity Level</label>
+                <label className="text-sm text-text-secondary mb-2 block">{t('lifestyle_labels.activity')}</label>
                 <div className="space-y-2">
                   {ACTIVITY_LEVELS.map(level => (
                     <button
                       key={level}
                       onClick={() => setLifestyle(l => ({ ...l, activity_level: level }))}
-                      className={`w-full text-left px-4 py-2.5 rounded-xl border text-sm transition-colors ${
+                      className={`w-full text-left px-4 py-3 rounded-xl border text-sm transition-colors min-h-[44px] ${
                         lifestyle.activity_level === level
                           ? 'bg-accent-green/20 border-accent-green text-accent-dark'
                           : 'bg-white border-border text-text-primary'
                       }`}
                     >
-                      {level.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase())}
+                      {t(`lifestyle_labels.${level}`, level.replace(/_/g, ' '))}
                     </button>
                   ))}
                 </div>
               </div>
               <div>
-                <label className="text-xs text-text-secondary mb-2 block">Stress Level</label>
+                <label className="text-sm text-text-secondary mb-2 block">{t('lifestyle_labels.stress')}</label>
                 <div className="flex gap-2">
                   {['low', 'moderate', 'high'].map(lvl => (
                     <button
                       key={lvl}
                       onClick={() => setLifestyle(l => ({ ...l, stress_level: lvl }))}
-                      className={`flex-1 py-2 rounded-xl text-sm border transition-colors ${
+                      className={`flex-1 py-2.5 rounded-xl text-sm border transition-colors min-h-[44px] ${
                         lifestyle.stress_level === lvl
                           ? 'bg-accent-orange/20 border-accent-orange text-accent-orange'
                           : 'bg-white border-border text-text-secondary'
                       }`}
                     >
-                      {lvl.charAt(0).toUpperCase() + lvl.slice(1)}
+                      {t(`lifestyle_labels.${lvl}`, lvl)}
                     </button>
                   ))}
                 </div>
               </div>
               <div>
-                <label className="text-xs text-text-secondary mb-2 block">Work Type</label>
+                <label className="text-sm text-text-secondary mb-2 block">{t('lifestyle_labels.work_type')}</label>
                 <div className="flex gap-2">
                   {['sedentary', 'standing', 'physical'].map(wt => (
                     <button
                       key={wt}
                       onClick={() => setLifestyle(l => ({ ...l, work_type: wt }))}
-                      className={`flex-1 py-2 rounded-xl text-xs border transition-colors ${
+                      className={`flex-1 py-2.5 rounded-xl text-sm border transition-colors min-h-[44px] ${
                         lifestyle.work_type === wt
                           ? 'bg-accent-blue/20 border-accent-blue text-accent-blue'
                           : 'bg-white border-border text-text-secondary'
                       }`}
                     >
-                      {wt.charAt(0).toUpperCase() + wt.slice(1)}
+                      {t(`lifestyle_labels.${wt}`, wt)}
                     </button>
                   ))}
                 </div>

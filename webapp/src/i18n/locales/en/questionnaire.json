@@ -1,10 +1,11 @@
 {
   "title": "Health Questionnaire",
   "subtitle": "Takes about 5 minutes",
+  "privacy": "Your health data stays private and is never shared or sold.",
   "modules": {
     "parq": "Safety Check",
     "goals": "Your Goals",
-    "fitness": "Fitness Level",
+    "fitness": "About You",
     "diet": "Diet Preferences",
     "sleep": "Sleep & Recovery",
     "lifestyle": "Lifestyle"
@@ -28,5 +29,50 @@
     "health": "General Health",
     "stress_relief": "Stress Relief"
   },
-  "consent": "I understand this is for informational purposes only and not medical advice."
+  "body": {
+    "age": "Age",
+    "gender": "Gender",
+    "male": "Male",
+    "female": "Female",
+    "other": "Other",
+    "height": "Height (cm)",
+    "weight": "Current Weight (kg)",
+    "target_weight": "Target Weight (kg)"
+  },
+  "diet_options": {
+    "halal": "Halal",
+    "vegetarian": "Vegetarian",
+    "vegan": "Vegan",
+    "no_restriction": "No Restriction"
+  },
+  "sleep_labels": {
+    "hours": "Sleep Hours per Night",
+    "quality": "Sleep Quality",
+    "poor": "Poor",
+    "fair": "Fair",
+    "good": "Good",
+    "excellent": "Excellent"
+  },
+  "lifestyle_labels": {
+    "activity": "Activity Level",
+    "sedentary": "Sedentary (desk job)",
+    "light": "Light (1-2x/week)",
+    "moderate": "Moderate (3-5x/week)",
+    "active": "Active (6-7x/week)",
+    "very_active": "Very Active",
+    "stress": "Stress Level",
+    "low": "Low",
+    "high": "High",
+    "work_type": "Work Type",
+    "standing": "Standing",
+    "physical": "Physical"
+  },
+  "errors": {
+    "select_goal": "Please select a goal",
+    "fill_required": "Please fill all required fields"
+  },
+  "consent": "I understand this is for informational purposes only and not medical advice.",
+  "next": "Next",
+  "back": "Back",
+  "submit": "Done"
 }
