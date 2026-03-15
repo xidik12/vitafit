@@ -32,12 +32,12 @@ export default function NavBar() {
           <button
             key={tab.path}
             onClick={() => navigate(tab.path)}
-            className={`flex flex-col items-center gap-0.5 px-3 py-1.5 rounded-xl transition-all duration-200 ${
+            className={`flex flex-col items-center gap-0.5 px-3 py-2.5 rounded-xl transition-all duration-200 min-h-[44px] min-w-[44px] ${
               active ? `${colors.bg}` : 'hover:bg-gray-50'
             }`}
           >
             <tab.Icon className={`w-6 h-6 transition-colors ${active ? colors.text : 'text-text-secondary'}`} />
-            <span className={`text-[10px] font-medium transition-colors ${active ? colors.text : 'text-text-secondary'}`}>
+            <span className={`text-xs font-medium transition-colors ${active ? colors.text : 'text-text-secondary'}`}>
               {t(tab.key)}
             </span>
           </button>

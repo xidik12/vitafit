@@ -86,13 +86,13 @@ export default function ExercisePlan() {
         <div className="flex items-center justify-between">
           <div>
             <h1 className="text-2xl font-bold text-text-primary">{t('title')}</h1>
-            <p className="text-accent-blue text-xs font-medium mt-1">{t('subtitle')}</p>
+            <p className="text-accent-blue text-sm font-medium mt-1">{t('subtitle')}</p>
           </div>
           {isOnboarded && (
             <button
               onClick={generatePlan}
               disabled={generating}
-              className="text-xs bg-gradient-to-r from-accent-blue to-accent-indigo text-white px-4 py-2 rounded-xl font-semibold shadow-md shadow-accent-blue/20 disabled:opacity-50"
+              className="text-sm bg-gradient-to-r from-accent-blue to-accent-indigo text-white px-5 py-3 rounded-xl font-semibold shadow-md shadow-accent-blue/20 disabled:opacity-50 min-h-[44px]"
             >
               {generating ? '...' : t('generate')}
             </button>
@@ -103,22 +103,22 @@ export default function ExercisePlan() {
       {!isOnboarded ? (
         <div className="bg-white rounded-2xl p-6 text-center border border-border shadow-sm">
           <DumbbellIcon className="w-10 h-10 text-text-secondary mx-auto mb-3" />
-          <p className="text-text-secondary text-sm mb-4">{t('empty')}</p>
+          <p className="text-text-secondary text-base mb-4">{t('empty')}</p>
           <button
             onClick={() => navigate('/questionnaire')}
-            className="bg-gradient-to-r from-accent-green to-accent-emerald text-white px-6 py-2.5 rounded-xl text-sm font-semibold shadow-md shadow-accent-green/20"
+            className="bg-gradient-to-r from-accent-green to-accent-emerald text-white px-6 py-3 rounded-xl text-base font-semibold shadow-md shadow-accent-green/20 min-h-[48px]"
           >
             {tc('dashboard.start_questionnaire')}
           </button>
         </div>
       ) : !plan ? (
         <div className="bg-white rounded-2xl p-6 text-center border border-border shadow-sm">
-          <ClipboardIcon className="w-10 h-10 text-text-secondary mx-auto mb-3" />
-          <p className="text-text-secondary text-sm mb-4">{t('empty')}</p>
+          <ClipboardIcon className="w-12 h-12 text-text-secondary mx-auto mb-3" />
+          <p className="text-text-secondary text-base mb-4">{t('empty')}</p>
           <button
             onClick={generatePlan}
             disabled={generating}
-            className="bg-gradient-to-r from-accent-blue to-accent-indigo text-white px-6 py-2.5 rounded-xl text-sm font-semibold disabled:opacity-50 shadow-md shadow-accent-blue/20"
+            className="bg-gradient-to-r from-accent-blue to-accent-indigo text-white px-6 py-3 rounded-xl text-base font-semibold disabled:opacity-50 shadow-md shadow-accent-blue/20 min-h-[48px]"
           >
             {generating ? tc('common.loading') : t('generate')}
           </button>
@@ -126,7 +126,7 @@ export default function ExercisePlan() {
       ) : (
         <>
           {/* Week label */}
-          <p className="text-text-secondary text-xs mb-3 font-semibold uppercase tracking-wide">{t('this_week')}</p>
+          <p className="text-text-secondary text-sm mb-3 font-semibold uppercase tracking-wide">{t('this_week')}</p>
 
           {error && (
             <div className="bg-accent-red/10 border border-accent-red/30 rounded-xl p-3 mb-3">
@@ -146,25 +146,25 @@ export default function ExercisePlan() {
                 }`}>
                   <button
                     onClick={() => setExpandedDay(isExpanded ? null : index)}
-                    className="w-full flex items-center justify-between p-3"
+                    className="w-full flex items-center justify-between p-3 min-h-[52px]"
                   >
                     <div className="flex items-center gap-3">
-                      <div className={`w-9 h-9 rounded-full flex items-center justify-center text-xs font-bold ${
+                      <div className={`w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold ${
                         isRestDay ? 'bg-gray-100 text-text-secondary' : 'bg-accent-green/15 text-accent-green'
                       }`}>
                         {dayNames[index] || `D${index + 1}`}
                       </div>
                       <div className="text-left">
-                        <p className="text-sm font-semibold text-text-primary">
+                        <p className="text-base font-semibold text-text-primary">
                           {t('day', { n: index + 1 })}
                         </p>
-                        <p className="text-xs text-text-secondary">
+                        <p className="text-sm text-text-secondary">
                           {isRestDay ? t('rest') : t('exercises_count', { count: day.exercises.length })}
                         </p>
                       </div>
                     </div>
                     {!isRestDay && (
-                      <span className="text-text-secondary text-xs">
+                      <span className="text-text-secondary text-sm">
                         {isExpanded ? '▲' : '▼'}
                       </span>
                     )}
@@ -177,7 +177,7 @@ export default function ExercisePlan() {
                       ))}
                       <button
                         onClick={(e) => { e.stopPropagation(); navigate(`/workout/${index}`) }}
-                        className="w-full mt-2 bg-gradient-to-r from-accent-green to-accent-emerald text-white py-2.5 rounded-xl text-sm font-semibold shadow-md shadow-accent-green/20"
+                        className="w-full mt-2 bg-gradient-to-r from-accent-green to-accent-emerald text-white py-3.5 rounded-xl text-base font-semibold shadow-md shadow-accent-green/20 min-h-[48px]"
                       >
                         {t('start_workout', 'Start Workout')}
                       </button>

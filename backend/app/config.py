@@ -1,3 +1,5 @@
+import os
+
 from pydantic_settings import BaseSettings
 
 
@@ -17,6 +19,17 @@ class Settings(BaseSettings):
     spoonacular_api_key: str = ""
     usda_api_key: str = ""
     pexels_api_key: str = ""
+
+    @property
+    def effective_webapp_url(self) -> str:
+        """Return the webapp URL, falling back to Railway's public domain if available."""
+        if self.telegram_webapp_url:
+            return self.telegram_webapp_url
+        # Railway injects RAILWAY_PUBLIC_DOMAIN at runtime (e.g. vitafit-production.up.railway.app)
+        railway_domain = os.environ.get("RAILWAY_PUBLIC_DOMAIN", "")
+        if railway_domain:
+            return f"https://{railway_domain}"
+        return ""
 
     @property
     def is_postgres(self) -> bool:

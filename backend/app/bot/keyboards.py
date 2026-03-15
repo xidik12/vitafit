@@ -25,10 +25,11 @@ def consent_keyboard(lang: str = "ru") -> InlineKeyboardMarkup:
 def main_keyboard(lang: str = "ru") -> InlineKeyboardMarkup:
     from app.bot.i18n import t
     buttons = []
-    if settings.telegram_webapp_url:
+    webapp_url = settings.effective_webapp_url
+    if webapp_url:
         buttons.append([InlineKeyboardButton(
             text=t("btn_open_app", lang),
-            web_app=WebAppInfo(url=settings.telegram_webapp_url),
+            web_app=WebAppInfo(url=webapp_url),
         )])
     return InlineKeyboardMarkup(inline_keyboard=buttons)
 

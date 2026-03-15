@@ -100,9 +100,14 @@ async def on_consent(callback: CallbackQuery, state: FSMContext):
             user.consent_given = True
             await session.commit()
 
+    # Privacy notice before starting questionnaire
+    await callback.message.edit_text(
+        f"🔒 {t('privacy_notice', lang)}"
+    )
+
     await state.update_data(parq_index=0, parq_yes_count=0)
     q = PARQ_QUESTIONS[0]
-    await callback.message.edit_text(
+    await callback.message.answer(
         f"1/7: {q[lang]}",
         reply_markup=yes_no_keyboard(lang),
     )
@@ -123,10 +128,13 @@ async def on_start_questionnaire(callback: CallbackQuery, state: FSMContext):
     lang = user.language if user else "ru"
 
     if user and user.consent_given:
-        # Skip consent, go straight to PAR-Q
+        # Skip consent, go straight to PAR-Q (with privacy notice)
         await state.update_data(lang=lang, parq_index=0, parq_yes_count=0)
-        q = PARQ_QUESTIONS[0]
         await callback.message.edit_text(
+            f"🔒 {t('privacy_notice', lang)}"
+        )
+        q = PARQ_QUESTIONS[0]
+        await callback.message.answer(
             f"1/7: {q[lang]}",
             reply_markup=yes_no_keyboard(lang),
         )

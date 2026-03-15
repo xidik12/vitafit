@@ -120,7 +120,7 @@ function SetRow({ setNum, exercise, isCompleted, onComplete }) {
     >
       {/* Set badge */}
       <div
-        className={`w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 ${
+        className={`w-9 h-9 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 ${
           isCompleted
             ? 'bg-accent-green text-white'
             : 'bg-white text-text-secondary border border-border'
@@ -149,7 +149,7 @@ function SetRow({ setNum, exercise, isCompleted, onComplete }) {
               : 'bg-white border-border text-text-primary focus:border-accent-green'
           }`}
         />
-        <p className="text-center text-[10px] text-text-secondary mt-0.5">{t('weight_label')}</p>
+        <p className="text-center text-xs text-text-secondary mt-0.5">{t('weight_label')}</p>
       </div>
 
       {/* Reps input */}
@@ -167,14 +167,14 @@ function SetRow({ setNum, exercise, isCompleted, onComplete }) {
               : 'bg-white border-border text-text-primary focus:border-accent-green'
           }`}
         />
-        <p className="text-center text-[10px] text-text-secondary mt-0.5">{t('reps_label')}</p>
+        <p className="text-center text-xs text-text-secondary mt-0.5">{t('reps_label')}</p>
       </div>
 
       {/* Complete button */}
       <button
         onClick={handleComplete}
         disabled={isCompleted}
-        className={`w-9 h-9 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 transition-all active:scale-95 ${
+        className={`w-11 h-11 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 transition-all active:scale-95 min-w-[44px] min-h-[44px] ${
           isCompleted
             ? 'bg-accent-green text-white cursor-default'
             : 'bg-accent-green text-white shadow-sm shadow-accent-green/40 hover:bg-accent-dark'
@@ -517,7 +517,7 @@ export default function ActiveWorkout() {
             <button
               key={p}
               onClick={() => changeRestPreset(p)}
-              className={`px-3 py-1.5 rounded-lg text-sm font-medium border transition-colors ${
+              className={`px-4 py-2.5 rounded-lg text-base font-medium border transition-colors min-h-[44px] ${
                 restTotal === p
                   ? 'bg-accent-green text-white border-accent-green'
                   : 'bg-white text-text-secondary border-border hover:border-accent-green/50'
@@ -569,7 +569,7 @@ export default function ActiveWorkout() {
         {/* Back / quit */}
         <button
           onClick={handleEarlyExit}
-          className="w-9 h-9 flex items-center justify-center text-text-secondary rounded-xl hover:bg-bg-secondary transition-colors"
+          className="w-11 h-11 flex items-center justify-center text-text-secondary rounded-xl hover:bg-bg-secondary transition-colors min-w-[44px] min-h-[44px]"
           aria-label="End workout"
         >
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -713,7 +713,7 @@ export default function ActiveWorkout() {
                 const name = i18n.language === 'ru' && ex.name_ru ? ex.name_ru : (ex.name_en || ex.name || 'Exercise')
                 return (
                   <div key={i} className="flex items-center gap-3 p-2.5 bg-white rounded-xl border border-border">
-                    <div className="w-6 h-6 rounded-full bg-border flex items-center justify-center text-xs text-text-secondary font-bold flex-shrink-0">
+                    <div className="w-8 h-8 rounded-full bg-border flex items-center justify-center text-sm text-text-secondary font-bold flex-shrink-0">
                       {currentExIdx + i + 2}
                     </div>
                     <div className="min-w-0 flex-1">

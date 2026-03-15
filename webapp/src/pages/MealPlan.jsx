@@ -90,37 +90,37 @@ function RecipeDetail({ recipe, onClose }) {
         <div className="p-4">
           <div className="flex justify-between items-start mb-2">
             <h2 className="text-lg font-bold text-text-primary flex-1 pr-2">{title}</h2>
-            <button onClick={onClose} className="text-text-secondary text-xl hover:text-text-primary transition-colors">✕</button>
+            <button onClick={onClose} className="text-text-secondary text-2xl hover:text-text-primary transition-colors p-2 min-w-[44px] min-h-[44px] flex items-center justify-center">✕</button>
           </div>
 
           {description && (
-            <p className="text-text-secondary text-sm mb-3">{description}</p>
+            <p className="text-text-secondary text-base mb-3">{description}</p>
           )}
 
           {/* Macro chips */}
           <div className="flex gap-2 mb-4 flex-wrap">
             {(r.calories ?? recipe.calories) != null && (
-              <span className="px-2.5 py-1 bg-accent-orange/10 text-accent-orange rounded-full text-xs font-semibold">
+              <span className="px-3 py-1.5 bg-accent-orange/10 text-accent-orange rounded-full text-sm font-semibold">
                 {Math.round(r.calories ?? recipe.calories)} {tc('common.kcal')}
               </span>
             )}
             {(r.protein ?? recipe.protein) != null && (
-              <span className="px-2.5 py-1 bg-accent-blue/10 text-accent-blue rounded-full text-xs font-semibold">
+              <span className="px-3 py-1.5 bg-accent-blue/10 text-accent-blue rounded-full text-sm font-semibold">
                 {t('macro_p')} {Math.round(r.protein ?? recipe.protein)}{tc('common.g')}
               </span>
             )}
             {(r.carbs ?? recipe.carbs) != null && (
-              <span className="px-2.5 py-1 bg-accent-green/10 text-accent-green rounded-full text-xs font-semibold">
+              <span className="px-3 py-1.5 bg-accent-green/10 text-accent-green rounded-full text-sm font-semibold">
                 {t('macro_c')} {Math.round(r.carbs ?? recipe.carbs)}{tc('common.g')}
               </span>
             )}
             {(r.fat ?? recipe.fat) != null && (
-              <span className="px-2.5 py-1 bg-accent-red/10 text-accent-red rounded-full text-xs font-semibold">
+              <span className="px-3 py-1.5 bg-accent-red/10 text-accent-red rounded-full text-sm font-semibold">
                 {t('macro_f')} {Math.round(r.fat ?? recipe.fat)}{tc('common.g')}
               </span>
             )}
             {(r.cook_time_mins || recipe.cook_time_mins) && (
-              <span className="px-2.5 py-1 bg-gray-100 text-text-secondary rounded-full text-xs font-medium">
+              <span className="px-3 py-1.5 bg-gray-100 text-text-secondary rounded-full text-sm font-medium">
                 {r.cook_time_mins || recipe.cook_time_mins} {tc('common.min')}
               </span>
             )}
@@ -135,10 +135,10 @@ function RecipeDetail({ recipe, onClose }) {
 
           {!fetchLoading && ingredients.length > 0 && (
             <>
-              <h3 className="text-sm font-semibold text-text-primary mb-2">{t('ingredients')}</h3>
-              <ul className="space-y-1 mb-4">
+              <h3 className="text-base font-semibold text-text-primary mb-2">{t('ingredients')}</h3>
+              <ul className="space-y-1.5 mb-4">
                 {ingredients.map((ing, i) => (
-                  <li key={i} className="text-sm text-text-secondary flex items-start gap-2">
+                  <li key={i} className="text-base text-text-secondary flex items-start gap-2">
                     <span className="text-accent-green mt-0.5">•</span>
                     <span>{ing}</span>
                   </li>
@@ -149,10 +149,10 @@ function RecipeDetail({ recipe, onClose }) {
 
           {!fetchLoading && steps.length > 0 && (
             <>
-              <h3 className="text-sm font-semibold text-text-primary mb-2">{t('instructions')}</h3>
+              <h3 className="text-base font-semibold text-text-primary mb-2">{t('instructions')}</h3>
               <ol className="space-y-2">
                 {steps.map((step, i) => (
-                  <li key={i} className="text-sm text-text-secondary flex items-start gap-2">
+                  <li key={i} className="text-base text-text-secondary flex items-start gap-2">
                     <span className="text-accent-green font-bold min-w-[20px]">{i + 1}.</span>
                     <span>{step}</span>
                   </li>
@@ -167,7 +167,7 @@ function RecipeDetail({ recipe, onClose }) {
               href={r.youtube_url || recipe.youtube_url}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 w-full bg-red-500 text-white py-2.5 rounded-xl text-sm font-semibold mt-4"
+              className="flex items-center justify-center gap-2 w-full bg-red-500 text-white py-3 rounded-xl text-base font-semibold mt-4 min-h-[48px]"
             >
               {t('watch_video')}
             </a>
@@ -256,13 +256,13 @@ export default function MealPlan() {
         <div className="flex items-center justify-between">
           <div>
             <h1 className="text-2xl font-bold text-text-primary">{t('title')}</h1>
-            <p className="text-accent-orange text-xs font-medium mt-1">{t('subtitle')}</p>
+            <p className="text-accent-orange text-sm font-medium mt-1">{t('subtitle')}</p>
           </div>
           {isOnboarded && (
             <button
               onClick={generatePlan}
               disabled={generating}
-              className="text-xs bg-gradient-to-r from-accent-orange to-accent-amber text-white px-4 py-2 rounded-xl font-semibold shadow-md shadow-accent-orange/20 disabled:opacity-50"
+              className="text-sm bg-gradient-to-r from-accent-orange to-accent-amber text-white px-5 py-3 rounded-xl font-semibold shadow-md shadow-accent-orange/20 disabled:opacity-50 min-h-[44px]"
             >
               {generating ? '...' : t('generate')}
             </button>
@@ -273,29 +273,29 @@ export default function MealPlan() {
       {!isOnboarded ? (
         <div className="bg-white rounded-2xl p-6 text-center border border-border shadow-sm">
           <UtensilsIcon className="w-10 h-10 text-text-secondary mx-auto mb-3" />
-          <p className="text-text-secondary text-sm mb-4">{t('empty')}</p>
+          <p className="text-text-secondary text-base mb-4">{t('empty')}</p>
           <button
             onClick={() => navigate('/questionnaire')}
-            className="bg-gradient-to-r from-accent-green to-accent-emerald text-white px-6 py-2.5 rounded-xl text-sm font-semibold shadow-md shadow-accent-green/20"
+            className="bg-gradient-to-r from-accent-green to-accent-emerald text-white px-6 py-3 rounded-xl text-base font-semibold shadow-md shadow-accent-green/20 min-h-[48px]"
           >
             {tc('dashboard.start_questionnaire')}
           </button>
         </div>
       ) : !plan ? (
         <div className="bg-white rounded-2xl p-6 text-center border border-border shadow-sm">
-          <ClipboardIcon className="w-10 h-10 text-text-secondary mx-auto mb-3" />
-          <p className="text-text-secondary text-sm mb-4">{t('empty')}</p>
+          <ClipboardIcon className="w-12 h-12 text-text-secondary mx-auto mb-3" />
+          <p className="text-text-secondary text-base mb-4">{t('empty')}</p>
           <button
             onClick={generatePlan}
             disabled={generating}
-            className="bg-gradient-to-r from-accent-orange to-accent-amber text-white px-6 py-2.5 rounded-xl text-sm font-semibold disabled:opacity-50 shadow-md shadow-accent-orange/20"
+            className="bg-gradient-to-r from-accent-orange to-accent-amber text-white px-6 py-3 rounded-xl text-base font-semibold disabled:opacity-50 shadow-md shadow-accent-orange/20 min-h-[48px]"
           >
             {generating ? tc('common.loading') : t('generate')}
           </button>
         </div>
       ) : (
         <>
-          <p className="text-text-secondary text-xs mb-3 font-semibold uppercase tracking-wide">{t('this_week')}</p>
+          <p className="text-text-secondary text-sm mb-3 font-semibold uppercase tracking-wide">{t('this_week')}</p>
 
           {error && (
             <div className="bg-accent-red/10 border border-accent-red/30 rounded-xl p-3 mb-3">
@@ -315,22 +315,22 @@ export default function MealPlan() {
                 <div key={index} className="bg-white rounded-xl overflow-hidden border border-border shadow-sm border-l-4 border-l-accent-orange">
                   <button
                     onClick={() => setExpandedDay(isExpanded ? null : index)}
-                    className="w-full flex items-center justify-between p-3"
+                    className="w-full flex items-center justify-between p-3 min-h-[52px]"
                   >
                     <div className="flex items-center gap-3">
-                      <div className="w-9 h-9 rounded-full bg-accent-orange/15 text-accent-orange flex items-center justify-center text-xs font-bold">
+                      <div className="w-10 h-10 rounded-full bg-accent-orange/15 text-accent-orange flex items-center justify-center text-sm font-bold">
                         {dayNames[index] || `D${index + 1}`}
                       </div>
                       <div className="text-left">
-                        <p className="text-sm font-semibold text-text-primary">
+                        <p className="text-base font-semibold text-text-primary">
                           {t('day', { n: index + 1 })}
                         </p>
-                        <p className="text-xs text-text-secondary">
+                        <p className="text-sm text-text-secondary">
                           {t('meals_count', { count: mealCount })}
                         </p>
                       </div>
                     </div>
-                    <span className="text-text-secondary text-xs">{isExpanded ? '▲' : '▼'}</span>
+                    <span className="text-text-secondary text-sm">{isExpanded ? '▲' : '▼'}</span>
                   </button>
 
                   {isExpanded && (
@@ -346,8 +346,8 @@ export default function MealPlan() {
 
                         return (
                           <div key={mealType} className="mb-3">
-                            <h4 className="text-xs font-semibold text-text-secondary uppercase tracking-wide mb-2 flex items-center gap-2">
-                              <span className={`w-2 h-2 rounded-full ${mealDotColors[mealType] || 'bg-gray-400'}`}></span>
+                            <h4 className="text-sm font-semibold text-text-secondary uppercase tracking-wide mb-2 flex items-center gap-2">
+                              <span className={`w-2.5 h-2.5 rounded-full ${mealDotColors[mealType] || 'bg-gray-400'}`}></span>
                               {t(mealType)}
                             </h4>
                             {recipes.map((recipe, ri) => (

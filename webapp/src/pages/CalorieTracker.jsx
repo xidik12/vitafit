@@ -27,43 +27,43 @@ function MealSection({ mealType, entries, onAddFood }) {
     <div className={`bg-white rounded-xl mb-3 overflow-hidden border border-border shadow-sm border-l-4 ${mealBorderColors[mealType] || 'border-l-accent-green'}`}>
       <button
         onClick={() => setExpanded(v => !v)}
-        className="w-full flex items-center justify-between p-3"
+        className="w-full flex items-center justify-between p-3 min-h-[48px]"
       >
         <div className="flex items-center gap-2">
-          {mealType === 'breakfast' ? <SunriseIcon className="w-5 h-5 text-accent-orange" /> :
-           mealType === 'lunch' ? <SunIcon className="w-5 h-5 text-accent-amber" /> :
-           mealType === 'dinner' ? <MoonIcon className="w-5 h-5 text-accent-blue" /> :
-           <AppleIcon className="w-5 h-5 text-accent-green" />}
-          <span className="text-sm font-semibold text-text-primary capitalize">
+          {mealType === 'breakfast' ? <SunriseIcon className="w-6 h-6 text-accent-orange" /> :
+           mealType === 'lunch' ? <SunIcon className="w-6 h-6 text-accent-amber" /> :
+           mealType === 'dinner' ? <MoonIcon className="w-6 h-6 text-accent-blue" /> :
+           <AppleIcon className="w-6 h-6 text-accent-green" />}
+          <span className="text-base font-semibold text-text-primary capitalize">
             {t(`meal_types.${mealType}`)}
           </span>
         </div>
         <div className="flex items-center gap-2">
-          <span className="text-xs font-medium text-text-secondary bg-gray-50 px-2 py-0.5 rounded-full">{Math.round(totalCal)} {t('common:common.kcal')}</span>
-          <span className="text-text-secondary text-xs">{expanded ? '▲' : '▼'}</span>
+          <span className="text-sm font-medium text-text-secondary bg-gray-50 px-2.5 py-1 rounded-full">{Math.round(totalCal)} {t('common:common.kcal')}</span>
+          <span className="text-text-secondary text-sm">{expanded ? '▲' : '▼'}</span>
         </div>
       </button>
 
       {expanded && (
         <div className="px-3 pb-3">
           {entries.length === 0 ? (
-            <p className="text-xs text-text-secondary py-2 text-center">{t('no_food_logged')}</p>
+            <p className="text-sm text-text-secondary py-2 text-center">{t('no_food_logged')}</p>
           ) : (
             <div className="space-y-1 mb-2">
               {entries.map((entry, i) => (
-                <div key={i} className="flex justify-between items-center py-1.5 border-b border-border/50 last:border-0">
+                <div key={i} className="flex justify-between items-center py-2 border-b border-border/50 last:border-0">
                   <div>
-                    <p className="text-sm text-text-primary">{entry.food_name}</p>
-                    <p className="text-xs text-text-secondary">{entry.amount_g}{t('common:common.g')}</p>
+                    <p className="text-base text-text-primary">{entry.food_name}</p>
+                    <p className="text-sm text-text-secondary">{entry.amount_g}{t('common:common.g')}</p>
                   </div>
-                  <span className="text-xs font-medium text-text-secondary">{Math.round(entry.calories)} {t('common:common.kcal')}</span>
+                  <span className="text-sm font-medium text-text-secondary">{Math.round(entry.calories)} {t('common:common.kcal')}</span>
                 </div>
               ))}
             </div>
           )}
           <button
             onClick={() => onAddFood(mealType)}
-            className="w-full flex items-center justify-center gap-1 py-2 text-accent-green text-xs font-medium border border-accent-green/30 rounded-lg hover:bg-accent-green/5 transition-colors"
+            className="w-full flex items-center justify-center gap-1 py-3 text-accent-green text-sm font-semibold border border-accent-green/30 rounded-lg hover:bg-accent-green/5 transition-colors min-h-[44px]"
           >
             <span>+</span>
             <span>{t('add_food')}</span>
@@ -172,7 +172,7 @@ export default function CalorieTracker() {
       {/* Header */}
       <div className="bg-gradient-to-br from-accent-teal/10 via-accent-cyan/5 to-transparent rounded-2xl p-4 mb-4">
         <h1 className="text-2xl font-bold text-text-primary">{t('title')}</h1>
-        <p className="text-accent-teal text-xs font-medium mt-1">{t('subtitle')}</p>
+        <p className="text-accent-teal text-sm font-medium mt-1">{t('subtitle')}</p>
       </div>
 
       {/* Calorie summary */}
@@ -181,25 +181,25 @@ export default function CalorieTracker() {
           <div className="text-center flex-1">
             <div className="bg-gradient-to-br from-accent-green/10 to-accent-emerald/5 rounded-xl py-2 px-3">
               <p className="text-2xl font-bold text-accent-green">{Math.round(t2.calories)}</p>
-              <p className="text-xs text-text-secondary font-medium">{t('daily_total')}</p>
+              <p className="text-sm text-text-secondary font-medium">{t('daily_total')}</p>
             </div>
           </div>
           <div className="text-center flex-1 mx-2">
             <div className="bg-gradient-to-br from-gray-50 to-gray-100/50 rounded-xl py-2 px-3">
               <p className="text-xl font-bold text-text-primary">{calGoal}</p>
-              <p className="text-xs text-text-secondary font-medium">{t('goal')}</p>
+              <p className="text-sm text-text-secondary font-medium">{t('goal')}</p>
             </div>
           </div>
           <div className="text-center flex-1">
             {calOver > 0 ? (
               <div className="bg-gradient-to-br from-accent-red/10 to-accent-red/5 rounded-xl py-2 px-3">
                 <p className="text-xl font-bold text-accent-red">{Math.round(calOver)}</p>
-                <p className="text-xs text-text-secondary font-medium">{t('over')}</p>
+                <p className="text-sm text-text-secondary font-medium">{t('over')}</p>
               </div>
             ) : (
               <div className="bg-gradient-to-br from-accent-teal/10 to-accent-cyan/5 rounded-xl py-2 px-3">
                 <p className="text-xl font-bold text-accent-teal">{Math.round(calRemaining)}</p>
-                <p className="text-xs text-text-secondary font-medium">{t('remaining')}</p>
+                <p className="text-sm text-text-secondary font-medium">{t('remaining')}</p>
               </div>
             )}
           </div>
@@ -232,18 +232,18 @@ export default function CalorieTracker() {
       <div className="bg-gradient-to-br from-accent-blue/5 to-accent-cyan/5 rounded-2xl p-4 mb-4 border border-accent-blue/15 shadow-sm">
         <div className="flex items-center justify-between mb-2">
           <div className="flex items-center gap-2">
-            <div className="w-9 h-9 rounded-full bg-accent-blue/15 flex items-center justify-center">
-              <DropletIcon className="w-5 h-5 text-accent-blue" />
+            <div className="w-10 h-10 rounded-full bg-accent-blue/15 flex items-center justify-center">
+              <DropletIcon className="w-6 h-6 text-accent-blue" />
             </div>
             <div>
-              <p className="text-sm font-semibold text-text-primary">{t('water_goal')}</p>
-              <p className="text-xs text-text-secondary">{waterMl}/{waterGoal} {tc('common.water_ml')}</p>
+              <p className="text-base font-semibold text-text-primary">{t('water_goal')}</p>
+              <p className="text-sm text-text-secondary">{waterMl}/{waterGoal} {tc('common.water_ml')}</p>
             </div>
           </div>
           <div className="flex gap-1">
             <button
               onClick={() => logWater(WATER_STEP_ML)}
-              className="bg-accent-blue/20 text-accent-blue px-3 py-1.5 rounded-lg text-xs font-semibold hover:bg-accent-blue/30 transition-colors"
+              className="bg-accent-blue/20 text-accent-blue px-4 py-2.5 rounded-lg text-sm font-semibold hover:bg-accent-blue/30 transition-colors min-h-[44px]"
             >
               +{WATER_STEP_ML}{tc('common.water_ml')}
             </button>
@@ -256,8 +256,8 @@ export default function CalorieTracker() {
           />
         </div>
         <div className="flex justify-between mt-1">
-          <span className="text-xs text-text-secondary font-medium">{Math.round(waterPercent)}%</span>
-          <span className="text-xs text-text-secondary">{waterGoal}{tc('common.water_ml')} {t('goal').toLowerCase()}</span>
+          <span className="text-sm text-text-secondary font-medium">{Math.round(waterPercent)}%</span>
+          <span className="text-sm text-text-secondary">{waterGoal}{tc('common.water_ml')} {t('goal').toLowerCase()}</span>
         </div>
       </div>
 

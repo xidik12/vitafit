@@ -70,7 +70,7 @@ export default function Settings() {
     <div className="p-4 pb-24">
       <div className="bg-gradient-to-br from-accent-green/10 via-accent-teal/5 to-transparent rounded-2xl p-4 mb-4">
         <h1 className="text-2xl font-bold text-text-primary">{t('common.settings')}</h1>
-        <p className="text-accent-green text-xs font-medium mt-1">{t('settings.subtitle')}</p>
+        <p className="text-accent-green text-sm font-medium mt-1">{t('settings.subtitle')}</p>
       </div>
 
       {/* Language */}
@@ -81,13 +81,13 @@ export default function Settings() {
             <button
               key={opt.code}
               onClick={() => handleLangChange(opt.code)}
-              className={`flex-1 flex items-center justify-center gap-2 py-2.5 rounded-xl border text-sm font-medium transition-colors ${
+              className={`flex-1 flex items-center justify-center gap-2 py-3 rounded-xl border text-base font-medium transition-colors min-h-[48px] ${
                 lang === opt.code
                   ? 'bg-accent-green/20 border-accent-green text-accent-dark'
                   : 'bg-bg-secondary border-border text-text-secondary'
               }`}
             >
-              <span className="text-xs font-bold uppercase text-text-secondary">{opt.code}</span>
+              <span className="text-sm font-bold uppercase text-text-secondary">{opt.code}</span>
               <span>{opt.label}</span>
             </button>
           ))}
@@ -118,7 +118,7 @@ export default function Settings() {
             <button
               key={opt.value}
               onClick={() => setDiet(opt.value)}
-              className={`py-2.5 rounded-xl border text-sm transition-colors ${
+              className={`py-3 rounded-xl border text-base transition-colors min-h-[48px] ${
                 diet === opt.value
                   ? 'bg-accent-green/20 border-accent-green text-accent-dark'
                   : 'bg-bg-secondary border-border text-text-secondary'
@@ -146,7 +146,7 @@ export default function Settings() {
       <button
         onClick={handleSave}
         disabled={saving}
-        className="w-full bg-accent-green text-white py-3 rounded-xl text-sm font-semibold mb-3 disabled:opacity-50"
+        className="w-full bg-accent-green text-white py-3.5 rounded-xl text-base font-semibold mb-3 disabled:opacity-50 min-h-[48px]"
       >
         {saving ? t('common.loading') : t('common.save')}
       </button>
@@ -155,24 +155,24 @@ export default function Settings() {
       <div className="bg-white rounded-2xl overflow-hidden mb-4 border border-border shadow-sm">
         <button
           onClick={() => navigate('/about')}
-          className="w-full flex items-center justify-between px-4 py-3 border-b border-border"
+          className="w-full flex items-center justify-between px-4 py-4 border-b border-border min-h-[48px]"
         >
-          <span className="text-sm text-text-primary">{t('common.about')}</span>
-          <span className="text-text-secondary">›</span>
+          <span className="text-base text-text-primary">{t('common.about')}</span>
+          <span className="text-text-secondary text-lg">›</span>
         </button>
         <button
           onClick={() => navigate('/questionnaire')}
-          className="w-full flex items-center justify-between px-4 py-3"
+          className="w-full flex items-center justify-between px-4 py-4 min-h-[48px]"
         >
-          <span className="text-sm text-text-primary">{t('settings.redo_questionnaire')}</span>
-          <span className="text-text-secondary">›</span>
+          <span className="text-base text-text-primary">{t('settings.redo_questionnaire')}</span>
+          <span className="text-text-secondary text-lg">›</span>
         </button>
       </div>
 
       {/* Logout */}
       <button
         onClick={handleLogout}
-        className="w-full py-3 rounded-xl text-sm font-medium text-accent-red border border-accent-red/30 bg-accent-red/5"
+        className="w-full py-3.5 rounded-xl text-base font-medium text-accent-red border border-accent-red/30 bg-accent-red/5 min-h-[48px]"
       >
         {t('settings.logout')}
       </button>

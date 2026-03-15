@@ -22,25 +22,25 @@ export default function RecipeCard({ recipe, onClick }) {
         )}
       </div>
       <div className="p-3">
-        <h4 className="text-sm font-semibold text-text-primary">{title}</h4>
-        <div className="flex gap-3 mt-2 text-xs text-text-secondary">
+        <h4 className="text-base font-semibold text-text-primary">{title}</h4>
+        <div className="flex gap-3 mt-2 text-sm text-text-secondary">
           {recipe.calories != null && <span className="font-medium">{Math.round(recipe.calories)} {t('common:common.kcal')}</span>}
           {recipe.cook_time_mins && <span>{t('cook_time', { mins: recipe.cook_time_mins })}</span>}
         </div>
         {(recipe.protein != null || recipe.carbs != null || recipe.fat != null) && (
-          <div className="flex gap-2 mt-2">
+          <div className="flex gap-2 mt-2 flex-wrap">
             {recipe.protein != null && (
-              <span className="px-2 py-0.5 bg-accent-blue/10 text-accent-blue rounded-full text-xs font-semibold">
+              <span className="px-2.5 py-1 bg-accent-blue/10 text-accent-blue rounded-full text-sm font-semibold">
                 {t('macro_p')} {Math.round(recipe.protein)}{tc('common.g')}
               </span>
             )}
             {recipe.carbs != null && (
-              <span className="px-2 py-0.5 bg-accent-green/10 text-accent-green rounded-full text-xs font-semibold">
+              <span className="px-2.5 py-1 bg-accent-green/10 text-accent-green rounded-full text-sm font-semibold">
                 {t('macro_c')} {Math.round(recipe.carbs)}{tc('common.g')}
               </span>
             )}
             {recipe.fat != null && (
-              <span className="px-2 py-0.5 bg-accent-red/10 text-accent-red rounded-full text-xs font-semibold">
+              <span className="px-2.5 py-1 bg-accent-red/10 text-accent-red rounded-full text-sm font-semibold">
                 {t('macro_f')} {Math.round(recipe.fat)}{tc('common.g')}
               </span>
             )}

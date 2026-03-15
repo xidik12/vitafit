@@ -131,6 +131,14 @@ export default function Questionnaire() {
         {/* Step 0: Consent */}
         {step === STEP_CONSENT && (
           <div>
+            {/* Privacy statement */}
+            <div className="bg-accent-green/10 border border-accent-green/20 rounded-xl p-3 mb-4 flex items-start gap-2">
+              <span className="text-accent-green text-lg mt-0.5">🔒</span>
+              <p className="text-sm text-accent-dark leading-relaxed">
+                {t('privacy')}
+              </p>
+            </div>
+
             <h2 className="text-lg font-semibold text-text-primary mb-4">
               ⚕️ {t('modules.parq')}
             </h2>
@@ -155,12 +163,12 @@ export default function Questionnaire() {
             <h2 className="text-lg font-semibold text-text-primary mb-1">
               {t('parq.title')}
             </h2>
-            <p className="text-xs text-text-secondary mb-4">
+            <p className="text-sm text-text-secondary mb-4">
               {t('subtitle')}
             </p>
             {parqWarning && (
               <div className="bg-accent-orange/10 border border-accent-orange/30 rounded-xl p-3 mb-4">
-                <p className="text-accent-orange text-xs">{t('parq.warning')}</p>
+                <p className="text-accent-orange text-sm">{t('parq.warning')}</p>
               </div>
             )}
             <div className="space-y-3">
@@ -172,7 +180,7 @@ export default function Questionnaire() {
                       <button
                         key={val}
                         onClick={() => setParq(prev => ({ ...prev, [qKey]: val }))}
-                        className={`flex-1 py-1.5 rounded-lg text-sm font-medium border transition-colors ${
+                        className={`flex-1 py-2.5 rounded-lg text-base font-medium border transition-colors min-h-[44px] ${
                           parq[qKey] === val
                             ? val === 'yes'
                               ? 'bg-accent-orange/20 border-accent-orange text-accent-orange'
@@ -329,7 +337,7 @@ export default function Questionnaire() {
                   onChange={e => setSleep(s => ({ ...s, sleep_hours: Number(e.target.value) }))}
                   className="w-full accent-accent-green"
                 />
-                <div className="flex justify-between text-xs text-text-secondary mt-1">
+                <div className="flex justify-between text-sm text-text-secondary mt-1">
                   <span>4h</span>
                   <span>12h</span>
                 </div>
@@ -433,7 +441,7 @@ export default function Questionnaire() {
           {step > 0 && (
             <button
               onClick={back}
-              className="flex-1 bg-gray-100 py-3 rounded-xl text-sm font-medium text-text-primary border border-border"
+              className="flex-1 bg-gray-100 py-3.5 rounded-xl text-base font-medium text-text-primary border border-border min-h-[48px]"
             >
               {tc('common.back')}
             </button>
@@ -441,7 +449,7 @@ export default function Questionnaire() {
           <button
             onClick={next}
             disabled={submitting}
-            className="flex-1 bg-accent-green text-white py-3 rounded-xl text-sm font-semibold disabled:opacity-50"
+            className="flex-1 bg-accent-green text-white py-3.5 rounded-xl text-base font-semibold disabled:opacity-50 min-h-[48px]"
           >
             {submitting
               ? tc('common.loading')

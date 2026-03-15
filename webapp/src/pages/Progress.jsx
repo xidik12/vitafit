@@ -46,8 +46,8 @@ function AchievementBadge({ achievement, unlocked }) {
         ? `${colors.bg} ${colors.border} shadow-sm`
         : 'bg-gray-50 border-border opacity-40'
     }`}>
-      <achievement.Icon className={`w-7 h-7 ${unlocked ? colors.text : 'text-text-secondary'}`} />
-      <span className={`text-xs mt-1 text-center leading-tight font-medium ${unlocked ? colors.text : 'text-text-secondary'}`}>
+      <achievement.Icon className={`w-8 h-8 ${unlocked ? colors.text : 'text-text-secondary'}`} />
+      <span className={`text-sm mt-1 text-center leading-tight font-medium ${unlocked ? colors.text : 'text-text-secondary'}`}>
         {t(achievement.labelKey)}
       </span>
     </div>
@@ -68,13 +68,13 @@ function CustomTooltip({ active, payload, label, lang }) {
 function MeasurementInput({ label, value, onChange }) {
   return (
     <div>
-      <label className="text-xs text-text-secondary font-medium">{label}</label>
+      <label className="text-sm text-text-secondary font-medium">{label}</label>
       <input
         type="number"
         step="0.1"
         value={value || ''}
         onChange={e => onChange(e.target.value ? Number(e.target.value) : null)}
-        className="w-full bg-bg-secondary rounded-lg px-2 py-1.5 text-sm text-text-primary outline-none border border-border focus:border-accent-purple transition-colors"
+        className="w-full bg-bg-secondary rounded-lg px-3 py-2.5 text-base text-text-primary outline-none border border-border focus:border-accent-purple transition-colors min-h-[44px]"
       />
     </div>
   )
@@ -179,7 +179,7 @@ export default function Progress() {
       {/* Header */}
       <div className="bg-gradient-to-br from-accent-purple/10 via-accent-indigo/5 to-transparent rounded-2xl p-4 mb-4">
         <h1 className="text-2xl font-bold text-text-primary">{t('title')}</h1>
-        <p className="text-accent-purple text-xs font-medium mt-1">{t('subtitle')}</p>
+        <p className="text-accent-purple text-sm font-medium mt-1">{t('subtitle')}</p>
       </div>
 
       {!hasData ? (
@@ -230,7 +230,7 @@ export default function Progress() {
               <h2 className="text-sm font-semibold text-text-primary">{t('measurements')}</h2>
               <button
                 onClick={() => setShowMeasurements(!showMeasurements)}
-                className="text-xs text-accent-purple font-semibold bg-accent-purple/10 px-3 py-1 rounded-lg"
+                className="text-sm text-accent-purple font-semibold bg-accent-purple/10 px-4 py-2 rounded-lg min-h-[44px]"
               >
                 {showMeasurements ? t('hide_measurements') : t('add_measurements')}
               </button>
@@ -345,7 +345,7 @@ export default function Progress() {
               </h2>
               <button
                 onClick={() => setShowHealthCheck(!showHealthCheck)}
-                className="text-xs text-accent-purple font-semibold bg-accent-purple/10 px-3 py-1 rounded-lg"
+                className="text-sm text-accent-purple font-semibold bg-accent-purple/10 px-4 py-2 rounded-lg min-h-[44px]"
               >
                 {showHealthCheck ? t('hide_health_check') : t('add_health_check')}
               </button>
@@ -386,13 +386,13 @@ export default function Progress() {
                 />
                 {/* Energy Level 1-10 */}
                 <div>
-                  <label className="text-xs text-text-secondary font-medium">{t('energy_level')}</label>
+                  <label className="text-sm text-text-secondary font-medium">{t('energy_level')}</label>
                   <div className="flex gap-1 mt-1">
                     {[1,2,3,4,5,6,7,8,9,10].map(n => (
                       <button
                         key={n}
                         onClick={() => setHealthCheck(h => ({ ...h, energy_level: n }))}
-                        className={`flex-1 py-1.5 rounded-lg text-xs font-semibold transition-colors ${
+                        className={`flex-1 py-2 rounded-lg text-sm font-semibold transition-colors min-h-[36px] ${
                           healthCheck.energy_level === n
                             ? 'bg-accent-amber text-white'
                             : 'bg-bg-secondary text-text-secondary border border-border'
@@ -405,15 +405,15 @@ export default function Progress() {
                 </div>
                 {/* Mood 1-5 */}
                 <div>
-                  <label className="text-xs text-text-secondary font-medium">{t('mood_label')}</label>
-                  <div className="flex gap-2 mt-1">
+                  <label className="text-sm text-text-secondary font-medium">{t('mood_label')}</label>
+                  <div className="flex gap-3 mt-1">
                     {[1,2,3,4,5].map(n => {
                       const moodColors = ['bg-accent-red', 'bg-accent-orange', 'bg-accent-amber', 'bg-accent-teal', 'bg-accent-green']
                       return (
                         <button
                           key={n}
                           onClick={() => setHealthCheck(h => ({ ...h, mood: n }))}
-                          className={`w-8 h-8 rounded-full transition-all ${moodColors[n - 1]} ${
+                          className={`w-10 h-10 rounded-full transition-all ${moodColors[n - 1]} ${
                             healthCheck.mood === n
                               ? 'ring-2 ring-offset-2 ring-accent-purple scale-110'
                               : 'opacity-40'
@@ -425,15 +425,15 @@ export default function Progress() {
                 </div>
                 {/* Recovery 1-5 */}
                 <div>
-                  <label className="text-xs text-text-secondary font-medium">{t('recovery')}</label>
-                  <div className="flex gap-2 mt-1">
+                  <label className="text-sm text-text-secondary font-medium">{t('recovery')}</label>
+                  <div className="flex gap-3 mt-1">
                     {[1,2,3,4,5].map(n => {
                       const recColors = ['bg-accent-red', 'bg-accent-orange', 'bg-accent-amber', 'bg-accent-blue', 'bg-accent-green']
                       return (
                         <button
                           key={n}
                           onClick={() => setHealthCheck(h => ({ ...h, recovery_score: n }))}
-                          className={`w-8 h-8 rounded-full transition-all ${recColors[n - 1]} ${
+                          className={`w-10 h-10 rounded-full transition-all ${recColors[n - 1]} ${
                             healthCheck.recovery_score === n
                               ? 'ring-2 ring-offset-2 ring-accent-purple scale-110'
                               : 'opacity-40'
@@ -471,9 +471,9 @@ export default function Progress() {
                   const s = statusMap[ind.status] || statusMap.info
                   return (
                     <div key={i} className={`${s.bg} rounded-xl p-3`}>
-                      <p className={`text-xs font-semibold ${s.text}`}>{ind.name}</p>
+                      <p className={`text-sm font-semibold ${s.text}`}>{ind.name}</p>
                       <p className={`text-lg font-bold ${s.text}`}>{ind.value}</p>
-                      <p className={`text-[10px] ${s.text} opacity-70`}>{s.label}</p>
+                      <p className={`text-xs ${s.text} opacity-70`}>{s.label}</p>
                     </div>
                   )
                 })}
@@ -539,12 +539,12 @@ export default function Progress() {
               <div className="flex-1 bg-gradient-to-br from-accent-orange/10 to-accent-amber/5 rounded-xl p-3 text-center border border-accent-orange/15">
                 <FireIcon className="w-8 h-8 text-accent-orange mx-auto" />
                 <p className="text-2xl font-bold text-accent-orange">{streak}</p>
-                <p className="text-xs text-text-secondary font-medium">{t('current_streak')}</p>
+                <p className="text-sm text-text-secondary font-medium">{t('current_streak')}</p>
               </div>
               <div className="flex-1 bg-gradient-to-br from-accent-blue/10 to-accent-indigo/5 rounded-xl p-3 text-center border border-accent-blue/15">
                 <MedalIcon className="w-8 h-8 text-accent-blue mx-auto" />
                 <p className="text-2xl font-bold text-accent-blue">{longestStreak}</p>
-                <p className="text-xs text-text-secondary font-medium">{t('longest_streak')}</p>
+                <p className="text-sm text-text-secondary font-medium">{t('longest_streak')}</p>
               </div>
             </div>
 
@@ -554,7 +554,7 @@ export default function Progress() {
                 <span className="text-sm font-semibold text-text-primary">
                   {t('level', { n: level })}
                 </span>
-                <span className="text-xs text-text-secondary font-medium">
+                <span className="text-sm text-text-secondary font-medium">
                   {t('xp', { xp })} / {xpToNext}
                 </span>
               </div>

@@ -21,12 +21,12 @@ export default function ProgressRing({ percent = 0, size = 80, strokeWidth = 6, 
         />
       </svg>
       <span
-        className="absolute text-sm font-bold text-text-primary"
-        style={{ top: size / 2 - 9, left: '50%', transform: 'translateX(-50%)' }}
+        className="absolute text-base font-bold text-text-primary"
+        style={{ top: size / 2 - 10, left: '50%', transform: 'translateX(-50%)' }}
       >
         {Math.round(percent)}%
       </span>
-      {label && <span className="text-xs text-text-secondary mt-1">{label}</span>}
+      {label && <span className="text-sm text-text-secondary mt-1">{label}</span>}
     </div>
   )
 }

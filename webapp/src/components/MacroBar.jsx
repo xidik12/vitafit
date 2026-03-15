@@ -3,7 +3,7 @@ export default function MacroBar({ current = 0, target = 100, label, color = '#3
 
   return (
     <div className="mb-2.5">
-      <div className="flex justify-between text-xs text-text-secondary mb-1">
+      <div className="flex justify-between text-sm text-text-secondary mb-1">
         <span className="font-medium">{label}</span>
         <span className="font-semibold">{Math.round(current)}/{target}{unit}</span>
       </div>
