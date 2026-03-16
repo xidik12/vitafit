@@ -77,8 +77,27 @@ async def get_streak(user: User = Depends(get_current_user)):
         )
         streak = result.scalar_one_or_none()
 
+        # Fetch achievements
+        ach_result = await session.execute(
+            select(Achievement).where(Achievement.user_id == user.id)
+        )
+        achievements = [a.achievement_type for a in ach_result.scalars().all()]
+
+        # Compute weekly compliance: days active this week / 7
+        today = dt_date.today()
+        week_start = today - __import__('datetime').timedelta(days=today.weekday())
+        workout_days = await session.execute(
+            select(func.count(func.distinct(CalorieLog.date)))
+            .where(CalorieLog.user_id == user.id, CalorieLog.date >= week_start)
+        )
+        active_days = workout_days.scalar() or 0
+        weekly_compliance = round((active_days / 7) * 100, 1)
+
     if not streak:
-        return {"current_streak": 0, "longest_streak": 0, "xp_total": 0, "level": 1}
+        return {
+            "current_streak": 0, "longest_streak": 0, "xp_total": 0, "level": 1,
+            "achievements": achievements, "weekly_compliance": weekly_compliance,
+        }
 
     return {
         "current_streak": streak.current_streak,
@@ -86,6 +105,8 @@ async def get_streak(user: User = Depends(get_current_user)):
         "xp_total": streak.xp_total,
         "level": streak.level,
         "last_active": streak.last_active_date.isoformat() if streak.last_active_date else None,
+        "achievements": achievements,
+        "weekly_compliance": weekly_compliance,
     }
 
 

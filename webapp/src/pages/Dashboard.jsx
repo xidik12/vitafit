@@ -7,14 +7,13 @@ import api from '../utils/api'
 import { CogIcon, FireIcon, PencilIcon, DumbbellIcon, UtensilsIcon, DropletIcon } from '../components/Icons'
 
 export default function Dashboard() {
-  const { t, i18n } = useTranslation()
+  const { t } = useTranslation()
   const { profile, token, loading, tgUser } = useUser()
   const navigate = useNavigate()
   const [todaySummary, setTodaySummary] = useState(null)
   const [summaryLoading, setSummaryLoading] = useState(true)
 
   const isOnboarded = profile?.onboarding_complete
-  const lang = i18n.language
 
   useEffect(() => {
     if (!token || !isOnboarded) {
@@ -58,19 +57,12 @@ export default function Dashboard() {
 
   // Time-based greeting
   const hour = new Date().getHours()
-  const greetingKey = hour < 12 ? 'morning' : hour < 18 ? 'afternoon' : 'evening'
-  const greetings = {
-    morning: lang === 'ru' ? 'Доброе утро' : 'Good morning',
-    afternoon: lang === 'ru' ? 'Добрый день' : 'Good afternoon',
-    evening: lang === 'ru' ? 'Добрый вечер' : 'Good evening',
-  }
-  const greeting = firstName
-    ? `${greetings[greetingKey]}, ${firstName}!`
-    : `${greetings[greetingKey]}!`
+  const greetingKey = hour < 12 ? 'greeting_morning' : hour < 18 ? 'greeting_afternoon' : 'greeting_evening'
+  const greetingText = t(`dashboard.${greetingKey}`)
+  const greeting = firstName ? `${greetingText}, ${firstName}!` : `${greetingText}!`
 
   // Today's main task placeholder
-  const todayTask = todaySummary?.today_task
-    || (lang === 'ru' ? 'Сегодня: 20 мин лёгкая йога' : "Today's workout: 20 min gentle yoga")
+  const todayTask = todaySummary?.today_task || t('dashboard.today_default_task')
 
   async function logWater() {
     if (!token) return
@@ -84,10 +76,10 @@ export default function Dashboard() {
 
   // Streak encouragement
   const streakMsg = streak === 0
-    ? (lang === 'ru' ? 'Начните серию сегодня!' : 'Start your streak today!')
+    ? t('dashboard.streak_start')
     : streak < 7
-    ? (lang === 'ru' ? 'Отличное начало! Продолжайте!' : 'Great start! Keep going!')
-    : (lang === 'ru' ? 'Потрясающая серия!' : 'Amazing streak!')
+    ? t('dashboard.streak_building')
+    : t('dashboard.streak_amazing')
 
   return (
     <div className="p-4 pb-24">
@@ -216,7 +208,7 @@ export default function Dashboard() {
                 <PencilIcon className="w-6 h-6 text-accent-teal" />
               </div>
               <span className="text-sm text-text-primary text-center leading-tight font-semibold">
-                {lang === 'ru' ? 'Записать еду' : 'Log Meal'}
+                {t('dashboard.log_meal')}
               </span>
             </button>
             <button
@@ -227,7 +219,7 @@ export default function Dashboard() {
                 <DumbbellIcon className="w-6 h-6 text-accent-blue" />
               </div>
               <span className="text-sm text-text-primary text-center leading-tight font-semibold">
-                {lang === 'ru' ? 'Тренировка' : 'Start Workout'}
+                {t('dashboard.start_workout')}
               </span>
             </button>
             <button
@@ -238,7 +230,7 @@ export default function Dashboard() {
                 <UtensilsIcon className="w-6 h-6 text-accent-orange" />
               </div>
               <span className="text-sm text-text-primary text-center leading-tight font-semibold">
-                {lang === 'ru' ? 'Питание' : 'Meal Plan'}
+                {t('dashboard.meal_plan')}
               </span>
             </button>
           </div>

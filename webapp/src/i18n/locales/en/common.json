@@ -17,7 +17,17 @@
     "water": "Water",
     "start_questionnaire": "Start Questionnaire",
     "complete_setup": "Complete your profile to get a personalized plan",
-    "subtitle": "Let's crush today's goals"
+    "subtitle": "Let's crush today's goals",
+    "greeting_morning": "Good morning",
+    "greeting_afternoon": "Good afternoon",
+    "greeting_evening": "Good evening",
+    "log_meal": "Log Meal",
+    "start_workout": "Start Workout",
+    "meal_plan": "Meal Plan",
+    "streak_start": "Start your streak today!",
+    "streak_building": "Great start! Keep going!",
+    "streak_amazing": "Amazing streak!",
+    "today_default_task": "Today's workout: 20 min gentle yoga"
   },
   "common": {
     "loading": "Loading...",
@@ -39,6 +49,21 @@
     "g": "g",
     "cm": "cm",
     "min": "min"
+  },
+  "about_page": {
+    "title": "About VitaFit",
+    "description": "VitaFit is your personal AI-powered health and fitness companion. Get personalized exercise plans, meal recommendations, and track your daily nutrition to achieve your health goals.",
+    "features_title": "Features",
+    "feature_exercises": "Personalized exercise plans",
+    "feature_meals": "AI-generated meal plans",
+    "feature_calories": "Daily calorie & macro tracking",
+    "feature_progress": "Progress visualization",
+    "feature_languages": "Multi-language support (EN/RU)",
+    "feature_streaks": "Streak & achievement system",
+    "disclaimer_title": "Medical Disclaimer",
+    "disclaimer_text": "VitaFit is intended for informational and educational purposes only. The content provided — including exercise plans, meal recommendations, and nutritional information — does not constitute medical advice. Always consult a qualified healthcare professional before starting any new fitness or nutrition program, especially if you have any existing medical conditions.",
+    "support": "Support",
+    "telegram_bot": "Telegram Bot"
   },
   "settings": {
     "subtitle": "Customize your experience",

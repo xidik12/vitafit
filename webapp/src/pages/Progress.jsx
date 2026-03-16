@@ -374,15 +374,15 @@ export default function Progress() {
                   />
                   <MeasurementInput
                     label={t('spo2')}
-                    value={healthCheck.spo2}
-                    onChange={v => setHealthCheck(h => ({ ...h, spo2: v }))}
+                    value={healthCheck.spo2_pct}
+                    onChange={v => setHealthCheck(h => ({ ...h, spo2_pct: v }))}
                   />
                 </div>
                 {/* Blood Glucose */}
                 <MeasurementInput
                   label={t('blood_glucose')}
-                  value={healthCheck.blood_glucose}
-                  onChange={v => setHealthCheck(h => ({ ...h, blood_glucose: v }))}
+                  value={healthCheck.blood_glucose_mmol}
+                  onChange={v => setHealthCheck(h => ({ ...h, blood_glucose_mmol: v }))}
                 />
                 {/* Energy Level 1-10 */}
                 <div>
@@ -454,25 +454,32 @@ export default function Progress() {
           </div>
 
           {/* Health Status summary */}
-          {healthStatus?.indicators && healthStatus.indicators.length > 0 && (
+          {healthStatus?.indicators && Object.keys(healthStatus.indicators).length > 0 && (
             <div className="bg-white rounded-2xl p-4 mb-4 border border-border shadow-sm">
               <h2 className="text-sm font-semibold text-text-primary mb-3 flex items-center gap-1.5">
                 <ActivityIcon className="w-4 h-4 text-accent-purple" />
                 {t('health_status')}
               </h2>
               <div className="grid grid-cols-2 gap-2">
-                {healthStatus.indicators.map((ind, i) => {
+                {Object.entries(healthStatus.indicators).map(([key, ind]) => {
                   const statusMap = {
                     good: { bg: 'bg-accent-green/10', text: 'text-accent-green', label: t('status_good') },
                     warning: { bg: 'bg-accent-amber/10', text: 'text-accent-amber', label: t('status_warning') },
                     danger: { bg: 'bg-accent-red/10', text: 'text-accent-red', label: t('status_danger') },
                     info: { bg: 'bg-accent-blue/10', text: 'text-accent-blue', label: t('status_info') },
                   }
+                  const nameMap = {
+                    heart_rate: t('heart_rate_label'),
+                    blood_pressure: t('blood_pressure_label'),
+                    spo2: t('spo2'),
+                    blood_glucose: t('blood_glucose'),
+                    energy: t('energy_level'),
+                  }
                   const s = statusMap[ind.status] || statusMap.info
                   return (
-                    <div key={i} className={`${s.bg} rounded-xl p-3`}>
-                      <p className={`text-sm font-semibold ${s.text}`}>{ind.name}</p>
-                      <p className={`text-lg font-bold ${s.text}`}>{ind.value}</p>
+                    <div key={key} className={`${s.bg} rounded-xl p-3`}>
+                      <p className={`text-sm font-semibold ${s.text}`}>{nameMap[key] || key}</p>
+                      <p className={`text-lg font-bold ${s.text}`}>{ind.label}</p>
                       <p className={`text-xs ${s.text} opacity-70`}>{s.label}</p>
                     </div>
                   )

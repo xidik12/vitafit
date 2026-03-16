@@ -8,6 +8,8 @@ services:
       - DATABASE_URL=sqlite+aiosqlite:///./vitafit.db
       - REDIS_URL=redis://redis:6379/0
       - DEBUG=true
+      - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
+      - JWT_SECRET_KEY=${JWT_SECRET_KEY:-vitafit-dev-secret-change-me}
     volumes:
       - ./backend:/app
     depends_on:

@@ -250,7 +250,7 @@ export default function ActiveWorkout() {
 
         const session = await api.post('/api/workouts/start', { plan_day_index: dayIndex }, token)
         if (cancelled) return
-        setSessionId(session?.session_id || session?.id || null)
+        setSessionId(session?.id || null)
       } catch (err) {
         if (!cancelled) setError(err.message || 'Failed to load workout')
       }
